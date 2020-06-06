@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-06T16:52:34.805Z</updated>
+  <updated>2020-06-06T17:06:45.797Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,15 +21,16 @@
     <link href="http://yoursite.com/2020/06/06/2020-6-6-2/"/>
     <id>http://yoursite.com/2020/06/06/2020-6-6-2/</id>
     <published>2020-06-06T13:14:17.000Z</published>
-    <updated>2020-06-06T16:52:34.805Z</updated>
+    <updated>2020-06-06T17:06:45.797Z</updated>
     
-    <content type="html"><![CDATA[<p>现在可以插入图片了！！<br><img src="https://i.loli.net/2020/06/07/CSEqwHMPrWAbKD7.jpg" alt="1.jpg"></p>]]></content>
+    <content type="html"><![CDATA[<p>现在可以插入图片了！！<img src="/2020/06/06/2020-6-6-2/1.jpg" alt="1.jpg"> </p><p><img src="/2020/06/06/2020-6-6-2/1.gif" alt="1.gif"></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;现在可以插入图片了！！&lt;br&gt;&lt;img src=&quot;https://i.loli.net/2020/06/07/CSEqwHMPrWAbKD7.jpg&quot; alt=&quot;1.jpg&quot;&gt;&lt;/p&gt;
+        &lt;p&gt;现在可以插入图片了！！&lt;img src=&quot;/2020/06/06/2020-6-6-2/1.jpg&quot; alt=&quot;1.jpg&quot;&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2020/06/06/2020-6-6-2/1.gif&quot; alt=&quot;1.gif&quot;&gt;&lt;/p&gt;
 
       
     

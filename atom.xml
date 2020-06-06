@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-06T10:43:40.522Z</updated>
+  <updated>2020-06-06T12:22:27.258Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,21 +17,20 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>My New Post</title>
-    <link href="http://yoursite.com/2020/06/06/My-New-Post/"/>
-    <id>http://yoursite.com/2020/06/06/My-New-Post/</id>
-    <published>2020-06-06T10:37:46.000Z</published>
-    <updated>2020-06-06T10:43:40.522Z</updated>
+    <title>2020-6-6</title>
+    <link href="http://yoursite.com/2020/06/06/2020-6-6/"/>
+    <id>http://yoursite.com/2020/06/06/2020-6-6/</id>
+    <published>2020-06-06T10:37:46.874Z</published>
+    <updated>2020-06-06T12:22:27.258Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="安装NexT"><a href="#安装NexT" class="headerlink" title="安装NexT"></a>安装NexT</h2><p>我是用的git clone的方法，文档中还有其他方法</p><p>copy</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure><h2 id="设置主题为NexT"><a href="#设置主题为NexT" class="headerlink" title="设置主题为NexT"></a>设置主题为NexT</h2><p>打开<code>~/Hexo/_config.yml</code>,找到theme行设置主题</p><p>copy</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br><span class="line">&#x2F;&#x2F;默认是landscape</span><br></pre></td></tr></table></figure><h2 id="配置NexT主题"><a href="#配置NexT主题" class="headerlink" title="配置NexT主题"></a>配置NexT主题</h2>]]></content>
+    <content type="html"><![CDATA[<p>title: 2020-6-6<br>tags: []<br>categories: []</p><h2 id="Hexo-基本搭建完成"><a href="#Hexo-基本搭建完成" class="headerlink" title="Hexo 基本搭建完成"></a>Hexo 基本搭建完成</h2>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;安装NexT&quot;&gt;&lt;a href=&quot;#安装NexT&quot; class=&quot;headerlink&quot; title=&quot;安装NexT&quot;&gt;&lt;/a&gt;安装NexT&lt;/h2&gt;&lt;p&gt;我是用的git clone的方法，文档中还有其他方法&lt;/p&gt;
-&lt;p&gt;copy&lt;/p&gt;
-&lt;figure cla
+        &lt;p&gt;title: 2020-6-6&lt;br&gt;tags: []&lt;br&gt;categories: []&lt;/p&gt;
+&lt;h2 id=&quot;Hexo-基本搭建完成&quot;&gt;&lt;a href=&quot;#Hexo-基本搭建完成&quot; class=&quot;headerlink&quot; title=&quot;Hexo 基本搭建完成&quot;&gt;&lt;/a&gt;
       
     
     </summary>
@@ -45,7 +44,7 @@
     <link href="http://yoursite.com/2020/06/06/hello-world/"/>
     <id>http://yoursite.com/2020/06/06/hello-world/</id>
     <published>2020-06-06T10:18:10.940Z</published>
-    <updated>2020-06-06T10:18:10.940Z</updated>
+    <updated>2020-06-06T10:43:48.735Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     

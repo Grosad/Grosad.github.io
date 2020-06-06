@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-06T10:18:10.940Z</updated>
+  <updated>2020-06-06T10:43:40.522Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>My New Post</title>
+    <link href="http://yoursite.com/2020/06/06/My-New-Post/"/>
+    <id>http://yoursite.com/2020/06/06/My-New-Post/</id>
+    <published>2020-06-06T10:37:46.000Z</published>
+    <updated>2020-06-06T10:43:40.522Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="安装NexT"><a href="#安装NexT" class="headerlink" title="安装NexT"></a>安装NexT</h2><p>我是用的git clone的方法，文档中还有其他方法</p><p>copy</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure><h2 id="设置主题为NexT"><a href="#设置主题为NexT" class="headerlink" title="设置主题为NexT"></a>设置主题为NexT</h2><p>打开<code>~/Hexo/_config.yml</code>,找到theme行设置主题</p><p>copy</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br><span class="line">&#x2F;&#x2F;默认是landscape</span><br></pre></td></tr></table></figure><h2 id="配置NexT主题"><a href="#配置NexT主题" class="headerlink" title="配置NexT主题"></a>配置NexT主题</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;安装NexT&quot;&gt;&lt;a href=&quot;#安装NexT&quot; class=&quot;headerlink&quot; title=&quot;安装NexT&quot;&gt;&lt;/a&gt;安装NexT&lt;/h2&gt;&lt;p&gt;我是用的git clone的方法，文档中还有其他方法&lt;/p&gt;
+&lt;p&gt;copy&lt;/p&gt;
+&lt;figure cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

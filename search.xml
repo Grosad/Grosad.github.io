@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo调试-1</title>
-    <url>/2020/06/06/2020-6-6/</url>
-    <content><![CDATA[<p>Hexo基本搭建完成</p>
+    <title>Hexo调试-2</title>
+    <url>/2020/06/06/2020-6-6-2/</url>
+    <content><![CDATA[<p>现在可以插入图片了！！<img src="/2020/06/06/2020-6-6-2/1.jpg" alt="1.jpg"> </p>
+<p><img src="/2020/06/06/2020-6-6-2/1.gif" alt="1.gif"></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -29,10 +30,9 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-2</title>
-    <url>/2020/06/06/2020-6-6-2/</url>
-    <content><![CDATA[<p>现在可以插入图片了！！<img src="/2020/06/06/2020-6-6-2/1.jpg" alt="1.jpg"> </p>
-<p><img src="/2020/06/06/2020-6-6-2/1.gif" alt="1.gif"></p>
+    <title>Hexo调试-1</title>
+    <url>/2020/06/06/2020-6-6/</url>
+    <content><![CDATA[<p>Hexo基本搭建完成</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {

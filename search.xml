@@ -97,9 +97,9 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-3</title>
-    <url>/2020/06/07/2020-6-7/</url>
-    <content><![CDATA[<p>换了个NexT主题<br>挑了一个比较满意的主题风格<br>忙活了几个小时<br>已经1点了<br>是时候休息了呀</p>
+    <title>Hexo调试-1</title>
+    <url>/2020/06/06/2020-6-6/</url>
+    <content><![CDATA[<p>Hexo基本搭建完成</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -162,9 +162,9 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-1</title>
-    <url>/2020/06/06/2020-6-6/</url>
-    <content><![CDATA[<p>Hexo基本搭建完成</p>
+    <title>Hexo调试-3</title>
+    <url>/2020/06/07/2020-6-7/</url>
+    <content><![CDATA[<p>换了个NexT主题<br>挑了一个比较满意的主题风格<br>忙活了几个小时<br>已经1点了<br>是时候休息了呀</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {

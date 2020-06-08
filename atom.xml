@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://grosad.github.io/"/>
-  <updated>2020-06-08T06:33:09.544Z</updated>
+  <updated>2020-06-08T15:41:46.781Z</updated>
   <id>http://grosad.github.io/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo调试-7</title>
+    <link href="http://grosad.github.io/2020/06/08/2020-6-8-2/"/>
+    <id>http://grosad.github.io/2020/06/08/2020-6-8-2/</id>
+    <published>2020-06-08T15:17:42.000Z</published>
+    <updated>2020-06-08T15:41:46.781Z</updated>
+    
+    <content type="html"><![CDATA[<p>找来了一些图，放在了那个自己搭的图床里，以后再用</p><p>测试了一下博客的访问速度，发现访问速度还是不尽人意，看来GitHub+jsDelivr搭建的图库还是有些小卡，明天再找点教程优化一下吧，弄好之后，就可以一篇一篇的水了233</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/KKEA$V0X8F6WZJE80%7BWN_L8.jpg" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;找来了一些图，放在了那个自己搭的图床里，以后再用&lt;/p&gt;
+&lt;p&gt;测试了一下博客的访问速度，发现访问速度还是不尽人意，看来GitHub+jsDelivr搭建的图库还是有些小卡，明天再找点教程优化一下吧，弄好之后，就可以一篇一篇的水了233&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;h
+      
+    
+    </summary>
+    
+    
+      <category term="咖啡" scheme="http://grosad.github.io/categories/%E5%92%96%E5%95%A1/"/>
+    
+    
+      <category term="日常" scheme="http://grosad.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+      <category term="调试" scheme="http://grosad.github.io/tags/%E8%B0%83%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo调试-6</title>
     <link href="http://grosad.github.io/2020/06/08/2020-6-8/"/>
     <id>http://grosad.github.io/2020/06/08/2020-6-8/</id>
     <published>2020-06-08T05:44:56.000Z</published>
-    <updated>2020-06-08T06:33:09.544Z</updated>
+    <updated>2020-06-08T15:18:55.460Z</updated>
     
     <content type="html"><![CDATA[<p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p><p>对博客的访问速度优化了一下，在预加载的基础上，弄了个懒加载，<code>懒加载</code>就是:一般是当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载,既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。</p><p>接下来，找点好看的图，把那些细节优化一下，弄完之后，Hexo差不多就调试完毕了</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt></p>]]></content>
     

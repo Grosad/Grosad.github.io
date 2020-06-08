@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://grosad.github.io/"/>
-  <updated>2020-06-07T14:28:19.206Z</updated>
+  <updated>2020-06-07T15:23:02.257Z</updated>
   <id>http://grosad.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://grosad.github.io/2020/06/07/2020-6-7-3/"/>
     <id>http://grosad.github.io/2020/06/07/2020-6-7-3/</id>
     <published>2020-06-07T14:11:54.000Z</published>
-    <updated>2020-06-07T14:28:19.206Z</updated>
+    <updated>2020-06-07T15:23:02.257Z</updated>
     
     <content type="html"><![CDATA[<p>又花了几个小时，尝试了一下coding + github 双部署，又觉得coding的使用效果强差人意，还是罢了</p><p>还有一部分时间，调试了下右下角的这个玩意儿，选来选去，还是用现在这个好了</p><p>左下角还有个播放音乐的功能，觉得还挺不错</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
@@ -38,6 +38,8 @@
     </summary>
     
     
+      <category term="咖啡" scheme="http://grosad.github.io/categories/%E5%92%96%E5%95%A1/"/>
+    
     
       <category term="日常" scheme="http://grosad.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
     
@@ -50,7 +52,7 @@
     <link href="http://grosad.github.io/2020/06/07/2020-6-7-2/"/>
     <id>http://grosad.github.io/2020/06/07/2020-6-7-2/</id>
     <published>2020-06-07T10:59:16.000Z</published>
-    <updated>2020-06-07T14:29:57.665Z</updated>
+    <updated>2020-06-07T15:22:55.609Z</updated>
     
     <content type="html"><![CDATA[<p>花了将近一下午的时间，换了另外一款主题，优化了一下界面<br>现在的界面没之前那么单调了，看起来挺舒服的，纵享丝滑<br>这个主题还有预加载功能，体验极好<br>得找点图来，自带的这些图不怎么不好看</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
@@ -66,6 +68,8 @@
     </summary>
     
     
+      <category term="咖啡" scheme="http://grosad.github.io/categories/%E5%92%96%E5%95%A1/"/>
+    
     
       <category term="日常" scheme="http://grosad.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
     
@@ -78,7 +82,7 @@
     <link href="http://grosad.github.io/2020/06/07/2020-6-7/"/>
     <id>http://grosad.github.io/2020/06/07/2020-6-7/</id>
     <published>2020-06-06T17:13:05.000Z</published>
-    <updated>2020-06-07T14:29:01.854Z</updated>
+    <updated>2020-06-07T15:22:49.405Z</updated>
     
     <content type="html"><![CDATA[<p>换了个NexT主题<br>挑了一个比较满意的主题风格<br>忙活了几个小时<br>已经1点了<br>是时候休息了呀</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
@@ -95,6 +99,8 @@
     </summary>
     
     
+      <category term="咖啡" scheme="http://grosad.github.io/categories/%E5%92%96%E5%95%A1/"/>
+    
     
       <category term="日常" scheme="http://grosad.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
     
@@ -107,7 +113,7 @@
     <link href="http://grosad.github.io/2020/06/06/2020-6-6/"/>
     <id>http://grosad.github.io/2020/06/06/2020-6-6/</id>
     <published>2020-06-06T12:42:10.000Z</published>
-    <updated>2020-06-07T14:34:46.881Z</updated>
+    <updated>2020-06-07T15:22:27.571Z</updated>
     
     <content type="html"><![CDATA[<p>Hexo基本搭建完成</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
@@ -125,6 +131,8 @@
     </summary>
     
     
+      <category term="咖啡" scheme="http://grosad.github.io/categories/%E5%92%96%E5%95%A1/"/>
+    
     
       <category term="日常" scheme="http://grosad.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
     
@@ -137,7 +145,7 @@
     <link href="http://grosad.github.io/2020/06/06/2020-6-6-2/"/>
     <id>http://grosad.github.io/2020/06/06/2020-6-6-2/</id>
     <published>2020-06-06T09:13:05.000Z</published>
-    <updated>2020-06-07T14:33:24.861Z</updated>
+    <updated>2020-06-07T15:22:43.435Z</updated>
     
     <content type="html"><![CDATA[<p>现在可以插入图片了！！<img src="/2020/06/06/2020-6-6-2/1.jpg" alt="1.jpg"> </p><p><img src="https://i.loli.net/2020/06/07/Gq1679La2XwctbM.gif" alt="1.gif"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
     
@@ -151,6 +159,8 @@
     
     </summary>
     
+    
+      <category term="咖啡" scheme="http://grosad.github.io/categories/%E5%92%96%E5%95%A1/"/>
     
     
       <category term="日常" scheme="http://grosad.github.io/tags/%E6%97%A5%E5%B8%B8/"/>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://grosad.github.io/"/>
-  <updated>2020-06-08T16:27:56.838Z</updated>
+  <updated>2020-06-08T16:24:59.534Z</updated>
   <id>http://grosad.github.io/</id>
   
   <author>
@@ -15,35 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>FTP笑脸漏洞</title>
-    <link href="http://grosad.github.io/2020/06/09/test/"/>
-    <id>http://grosad.github.io/2020/06/09/test/</id>
-    <published>2020-06-08T16:24:00.000Z</published>
-    <updated>2020-06-08T16:27:56.838Z</updated>
-    
-    <content type="html"><![CDATA[<p>哈皮玩意你还想找漏洞？</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;哈皮玩意你还想找漏洞？&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="咖啡" scheme="http://grosad.github.io/categories/%E5%92%96%E5%95%A1/"/>
-    
-    
-      <category term="日常" scheme="http://grosad.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
-    
-      <category term="调试" scheme="http://grosad.github.io/tags/%E8%B0%83%E8%AF%95/"/>
-    
-  </entry>
   
   <entry>
     <title>Hexo调试-7</title>

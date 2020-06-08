@@ -506,26 +506,8 @@
                 <p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p>
 <p>对博客的访问速度优化了一下，在预加载的基础上，弄了个懒加载，<code>懒加载</code>就是:一般是当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载,既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。</p>
 <p>接下来，找点好看的图，把那些细节优化一下，弄完之后，Hexo差不多就调试完毕了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt=""></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt></p>
+
             </div>
             <hr/>
 
@@ -861,7 +843,6 @@
 还有一部分时间，调试了下右下角的这个玩意儿，选来选去，还是用现在这个好了
 左下角还有个播放音乐的功能，觉得还挺不错
 
-    
                         
                     </div>
                     <div class="publish-info">

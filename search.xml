@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo调试-1</title>
-    <url>/2020/06/06/2020-6-6/</url>
-    <content><![CDATA[<p>Hexo基本搭建完成</p>
+    <title>Hexo调试-2</title>
+    <url>/2020/06/06/2020-6-6-2/</url>
+    <content><![CDATA[<p>现在可以插入图片了！！<img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/c.gif" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1.gif" alt></p>
 ]]></content>
       <categories>
         <category>调试</category>
@@ -14,10 +15,110 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-2</title>
-    <url>/2020/06/06/2020-6-6-2/</url>
-    <content><![CDATA[<p>现在可以插入图片了！！<img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/c.gif" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1.gif" alt></p>
+    <title>四层主机发现</title>
+    <url>/2020/06/25/2020-6-25/</url>
+    <content><![CDATA[<blockquote>
+<p>这里稍稍总结一下局域网内的主机发现方法</p>
+<p>渗透机：Kali Linux 2019.3版</p>
+</blockquote>
+<h1 id="主机发现"><a href="#主机发现" class="headerlink" title="主机发现"></a>主机发现</h1><blockquote>
+<p>ISO七层模型，是国际标准化组织（ISO）制定的一个用于计算机或通信系统间互联的标准体系，一般称为OSI参考模型或七层模型。</p>
+</blockquote>
+<h2 id="二层主机发现"><a href="#二层主机发现" class="headerlink" title="二层主机发现"></a>二层主机发现</h2><p>利用 了ISO中链路层中的协议进行主机发现，一般使用<strong>ARP协议</strong></p>
+<p>由于是利用MAC地址作为对应的识别地址</p>
+<p><strong>优点</strong></p>
+<ol>
+<li>速度快</li>
+<li>可靠性高</li>
+</ol>
+<p><strong>缺点</strong></p>
+<ol>
+<li>无法扫描经过路由的主机</li>
+</ol>
+<h4 id="二层发现-arping工具"><a href="#二层发现-arping工具" class="headerlink" title="二层发现-arping工具"></a><strong>二层发现-arping工具</strong></h4><p>Kali下自带的arping工具可以进行对应的二层主机发现</p>
+<p><strong>缺点：无法多个主机同时扫描</strong></p>
+<blockquote>
+<p>arping 目标ip</p>
+<p>这里的 -c 参数可指定发送的ping包数量</p>
+<p>若不指定会持续ping 需人工暂停</p>
+<p>arping -help 可查看帮助文档</p>
+</blockquote>
+<p><strong><em>几乎所有工具都能使用help参数查看帮助文档，后续不再赘述</em></strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-71.png" alt></p>
+<h4 id="二层发现-netdiscover工具"><a href="#二层发现-netdiscover工具" class="headerlink" title="二层发现-netdiscover工具"></a>二层发现-netdiscover工具</h4><p>netdiscover工具可以针对特定子网进行<strong>多主机</strong>扫描</p>
+<blockquote>
+<p>netdiscover -r 192.168.1.1/24</p>
+<p>扫描192.168.1.0网段</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-72.png" alt></p>
+<h2 id="三层主机发现"><a href="#三层主机发现" class="headerlink" title="三层主机发现"></a>三层主机发现</h2><p>利用了ISO中网络中的协议进行主机发现，一般使用<strong>ICMP协议</strong></p>
+<p><strong>优点</strong></p>
+<ol>
+<li>可以发现远程主机，经过路由的主机</li>
+<li>速度相对比较快</li>
+</ol>
+<p><strong>缺点</strong></p>
+<ol>
+<li>数据包经常被防火墙过滤</li>
+<li>速度比二层发现要慢</li>
+</ol>
+<h4 id="三层发现-ping工具"><a href="#三层发现-ping工具" class="headerlink" title="三层发现-ping工具"></a>三层发现-ping工具</h4><blockquote>
+<p>ping 目标ip</p>
+<p>ping工具在Linux和Windows都有自带</p>
+<p>Linux下如果不使用-C参数，将会一直扫描</p>
+<p>windows默认四次探测</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-73.png" alt></p>
+<h4 id="三层发现-fping工具"><a href="#三层发现-fping工具" class="headerlink" title="三层发现-fping工具"></a>三层发现-fping工具</h4><p>fping可针对多个主机同时进行扫描</p>
+<blockquote>
+<p>fping -g 192.168.1.1/24</p>
+<p>扫描192.168.1.0网段</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-74.png" alt></p>
+<h4 id="三层发现-hping3工具"><a href="#三层发现-hping3工具" class="headerlink" title="三层发现-hping3工具"></a>三层发现-hping3工具</h4><p><strong><em>特点：可发送自定义ICMP数据包来绕过防火墙</em></strong></p>
+<blockquote>
+<p>示例：</p>
+<p>hping3 -c 3 -1 192.168.0.103 –icmpcode 1</p>
+<p>自定义ICMP包可在help中查看帮助文档</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-75.png" alt></p>
+<h2 id="四层主机发现"><a href="#四层主机发现" class="headerlink" title="四层主机发现"></a>四层主机发现</h2><p>利用了ISO中的传输层协议进行主机发现，<strong>一般使用TCP、UDP探测</strong></p>
+<p><strong>优点</strong></p>
+<ol>
+<li>可以探测远程主机</li>
+<li>比三层发现更靠谱</li>
+</ol>
+<p><strong>缺点</strong></p>
+<ol>
+<li>花费时间较长</li>
+</ol>
+<h4 id="四层发现-nmap工具"><a href="#四层发现-nmap工具" class="headerlink" title="四层发现-nmap工具"></a>四层发现-nmap工具</h4><blockquote>
+<p>nmap可以进行二、三、四层的探测</p>
+</blockquote>
+<blockquote>
+<p>nmap 目标IP</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-76.png" alt></p>
+<h4 id="四层发现-hping3工具"><a href="#四层发现-hping3工具" class="headerlink" title="四层发现-hping3工具"></a>四层发现-hping3工具</h4><blockquote>
+<p>hping3 –udp -c 3 192.168.0.103</p>
+<p>这里原理如同hping3，指定UDP探测</p>
+<p>（这里需要结合多层探测，不再赘述）</p>
+</blockquote>
+<h2 id="主机发现-Python脚本"><a href="#主机发现-Python脚本" class="headerlink" title="主机发现-Python脚本"></a>主机发现-Python脚本</h2><p>可在github上寻找相关资源</p>
+<p>由于各类脚本繁杂，这里不作推荐</p>
+]]></content>
+      <categories>
+        <category>网络空间安全</category>
+      </categories>
+      <tags>
+        <tag>网络空间安全</tag>
+        <tag>收录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo调试-1</title>
+    <url>/2020/06/06/2020-6-6/</url>
+    <content><![CDATA[<p>Hexo基本搭建完成</p>
 ]]></content>
       <categories>
         <category>调试</category>
@@ -41,6 +142,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo调试-5</title>
+    <url>/2020/06/07/2020-6-7-3/</url>
+    <content><![CDATA[<p>又花了几个小时，尝试了一下coding + github 双部署，又觉得coding的使用效果强差人意，还是罢了<br>还有一部分时间，调试了下右下角的这个玩意儿，选来选去，还是用现在这个好了<br>左下角还有个播放音乐的功能，我觉得还挺不错</p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo调试-3</title>
     <url>/2020/06/07/2020-6-7/</url>
     <content><![CDATA[<p>换了个NexT主题<br>挑了一个比较满意的主题风格<br>忙活了几个小时<br>已经1点了<br>是时候休息了呀</p>
@@ -54,9 +168,12 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-5</title>
-    <url>/2020/06/07/2020-6-7-3/</url>
-    <content><![CDATA[<p>又花了几个小时，尝试了一下coding + github 双部署，又觉得coding的使用效果强差人意，还是罢了<br>还有一部分时间，调试了下右下角的这个玩意儿，选来选去，还是用现在这个好了<br>左下角还有个播放音乐的功能，我觉得还挺不错</p>
+    <title>Hexo调试-6</title>
+    <url>/2020/06/08/2020-6-8/</url>
+    <content><![CDATA[<p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p>
+<p>对博客的访问速度优化了一下，在预加载的基础上，弄了个懒加载，<code>懒加载</code>就是:一般是当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载,既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。</p>
+<p>接下来，找点好看的图，把那些细节优化一下，弄完之后，Hexo差不多就调试完毕了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt></p>
 ]]></content>
       <categories>
         <category>调试</category>
@@ -79,6 +196,70 @@
       <tags>
         <tag>日常</tag>
         <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux中关于文件权限</title>
+    <url>/2020/06/25/Linux-1/</url>
+    <content><![CDATA[<blockquote>
+<p> 这里归类一下Linux下的文件权限类型</p>
+<p>方便新手查看</p>
+</blockquote>
+<p>首先，在查看目录下输入</p>
+<blockquote>
+<p>ls -alh</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-81.png" alt></p>
+<p>这里拿a.out文件举例</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-82.png" alt></p>
+<blockquote>
+<p>这里分别对应的是：<strong>文件权限   文件数量  用户  文件大小  创建日期  文件名</strong> </p>
+<p>a.out中，1代表文件数量为1个，创建\权限用户为root用户，大小为17kb</p>
+<p>创建日期为6月25日14:13  文件名为a.out</p>
+</blockquote>
+<p>而开头的代码表意为<strong>文件权限</strong>  我们把它分为<strong>四等份</strong>查看</p>
+<hr>
+<pre><code>-rwxr-xr-x
+-   rwx   r-x   r-x</code></pre><hr>
+<p>这四等份从左至右代表的一样分别是：</p>
+<p><strong>文件类型    当前用户权限   所属组用户权限   其他用户权限</strong></p>
+<p>文件类型：</p>
+<p>l（快捷方式）d（目录）c（设备）b（块设备） - (其他类型）</p>
+<blockquote>
+<p> 图中的（..）和（.）的文件类型都是d（即目录）</p>
+</blockquote>
+<p><strong>关于用户权限</strong></p>
+<hr>
+<p>r：读取权限</p>
+<p>w：写入权限</p>
+<p>x：执行权限</p>
+<hr>
+<p>注意：<strong>文件权限的排版是按rwx规定格式排版</strong></p>
+<p>所以不会出现rxw xwr之类的情况</p>
+<p>例如这里</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-82.png" alt></p>
+<p>文件a.out当前用户具有<strong>rwx</strong>权限（即读、写、执行权限）</p>
+<p><strong>所属用户组</strong>却只有<strong>r-x</strong>权限（即读、执行权限）</p>
+<p>由于<strong>w权限</strong>所在的位置是 <strong>（ - ）</strong> 所以所属用户组没有<strong>写入权限</strong> </p>
+<blockquote>
+<p>Kali中拥有执行权限的文件名会变成绿色</p>
+<p>但颜色并不一定代表文件权限，请勿混淆</p>
+</blockquote>
+<p>这里的a.out拥有x权限，所以可以尝试运行</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-83.png" alt></p>
+<h4 id="这个时候有人会问了，如果写的程序没有执行权限该怎么办？"><a href="#这个时候有人会问了，如果写的程序没有执行权限该怎么办？" class="headerlink" title="这个时候有人会问了，如果写的程序没有执行权限该怎么办？"></a>这个时候有人会问了，如果写的程序没有执行权限该怎么办？</h4><h2 id><a href="#" class="headerlink" title></a><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-84.png" alt></h2><pre><code>chmod +x 1.py   为1.py文件添加x权限（执行权限）
+chmod -x 1.py   为1.py文件去除x权限（执行权限）</code></pre><hr>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-85.png" alt></p>
+<p>这里就成功运行了！</p>
+<p>再使用ls查看，会发现1.py多出了x权限</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-86.png" alt></p>
+]]></content>
+      <categories>
+        <category>网络空间安全</category>
+      </categories>
+      <tags>
+        <tag>网络空间安全</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -178,22 +359,6 @@
       <tags>
         <tag>网络空间安全</tag>
         <tag>收录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo调试-6</title>
-    <url>/2020/06/08/2020-6-8/</url>
-    <content><![CDATA[<p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p>
-<p>对博客的访问速度优化了一下，在预加载的基础上，弄了个懒加载，<code>懒加载</code>就是:一般是当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载,既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。</p>
-<p>接下来，找点好看的图，把那些细节优化一下，弄完之后，Hexo差不多就调试完毕了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
       </tags>
   </entry>
   <entry>
@@ -320,104 +485,94 @@ apt-get clean            #清理无用的包</code></pre><hr>
       </tags>
   </entry>
   <entry>
-    <title>四层主机发现</title>
-    <url>/2020/06/25/2020-6-25/</url>
-    <content><![CDATA[<blockquote>
-<p>这里稍稍总结一下局域网内的主机发现方法</p>
-<p>渗透机：Kali Linux 2019.3版</p>
+    <title>Vlan划分</title>
+    <url>/2020/06/25/vlan/</url>
+    <content><![CDATA[<h1 id="网络搭建—VLAN"><a href="#网络搭建—VLAN" class="headerlink" title="网络搭建—VLAN"></a>网络搭建—VLAN</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
 </blockquote>
-<h1 id="主机发现"><a href="#主机发现" class="headerlink" title="主机发现"></a>主机发现</h1><blockquote>
-<p>ISO七层模型，是国际标准化组织（ISO）制定的一个用于计算机或通信系统间互联的标准体系，一般称为OSI参考模型或七层模型。</p>
-</blockquote>
-<h2 id="二层主机发现"><a href="#二层主机发现" class="headerlink" title="二层主机发现"></a>二层主机发现</h2><p>利用 了ISO中链路层中的协议进行主机发现，一般使用<strong>ARP协议</strong></p>
-<p>由于是利用MAC地址作为对应的识别地址</p>
-<p><strong>优点</strong></p>
-<ol>
-<li>速度快</li>
-<li>可靠性高</li>
-</ol>
-<p><strong>缺点</strong></p>
-<ol>
-<li>无法扫描经过路由的主机</li>
-</ol>
-<h4 id="二层发现-arping工具"><a href="#二层发现-arping工具" class="headerlink" title="二层发现-arping工具"></a><strong>二层发现-arping工具</strong></h4><p>Kali下自带的arping工具可以进行对应的二层主机发现</p>
-<p><strong>缺点：无法多个主机同时扫描</strong></p>
-<blockquote>
-<p>arping 目标ip</p>
-<p>这里的 -c 参数可指定发送的ping包数量</p>
-<p>若不指定会持续ping 需人工暂停</p>
-<p>arping -help 可查看帮助文档</p>
-</blockquote>
-<p><strong><em>几乎所有工具都能使用help参数查看帮助文档，后续不再赘述</em></strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-71.png" alt></p>
-<h4 id="二层发现-netdiscover工具"><a href="#二层发现-netdiscover工具" class="headerlink" title="二层发现-netdiscover工具"></a>二层发现-netdiscover工具</h4><p>netdiscover工具可以针对特定子网进行<strong>多主机</strong>扫描</p>
-<blockquote>
-<p>netdiscover -r 192.168.1.1/24</p>
-<p>扫描192.168.1.0网段</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-72.png" alt></p>
-<h2 id="三层主机发现"><a href="#三层主机发现" class="headerlink" title="三层主机发现"></a>三层主机发现</h2><p>利用了ISO中网络中的协议进行主机发现，一般使用<strong>ICMP协议</strong></p>
-<p><strong>优点</strong></p>
-<ol>
-<li>可以发现远程主机，经过路由的主机</li>
-<li>速度相对比较快</li>
-</ol>
-<p><strong>缺点</strong></p>
-<ol>
-<li>数据包经常被防火墙过滤</li>
-<li>速度比二层发现要慢</li>
-</ol>
-<h4 id="三层发现-ping工具"><a href="#三层发现-ping工具" class="headerlink" title="三层发现-ping工具"></a>三层发现-ping工具</h4><blockquote>
-<p>ping 目标ip</p>
-<p>ping工具在Linux和Windows都有自带</p>
-<p>Linux下如果不使用-C参数，将会一直扫描</p>
-<p>windows默认四次探测</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-73.png" alt></p>
-<h4 id="三层发现-fping工具"><a href="#三层发现-fping工具" class="headerlink" title="三层发现-fping工具"></a>三层发现-fping工具</h4><p>fping可针对多个主机同时进行扫描</p>
-<blockquote>
-<p>fping -g 192.168.1.1/24</p>
-<p>扫描192.168.1.0网段</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-74.png" alt></p>
-<h4 id="三层发现-hping3工具"><a href="#三层发现-hping3工具" class="headerlink" title="三层发现-hping3工具"></a>三层发现-hping3工具</h4><p><strong><em>特点：可发送自定义ICMP数据包来绕过防火墙</em></strong></p>
-<blockquote>
-<p>示例：</p>
-<p>hping3 -c 3 -1 192.168.0.103 –icmpcode 1</p>
-<p>自定义ICMP包可在help中查看帮助文档</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-75.png" alt></p>
-<h2 id="四层主机发现"><a href="#四层主机发现" class="headerlink" title="四层主机发现"></a>四层主机发现</h2><p>利用了ISO中的传输层协议进行主机发现，<strong>一般使用TCP、UDP探测</strong></p>
-<p><strong>优点</strong></p>
-<ol>
-<li>可以探测远程主机</li>
-<li>比三层发现更靠谱</li>
-</ol>
-<p><strong>缺点</strong></p>
-<ol>
-<li>花费时间较长</li>
-</ol>
-<h4 id="四层发现-nmap工具"><a href="#四层发现-nmap工具" class="headerlink" title="四层发现-nmap工具"></a>四层发现-nmap工具</h4><blockquote>
-<p>nmap可以进行二、三、四层的探测</p>
-</blockquote>
-<blockquote>
-<p>nmap 目标IP</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-76.png" alt></p>
-<h4 id="四层发现-hping3工具"><a href="#四层发现-hping3工具" class="headerlink" title="四层发现-hping3工具"></a>四层发现-hping3工具</h4><blockquote>
-<p>hping3 –udp -c 3 192.168.0.103</p>
-<p>这里原理如同hping3，指定UDP探测</p>
-<p>（这里需要结合多层探测，不再赘述）</p>
-</blockquote>
-<h2 id="主机发现-Python脚本"><a href="#主机发现-Python脚本" class="headerlink" title="主机发现-Python脚本"></a>主机发现-Python脚本</h2><p>可在github上寻找相关资源</p>
-<p>由于各类脚本繁杂，这里不作推荐</p>
-]]></content>
+<h2 id="1-VlAN划分"><a href="#1-VlAN划分" class="headerlink" title="1.VlAN划分"></a>1.VlAN划分</h2><h3 id="1-单交换机"><a href="#1-单交换机" class="headerlink" title="(1)单交换机"></a>(1)单交换机</h3><h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/i-1.png" alt></p>
+<h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><pre><code>en
+config
+int f0/1
+sw acc vlan 10
+int f0/2
+sw acc vlan 20
+int f0/3
+sw acc vlan 30
+end</code></pre><h3 id="2-双交换机"><a href="#2-双交换机" class="headerlink" title="(2)双交换机"></a>(2)双交换机</h3><h4 id="拓扑"><a href="#拓扑" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/i2.png" alt></p>
+<h4 id="指令-1"><a href="#指令-1" class="headerlink" title="指令"></a>指令</h4><p>SW 1</p>
+<pre><code>en
+config
+int f0/1
+sw acc vlan 10
+int f0/2
+sw acc vlan 20
+int f0/24
+sw mode trunk
+sw trunk all vlan all
+end</code></pre><p>SW 2</p>
+<pre><code>en
+config
+int f0/1
+sw acc vlan 10
+int f0/2
+sw acc vlan 20
+int f0/24
+sw mode trunk
+sw trunk all vlan all
+end</code></pre><h2 id="2-Vlan间通信"><a href="#2-Vlan间通信" class="headerlink" title="2.Vlan间通信"></a>2.Vlan间通信</h2><h3 id="1-SVI"><a href="#1-SVI" class="headerlink" title="(1)SVI"></a>(1)SVI</h3><h4 id="拓扑-1"><a href="#拓扑-1" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/ttt.PNG" alt></p>
+<h4 id="指令-2"><a href="#指令-2" class="headerlink" title="指令"></a>指令</h4><pre><code>en
+config
+int vlan 10
+ip add 192.168.1.254 255.255.255.0
+int vlan 20
+ip add 192.168.2.254 255.255.255.0
+exit
+int f0/1
+sw trunk encapsulation dot1q
+sw mode trunk
+ip routing
+end</code></pre><p>二层</p>
+<pre><code>en
+config
+int f0/1
+sw mode trunk
+sw trunk all vlan all
+int f0/2
+sw acc vlan 10
+int f0/4
+sw acc vlan 20</code></pre><h3 id="2-单臂路由"><a href="#2-单臂路由" class="headerlink" title="(2)单臂路由"></a>(2)单臂路由</h3><h4 id="拓扑-2"><a href="#拓扑-2" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/ccc.PNG" alt></p>
+<h4 id="指令-3"><a href="#指令-3" class="headerlink" title="指令"></a>指令</h4><p>路由</p>
+<pre><code>en 
+config
+int f0/0.1 
+en dot1q 10
+ip add 192.168.1.254 255.255.255.0
+no shutdown 
+int f0/0.2
+en dot1q 20
+ip add 192.168.2.254 255.255.255.0
+no shutdown
+exit 
+int f0/0
+ip routing
+no shutdown
+end</code></pre><p>二层</p>
+<pre><code>en
+config
+int f0/1
+sw mode trunk
+sw trunk all vlan all
+int f0/2
+sw acc vlan 10
+int f0/3
+sw acc vlan 20</code></pre>]]></content>
       <categories>
-        <category>网络空间安全</category>
+        <category>网络搭建</category>
       </categories>
       <tags>
-        <tag>网络空间安全</tag>
         <tag>收录</tag>
+        <tag>网络搭建</tag>
       </tags>
   </entry>
 </search>

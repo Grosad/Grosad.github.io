@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://grosad.github.io/"/>
-  <updated>2020-06-25T06:07:24.991Z</updated>
+  <updated>2020-06-25T08:19:57.755Z</updated>
   <id>http://grosad.github.io/</id>
   
   <author>
@@ -15,6 +15,71 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vlan划分</title>
+    <link href="http://grosad.github.io/2020/06/25/vlan/"/>
+    <id>http://grosad.github.io/2020/06/25/vlan/</id>
+    <published>2020-06-25T06:30:05.000Z</published>
+    <updated>2020-06-25T08:19:57.755Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="网络搭建—VLAN"><a href="#网络搭建—VLAN" class="headerlink" title="网络搭建—VLAN"></a>网络搭建—VLAN</h1><blockquote><p>实验平台: Cisco Packet Tracer 7.3.0</p></blockquote><h2 id="1-VlAN划分"><a href="#1-VlAN划分" class="headerlink" title="1.VlAN划分"></a>1.VlAN划分</h2><h3 id="1-单交换机"><a href="#1-单交换机" class="headerlink" title="(1)单交换机"></a>(1)单交换机</h3><h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/i-1.png" alt></p><h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><pre><code>enconfigint f0/1sw acc vlan 10int f0/2sw acc vlan 20int f0/3sw acc vlan 30end</code></pre><h3 id="2-双交换机"><a href="#2-双交换机" class="headerlink" title="(2)双交换机"></a>(2)双交换机</h3><h4 id="拓扑"><a href="#拓扑" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/i2.png" alt></p><h4 id="指令-1"><a href="#指令-1" class="headerlink" title="指令"></a>指令</h4><p>SW 1</p><pre><code>enconfigint f0/1sw acc vlan 10int f0/2sw acc vlan 20int f0/24sw mode trunksw trunk all vlan allend</code></pre><p>SW 2</p><pre><code>enconfigint f0/1sw acc vlan 10int f0/2sw acc vlan 20int f0/24sw mode trunksw trunk all vlan allend</code></pre><h2 id="2-Vlan间通信"><a href="#2-Vlan间通信" class="headerlink" title="2.Vlan间通信"></a>2.Vlan间通信</h2><h3 id="1-SVI"><a href="#1-SVI" class="headerlink" title="(1)SVI"></a>(1)SVI</h3><h4 id="拓扑-1"><a href="#拓扑-1" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/ttt.PNG" alt></p><h4 id="指令-2"><a href="#指令-2" class="headerlink" title="指令"></a>指令</h4><pre><code>enconfigint vlan 10ip add 192.168.1.254 255.255.255.0int vlan 20ip add 192.168.2.254 255.255.255.0exitint f0/1sw trunk encapsulation dot1qsw mode trunkip routingend</code></pre><p>二层</p><pre><code>enconfigint f0/1sw mode trunksw trunk all vlan allint f0/2sw acc vlan 10int f0/4sw acc vlan 20</code></pre><h3 id="2-单臂路由"><a href="#2-单臂路由" class="headerlink" title="(2)单臂路由"></a>(2)单臂路由</h3><h4 id="拓扑-2"><a href="#拓扑-2" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/ccc.PNG" alt></p><h4 id="指令-3"><a href="#指令-3" class="headerlink" title="指令"></a>指令</h4><p>路由</p><pre><code>en configint f0/0.1 en dot1q 10ip add 192.168.1.254 255.255.255.0no shutdown int f0/0.2en dot1q 20ip add 192.168.2.254 255.255.255.0no shutdownexit int f0/0ip routingno shutdownend</code></pre><p>二层</p><pre><code>enconfigint f0/1sw mode trunksw trunk all vlan allint f0/2sw acc vlan 10int f0/3sw acc vlan 20</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;网络搭建—VLAN&quot;&gt;&lt;a href=&quot;#网络搭建—VLAN&quot; class=&quot;headerlink&quot; title=&quot;网络搭建—VLAN&quot;&gt;&lt;/a&gt;网络搭建—VLAN&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;实验平台: Cisco Packet Tracer 7.3
+      
+    
+    </summary>
+    
+    
+      <category term="网络搭建" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
+    
+      <category term="网络搭建" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux中关于文件权限</title>
+    <link href="http://grosad.github.io/2020/06/25/Linux-1/"/>
+    <id>http://grosad.github.io/2020/06/25/Linux-1/</id>
+    <published>2020-06-25T05:47:08.000Z</published>
+    <updated>2020-06-25T07:08:00.447Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p> 这里归类一下Linux下的文件权限类型</p><p>方便新手查看</p></blockquote><p>首先，在查看目录下输入</p><blockquote><p>ls -alh</p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-81.png" alt></p><p>这里拿a.out文件举例</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-82.png" alt></p><blockquote><p>这里分别对应的是：<strong>文件权限   文件数量  用户  文件大小  创建日期  文件名</strong> </p><p>a.out中，1代表文件数量为1个，创建\权限用户为root用户，大小为17kb</p><p>创建日期为6月25日14:13  文件名为a.out</p></blockquote><p>而开头的代码表意为<strong>文件权限</strong>  我们把它分为<strong>四等份</strong>查看</p><hr><pre><code>-rwxr-xr-x-   rwx   r-x   r-x</code></pre><hr><p>这四等份从左至右代表的一样分别是：</p><p><strong>文件类型    当前用户权限   所属组用户权限   其他用户权限</strong></p><p>文件类型：</p><p>l（快捷方式）d（目录）c（设备）b（块设备） - (其他类型）</p><blockquote><p> 图中的（..）和（.）的文件类型都是d（即目录）</p></blockquote><p><strong>关于用户权限</strong></p><hr><p>r：读取权限</p><p>w：写入权限</p><p>x：执行权限</p><hr><p>注意：<strong>文件权限的排版是按rwx规定格式排版</strong></p><p>所以不会出现rxw xwr之类的情况</p><p>例如这里</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-82.png" alt></p><p>文件a.out当前用户具有<strong>rwx</strong>权限（即读、写、执行权限）</p><p><strong>所属用户组</strong>却只有<strong>r-x</strong>权限（即读、执行权限）</p><p>由于<strong>w权限</strong>所在的位置是 <strong>（ - ）</strong> 所以所属用户组没有<strong>写入权限</strong> </p><blockquote><p>Kali中拥有执行权限的文件名会变成绿色</p><p>但颜色并不一定代表文件权限，请勿混淆</p></blockquote><p>这里的a.out拥有x权限，所以可以尝试运行</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-83.png" alt></p><h4 id="这个时候有人会问了，如果写的程序没有执行权限该怎么办？"><a href="#这个时候有人会问了，如果写的程序没有执行权限该怎么办？" class="headerlink" title="这个时候有人会问了，如果写的程序没有执行权限该怎么办？"></a>这个时候有人会问了，如果写的程序没有执行权限该怎么办？</h4><h2 id><a href="#" class="headerlink" title></a><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-84.png" alt></h2><pre><code>chmod +x 1.py   为1.py文件添加x权限（执行权限）chmod -x 1.py   为1.py文件去除x权限（执行权限）</code></pre><hr><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-85.png" alt></p><p>这里就成功运行了！</p><p>再使用ls查看，会发现1.py多出了x权限</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-86.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt; 这里归类一下Linux下的文件权限类型&lt;/p&gt;
+&lt;p&gt;方便新手查看&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;首先，在查看目录下输入&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ls -alh&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img sr
+      
+    
+    </summary>
+    
+    
+      <category term="网络空间安全" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="网络空间安全" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="教程" scheme="http://grosad.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>四层主机发现</title>

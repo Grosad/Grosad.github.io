@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://grosad.github.io/"/>
-  <updated>2020-06-25T04:32:08.819Z</updated>
+  <updated>2020-06-25T06:07:24.991Z</updated>
   <id>http://grosad.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>四层主机发现</title>
+    <link href="http://grosad.github.io/2020/06/25/2020-6-25/"/>
+    <id>http://grosad.github.io/2020/06/25/2020-6-25/</id>
+    <published>2020-06-25T04:43:41.000Z</published>
+    <updated>2020-06-25T06:07:24.991Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>这里稍稍总结一下局域网内的主机发现方法</p><p>渗透机：Kali Linux 2019.3版</p></blockquote><h1 id="主机发现"><a href="#主机发现" class="headerlink" title="主机发现"></a>主机发现</h1><blockquote><p>ISO七层模型，是国际标准化组织（ISO）制定的一个用于计算机或通信系统间互联的标准体系，一般称为OSI参考模型或七层模型。</p></blockquote><h2 id="二层主机发现"><a href="#二层主机发现" class="headerlink" title="二层主机发现"></a>二层主机发现</h2><p>利用 了ISO中链路层中的协议进行主机发现，一般使用<strong>ARP协议</strong></p><p>由于是利用MAC地址作为对应的识别地址</p><p><strong>优点</strong></p><ol><li>速度快</li><li>可靠性高</li></ol><p><strong>缺点</strong></p><ol><li>无法扫描经过路由的主机</li></ol><h4 id="二层发现-arping工具"><a href="#二层发现-arping工具" class="headerlink" title="二层发现-arping工具"></a><strong>二层发现-arping工具</strong></h4><p>Kali下自带的arping工具可以进行对应的二层主机发现</p><p><strong>缺点：无法多个主机同时扫描</strong></p><blockquote><p>arping 目标ip</p><p>这里的 -c 参数可指定发送的ping包数量</p><p>若不指定会持续ping 需人工暂停</p><p>arping -help 可查看帮助文档</p></blockquote><p><strong><em>几乎所有工具都能使用help参数查看帮助文档，后续不再赘述</em></strong></p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-71.png" alt></p><h4 id="二层发现-netdiscover工具"><a href="#二层发现-netdiscover工具" class="headerlink" title="二层发现-netdiscover工具"></a>二层发现-netdiscover工具</h4><p>netdiscover工具可以针对特定子网进行<strong>多主机</strong>扫描</p><blockquote><p>netdiscover -r 192.168.1.1/24</p><p>扫描192.168.1.0网段</p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-72.png" alt></p><h2 id="三层主机发现"><a href="#三层主机发现" class="headerlink" title="三层主机发现"></a>三层主机发现</h2><p>利用了ISO中网络中的协议进行主机发现，一般使用<strong>ICMP协议</strong></p><p><strong>优点</strong></p><ol><li>可以发现远程主机，经过路由的主机</li><li>速度相对比较快</li></ol><p><strong>缺点</strong></p><ol><li>数据包经常被防火墙过滤</li><li>速度比二层发现要慢</li></ol><h4 id="三层发现-ping工具"><a href="#三层发现-ping工具" class="headerlink" title="三层发现-ping工具"></a>三层发现-ping工具</h4><blockquote><p>ping 目标ip</p><p>ping工具在Linux和Windows都有自带</p><p>Linux下如果不使用-C参数，将会一直扫描</p><p>windows默认四次探测</p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-73.png" alt></p><h4 id="三层发现-fping工具"><a href="#三层发现-fping工具" class="headerlink" title="三层发现-fping工具"></a>三层发现-fping工具</h4><p>fping可针对多个主机同时进行扫描</p><blockquote><p>fping -g 192.168.1.1/24</p><p>扫描192.168.1.0网段</p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-74.png" alt></p><h4 id="三层发现-hping3工具"><a href="#三层发现-hping3工具" class="headerlink" title="三层发现-hping3工具"></a>三层发现-hping3工具</h4><p><strong><em>特点：可发送自定义ICMP数据包来绕过防火墙</em></strong></p><blockquote><p>示例：</p><p>hping3 -c 3 -1 192.168.0.103 –icmpcode 1</p><p>自定义ICMP包可在help中查看帮助文档</p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-75.png" alt></p><h2 id="四层主机发现"><a href="#四层主机发现" class="headerlink" title="四层主机发现"></a>四层主机发现</h2><p>利用了ISO中的传输层协议进行主机发现，<strong>一般使用TCP、UDP探测</strong></p><p><strong>优点</strong></p><ol><li>可以探测远程主机</li><li>比三层发现更靠谱</li></ol><p><strong>缺点</strong></p><ol><li>花费时间较长</li></ol><h4 id="四层发现-nmap工具"><a href="#四层发现-nmap工具" class="headerlink" title="四层发现-nmap工具"></a>四层发现-nmap工具</h4><blockquote><p>nmap可以进行二、三、四层的探测</p></blockquote><blockquote><p>nmap 目标IP</p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-76.png" alt></p><h4 id="四层发现-hping3工具"><a href="#四层发现-hping3工具" class="headerlink" title="四层发现-hping3工具"></a>四层发现-hping3工具</h4><blockquote><p>hping3 –udp -c 3 192.168.0.103</p><p>这里原理如同hping3，指定UDP探测</p><p>（这里需要结合多层探测，不再赘述）</p></blockquote><h2 id="主机发现-Python脚本"><a href="#主机发现-Python脚本" class="headerlink" title="主机发现-Python脚本"></a>主机发现-Python脚本</h2><p>可在github上寻找相关资源</p><p>由于各类脚本繁杂，这里不作推荐</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;这里稍稍总结一下局域网内的主机发现方法&lt;/p&gt;
+&lt;p&gt;渗透机：Kali Linux 2019.3版&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;主机发现&quot;&gt;&lt;a href=&quot;#主机发现&quot; class=&quot;headerlink&quot; title=&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="网络空间安全" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="网络空间安全" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>FTP服务漏洞利用</title>

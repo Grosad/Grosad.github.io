@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="FTP服务漏洞利用, share;diary; experience;">
+    <meta name="keywords" content="四层主机发现, share;diary; experience;">
     <meta name="description" content="the world&#39;s full of lonely people afraid to make the first move.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>FTP服务漏洞利用 | Grosad-BLOG</title>
+    <title>四层主机发现 | Grosad-BLOG</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/libs/awesome/css/all.css">
@@ -331,12 +331,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Grosad/p/image/1-62.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Grosad/p/image/1-77.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">FTP服务漏洞利用</h1>
+                    <h1 class="description center-align post-title">四层主机发现</h1>
                 </div>
             </div>
         </div>
@@ -503,93 +503,95 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="关于FTP服务的常见漏洞"><a href="#关于FTP服务的常见漏洞" class="headerlink" title="关于FTP服务的常见漏洞"></a>关于FTP服务的常见漏洞</h1><h2 id="1-FTP匿名登录微笑漏洞"><a href="#1-FTP匿名登录微笑漏洞" class="headerlink" title="1.FTP匿名登录微笑漏洞"></a>1.FTP匿名登录微笑漏洞</h2><p>靶机metasploitable2-Linux VSFTPD v2.3.4版本</p>
-<p>渗透机 Kali Linux 2019.3版本</p>
-<p><strong>触发条件：服务允许匿名登录</strong></p>
-<ol>
-<li><strong>首先使用扫描工具对21端口（ftp默认开放于21端口）进行扫描，检测其开放性。</strong></li>
-</ol>
-<p>这里使用<strong>nmap工具</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-51.png" alt></p>
-<p>该端口处于open（开放）状态</p>
-<p>小提示：如果使用扫描工具扫描6200端口（即漏洞触发端口）会显示端口关闭</p>
-<p>虽然是关闭状态，但是不会影响漏洞触发，所以不必担心</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-63.png" alt></p>
-<ol start="2">
-<li><strong>使用nc命令连接FTP服务器</strong></li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-53.png" alt></p>
-<p>在空命令行里输入：</p>
-<p><strong>user anonymous</strong>（使用匿名账户进行登录）<strong>若回显参数为331</strong>，则输入成功</p>
-<p>然后接着输入</p>
-<p><strong>pass pass</strong>（输入密码)由于是匿名登录，pass可以随便打，<strong>若回显参数为230</strong>，则输入成功</p>
-<p>接着可以使用<strong>help命令测试</strong>，登录成功！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-54.png" alt></p>
-<p>测试完毕匿名登录的可用性之后，开始利用漏洞</p>
-<ol start="3">
-<li><p><strong>触发微笑漏洞</strong></p>
-<p>使用nc命令连接目标21端口</p>
-<p>命令行输入：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-55.png" alt></p>
-<p>这里的user用户名可以随便输入，<strong>但是必须包含   :)    字符</strong></p>
-<p>密码也能随便输入，这一步是触发位于6200端口的漏洞</p>
-<p>这里输入help的话是不会回显参数的，这一步登录仅触发漏洞，并无登录意图</p>
-<p><strong>（因包含的字符是 :) 横着看像一个笑脸，所以被誉为FTP笑脸漏洞）</strong></p>
-<ol start="4">
-<li><p><strong>连接端口，漏洞利用</strong></p>
-<p>使用nc连接6200漏洞端口</p>
-<p>输入id命令，可以看到已经获取的root权限了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-56.png" alt></p>
-<h3 id="防御方法！"><a href="#防御方法！" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
-<ol>
-<li>FTP服务禁止匿名登录</li>
-<li>可打上相关的漏洞补丁</li>
-<li>设置防火墙禁止后门6200端口</li>
-</ol>
+                <blockquote>
+<p>这里稍稍总结一下局域网内的主机发现方法</p>
+<p>渗透机：Kali Linux 2019.3版</p>
 </blockquote>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="2-FTP暴力破解"><a href="#2-FTP暴力破解" class="headerlink" title="2.FTP暴力破解"></a>2.FTP暴力破解</h2><p><strong>Kali内集成有很多密码破解工具，这里用medusa举例</strong></p>
-<p>medusa -h 目标IP -u 用户名 -P 字典 -M FTP</p>
-<p>参数-U大写U意为指定用户名字典，小写u指定用户名，-p参数同理，-M指定服务</p>
-<p>可自行编写密码字典，也可以用命令生成（详见其他文章）</p>
-<p>每个密码之间换行就行，这里编写了mm.txt字典</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-57.png" alt></p>
-<p>开始破解，注意这里的字典文件必须使用<strong>绝对路径</strong></p>
-<p>注意，暴力破解的速度取决于<strong>服务器响应速度</strong>和<strong>攻击机处理速度</strong></p>
-<p>所以可以在medusa使用 <strong>-t 和 -r 参数</strong>设置<strong>线程数量</strong>和<strong>重试间隔时间</strong>（默认为3秒）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-58.png" alt></p>
-<p>破解成功！密码为msfadmin，返回了【SUCCESS】（成功！）</p>
-<h3 id="防御方法！-1"><a href="#防御方法！-1" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
-<p>这里以Windows Server 2008 R2为例</p>
-<p>开始 - 管理工具 - 本地安全策略 - 安全设置 - 账户策略 - 账户锁定策略 - 账户锁定阀值</p>
-<p>可设置（___）次无效登录后锁定账户，点击确定后还可设置锁定时间</p>
+<h1 id="主机发现"><a href="#主机发现" class="headerlink" title="主机发现"></a>主机发现</h1><blockquote>
+<p>ISO七层模型，是国际标准化组织（ISO）制定的一个用于计算机或通信系统间互联的标准体系，一般称为OSI参考模型或七层模型。</p>
 </blockquote>
-<h2 id="3-FTP明文验证抓包"><a href="#3-FTP明文验证抓包" class="headerlink" title="3.FTP明文验证抓包"></a>3.FTP明文验证抓包</h2><p>由于<strong>FTP是明文验证/传输</strong>的，所以避免不了网络抓包获取密码</p>
-<p>可以使用<strong>ARP欺骗</strong>（又称断网攻击）进行攻击，网络崩溃后使用<strong>抓包工具</strong>持续抓包</p>
-<p><strong>这里用Wireshark示例</strong></p>
+<h2 id="二层主机发现"><a href="#二层主机发现" class="headerlink" title="二层主机发现"></a>二层主机发现</h2><p>利用 了ISO中链路层中的协议进行主机发现，一般使用<strong>ARP协议</strong></p>
+<p>由于是利用MAC地址作为对应的识别地址</p>
+<p><strong>优点</strong></p>
 <ol>
-<li><strong>进行ARP欺骗攻击</strong></li>
+<li>速度快</li>
+<li>可靠性高</li>
 </ol>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-59.png" alt></p>
+<p><strong>缺点</strong></p>
+<ol>
+<li>无法扫描经过路由的主机</li>
+</ol>
+<h4 id="二层发现-arping工具"><a href="#二层发现-arping工具" class="headerlink" title="二层发现-arping工具"></a><strong>二层发现-arping工具</strong></h4><p>Kali下自带的arping工具可以进行对应的二层主机发现</p>
+<p><strong>缺点：无法多个主机同时扫描</strong></p>
 <blockquote>
-<p>arpspoof -i eth0 -t 192.168.0.103 192.168.0.255</p>
-<p>这里的eth0是本地网卡，注意这里是数字0而不是字母O</p>
-<p>后面第一个IP是目标IP  第二个是本地网关</p>
+<p>arping 目标ip</p>
+<p>这里的 -c 参数可指定发送的ping包数量</p>
+<p>若不指定会持续ping 需人工暂停</p>
+<p>arping -help 可查看帮助文档</p>
 </blockquote>
-<p><strong>开始持续ARP攻击，此时目标网络连接会崩溃，一段时间后关闭ARP欺骗，开启抓包监听</strong></p>
-<p>筛选到涉及相关IP的数据流，找到可疑的数据包</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-60.png" alt></p>
-<p>这里可以直观的看到抓取了明文数据流，劫获了目标的登录名和密码</p>
-<p>当然也可以<strong>右键 - 追踪流 - TCP流</strong>更直观的看到</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-61.png" alt></p>
-<h3 id="防御方法！-2"><a href="#防御方法！-2" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
-<p>使用SFTP等其他密文加密传输服务来代替FTP</p>
+<p><strong><em>几乎所有工具都能使用help参数查看帮助文档，后续不再赘述</em></strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-71.png" alt></p>
+<h4 id="二层发现-netdiscover工具"><a href="#二层发现-netdiscover工具" class="headerlink" title="二层发现-netdiscover工具"></a>二层发现-netdiscover工具</h4><p>netdiscover工具可以针对特定子网进行<strong>多主机</strong>扫描</p>
+<blockquote>
+<p>netdiscover -r 192.168.1.1/24</p>
+<p>扫描192.168.1.0网段</p>
 </blockquote>
-<h2 id="4-反弹shell"><a href="#4-反弹shell" class="headerlink" title="4.反弹shell"></a>4.反弹shell</h2><p>这里用setoolkit更适用，sessions可直观查看存在的后门并进行连接</p>
-<p>关于上传木马文件并诱其运行以及防御措施等方法不再赘述</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-72.png" alt></p>
+<h2 id="三层主机发现"><a href="#三层主机发现" class="headerlink" title="三层主机发现"></a>三层主机发现</h2><p>利用了ISO中网络中的协议进行主机发现，一般使用<strong>ICMP协议</strong></p>
+<p><strong>优点</strong></p>
+<ol>
+<li>可以发现远程主机，经过路由的主机</li>
+<li>速度相对比较快</li>
+</ol>
+<p><strong>缺点</strong></p>
+<ol>
+<li>数据包经常被防火墙过滤</li>
+<li>速度比二层发现要慢</li>
+</ol>
+<h4 id="三层发现-ping工具"><a href="#三层发现-ping工具" class="headerlink" title="三层发现-ping工具"></a>三层发现-ping工具</h4><blockquote>
+<p>ping 目标ip</p>
+<p>ping工具在Linux和Windows都有自带</p>
+<p>Linux下如果不使用-C参数，将会一直扫描</p>
+<p>windows默认四次探测</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-73.png" alt></p>
+<h4 id="三层发现-fping工具"><a href="#三层发现-fping工具" class="headerlink" title="三层发现-fping工具"></a>三层发现-fping工具</h4><p>fping可针对多个主机同时进行扫描</p>
+<blockquote>
+<p>fping -g 192.168.1.1/24</p>
+<p>扫描192.168.1.0网段</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-74.png" alt></p>
+<h4 id="三层发现-hping3工具"><a href="#三层发现-hping3工具" class="headerlink" title="三层发现-hping3工具"></a>三层发现-hping3工具</h4><p><strong><em>特点：可发送自定义ICMP数据包来绕过防火墙</em></strong></p>
+<blockquote>
+<p>示例：</p>
+<p>hping3 -c 3 -1 192.168.0.103 –icmpcode 1</p>
+<p>自定义ICMP包可在help中查看帮助文档</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-75.png" alt></p>
+<h2 id="四层主机发现"><a href="#四层主机发现" class="headerlink" title="四层主机发现"></a>四层主机发现</h2><p>利用了ISO中的传输层协议进行主机发现，<strong>一般使用TCP、UDP探测</strong></p>
+<p><strong>优点</strong></p>
+<ol>
+<li>可以探测远程主机</li>
+<li>比三层发现更靠谱</li>
+</ol>
+<p><strong>缺点</strong></p>
+<ol>
+<li>花费时间较长</li>
+</ol>
+<h4 id="四层发现-nmap工具"><a href="#四层发现-nmap工具" class="headerlink" title="四层发现-nmap工具"></a>四层发现-nmap工具</h4><blockquote>
+<p>nmap可以进行二、三、四层的探测</p>
+</blockquote>
+<blockquote>
+<p>nmap 目标IP</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-76.png" alt></p>
+<h4 id="四层发现-hping3工具"><a href="#四层发现-hping3工具" class="headerlink" title="四层发现-hping3工具"></a>四层发现-hping3工具</h4><blockquote>
+<p>hping3 –udp -c 3 192.168.0.103</p>
+<p>这里原理如同hping3，指定UDP探测</p>
+<p>（这里需要结合多层探测，不再赘述）</p>
+</blockquote>
+<h2 id="主机发现-Python脚本"><a href="#主机发现-Python脚本" class="headerlink" title="主机发现-Python脚本"></a>主机发现-Python脚本</h2><p>可在github上寻找相关资源</p>
+<p>由于各类脚本繁杂，这里不作推荐</p>
 
             </div>
             <hr/>
@@ -615,7 +617,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://grosad.github.io/2020/06/25/FTP-Vulnerability/">http://grosad.github.io/2020/06/25/FTP-Vulnerability/</a>
+                    <a href="http://grosad.github.io/2020/06/25/2020-6-25/">http://grosad.github.io/2020/06/25/2020-6-25/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -829,7 +831,7 @@
         repo: 'p',
         owner: 'Grosad',
         admin: "Grosad",
-        id: '2020-06-25T01-40-45',
+        id: '2020-06-25T12-43-41',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -853,9 +855,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/06/25/2020-6-25/">
                     <div class="card-image">
@@ -879,9 +882,9 @@ ISO七层模型，是国际标准化组织（ISO）制定的一个用于计算�
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -894,6 +897,7 @@ ISO七层模型，是国际标准化组织（ISO）制定的一个用于计算�
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -916,35 +920,27 @@ ISO七层模型，是国际标准化组织（ISO）制定的一个用于计算�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/23/kali-install-1/">
+                <a href="/2020/06/25/FTP-Vulnerability/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Grosad/p/image/Kali.jpg" class="responsive-img" alt="kali安装">
+                        <img src="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-62.png" class="responsive-img" alt="FTP服务漏洞利用">
                         
-                        <span class="card-title">kali安装</span>
+                        <span class="card-title">FTP服务漏洞利用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-自从Hexo基本搭建完成后，不知道写些什么，所以咕咕咕了个10几天。想了想，先从网安开始吧，后续再写几篇网络搭建的。
+                            关于FTP服务的常见漏洞1.FTP匿名登录微笑漏洞靶机metasploitable2-Linux VSFTPD v2.3.4版本
+渗透机 Kali Linux 2019.3版本
+触发条件：服务允许匿名登录
 
-Kali安装
-镜像我用的是 2019.3
-VMware 15
-多图警告，可能加载比较慢
-
-
-开始安装
-新建虚拟机
-
-把
+首先使用扫描工具对21端口（ft
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-25
                             </span>
                         <span class="publish-author">
                             
@@ -965,8 +961,8 @@ VMware 15
                         <span class="chip bg-color">网络空间安全</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">教程</span>
+                    <a href="/tags/%E6%94%B6%E5%BD%95/">
+                        <span class="chip bg-color">收录</span>
                     </a>
                     
                 </div>

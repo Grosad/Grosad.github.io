@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>FTP服务漏洞利用</title>
+      <link href="/2020/06/25/FTP-Vulnerability/"/>
+      <url>/2020/06/25/FTP-Vulnerability/</url>
+      
+        <content type="html"><![CDATA[<h1 id="关于FTP服务的常见漏洞"><a href="#关于FTP服务的常见漏洞" class="headerlink" title="关于FTP服务的常见漏洞"></a>关于FTP服务的常见漏洞</h1><h2 id="1-FTP匿名登录微笑漏洞"><a href="#1-FTP匿名登录微笑漏洞" class="headerlink" title="1.FTP匿名登录微笑漏洞"></a>1.FTP匿名登录微笑漏洞</h2><p>靶机metasploitable2-Linux VSFTPD v2.3.4版本</p><p>渗透机 Kali Linux 2019.3版本</p><p><strong>触发条件：服务允许匿名登录</strong></p><ol><li><strong>首先使用扫描工具对21端口（ftp默认开放于21端口）进行扫描，检测其开放性。</strong></li></ol><p>这里使用<strong>nmap工具</strong></p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-51.png" alt></p><p>该端口处于open（开放）状态</p><p>小提示：如果使用扫描工具扫描6200端口（即漏洞触发端口）会显示端口关闭</p><p>虽然是关闭状态，但是不会影响漏洞触发，所以不必担心</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-63.png" alt></p><ol start="2"><li><strong>使用nc命令连接FTP服务器</strong></li></ol><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-53.png" alt></p><p>在空命令行里输入：</p><p><strong>user anonymous</strong>（使用匿名账户进行登录）<strong>若回显参数为331</strong>，则输入成功</p><p>然后接着输入</p><p><strong>pass pass</strong>（输入密码)由于是匿名登录，pass可以随便打，<strong>若回显参数为230</strong>，则输入成功</p><p>接着可以使用<strong>help命令测试</strong>，登录成功！</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-54.png" alt></p><p>测试完毕匿名登录的可用性之后，开始利用漏洞</p><ol start="3"><li><p><strong>触发微笑漏洞</strong></p><p>使用nc命令连接目标21端口</p><p>命令行输入：</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-55.png" alt></p><p>这里的user用户名可以随便输入，<strong>但是必须包含   :)    字符</strong></p><p>密码也能随便输入，这一步是触发位于6200端口的漏洞</p><p>这里输入help的话是不会回显参数的，这一步登录仅触发漏洞，并无登录意图</p><p><strong>（因包含的字符是 :) 横着看像一个笑脸，所以被誉为FTP笑脸漏洞）</strong></p><ol start="4"><li><p><strong>连接端口，漏洞利用</strong></p><p>使用nc连接6200漏洞端口</p><p>输入id命令，可以看到已经获取的root权限了</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-56.png" alt></p><h3 id="防御方法！"><a href="#防御方法！" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote><ol><li>FTP服务禁止匿名登录</li><li>可打上相关的漏洞补丁</li><li>设置防火墙禁止后门6200端口</li></ol></blockquote></li></ol></li></ol><h2 id="2-FTP暴力破解"><a href="#2-FTP暴力破解" class="headerlink" title="2.FTP暴力破解"></a>2.FTP暴力破解</h2><p><strong>Kali内集成有很多密码破解工具，这里用medusa举例</strong></p><p>medusa -h 目标IP -u 用户名 -P 字典 -M FTP</p><p>参数-U大写U意为指定用户名字典，小写p直接用户名，-p参数同理，-M指定服务</p><p>可自行编写密码字典，也可以用命令生成（详见其他文章）</p><p>每个密码之间换行就行，这里编写了mm.txt字典</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-57.png" alt></p><p>开始破解，注意这里的字典文件必须使用<strong>绝对路径</strong></p><p>注意，暴力破解的速度取决于<strong>服务器响应速度</strong>和<strong>攻击机处理速度</strong></p><p>所以可以在medusa使用 <strong>-t 和 -r 参数</strong>设置<strong>线程数量</strong>和<strong>重试间隔时间</strong>（默认为3秒）</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-58.png" alt></p><p>破解成功！密码为msfadmin，返回了【SUCCESS】（成功！）</p><h3 id="防御方法！-1"><a href="#防御方法！-1" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote><p>这里以Windows Server 2008 R2为例</p><p>开始 - 管理工具 - 本地安全策略 - 安全设置 - 账户策略 - 账户锁定策略 - 账户锁定阀值</p><p>可设置（___）次无效登录后锁定账户，点击确定后还可设置锁定时间</p></blockquote><h2 id="3-FTP明文验证抓包"><a href="#3-FTP明文验证抓包" class="headerlink" title="3.FTP明文验证抓包"></a>3.FTP明文验证抓包</h2><p>由于<strong>FTP是明文验证/传输</strong>的，所以避免不了网络抓包获取密码</p><p>可以使用<strong>ARP欺骗</strong>（又称断网攻击）进行攻击，网络崩溃后使用<strong>抓包工具</strong>持续抓包</p><p><strong>这里用Wireshark示例</strong></p><ol><li><strong>进行ARP欺骗攻击</strong></li></ol><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-59.png" alt></p><blockquote><p>arpspoof -i eth0 -t 192.168.0.103 192.168.0.255</p><p>这里的eth0是本地网卡，注意这里是数字0而不是字母O</p><p>后面第一个IP是目标IP  第二个是本地网关</p></blockquote><p><strong>开始持续ARP攻击，此时目标网络连接会崩溃，一段时间后关闭ARP欺骗，开启抓包监听</strong></p><p>筛选到涉及相关IP的数据流，找到可以的数据包</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-60.png" alt></p><p>这里可以直观的看到抓取了明文数据流，劫获了目标的登录名和密码</p><p>当然也可以<strong>右键 - 追踪流 - TCP流</strong>更直观的看到</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-61.png" alt></p><h3 id="防御方法！-2"><a href="#防御方法！-2" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote><p>使用SFTP等其他密文加密传输服务来代替FTP</p></blockquote><h2 id="4-反弹shell"><a href="#4-反弹shell" class="headerlink" title="4.反弹shell"></a>4.反弹shell</h2><p>这里用setoolkit更适用，sessions可直观查看存在的后门并进行连接</p><p>关于上传木马文件并诱其运行以及防御措施等方法不再赘述</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络空间安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络空间安全 </tag>
+            
+            <tag> 收录 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>kali安装</title>
       <link href="/2020/06/23/kali-install-1/"/>
       <url>/2020/06/23/kali-install-1/</url>
@@ -13,14 +40,14 @@
       
       <categories>
           
-          <category> 网安 </category>
+          <category> 网络空间安全 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 网安 </tag>
+            <tag> 网络空间安全 </tag>
             
             <tag> 教程 </tag>
             

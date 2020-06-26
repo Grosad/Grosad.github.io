@@ -15,35 +15,9 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-1</title>
-    <url>/2020/06/06/2020-6-6/</url>
-    <content><![CDATA[<p>Hexo基本搭建完成</p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo调试-4</title>
     <url>/2020/06/07/2020-6-7-2/</url>
     <content><![CDATA[<p>花了将近一下午的时间，换了另外一款主题，优化了一下界面<br>现在的界面没之前那么单调了，看起来挺舒服的，纵享丝滑<br>这个主题还有预加载功能，体验极好<br>得找点图来，自带的这些图不怎么不好看</p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo调试-3</title>
-    <url>/2020/06/07/2020-6-7/</url>
-    <content><![CDATA[<p>换了个NexT主题<br>挑了一个比较满意的主题风格<br>忙活了几个小时<br>已经1点了<br>是时候休息了呀</p>
 ]]></content>
       <categories>
         <category>调试</category>
@@ -67,6 +41,133 @@
       </tags>
   </entry>
   <entry>
+    <title>四层主机发现</title>
+    <url>/2020/06/25/2020-6-25/</url>
+    <content><![CDATA[<blockquote>
+<p>这里稍稍总结一下局域网内的主机发现方法</p>
+<p>渗透机：Kali Linux 2019.3版</p>
+</blockquote>
+<h1 id="主机发现"><a href="#主机发现" class="headerlink" title="主机发现"></a>主机发现</h1><blockquote>
+<p>ISO七层模型，是国际标准化组织（ISO）制定的一个用于计算机或通信系统间互联的标准体系，一般称为OSI参考模型或七层模型。</p>
+</blockquote>
+<h2 id="二层主机发现"><a href="#二层主机发现" class="headerlink" title="二层主机发现"></a>二层主机发现</h2><p>利用 了ISO中链路层中的协议进行主机发现，一般使用<strong>ARP协议</strong></p>
+<p>由于是利用MAC地址作为对应的识别地址</p>
+<p><strong>优点</strong></p>
+<ol>
+<li>速度快</li>
+<li>可靠性高</li>
+</ol>
+<p><strong>缺点</strong></p>
+<ol>
+<li>无法扫描经过路由的主机</li>
+</ol>
+<h4 id="二层发现-arping工具"><a href="#二层发现-arping工具" class="headerlink" title="二层发现-arping工具"></a><strong>二层发现-arping工具</strong></h4><p>Kali下自带的arping工具可以进行对应的二层主机发现</p>
+<p><strong>缺点：无法多个主机同时扫描</strong></p>
+<blockquote>
+<p>arping 目标ip</p>
+<p>这里的 -c 参数可指定发送的ping包数量</p>
+<p>若不指定会持续ping 需人工暂停</p>
+<p>arping -help 可查看帮助文档</p>
+</blockquote>
+<p><strong><em>几乎所有工具都能使用help参数查看帮助文档，后续不再赘述</em></strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-71.png" alt></p>
+<h4 id="二层发现-netdiscover工具"><a href="#二层发现-netdiscover工具" class="headerlink" title="二层发现-netdiscover工具"></a>二层发现-netdiscover工具</h4><p>netdiscover工具可以针对特定子网进行<strong>多主机</strong>扫描</p>
+<blockquote>
+<p>netdiscover -r 192.168.1.1/24</p>
+<p>扫描192.168.1.0网段</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-72.png" alt></p>
+<h2 id="三层主机发现"><a href="#三层主机发现" class="headerlink" title="三层主机发现"></a>三层主机发现</h2><p>利用了ISO中网络中的协议进行主机发现，一般使用<strong>ICMP协议</strong></p>
+<p><strong>优点</strong></p>
+<ol>
+<li>可以发现远程主机，经过路由的主机</li>
+<li>速度相对比较快</li>
+</ol>
+<p><strong>缺点</strong></p>
+<ol>
+<li>数据包经常被防火墙过滤</li>
+<li>速度比二层发现要慢</li>
+</ol>
+<h4 id="三层发现-ping工具"><a href="#三层发现-ping工具" class="headerlink" title="三层发现-ping工具"></a>三层发现-ping工具</h4><blockquote>
+<p>ping 目标ip</p>
+<p>ping工具在Linux和Windows都有自带</p>
+<p>Linux下如果不使用-C参数，将会一直扫描</p>
+<p>windows默认四次探测</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-73.png" alt></p>
+<h4 id="三层发现-fping工具"><a href="#三层发现-fping工具" class="headerlink" title="三层发现-fping工具"></a>三层发现-fping工具</h4><p>fping可针对多个主机同时进行扫描</p>
+<blockquote>
+<p>fping -g 192.168.1.1/24</p>
+<p>扫描192.168.1.0网段</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-74.png" alt></p>
+<h4 id="三层发现-hping3工具"><a href="#三层发现-hping3工具" class="headerlink" title="三层发现-hping3工具"></a>三层发现-hping3工具</h4><p><strong><em>特点：可发送自定义ICMP数据包来绕过防火墙</em></strong></p>
+<blockquote>
+<p>示例：</p>
+<p>hping3 -c 3 -1 192.168.0.103 –icmpcode 1</p>
+<p>自定义ICMP包可在help中查看帮助文档</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-75.png" alt></p>
+<h2 id="四层主机发现"><a href="#四层主机发现" class="headerlink" title="四层主机发现"></a>四层主机发现</h2><p>利用了ISO中的传输层协议进行主机发现，<strong>一般使用TCP、UDP探测</strong></p>
+<p><strong>优点</strong></p>
+<ol>
+<li>可以探测远程主机</li>
+<li>比三层发现更靠谱</li>
+</ol>
+<p><strong>缺点</strong></p>
+<ol>
+<li>花费时间较长</li>
+</ol>
+<h4 id="四层发现-nmap工具"><a href="#四层发现-nmap工具" class="headerlink" title="四层发现-nmap工具"></a>四层发现-nmap工具</h4><blockquote>
+<p>nmap可以进行二、三、四层的探测</p>
+</blockquote>
+<blockquote>
+<p>nmap 目标IP</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-76.png" alt></p>
+<h4 id="四层发现-hping3工具"><a href="#四层发现-hping3工具" class="headerlink" title="四层发现-hping3工具"></a>四层发现-hping3工具</h4><blockquote>
+<p>hping3 –udp -c 3 192.168.0.103</p>
+<p>这里原理如同hping3，指定UDP探测</p>
+<p>（这里需要结合多层探测，不再赘述）</p>
+</blockquote>
+<h2 id="主机发现-Python脚本"><a href="#主机发现-Python脚本" class="headerlink" title="主机发现-Python脚本"></a>主机发现-Python脚本</h2><p>可在github上寻找相关资源</p>
+<p>由于各类脚本繁杂，这里不作推荐</p>
+]]></content>
+      <categories>
+        <category>网络空间安全</category>
+      </categories>
+      <tags>
+        <tag>网络空间安全</tag>
+        <tag>收录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo调试-1</title>
+    <url>/2020/06/06/2020-6-6/</url>
+    <content><![CDATA[<p>Hexo基本搭建完成</p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo调试-3</title>
+    <url>/2020/06/07/2020-6-7/</url>
+    <content><![CDATA[<p>换了个NexT主题<br>挑了一个比较满意的主题风格<br>忙活了几个小时<br>已经1点了<br>是时候休息了呀</p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo调试-7</title>
     <url>/2020/06/08/2020-6-8-2/</url>
     <content><![CDATA[<p>找来了一些图，放在了那个自己搭的图床里，以后再用</p>
@@ -79,6 +180,184 @@
       <tags>
         <tag>日常</tag>
         <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DOS基本命令</title>
+    <url>/2020/06/26/DOS/</url>
+    <content><![CDATA[<h1 id="DOS基本命令"><a href="#DOS基本命令" class="headerlink" title="DOS基本命令"></a>DOS基本命令</h1><h2 id="一、DOS命令"><a href="#一、DOS命令" class="headerlink" title="一、DOS命令"></a>一、DOS命令</h2><ol>
+<li><p>color help   改变背景及字体颜色</p>
+</li>
+<li><p>cls   清屏</p>
+</li>
+<li><p>dir   查看当前文件夹下的文件</p>
+<p>文件类型中有 (DIR) 表示的是“文件夹”，否则代表“文件”</p>
+<p>dir /a 显示所有文件</p>
+</li>
+<li><p>cd   进入指定目录</p>
+<p>cd .. 返回上一级目录</p>
+<p>cd \ 退至根目录   (\代表根)</p>
+<p>cd .. \xaa 退出至上级目录后进入\xaa</p>
+<p>cd \a\xaa 进入xaa（绝对路径）</p>
+<p>切换到其他硬盘：直接输入盘符</p>
+<p>例如：E：    C：</p>
+</li>
+<li><p>md    创建文件夹/目录</p>
+<p>md 1 2 3 4 5 用空格分隔创建多个文件夹</p>
+<p>md “1 2 3 4 5 “ 引号标记其为文本格式</p>
+<p>md a\b\c\d   递归创建(套娃)</p>
+</li>
+<li><p>rd   删除<strong>文件夹/目录</strong></p>
+<p>rd 1 2 3 4 5 用空格分隔删除多个文件夹</p>
+<p>rd “1 2 3 4 5 “ 引号标记其为文本格式</p>
+<p>rd 目录 /s /q  （/s参数代表删除文件夹下所有的文件,/q代表跳过删除警告强行删除）</p>
+<p>rd \ /s/q    格盘</p>
+</li>
+<li><p>del   删除<strong>文件</strong></p>
+</li>
+<li><p>‘  &gt;  漏斗</p>
+<p>dir &gt; 1.txt   将dir命令输出结果<strong>覆盖式</strong>保存至1.txt</p>
+<p>dir &gt;&gt; 1.txt   将dir命令输出结果<strong>追加式</strong>保存至1.txt</p>
+<p>echo Oscurnb!  &gt;  1.txt 将echo回显文本保存至1.txt</p>
+<p>默认情况下&gt;和&gt;&gt;只导出<strong>正确回显</strong>，需在&gt;前添加’2’</p>
+<p>1&gt; 输出<strong>正确回显</strong>   2&gt;输出<strong>错误回显</strong>   （<strong>&gt;默认为1&gt;</strong>）</p>
+<p>rd . /s/q 2&gt;<strong>nul</strong> &gt;nul   丢弃输出数据，命令行不保留回显</p>
+</li>
+<li><p>type   打印</p>
+<p>type 1.txt   浏览文件内容</p>
+</li>
+<li><p>copy   复制</p>
+<p>move   剪切/移动</p>
+<p>ren   重命名</p>
+</li>
+<li><p>attrib   修改目录\文件属性</p>
+<p>attrib +h 1.txt    将1.txt属性添加“隐藏属性”</p>
+<p>attrib -h 1.txt    将1.txt属性取消“隐藏属性”</p>
+<p>+s    添加成”系统级文件夹”</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>网络空间安全</category>
+      </categories>
+      <tags>
+        <tag>网络空间安全</tag>
+        <tag>收录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo调试-6</title>
+    <url>/2020/06/08/2020-6-8/</url>
+    <content><![CDATA[<p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p>
+<p>对博客的访问速度优化了一下，在预加载的基础上，弄了个懒加载，<code>懒加载</code>就是:一般是当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载,既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。</p>
+<p>接下来，找点好看的图，把那些细节优化一下，弄完之后，Hexo差不多就调试完毕了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>FTP服务漏洞利用</title>
+    <url>/2020/06/25/FTP-Vulnerability/</url>
+    <content><![CDATA[<h1 id="关于FTP服务的常见漏洞"><a href="#关于FTP服务的常见漏洞" class="headerlink" title="关于FTP服务的常见漏洞"></a>关于FTP服务的常见漏洞</h1><h2 id="1-FTP匿名登录微笑漏洞"><a href="#1-FTP匿名登录微笑漏洞" class="headerlink" title="1.FTP匿名登录微笑漏洞"></a>1.FTP匿名登录微笑漏洞</h2><p>靶机metasploitable2-Linux VSFTPD v2.3.4版本</p>
+<p>渗透机 Kali Linux 2019.3版本</p>
+<p><strong>触发条件：服务允许匿名登录</strong></p>
+<ol>
+<li><strong>首先使用扫描工具对21端口（ftp默认开放于21端口）进行扫描，检测其开放性。</strong></li>
+</ol>
+<p>这里使用<strong>nmap工具</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-51.png" alt></p>
+<p>该端口处于open（开放）状态</p>
+<p>小提示：如果使用扫描工具扫描6200端口（即漏洞触发端口）会显示端口关闭</p>
+<p>虽然是关闭状态，但是不会影响漏洞触发，所以不必担心</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-63.png" alt></p>
+<ol start="2">
+<li><strong>使用nc命令连接FTP服务器</strong></li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-53.png" alt></p>
+<p>在空命令行里输入：</p>
+<p><strong>user anonymous</strong>（使用匿名账户进行登录）<strong>若回显参数为331</strong>，则输入成功</p>
+<p>然后接着输入</p>
+<p><strong>pass pass</strong>（输入密码)由于是匿名登录，pass可以随便打，<strong>若回显参数为230</strong>，则输入成功</p>
+<p>接着可以使用<strong>help命令测试</strong>，登录成功！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-54.png" alt></p>
+<p>测试完毕匿名登录的可用性之后，开始利用漏洞</p>
+<ol start="3">
+<li><p><strong>触发微笑漏洞</strong></p>
+<p>使用nc命令连接目标21端口</p>
+<p>命令行输入：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-55.png" alt></p>
+<p>这里的user用户名可以随便输入，<strong>但是必须包含   :)    字符</strong></p>
+<p>密码也能随便输入，这一步是触发位于6200端口的漏洞</p>
+<p>这里输入help的话是不会回显参数的，这一步登录仅触发漏洞，并无登录意图</p>
+<p><strong>（因包含的字符是 :) 横着看像一个笑脸，所以被誉为FTP笑脸漏洞）</strong></p>
+<ol start="4">
+<li><p><strong>连接端口，漏洞利用</strong></p>
+<p>使用nc连接6200漏洞端口</p>
+<p>输入id命令，可以看到已经获取的root权限了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-56.png" alt></p>
+<h3 id="防御方法！"><a href="#防御方法！" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
+<ol>
+<li>FTP服务禁止匿名登录</li>
+<li>可打上相关的漏洞补丁</li>
+<li>设置防火墙禁止后门6200端口</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="2-FTP暴力破解"><a href="#2-FTP暴力破解" class="headerlink" title="2.FTP暴力破解"></a>2.FTP暴力破解</h2><p><strong>Kali内集成有很多密码破解工具，这里用medusa举例</strong></p>
+<p>medusa -h 目标IP -u 用户名 -P 字典 -M FTP</p>
+<p>参数-U大写U意为指定用户名字典，小写u指定用户名，-p参数同理，-M指定服务</p>
+<p>可自行编写密码字典，也可以用命令生成（详见其他文章）</p>
+<p>每个密码之间换行就行，这里编写了mm.txt字典</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-57.png" alt></p>
+<p>开始破解，注意这里的字典文件必须使用<strong>绝对路径</strong></p>
+<p>注意，暴力破解的速度取决于<strong>服务器响应速度</strong>和<strong>攻击机处理速度</strong></p>
+<p>所以可以在medusa使用 <strong>-t 和 -r 参数</strong>设置<strong>线程数量</strong>和<strong>重试间隔时间</strong>（默认为3秒）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-58.png" alt></p>
+<p>破解成功！密码为msfadmin，返回了【SUCCESS】（成功！）</p>
+<h3 id="防御方法！-1"><a href="#防御方法！-1" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
+<p>这里以Windows Server 2008 R2为例</p>
+<p>开始 - 管理工具 - 本地安全策略 - 安全设置 - 账户策略 - 账户锁定策略 - 账户锁定阀值</p>
+<p>可设置（___）次无效登录后锁定账户，点击确定后还可设置锁定时间</p>
+</blockquote>
+<h2 id="3-FTP明文验证抓包"><a href="#3-FTP明文验证抓包" class="headerlink" title="3.FTP明文验证抓包"></a>3.FTP明文验证抓包</h2><p>由于<strong>FTP是明文验证/传输</strong>的，所以避免不了网络抓包获取密码</p>
+<p>可以使用<strong>ARP欺骗</strong>（又称断网攻击）进行攻击，网络崩溃后使用<strong>抓包工具</strong>持续抓包</p>
+<p><strong>这里用Wireshark示例</strong></p>
+<ol>
+<li><strong>进行ARP欺骗攻击</strong></li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-59.png" alt></p>
+<blockquote>
+<p>arpspoof -i eth0 -t 192.168.0.103 192.168.0.255</p>
+<p>这里的eth0是本地网卡，注意这里是数字0而不是字母O</p>
+<p>后面第一个IP是目标IP  第二个是本地网关</p>
+</blockquote>
+<p><strong>开始持续ARP攻击，此时目标网络连接会崩溃，一段时间后关闭ARP欺骗，开启抓包监听</strong></p>
+<p>筛选到涉及相关IP的数据流，找到可疑的数据包</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-60.png" alt></p>
+<p>这里可以直观的看到抓取了明文数据流，劫获了目标的登录名和密码</p>
+<p>当然也可以<strong>右键 - 追踪流 - TCP流</strong>更直观的看到</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-61.png" alt></p>
+<h3 id="防御方法！-2"><a href="#防御方法！-2" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
+<p>使用SFTP等其他密文加密传输服务来代替FTP</p>
+</blockquote>
+<h2 id="4-反弹shell"><a href="#4-反弹shell" class="headerlink" title="4.反弹shell"></a>4.反弹shell</h2><p>这里用setoolkit更适用，sessions可直观查看存在的后门并进行连接</p>
+<p>关于上传木马文件并诱其运行以及防御措施等方法不再赘述</p>
+]]></content>
+      <categories>
+        <category>网络空间安全</category>
+      </categories>
+      <tags>
+        <tag>网络空间安全</tag>
+        <tag>收录</tag>
       </tags>
   </entry>
   <entry>
@@ -234,156 +513,6 @@ shell@msfadmin &gt; ps aux | grep udev  查看pid</code></pre><p><img src="https
       </tags>
   </entry>
   <entry>
-    <title>四层主机发现</title>
-    <url>/2020/06/25/2020-6-25/</url>
-    <content><![CDATA[<blockquote>
-<p>这里稍稍总结一下局域网内的主机发现方法</p>
-<p>渗透机：Kali Linux 2019.3版</p>
-</blockquote>
-<h1 id="主机发现"><a href="#主机发现" class="headerlink" title="主机发现"></a>主机发现</h1><blockquote>
-<p>ISO七层模型，是国际标准化组织（ISO）制定的一个用于计算机或通信系统间互联的标准体系，一般称为OSI参考模型或七层模型。</p>
-</blockquote>
-<h2 id="二层主机发现"><a href="#二层主机发现" class="headerlink" title="二层主机发现"></a>二层主机发现</h2><p>利用 了ISO中链路层中的协议进行主机发现，一般使用<strong>ARP协议</strong></p>
-<p>由于是利用MAC地址作为对应的识别地址</p>
-<p><strong>优点</strong></p>
-<ol>
-<li>速度快</li>
-<li>可靠性高</li>
-</ol>
-<p><strong>缺点</strong></p>
-<ol>
-<li>无法扫描经过路由的主机</li>
-</ol>
-<h4 id="二层发现-arping工具"><a href="#二层发现-arping工具" class="headerlink" title="二层发现-arping工具"></a><strong>二层发现-arping工具</strong></h4><p>Kali下自带的arping工具可以进行对应的二层主机发现</p>
-<p><strong>缺点：无法多个主机同时扫描</strong></p>
-<blockquote>
-<p>arping 目标ip</p>
-<p>这里的 -c 参数可指定发送的ping包数量</p>
-<p>若不指定会持续ping 需人工暂停</p>
-<p>arping -help 可查看帮助文档</p>
-</blockquote>
-<p><strong><em>几乎所有工具都能使用help参数查看帮助文档，后续不再赘述</em></strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-71.png" alt></p>
-<h4 id="二层发现-netdiscover工具"><a href="#二层发现-netdiscover工具" class="headerlink" title="二层发现-netdiscover工具"></a>二层发现-netdiscover工具</h4><p>netdiscover工具可以针对特定子网进行<strong>多主机</strong>扫描</p>
-<blockquote>
-<p>netdiscover -r 192.168.1.1/24</p>
-<p>扫描192.168.1.0网段</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-72.png" alt></p>
-<h2 id="三层主机发现"><a href="#三层主机发现" class="headerlink" title="三层主机发现"></a>三层主机发现</h2><p>利用了ISO中网络中的协议进行主机发现，一般使用<strong>ICMP协议</strong></p>
-<p><strong>优点</strong></p>
-<ol>
-<li>可以发现远程主机，经过路由的主机</li>
-<li>速度相对比较快</li>
-</ol>
-<p><strong>缺点</strong></p>
-<ol>
-<li>数据包经常被防火墙过滤</li>
-<li>速度比二层发现要慢</li>
-</ol>
-<h4 id="三层发现-ping工具"><a href="#三层发现-ping工具" class="headerlink" title="三层发现-ping工具"></a>三层发现-ping工具</h4><blockquote>
-<p>ping 目标ip</p>
-<p>ping工具在Linux和Windows都有自带</p>
-<p>Linux下如果不使用-C参数，将会一直扫描</p>
-<p>windows默认四次探测</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-73.png" alt></p>
-<h4 id="三层发现-fping工具"><a href="#三层发现-fping工具" class="headerlink" title="三层发现-fping工具"></a>三层发现-fping工具</h4><p>fping可针对多个主机同时进行扫描</p>
-<blockquote>
-<p>fping -g 192.168.1.1/24</p>
-<p>扫描192.168.1.0网段</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-74.png" alt></p>
-<h4 id="三层发现-hping3工具"><a href="#三层发现-hping3工具" class="headerlink" title="三层发现-hping3工具"></a>三层发现-hping3工具</h4><p><strong><em>特点：可发送自定义ICMP数据包来绕过防火墙</em></strong></p>
-<blockquote>
-<p>示例：</p>
-<p>hping3 -c 3 -1 192.168.0.103 –icmpcode 1</p>
-<p>自定义ICMP包可在help中查看帮助文档</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-75.png" alt></p>
-<h2 id="四层主机发现"><a href="#四层主机发现" class="headerlink" title="四层主机发现"></a>四层主机发现</h2><p>利用了ISO中的传输层协议进行主机发现，<strong>一般使用TCP、UDP探测</strong></p>
-<p><strong>优点</strong></p>
-<ol>
-<li>可以探测远程主机</li>
-<li>比三层发现更靠谱</li>
-</ol>
-<p><strong>缺点</strong></p>
-<ol>
-<li>花费时间较长</li>
-</ol>
-<h4 id="四层发现-nmap工具"><a href="#四层发现-nmap工具" class="headerlink" title="四层发现-nmap工具"></a>四层发现-nmap工具</h4><blockquote>
-<p>nmap可以进行二、三、四层的探测</p>
-</blockquote>
-<blockquote>
-<p>nmap 目标IP</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-76.png" alt></p>
-<h4 id="四层发现-hping3工具"><a href="#四层发现-hping3工具" class="headerlink" title="四层发现-hping3工具"></a>四层发现-hping3工具</h4><blockquote>
-<p>hping3 –udp -c 3 192.168.0.103</p>
-<p>这里原理如同hping3，指定UDP探测</p>
-<p>（这里需要结合多层探测，不再赘述）</p>
-</blockquote>
-<h2 id="主机发现-Python脚本"><a href="#主机发现-Python脚本" class="headerlink" title="主机发现-Python脚本"></a>主机发现-Python脚本</h2><p>可在github上寻找相关资源</p>
-<p>由于各类脚本繁杂，这里不作推荐</p>
-]]></content>
-      <categories>
-        <category>网络空间安全</category>
-      </categories>
-      <tags>
-        <tag>网络空间安全</tag>
-        <tag>收录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《如果爱了》</title>
-    <url>/2020/06/25/b-1/</url>
-    <content><![CDATA[<h1 id="《如果爱了》"><a href="#《如果爱了》" class="headerlink" title="《如果爱了》"></a>《如果爱了》</h1><h5 id="作者：Oscur"><a href="#作者：Oscur" class="headerlink" title="作者：Oscur"></a>作者：Oscur</h5><h2 id="——序章"><a href="#——序章" class="headerlink" title="——序章"></a>——序章</h2><p>​        我考虑了很久，决定创作这篇文章，或许他是日记，仅为留下记忆，或是纪念，或是录堑，亦或是缅怀。</p>
-<p>​        故事很长，倾心诉说。</p>
-<p>​        之前看到过一个疑问，如果让你重新再来一次，你还会重蹈覆辙吗，或是说，你后悔吗？若让我重新再来，我仍会做相同的选择，且不后悔，但在她身上，我再不想留下任何感情。人生中遇见的每一个人，都是安排好的，他一定有意义，但是这份所谓的意义也可以是“经历”，我不后悔遇见她，我也不后悔和她发生的一切，但我再也不是从前那个我，我把她当教训，亦不是三年前痴痴的卑微，更不是半年前深情的舔狗。室友开玩笑的说我像个“喜剧演员”，我想我更像Joker吧。</p>
-<p>​        因为疫情，高二下学期全部被网课代替，我开始讨厌想起她，厌恶脑海中穿插过关于她的点滴，那种感觉很魔幻，像子弹一样击穿我笨拙的壁垒。每当这个时候我总会用力扇自己一耳光，疼痛总会提醒我，质问我到底变了吗，我还是那个我吗？</p>
-<p>​        我喜欢薛之谦，并不是他的歌好听，或是人长得帅，薛先生的歌总会对我的生活产生极大的共鸣，他在讲述一个悲伤的故事，悲伤却被治愈着。最无力，无奈的一首：</p>
-<p>​        没有《演员》的决裂冷炎</p>
-<p>​        没有《绅士》的进退有度</p>
-<p>​        没有《方圆几里》的执着</p>
-<p>​        没有《其实》的歇斯底里</p>
-<p>只有后知后觉的撕心裂肺，连唱腔都隐隐作痛。</p>
-<p>“我们的爱情到这刚刚好，再不争也不吵不必再煎熬，你可以不用记得我的好。”</p>
-<p>现在却害怕听薛之谦，恰好的三行情书总会无数次挑动我已经麻木的伤口。</p>
-<p>​        <strong>等怂恿的烫了手，等看懂的还我自由</strong></p>
-<p>​        谣言横行，舆论传讹，当局者迷。</p>
-<p>​        在他们眼中，我便是“绿了她”，“为了好玩才谈”，可我是个什么样的人，我想我身边的朋友比我更清楚。元旦时期，她对我不冷不热，爱搭不理，在我对她的闺蜜进行刨问，对她开始“恳求”时，她告诉我，我和我的女部下有不当之交，甚至于“周遭皆明，唯其不知”，“所有人都在瞒着我”，“他们都在劝我分”</p>
-<p>​        体测陪跑？我陪的是整个文体部，怎么就是她一个人了？</p>
-<p>​        手牵手？无中生有加上以讹传讹？</p>
-<p>​        当然，我更不知道女当事人和她为了躲避我QQ关联的消息查看而“创群聊完删”的操作中，到底有什么，我想我最好不想知道。</p>
-<p>​        可能我真的将公私分明做出了极致，在红头文件下偏袒她以前的朋友，在开除处分下挽留她现在的闺蜜，在招新面试中挑选她的同学脱颖而出。工作没有特地安排她和我一组，部门之间没有破坏规矩，全会之下没有鼓起官威。正经的工作居然没有掺杂到任何个人感情，我想我很负责，也很可悲，难道不是吗？副主席？</p>
-<p>​        <strong>如果无奈了，那就放下手，野草一定会出卖墙头。</strong></p>
-<p>​                                                                                                                               ———2020年5月30日 凌晨1:43 著序</p>
-]]></content>
-      <categories>
-        <category>书</category>
-      </categories>
-      <tags>
-        <tag>书</tag>
-        <tag>如果爱了</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo调试-6</title>
-    <url>/2020/06/08/2020-6-8/</url>
-    <content><![CDATA[<p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p>
-<p>对博客的访问速度优化了一下，在预加载的基础上，弄了个懒加载，<code>懒加载</code>就是:一般是当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载,既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。</p>
-<p>接下来，找点好看的图，把那些细节优化一下，弄完之后，Hexo差不多就调试完毕了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>DHCP</title>
     <url>/2020/06/25/dhcp/</url>
     <content><![CDATA[<h1 id="网络搭建—DHCP"><a href="#网络搭建—DHCP" class="headerlink" title="网络搭建—DHCP"></a>网络搭建—DHCP</h1><blockquote>
@@ -448,193 +577,36 @@ ip dhcp snooping trust</code></pre>]]></content>
       </tags>
   </entry>
   <entry>
-    <title>FTP服务漏洞利用</title>
-    <url>/2020/06/25/FTP-Vulnerability/</url>
-    <content><![CDATA[<h1 id="关于FTP服务的常见漏洞"><a href="#关于FTP服务的常见漏洞" class="headerlink" title="关于FTP服务的常见漏洞"></a>关于FTP服务的常见漏洞</h1><h2 id="1-FTP匿名登录微笑漏洞"><a href="#1-FTP匿名登录微笑漏洞" class="headerlink" title="1.FTP匿名登录微笑漏洞"></a>1.FTP匿名登录微笑漏洞</h2><p>靶机metasploitable2-Linux VSFTPD v2.3.4版本</p>
-<p>渗透机 Kali Linux 2019.3版本</p>
-<p><strong>触发条件：服务允许匿名登录</strong></p>
-<ol>
-<li><strong>首先使用扫描工具对21端口（ftp默认开放于21端口）进行扫描，检测其开放性。</strong></li>
-</ol>
-<p>这里使用<strong>nmap工具</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-51.png" alt></p>
-<p>该端口处于open（开放）状态</p>
-<p>小提示：如果使用扫描工具扫描6200端口（即漏洞触发端口）会显示端口关闭</p>
-<p>虽然是关闭状态，但是不会影响漏洞触发，所以不必担心</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-63.png" alt></p>
-<ol start="2">
-<li><strong>使用nc命令连接FTP服务器</strong></li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-53.png" alt></p>
-<p>在空命令行里输入：</p>
-<p><strong>user anonymous</strong>（使用匿名账户进行登录）<strong>若回显参数为331</strong>，则输入成功</p>
-<p>然后接着输入</p>
-<p><strong>pass pass</strong>（输入密码)由于是匿名登录，pass可以随便打，<strong>若回显参数为230</strong>，则输入成功</p>
-<p>接着可以使用<strong>help命令测试</strong>，登录成功！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-54.png" alt></p>
-<p>测试完毕匿名登录的可用性之后，开始利用漏洞</p>
-<ol start="3">
-<li><p><strong>触发微笑漏洞</strong></p>
-<p>使用nc命令连接目标21端口</p>
-<p>命令行输入：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-55.png" alt></p>
-<p>这里的user用户名可以随便输入，<strong>但是必须包含   :)    字符</strong></p>
-<p>密码也能随便输入，这一步是触发位于6200端口的漏洞</p>
-<p>这里输入help的话是不会回显参数的，这一步登录仅触发漏洞，并无登录意图</p>
-<p><strong>（因包含的字符是 :) 横着看像一个笑脸，所以被誉为FTP笑脸漏洞）</strong></p>
-<ol start="4">
-<li><p><strong>连接端口，漏洞利用</strong></p>
-<p>使用nc连接6200漏洞端口</p>
-<p>输入id命令，可以看到已经获取的root权限了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-56.png" alt></p>
-<h3 id="防御方法！"><a href="#防御方法！" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
-<ol>
-<li>FTP服务禁止匿名登录</li>
-<li>可打上相关的漏洞补丁</li>
-<li>设置防火墙禁止后门6200端口</li>
-</ol>
-</blockquote>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="2-FTP暴力破解"><a href="#2-FTP暴力破解" class="headerlink" title="2.FTP暴力破解"></a>2.FTP暴力破解</h2><p><strong>Kali内集成有很多密码破解工具，这里用medusa举例</strong></p>
-<p>medusa -h 目标IP -u 用户名 -P 字典 -M FTP</p>
-<p>参数-U大写U意为指定用户名字典，小写u指定用户名，-p参数同理，-M指定服务</p>
-<p>可自行编写密码字典，也可以用命令生成（详见其他文章）</p>
-<p>每个密码之间换行就行，这里编写了mm.txt字典</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-57.png" alt></p>
-<p>开始破解，注意这里的字典文件必须使用<strong>绝对路径</strong></p>
-<p>注意，暴力破解的速度取决于<strong>服务器响应速度</strong>和<strong>攻击机处理速度</strong></p>
-<p>所以可以在medusa使用 <strong>-t 和 -r 参数</strong>设置<strong>线程数量</strong>和<strong>重试间隔时间</strong>（默认为3秒）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-58.png" alt></p>
-<p>破解成功！密码为msfadmin，返回了【SUCCESS】（成功！）</p>
-<h3 id="防御方法！-1"><a href="#防御方法！-1" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
-<p>这里以Windows Server 2008 R2为例</p>
-<p>开始 - 管理工具 - 本地安全策略 - 安全设置 - 账户策略 - 账户锁定策略 - 账户锁定阀值</p>
-<p>可设置（___）次无效登录后锁定账户，点击确定后还可设置锁定时间</p>
-</blockquote>
-<h2 id="3-FTP明文验证抓包"><a href="#3-FTP明文验证抓包" class="headerlink" title="3.FTP明文验证抓包"></a>3.FTP明文验证抓包</h2><p>由于<strong>FTP是明文验证/传输</strong>的，所以避免不了网络抓包获取密码</p>
-<p>可以使用<strong>ARP欺骗</strong>（又称断网攻击）进行攻击，网络崩溃后使用<strong>抓包工具</strong>持续抓包</p>
-<p><strong>这里用Wireshark示例</strong></p>
-<ol>
-<li><strong>进行ARP欺骗攻击</strong></li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-59.png" alt></p>
-<blockquote>
-<p>arpspoof -i eth0 -t 192.168.0.103 192.168.0.255</p>
-<p>这里的eth0是本地网卡，注意这里是数字0而不是字母O</p>
-<p>后面第一个IP是目标IP  第二个是本地网关</p>
-</blockquote>
-<p><strong>开始持续ARP攻击，此时目标网络连接会崩溃，一段时间后关闭ARP欺骗，开启抓包监听</strong></p>
-<p>筛选到涉及相关IP的数据流，找到可疑的数据包</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-60.png" alt></p>
-<p>这里可以直观的看到抓取了明文数据流，劫获了目标的登录名和密码</p>
-<p>当然也可以<strong>右键 - 追踪流 - TCP流</strong>更直观的看到</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-61.png" alt></p>
-<h3 id="防御方法！-2"><a href="#防御方法！-2" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
-<p>使用SFTP等其他密文加密传输服务来代替FTP</p>
-</blockquote>
-<h2 id="4-反弹shell"><a href="#4-反弹shell" class="headerlink" title="4.反弹shell"></a>4.反弹shell</h2><p>这里用setoolkit更适用，sessions可直观查看存在的后门并进行连接</p>
-<p>关于上传木马文件并诱其运行以及防御措施等方法不再赘述</p>
+    <title>《如果爱了》</title>
+    <url>/2020/06/25/b-1/</url>
+    <content><![CDATA[<h1 id="《如果爱了》"><a href="#《如果爱了》" class="headerlink" title="《如果爱了》"></a>《如果爱了》</h1><h5 id="作者：Oscur"><a href="#作者：Oscur" class="headerlink" title="作者：Oscur"></a>作者：Oscur</h5><h2 id="——序章"><a href="#——序章" class="headerlink" title="——序章"></a>——序章</h2><p>​        我考虑了很久，决定创作这篇文章，或许他是日记，仅为留下记忆，或是纪念，或是录堑，亦或是缅怀。</p>
+<p>​        故事很长，倾心诉说。</p>
+<p>​        之前看到过一个疑问，如果让你重新再来一次，你还会重蹈覆辙吗，或是说，你后悔吗？若让我重新再来，我仍会做相同的选择，且不后悔，但在她身上，我再不想留下任何感情。人生中遇见的每一个人，都是安排好的，他一定有意义，但是这份所谓的意义也可以是“经历”，我不后悔遇见她，我也不后悔和她发生的一切，但我再也不是从前那个我，我把她当教训，亦不是三年前痴痴的卑微，更不是半年前深情的舔狗。室友开玩笑的说我像个“喜剧演员”，我想我更像Joker吧。</p>
+<p>​        因为疫情，高二下学期全部被网课代替，我开始讨厌想起她，厌恶脑海中穿插过关于她的点滴，那种感觉很魔幻，像子弹一样击穿我笨拙的壁垒。每当这个时候我总会用力扇自己一耳光，疼痛总会提醒我，质问我到底变了吗，我还是那个我吗？</p>
+<p>​        我喜欢薛之谦，并不是他的歌好听，或是人长得帅，薛先生的歌总会对我的生活产生极大的共鸣，他在讲述一个悲伤的故事，悲伤却被治愈着。最无力，无奈的一首：</p>
+<p>​        没有《演员》的决裂冷炎</p>
+<p>​        没有《绅士》的进退有度</p>
+<p>​        没有《方圆几里》的执着</p>
+<p>​        没有《其实》的歇斯底里</p>
+<p>只有后知后觉的撕心裂肺，连唱腔都隐隐作痛。</p>
+<p>“我们的爱情到这刚刚好，再不争也不吵不必再煎熬，你可以不用记得我的好。”</p>
+<p>现在却害怕听薛之谦，恰好的三行情书总会无数次挑动我已经麻木的伤口。</p>
+<p>​        <strong>等怂恿的烫了手，等看懂的还我自由</strong></p>
+<p>​        谣言横行，舆论传讹，当局者迷。</p>
+<p>​        在他们眼中，我便是“绿了她”，“为了好玩才谈”，可我是个什么样的人，我想我身边的朋友比我更清楚。元旦时期，她对我不冷不热，爱搭不理，在我对她的闺蜜进行刨问，对她开始“恳求”时，她告诉我，我和我的女部下有不当之交，甚至于“周遭皆明，唯其不知”，“所有人都在瞒着我”，“他们都在劝我分”</p>
+<p>​        体测陪跑？我陪的是整个文体部，怎么就是她一个人了？</p>
+<p>​        手牵手？无中生有加上以讹传讹？</p>
+<p>​        当然，我更不知道女当事人和她为了躲避我QQ关联的消息查看而“创群聊完删”的操作中，到底有什么，我想我最好不想知道。</p>
+<p>​        可能我真的将公私分明做出了极致，在红头文件下偏袒她以前的朋友，在开除处分下挽留她现在的闺蜜，在招新面试中挑选她的同学脱颖而出。工作没有特地安排她和我一组，部门之间没有破坏规矩，全会之下没有鼓起官威。正经的工作居然没有掺杂到任何个人感情，我想我很负责，也很可悲，难道不是吗？副主席？</p>
+<p>​        <strong>如果无奈了，那就放下手，野草一定会出卖墙头。</strong></p>
+<p>​                                                                                                                               ———2020年5月30日 凌晨1:43 著序</p>
 ]]></content>
       <categories>
-        <category>网络空间安全</category>
+        <category>书</category>
       </categories>
       <tags>
-        <tag>网络空间安全</tag>
-        <tag>收录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vlan划分</title>
-    <url>/2020/06/25/vlan/</url>
-    <content><![CDATA[<h1 id="网络搭建—VLAN"><a href="#网络搭建—VLAN" class="headerlink" title="网络搭建—VLAN"></a>网络搭建—VLAN</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h2 id="1-VlAN划分"><a href="#1-VlAN划分" class="headerlink" title="1.VlAN划分"></a>1.VlAN划分</h2><h3 id="1-单交换机"><a href="#1-单交换机" class="headerlink" title="(1)单交换机"></a>(1)单交换机</h3><h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/i-1.png" alt></p>
-<h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><pre><code>en
-config
-int f0/1
-sw acc vlan 10
-int f0/2
-sw acc vlan 20
-int f0/3
-sw acc vlan 30
-end</code></pre><h3 id="2-双交换机"><a href="#2-双交换机" class="headerlink" title="(2)双交换机"></a>(2)双交换机</h3><h4 id="拓扑"><a href="#拓扑" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/i2.png" alt></p>
-<h4 id="指令-1"><a href="#指令-1" class="headerlink" title="指令"></a>指令</h4><p>SW 1</p>
-<pre><code>en
-config
-int f0/1
-sw acc vlan 10
-int f0/2
-sw acc vlan 20
-int f0/24
-sw mode trunk
-sw trunk all vlan all
-end</code></pre><p>SW 2</p>
-<pre><code>en
-config
-int f0/1
-sw acc vlan 10
-int f0/2
-sw acc vlan 20
-int f0/24
-sw mode trunk
-sw trunk all vlan all
-end</code></pre><h2 id="2-Vlan间通信"><a href="#2-Vlan间通信" class="headerlink" title="2.Vlan间通信"></a>2.Vlan间通信</h2><h3 id="1-SVI"><a href="#1-SVI" class="headerlink" title="(1)SVI"></a>(1)SVI</h3><h4 id="拓扑-1"><a href="#拓扑-1" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/ttt.PNG" alt></p>
-<h4 id="指令-2"><a href="#指令-2" class="headerlink" title="指令"></a>指令</h4><pre><code>en
-config
-int vlan 10
-ip add 192.168.1.254 255.255.255.0
-int vlan 20
-ip add 192.168.2.254 255.255.255.0
-exit
-int f0/1
-sw trunk encapsulation dot1q
-sw mode trunk
-ip routing
-end</code></pre><p>二层</p>
-<pre><code>en
-config
-int f0/1
-sw mode trunk
-sw trunk all vlan all
-int f0/2
-sw acc vlan 10
-int f0/4
-sw acc vlan 20</code></pre><h3 id="2-单臂路由"><a href="#2-单臂路由" class="headerlink" title="(2)单臂路由"></a>(2)单臂路由</h3><h4 id="拓扑-2"><a href="#拓扑-2" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/ccc.PNG" alt></p>
-<h4 id="指令-3"><a href="#指令-3" class="headerlink" title="指令"></a>指令</h4><p>路由</p>
-<pre><code>en 
-config
-int f0/0.1 
-en dot1q 10
-ip add 192.168.1.254 255.255.255.0
-no shutdown 
-int f0/0.2
-en dot1q 20
-ip add 192.168.2.254 255.255.255.0
-no shutdown
-exit 
-int f0/0
-ip routing
-no shutdown
-end</code></pre><p>二层</p>
-<pre><code>en
-config
-int f0/1
-sw mode trunk
-sw trunk all vlan all
-int f0/2
-sw acc vlan 10
-int f0/3
-sw acc vlan 20</code></pre>]]></content>
-      <categories>
-        <category>网络搭建</category>
-      </categories>
-      <tags>
-        <tag>收录</tag>
-        <tag>网络搭建</tag>
+        <tag>书</tag>
+        <tag>如果爱了</tag>
       </tags>
   </entry>
   <entry>
@@ -758,6 +730,150 @@ apt-get clean            #清理无用的包</code></pre><hr>
       <tags>
         <tag>网络空间安全</tag>
         <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>静态路由</title>
+    <url>/2020/06/26/route/</url>
+    <content><![CDATA[<h1 id="网络搭建—静态路由"><a href="#网络搭建—静态路由" class="headerlink" title="网络搭建—静态路由"></a>网络搭建—静态路由</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-1.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
+<pre><code>en
+config
+int f0/0
+no shutdown
+ip add 192.168.1.1 255.255.255.0
+int s0/0/0
+no shutdown
+ip add 192.168.3.1 255.255.255.0
+exit
+ip routing
+ip route 192.168.4.0 255.255.255.0 192.168.3.2
+ip route 192.168.2.0 255.255.255.0 192.168.3.2</code></pre><p>R2</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.3.2 255.255.255.0
+int s0/0/1
+no shutdown
+ip add 192.168.4.2 255.255.255.0
+exit
+ip routing
+ip route 192.168.1.0 255.255.255.0 192.168.3.1
+ip route 192.168.2.0 255.255.255.0 192.168.4.1</code></pre><p>R3</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.4.1 255.255.255.0
+int f0/0
+no shutdown
+ip add 192.168.2.1 255.255.255.0
+exit
+ip routing
+ip route 192.168.1.0 255.255.255.0 192.168.4.2
+ip route 192.168.3.0 255.255.255.0 192.168.4.2</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-2.png" alt></p>
+]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vlan划分</title>
+    <url>/2020/06/25/vlan/</url>
+    <content><![CDATA[<h1 id="网络搭建—VLAN"><a href="#网络搭建—VLAN" class="headerlink" title="网络搭建—VLAN"></a>网络搭建—VLAN</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="1-VlAN划分"><a href="#1-VlAN划分" class="headerlink" title="1.VlAN划分"></a>1.VlAN划分</h2><h3 id="1-单交换机"><a href="#1-单交换机" class="headerlink" title="(1)单交换机"></a>(1)单交换机</h3><h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/i-1.png" alt></p>
+<h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><pre><code>en
+config
+int f0/1
+sw acc vlan 10
+int f0/2
+sw acc vlan 20
+int f0/3
+sw acc vlan 30
+end</code></pre><h3 id="2-双交换机"><a href="#2-双交换机" class="headerlink" title="(2)双交换机"></a>(2)双交换机</h3><h4 id="拓扑"><a href="#拓扑" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/i2.png" alt></p>
+<h4 id="指令-1"><a href="#指令-1" class="headerlink" title="指令"></a>指令</h4><p>SW 1</p>
+<pre><code>en
+config
+int f0/1
+sw acc vlan 10
+int f0/2
+sw acc vlan 20
+int f0/24
+sw mode trunk
+sw trunk all vlan all
+end</code></pre><p>SW 2</p>
+<pre><code>en
+config
+int f0/1
+sw acc vlan 10
+int f0/2
+sw acc vlan 20
+int f0/24
+sw mode trunk
+sw trunk all vlan all
+end</code></pre><h2 id="2-Vlan间通信"><a href="#2-Vlan间通信" class="headerlink" title="2.Vlan间通信"></a>2.Vlan间通信</h2><h3 id="1-SVI"><a href="#1-SVI" class="headerlink" title="(1)SVI"></a>(1)SVI</h3><h4 id="拓扑-1"><a href="#拓扑-1" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/ttt.PNG" alt></p>
+<h4 id="指令-2"><a href="#指令-2" class="headerlink" title="指令"></a>指令</h4><pre><code>en
+config
+int vlan 10
+ip add 192.168.1.254 255.255.255.0
+int vlan 20
+ip add 192.168.2.254 255.255.255.0
+exit
+int f0/1
+sw trunk encapsulation dot1q
+sw mode trunk
+ip routing
+end</code></pre><p>二层</p>
+<pre><code>en
+config
+int f0/1
+sw mode trunk
+sw trunk all vlan all
+int f0/2
+sw acc vlan 10
+int f0/4
+sw acc vlan 20</code></pre><h3 id="2-单臂路由"><a href="#2-单臂路由" class="headerlink" title="(2)单臂路由"></a>(2)单臂路由</h3><h4 id="拓扑-2"><a href="#拓扑-2" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/ccc.PNG" alt></p>
+<h4 id="指令-3"><a href="#指令-3" class="headerlink" title="指令"></a>指令</h4><p>路由</p>
+<pre><code>en 
+config
+int f0/0.1 
+en dot1q 10
+ip add 192.168.1.254 255.255.255.0
+no shutdown 
+int f0/0.2
+en dot1q 20
+ip add 192.168.2.254 255.255.255.0
+no shutdown
+exit 
+int f0/0
+ip routing
+no shutdown
+end</code></pre><p>二层</p>
+<pre><code>en
+config
+int f0/1
+sw mode trunk
+sw trunk all vlan all
+int f0/2
+sw acc vlan 10
+int f0/3
+sw acc vlan 20</code></pre>]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
       </tags>
   </entry>
 </search>

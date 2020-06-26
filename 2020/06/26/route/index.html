@@ -520,7 +520,7 @@
 <p>实验平台: Cisco Packet Tracer 7.3.0</p>
 </blockquote>
 <h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-1.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R0</p>
 <pre><code>en
 config
 int f0/0
@@ -532,7 +532,7 @@ ip add 192.168.3.1 255.255.255.0
 exit
 ip routing
 ip route 192.168.4.0 255.255.255.0 192.168.3.2
-ip route 192.168.2.0 255.255.255.0 192.168.3.2</code></pre><p>R2</p>
+ip route 192.168.2.0 255.255.255.0 192.168.3.2</code></pre><p>R1</p>
 <pre><code>en
 config
 int s0/0/0
@@ -544,7 +544,7 @@ ip add 192.168.4.2 255.255.255.0
 exit
 ip routing
 ip route 192.168.1.0 255.255.255.0 192.168.3.1
-ip route 192.168.2.0 255.255.255.0 192.168.4.1</code></pre><p>R3</p>
+ip route 192.168.2.0 255.255.255.0 192.168.4.1</code></pre><p>R2</p>
 <pre><code>en
 config
 int s0/0/0
@@ -820,29 +820,28 @@ ip route 192.168.3.0 255.255.255.0 192.168.4.2</code></pre><h2 id="结果"><a hr
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/06/26/route/">
+                <a href="/2020/06/26/RIP/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-1.png" class="responsive-img" alt="静态路由">
+                        <img src="https://cdn.jsdelivr.net/gh/Grosad/p/image/r2-1.png" class="responsive-img" alt="RIP动态路由协议">
                         
-                        <span class="card-title">静态路由</span>
+                        <span class="card-title">RIP动态路由协议</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            实验平台Cisco Packet Tracer 7.3.0 静态路由  拓扑图   指令
+                            实验平台Cisco Packet Tracer 7.3.0 RIP动态路由协议  拓扑图   指令
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-26
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-26
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -855,7 +854,6 @@ ip route 192.168.3.0 255.255.255.0 192.168.4.2</code></pre><h2 id="结果"><a hr
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     

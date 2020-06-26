@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://grosad.github.io/"/>
-  <updated>2020-06-26T15:30:22.735Z</updated>
+  <updated>2020-06-26T16:07:07.539Z</updated>
   <id>http://grosad.github.io/</id>
   
   <author>
@@ -17,13 +17,71 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>OSPF动态路由协议</title>
+    <link href="http://grosad.github.io/2020/06/26/OSPF/"/>
+    <id>http://grosad.github.io/2020/06/26/OSPF/</id>
+    <published>2020-06-26T15:55:10.000Z</published>
+    <updated>2020-06-26T16:07:07.539Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="网络搭建—OSPF动态路由协议"><a href="#网络搭建—OSPF动态路由协议" class="headerlink" title="网络搭建—OSPF动态路由协议"></a>网络搭建—OSPF动态路由协议</h1><blockquote><p>实验平台: Cisco Packet Tracer 7.3.0</p></blockquote><h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627000547.png" alt></p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p><pre><code>enconfigint f0/0no shutdownip add 192.168.1.1 255.255.255.0int s0/0/0no shutdownip add 192.168.3.1 255.255.255.0exitip routingroute ospf 1network 192.168.1.0 0.0.0.255 area 0network 192.168.3.0 0.0.0.255 area 0</code></pre><p>R2</p><pre><code>enconfigint s0/0/0no shutdownip add 192.168.3.2 255.255.255.0int s0/0/1no shutdownip add 192.168.4.2 255.255.255.0exitip routingroute ospf 1network 192.168.4.0 0.0.0.255 area 0network 192.168.3.0 0.0.0.255 area 0</code></pre><p>R3</p><pre><code>enconfigint s0/0/0no shutdownip add 192.168.4.1 255.255.255.0int f0/0no shutdownip add 192.168.2.1 255.255.255.0exitip routingroute ospf 1network 192.168.2.0 0.0.0.255 area 0network 192.168.4.0 0.0.0.255 area 0</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627000520.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;网络搭建—OSPF动态路由协议&quot;&gt;&lt;a href=&quot;#网络搭建—OSPF动态路由协议&quot; class=&quot;headerlink&quot; title=&quot;网络搭建—OSPF动态路由协议&quot;&gt;&lt;/a&gt;网络搭建—OSPF动态路由协议&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;实验平台:
+      
+    
+    </summary>
+    
+    
+      <category term="网络搭建" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
+    
+      <category term="网络搭建" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RIP动态路由协议</title>
+    <link href="http://grosad.github.io/2020/06/26/RIP/"/>
+    <id>http://grosad.github.io/2020/06/26/RIP/</id>
+    <published>2020-06-26T15:30:10.000Z</published>
+    <updated>2020-06-26T15:58:54.242Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="网络搭建—RIP动态路由协议"><a href="#网络搭建—RIP动态路由协议" class="headerlink" title="网络搭建—RIP动态路由协议"></a>网络搭建—RIP动态路由协议</h1><blockquote><p>实验平台: Cisco Packet Tracer 7.3.0</p></blockquote><h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r2-1.png" alt></p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p><pre><code>enconfigint f0/0no shutdownip add 192.168.1.1 255.255.255.0int s0/0/0no shutdownip add 192.168.3.1 255.255.255.0exitip routingroute ripversion 2no autonetwork 192.168.1.0network 192.168.3.0</code></pre><p>R2</p><pre><code>enconfigint s0/0/0no shutdownip add 192.168.3.2 255.255.255.0int s0/0/1no shutdownip add 192.168.4.2 255.255.255.0exitip routingroute ripversion 2no autonetwork 192.168.4.0network 192.168.3.0</code></pre><p>R3</p><pre><code>enconfigint s0/0/0no shutdownip add 192.168.4.1 255.255.255.0int f0/0no shutdownip add 192.168.2.1 255.255.255.0exitip routingroute ripversion 2no autonetwork 192.168.2.0network 192.168.4.0</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r2-2.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;网络搭建—RIP动态路由协议&quot;&gt;&lt;a href=&quot;#网络搭建—RIP动态路由协议&quot; class=&quot;headerlink&quot; title=&quot;网络搭建—RIP动态路由协议&quot;&gt;&lt;/a&gt;网络搭建—RIP动态路由协议&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;实验平台: Cis
+      
+    
+    </summary>
+    
+    
+      <category term="网络搭建" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
+    
+      <category term="网络搭建" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>静态路由</title>
     <link href="http://grosad.github.io/2020/06/26/route/"/>
     <id>http://grosad.github.io/2020/06/26/route/</id>
     <published>2020-06-26T15:00:10.000Z</published>
-    <updated>2020-06-26T15:30:22.735Z</updated>
+    <updated>2020-06-26T15:44:34.844Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="网络搭建—静态路由"><a href="#网络搭建—静态路由" class="headerlink" title="网络搭建—静态路由"></a>网络搭建—静态路由</h1><blockquote><p>实验平台: Cisco Packet Tracer 7.3.0</p></blockquote><h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-1.png" alt></p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p><pre><code>enconfigint f0/0no shutdownip add 192.168.1.1 255.255.255.0int s0/0/0no shutdownip add 192.168.3.1 255.255.255.0exitip routingip route 192.168.4.0 255.255.255.0 192.168.3.2ip route 192.168.2.0 255.255.255.0 192.168.3.2</code></pre><p>R2</p><pre><code>enconfigint s0/0/0no shutdownip add 192.168.3.2 255.255.255.0int s0/0/1no shutdownip add 192.168.4.2 255.255.255.0exitip routingip route 192.168.1.0 255.255.255.0 192.168.3.1ip route 192.168.2.0 255.255.255.0 192.168.4.1</code></pre><p>R3</p><pre><code>enconfigint s0/0/0no shutdownip add 192.168.4.1 255.255.255.0int f0/0no shutdownip add 192.168.2.1 255.255.255.0exitip routingip route 192.168.1.0 255.255.255.0 192.168.4.2ip route 192.168.3.0 255.255.255.0 192.168.4.2</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-2.png" alt></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="网络搭建—静态路由"><a href="#网络搭建—静态路由" class="headerlink" title="网络搭建—静态路由"></a>网络搭建—静态路由</h1><blockquote><p>实验平台: Cisco Packet Tracer 7.3.0</p></blockquote><h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-1.png" alt></p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R0</p><pre><code>enconfigint f0/0no shutdownip add 192.168.1.1 255.255.255.0int s0/0/0no shutdownip add 192.168.3.1 255.255.255.0exitip routingip route 192.168.4.0 255.255.255.0 192.168.3.2ip route 192.168.2.0 255.255.255.0 192.168.3.2</code></pre><p>R1</p><pre><code>enconfigint s0/0/0no shutdownip add 192.168.3.2 255.255.255.0int s0/0/1no shutdownip add 192.168.4.2 255.255.255.0exitip routingip route 192.168.1.0 255.255.255.0 192.168.3.1ip route 192.168.2.0 255.255.255.0 192.168.4.1</code></pre><p>R2</p><pre><code>enconfigint s0/0/0no shutdownip add 192.168.4.1 255.255.255.0int f0/0no shutdownip add 192.168.2.1 255.255.255.0exitip routingip route 192.168.1.0 255.255.255.0 192.168.4.2ip route 192.168.3.0 255.255.255.0 192.168.4.2</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-2.png" alt></p>]]></content>
     
     <summary type="html">
     
@@ -50,7 +108,7 @@
     <link href="http://grosad.github.io/2020/06/26/DOS/"/>
     <id>http://grosad.github.io/2020/06/26/DOS/</id>
     <published>2020-06-26T08:56:27.000Z</published>
-    <updated>2020-06-26T15:34:00.815Z</updated>
+    <updated>2020-06-26T15:38:42.804Z</updated>
     
     <content type="html"><![CDATA[<h1 id="DOS基本命令"><a href="#DOS基本命令" class="headerlink" title="DOS基本命令"></a>DOS基本命令</h1><h2 id="一、DOS命令"><a href="#一、DOS命令" class="headerlink" title="一、DOS命令"></a>一、DOS命令</h2><ol><li><p>color help   改变背景及字体颜色</p></li><li><p>cls   清屏</p></li><li><p>dir   查看当前文件夹下的文件</p><p>文件类型中有 (DIR) 表示的是“文件夹”，否则代表“文件”</p><p>dir /a 显示所有文件</p></li><li><p>cd   进入指定目录</p><p>cd .. 返回上一级目录</p><p>cd \ 退至根目录   (\代表根)</p><p>cd .. \xaa 退出至上级目录后进入\xaa</p><p>cd \a\xaa 进入xaa（绝对路径）</p><p>切换到其他硬盘：直接输入盘符</p><p>例如：E：    C：</p></li><li><p>md    创建文件夹/目录</p><p>md 1 2 3 4 5 用空格分隔创建多个文件夹</p><p>md “1 2 3 4 5 “ 引号标记其为文本格式</p><p>md a\b\c\d   递归创建(套娃)</p></li><li><p>rd   删除<strong>文件夹/目录</strong></p><p>rd 1 2 3 4 5 用空格分隔删除多个文件夹</p><p>rd “1 2 3 4 5 “ 引号标记其为文本格式</p><p>rd 目录 /s /q  （/s参数代表删除文件夹下所有的文件,/q代表跳过删除警告强行删除）</p><p>rd \ /s/q    格盘</p></li><li><p>del   删除<strong>文件</strong></p></li><li><p>‘  &gt;  漏斗</p><p>dir &gt; 1.txt   将dir命令输出结果<strong>覆盖式</strong>保存至1.txt</p><p>dir &gt;&gt; 1.txt   将dir命令输出结果<strong>追加式</strong>保存至1.txt</p><p>echo Oscurnb!  &gt;  1.txt 将echo回显文本保存至1.txt</p><p>默认情况下&gt;和&gt;&gt;只导出<strong>正确回显</strong>，需在&gt;前添加’2’</p><p>1&gt; 输出<strong>正确回显</strong>   2&gt;输出<strong>错误回显</strong>   （<strong>&gt;默认为1&gt;</strong>）</p><p>rd . /s/q 2&gt;<strong>nul</strong> &gt;nul   丢弃输出数据，命令行不保留回显</p></li><li><p>type   打印</p><p>type 1.txt   浏览文件内容</p></li><li><p>copy   复制</p><p>move   剪切/移动</p><p>ren   重命名</p></li><li><p>attrib   修改目录\文件属性</p><p>attrib +h 1.txt    将1.txt属性添加“隐藏属性”</p><p>attrib -h 1.txt    将1.txt属性取消“隐藏属性”</p><p>+s    添加成”系统级文件夹”</p></li></ol>]]></content>
     

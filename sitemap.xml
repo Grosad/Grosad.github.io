@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://grosad.github.io/2020/06/26/DOS/</loc>
+    <loc>http://grosad.github.io/2020/06/26/OSPF/</loc>
     
-    <lastmod>2020-06-26T15:34:00.815Z</lastmod>
+    <lastmod>2020-06-26T16:07:07.539Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://grosad.github.io/2020/06/26/RIP/</loc>
+    
+    <lastmod>2020-06-26T15:58:54.242Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://grosad.github.io/2020/06/26/route/</loc>
     
-    <lastmod>2020-06-26T15:30:22.735Z</lastmod>
+    <lastmod>2020-06-26T15:44:34.844Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://grosad.github.io/2020/06/26/DOS/</loc>
+    
+    <lastmod>2020-06-26T15:38:42.804Z</lastmod>
     
   </url>
   

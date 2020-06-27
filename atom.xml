@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://grosad.github.io/"/>
-  <updated>2020-06-27T05:26:46.630Z</updated>
+  <updated>2020-06-27T12:27:57.357Z</updated>
   <id>http://grosad.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>批处理编写</title>
+    <link href="http://grosad.github.io/2020/06/27/DOS-1/"/>
+    <id>http://grosad.github.io/2020/06/27/DOS-1/</id>
+    <published>2020-06-27T09:17:17.000Z</published>
+    <updated>2020-06-27T12:27:57.357Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一些基础批处理编写收录"><a href="#一些基础批处理编写收录" class="headerlink" title="一些基础批处理编写收录"></a>一些基础批处理编写收录</h1><ol><li><p><strong>批处理的作用</strong></p><p>自上而下成批的处理每一条命令，直到执行最后一条</p></li><li><p><strong>创建批处理</strong></p><p>批处理文件的扩展名：<strong>.bat</strong></p></li><li><p><strong>基础命令</strong></p><p>@echo off   关闭执行过程</p><p>pause   程序暂停</p><p>title   黑框标题</p><p>echo.   输出空行（仅在批处理中有用）</p><p>ping -n 10 127.0.0.1 &gt;nul   延迟10个ping包后关闭程序</p><p>%变量%   取值</p><p>shutdown    关机</p><p>ntsd   杀死进程</p><p>taskkill   杀死进程</p><p>fsutil file createnew 文件路径 大小   新建文件</p><blockquote><p>例：fsutil file createnew e:\123.txt 40960    //在e:\下建立一个叫123.txt的文件，大小为40kb</p></blockquote><p><strong>:   定义区块(这是冒号)</strong></p><p>可以理解为C语言的{}，可以和<strong>goto（跳转）</strong>配合使用，例：</p><blockquote><p>:1   //区块1</p><p>命令1</p><p>命令2</p><p>:2   //区块2</p><p>命令1</p><p>:3   //区块3</p><p>goto :1   //跳转到区块1</p></blockquote><p><strong>set   定义变量</strong></p><blockquote><p>例：</p><p>set /p a=请输入a的值    </p><p> /p参数定义输入函数，若没有/p  =右边的文本会变成a的值</p></blockquote></li><li><h5 id="一些批处理实例-命令后的-是注释的意思，实际使用请划去"><a href="#一些批处理实例-命令后的-是注释的意思，实际使用请划去" class="headerlink" title="一些批处理实例   命令后的//是注释的意思，实际使用请划去//"></a>一些批处理实例   <strong>命令后的//是注释的意思，实际使用请划去</strong>//</h5><blockquote><p>如果看不懂请配合《DOS基本命令》查看</p></blockquote></li></ol><h5 id="C盘毁灭机"><a href="#C盘毁灭机" class="headerlink" title="C盘毁灭机"></a>C盘毁灭机</h5><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202107.png" alt></p><p><strong>撑死他的硬盘</strong></p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202141.png" alt></p><p><strong>死循环爆CPU</strong></p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202224.png" alt></p><p><strong>关机小程序(这可能是唯一一个有益的程序)</strong></p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202303.png" alt></p><p><strong>蓝屏战士</strong></p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202322.png" alt></p><p><strong>恐吓小脚本</strong></p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202553.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;一些基础批处理编写收录&quot;&gt;&lt;a href=&quot;#一些基础批处理编写收录&quot; class=&quot;headerlink&quot; title=&quot;一些基础批处理编写收录&quot;&gt;&lt;/a&gt;一些基础批处理编写收录&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;批处理的作用&lt;/strong&gt;&lt;/
+      
+    
+    </summary>
+    
+    
+      <category term="网络空间安全" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="网络空间安全" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>ipc$命令管道入侵示例</title>
@@ -561,35 +590,6 @@
       
       
         &lt;p&gt;现在可以插入图片了！！&lt;img src=&quot;https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif&quot; data-original=&quot;https://cdn.jsdelivr.net/gh/G
-      
-    
-    </summary>
-    
-    
-      <category term="调试" scheme="http://grosad.github.io/categories/%E8%B0%83%E8%AF%95/"/>
-    
-    
-      <category term="日常" scheme="http://grosad.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
-    
-      <category term="调试" scheme="http://grosad.github.io/tags/%E8%B0%83%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo调试-1</title>
-    <link href="http://grosad.github.io/2020/06/06/2020-6-6/"/>
-    <id>http://grosad.github.io/2020/06/06/2020-6-6/</id>
-    <published>2020-06-06T09:42:10.000Z</published>
-    <updated>2020-06-26T14:57:43.301Z</updated>
-    
-    <content type="html"><![CDATA[<p>Hexo基本搭建完成</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Hexo基本搭建完成&lt;/p&gt;
-
       
     
     </summary>

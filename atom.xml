@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://grosad.github.io/"/>
-  <updated>2020-06-27T12:27:57.357Z</updated>
+  <updated>2020-06-28T10:40:10.584Z</updated>
   <id>http://grosad.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>5次shift漏洞破解系统密码</title>
+    <link href="http://grosad.github.io/2020/06/28/shift/"/>
+    <id>http://grosad.github.io/2020/06/28/shift/</id>
+    <published>2020-06-28T07:39:06.000Z</published>
+    <updated>2020-06-28T10:40:10.584Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="利用5次shift漏洞破解系统密码"><a href="#利用5次shift漏洞破解系统密码" class="headerlink" title="利用5次shift漏洞破解系统密码"></a>利用5次shift漏洞破解系统密码</h1><h2 id="Windows-五次shift键破解密码"><a href="#Windows-五次shift键破解密码" class="headerlink" title="Windows   五次shift键破解密码"></a>Windows   五次shift键破解密码</h2><p>原理：系统登录界面时五次按下shift键会弹出 - 粘滞键菜单   找到对应路径<strong>掉包成CMD即可</strong></p><p>部分win7和win10可以利用系统修复功能来篡改系统文件名</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183502.png" alt></p><p><strong>具体步骤：</strong></p><ol><li><p>开机出现windows启动界面时强制关机</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183544.png" alt></p></li><li><p>再次开机，选择“启动修复”选项</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183614.png" alt></p></li><li><p>等待系统进行扫描，在系统还原选项点击<strong>“取消”</strong></p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183631.png" alt></p></li><li><p>到这个界面时，点击”隐藏问题详细信息“</p><p><strong>打开最下面的超链接</strong></p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183657.png" alt></p></li><li><p>这里就会弹出操作系统的错误报告，我们只需要点击右上角的</p><p><strong>文件 - 打开</strong>  <strong>然后顺藤摸瓜   摸到C盘目录</strong></p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183728.png" alt></p><blockquote><p>这一步只是利用弹出的记事本摸到C盘，跟记事本的内容毫无关联</p></blockquote></li><li><p><strong>开始掉包！</strong></p><p><strong>先到C:\windows\system32目录</strong></p><p>这里 <strong>粘滞键菜单</strong> 是 <strong>sethc</strong> （这里的路径是隐藏扩展名的）</p><p>重命名：随便打</p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183748.png" alt></p><p><strong>接着找到CMD，将CMD复制一份并命名为setch</strong></p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183833.png" alt></p><p>OK，掉包成功！重启计算机！</p><p>重启之后连按5次shift后弹出的不是<strong>粘滞键菜单</strong>，而是<strong>cmd！</strong></p><blockquote><p><strong>方法1：</strong></p><p>net user 用户名 新密码</p><p>缺点：会被发现</p><p><strong>方法2：</strong></p><p>net user 新用户 密码 /add</p><p>net localgroup administrators 新用户 /add</p><p>创建一个新用户   并添加到超级管理员用户组</p><p>PS:操作完之后需要删除用户和日志   毁尸灭迹</p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183856.png" alt></p><p><strong>然后就可以用新用户登录了</strong>！</p></li></ol><h2 id="防御方法"><a href="#防御方法" class="headerlink" title="防御方法"></a>防御方法</h2><p><strong>升级到最新windows版本即可</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;利用5次shift漏洞破解系统密码&quot;&gt;&lt;a href=&quot;#利用5次shift漏洞破解系统密码&quot; class=&quot;headerlink&quot; title=&quot;利用5次shift漏洞破解系统密码&quot;&gt;&lt;/a&gt;利用5次shift漏洞破解系统密码&lt;/h1&gt;&lt;h2 id=&quot;Windo
+      
+    
+    </summary>
+    
+    
+      <category term="网络空间安全" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="网络空间安全" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>批处理编写</title>
@@ -562,34 +590,6 @@
       
         &lt;p&gt;换了个NexT主题&lt;br&gt;挑了一个比较满意的主题风格&lt;br&gt;忙活了几个小时&lt;br&gt;已经1点了&lt;br&gt;是时候休息了呀&lt;/p&gt;
 
-      
-    
-    </summary>
-    
-    
-      <category term="调试" scheme="http://grosad.github.io/categories/%E8%B0%83%E8%AF%95/"/>
-    
-    
-      <category term="日常" scheme="http://grosad.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
-    
-      <category term="调试" scheme="http://grosad.github.io/tags/%E8%B0%83%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo调试-2</title>
-    <link href="http://grosad.github.io/2020/06/06/2020-6-6-2/"/>
-    <id>http://grosad.github.io/2020/06/06/2020-6-6-2/</id>
-    <published>2020-06-06T12:13:05.000Z</published>
-    <updated>2020-06-26T14:58:00.759Z</updated>
-    
-    <content type="html"><![CDATA[<p>现在可以插入图片了！！<img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/c.gif" alt></p><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1.gif" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;现在可以插入图片了！！&lt;img src=&quot;https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif&quot; data-original=&quot;https://cdn.jsdelivr.net/gh/G
       
     
     </summary>

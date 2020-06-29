@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://grosad.github.io/404/404.html</loc>
+    
+    <lastmod>2020-06-29T08:49:54.760Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://grosad.github.io/2020/06/25/dhcp/</loc>
+    
+    <lastmod>2020-06-29T08:43:34.973Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://grosad.github.io/2020/06/25/FTP-Vulnerability/</loc>
+    
+    <lastmod>2020-06-29T08:43:21.341Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://grosad.github.io/2020/06/25/Linux-1/</loc>
+    
+    <lastmod>2020-06-29T08:42:54.063Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://grosad.github.io/2020/06/25/b-1/</loc>
+    
+    <lastmod>2020-06-29T08:41:14.184Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://grosad.github.io/friends/index.html</loc>
+    
+    <lastmod>2020-06-29T08:33:42.619Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://grosad.github.io/2020/06/28/shift/</loc>
     
     <lastmod>2020-06-29T01:08:27.449Z</lastmod>
@@ -100,23 +142,9 @@
   </url>
   
   <url>
-    <loc>http://grosad.github.io/2020/06/25/b-1/</loc>
-    
-    <lastmod>2020-06-26T14:55:01.189Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://grosad.github.io/2020/06/25/Telnet-1/</loc>
     
     <lastmod>2020-06-26T06:14:19.300Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://grosad.github.io/2020/06/25/dhcp/</loc>
-    
-    <lastmod>2020-06-25T17:05:01.474Z</lastmod>
     
   </url>
   
@@ -128,23 +156,9 @@
   </url>
   
   <url>
-    <loc>http://grosad.github.io/2020/06/25/Linux-1/</loc>
-    
-    <lastmod>2020-06-25T07:08:00.447Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://grosad.github.io/2020/06/25/2020-6-25/</loc>
     
     <lastmod>2020-06-25T06:07:24.991Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://grosad.github.io/2020/06/25/FTP-Vulnerability/</loc>
-    
-    <lastmod>2020-06-25T04:32:08.819Z</lastmod>
     
   </url>
   
@@ -159,13 +173,6 @@
     <loc>http://grosad.github.io/about/index.html</loc>
     
     <lastmod>2020-06-08T09:42:26.674Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://grosad.github.io/friends/index.html</loc>
-    
-    <lastmod>2020-06-07T09:22:27.046Z</lastmod>
     
   </url>
   

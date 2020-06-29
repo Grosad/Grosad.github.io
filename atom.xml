@@ -38,7 +38,36 @@
       <category term="网络空间安全" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
     
     
+      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
+    
       <category term="网络空间安全" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://grosad.github.io/2020/06/28/111/"/>
+    <id>http://grosad.github.io/2020/06/28/111/</id>
+    <published>2020-06-28T06:30:05.000Z</published>
+    <updated>2020-06-29T10:02:04.592Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="网络搭建—VLAN"><a href="#网络搭建—VLAN" class="headerlink" title="网络搭建—VLAN"></a>网络搭建—VLAN</h1><blockquote><p>实验平台: Cisco Packet Tracer 7.3.0</p></blockquote><h2 id="1-VlAN划分"><a href="#1-VlAN划分" class="headerlink" title="1.VlAN划分"></a>1.VlAN划分</h2><h3 id="1-单交换机"><a href="#1-单交换机" class="headerlink" title="(1)单交换机"></a>(1)单交换机</h3><h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/i-1.png" alt></p><h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><pre><code>enconfigint f0/1sw acc vlan 10int f0/2sw acc vlan 20int f0/3sw acc vlan 30end</code></pre><h3 id="2-双交换机"><a href="#2-双交换机" class="headerlink" title="(2)双交换机"></a>(2)双交换机</h3><h4 id="拓扑"><a href="#拓扑" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/i2.png" alt></p><h4 id="指令-1"><a href="#指令-1" class="headerlink" title="指令"></a>指令</h4><p>SW 1</p><pre><code>enconfigint f0/1sw acc vlan 10int f0/2sw acc vlan 20int f0/24sw mode trunksw trunk all vlan allend</code></pre><p>SW 2</p><pre><code>enconfigint f0/1sw acc vlan 10int f0/2sw acc vlan 20int f0/24sw mode trunksw trunk all vlan allend</code></pre><h2 id="2-Vlan间通信"><a href="#2-Vlan间通信" class="headerlink" title="2.Vlan间通信"></a>2.Vlan间通信</h2><h3 id="1-SVI"><a href="#1-SVI" class="headerlink" title="(1)SVI"></a>(1)SVI</h3><h4 id="拓扑-1"><a href="#拓扑-1" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/ttt.PNG" alt></p><h4 id="指令-2"><a href="#指令-2" class="headerlink" title="指令"></a>指令</h4><pre><code>enconfigint vlan 10ip add 192.168.1.254 255.255.255.0int vlan 20ip add 192.168.2.254 255.255.255.0exitint f0/1sw trunk encapsulation dot1qsw mode trunkip routingend</code></pre><p>二层</p><pre><code>enconfigint f0/1sw mode trunksw trunk all vlan allint f0/2sw acc vlan 10int f0/4sw acc vlan 20</code></pre><h3 id="2-单臂路由"><a href="#2-单臂路由" class="headerlink" title="(2)单臂路由"></a>(2)单臂路由</h3><h4 id="拓扑-2"><a href="#拓扑-2" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/ccc.PNG" alt></p><h4 id="指令-3"><a href="#指令-3" class="headerlink" title="指令"></a>指令</h4><p>路由</p><pre><code>en configint f0/0.1 en dot1q 10ip add 192.168.1.254 255.255.255.0no shutdown int f0/0.2en dot1q 20ip add 192.168.2.254 255.255.255.0no shutdownexit int f0/0ip routingno shutdownend</code></pre><p>二层</p><pre><code>enconfigint f0/1sw mode trunksw trunk all vlan allint f0/2sw acc vlan 10int f0/3sw acc vlan 20</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;网络搭建—VLAN&quot;&gt;&lt;a href=&quot;#网络搭建—VLAN&quot; class=&quot;headerlink&quot; title=&quot;网络搭建—VLAN&quot;&gt;&lt;/a&gt;网络搭建—VLAN&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;实验平台: Cisco Packet Tracer 7.3
+      
+    
+    </summary>
+    
+    
+      <category term="网络搭建" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="网络搭建" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
     
       <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
     
@@ -67,9 +96,9 @@
       <category term="网络空间安全" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
     
     
-      <category term="网络空间安全" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
-    
       <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
+    
+      <category term="网络空间安全" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
@@ -125,9 +154,9 @@
       <category term="网络搭建" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
-    
       <category term="网络搭建" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
     
   </entry>
   
@@ -154,9 +183,9 @@
       <category term="网络搭建" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
-    
       <category term="网络搭建" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
     
   </entry>
   
@@ -183,9 +212,9 @@
       <category term="网络搭建" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
-    
       <category term="网络搭建" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
     
   </entry>
   
@@ -211,9 +240,9 @@
       <category term="网络空间安全" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
     
     
-      <category term="网络空间安全" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
-    
       <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
+    
+      <category term="网络空间安全" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
@@ -240,9 +269,9 @@
       <category term="网络搭建" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
-    
       <category term="网络搭建" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
     
   </entry>
   
@@ -325,9 +354,9 @@
       <category term="网络搭建" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
-    
       <category term="网络搭建" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    
+      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
     
   </entry>
   
@@ -393,9 +422,9 @@
       <category term="网络空间安全" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
     
     
-      <category term="网络空间安全" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
-    
       <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
+    
+      <category term="网络空间安全" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
@@ -421,9 +450,9 @@
       <category term="网络空间安全" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
     
     
-      <category term="网络空间安全" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
-    
       <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
+    
+      <category term="网络空间安全" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
@@ -560,35 +589,6 @@
       
       
         &lt;p&gt;花了将近一下午的时间，换了另外一款主题，优化了一下界面&lt;br&gt;现在的界面没之前那么单调了，看起来挺舒服的，纵享丝滑&lt;br&gt;这个主题还有预加载功能，体验极好&lt;br&gt;得找点图来，自带的这些图不怎么不好看&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="调试" scheme="http://grosad.github.io/categories/%E8%B0%83%E8%AF%95/"/>
-    
-    
-      <category term="日常" scheme="http://grosad.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
-    
-      <category term="调试" scheme="http://grosad.github.io/tags/%E8%B0%83%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo调试-3</title>
-    <link href="http://grosad.github.io/2020/06/07/2020-6-7/"/>
-    <id>http://grosad.github.io/2020/06/07/2020-6-7/</id>
-    <published>2020-06-06T17:13:05.000Z</published>
-    <updated>2020-06-26T14:58:26.770Z</updated>
-    
-    <content type="html"><![CDATA[<p>换了个NexT主题<br>挑了一个比较满意的主题风格<br>忙活了几个小时<br>已经1点了<br>是时候休息了呀</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;换了个NexT主题&lt;br&gt;挑了一个比较满意的主题风格&lt;br&gt;忙活了几个小时&lt;br&gt;已经1点了&lt;br&gt;是时候休息了呀&lt;/p&gt;
 
       
     

@@ -1,6 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>test</title>
+    <url>/2020/06/28/111/</url>
+    <content><![CDATA[<h1 id="网络搭建—VLAN"><a href="#网络搭建—VLAN" class="headerlink" title="网络搭建—VLAN"></a>网络搭建—VLAN</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="1-VlAN划分"><a href="#1-VlAN划分" class="headerlink" title="1.VlAN划分"></a>1.VlAN划分</h2><h3 id="1-单交换机"><a href="#1-单交换机" class="headerlink" title="(1)单交换机"></a>(1)单交换机</h3><h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/i-1.png" alt></p>
+<h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><pre><code>en
+config
+int f0/1
+sw acc vlan 10
+int f0/2
+sw acc vlan 20
+int f0/3
+sw acc vlan 30
+end</code></pre><h3 id="2-双交换机"><a href="#2-双交换机" class="headerlink" title="(2)双交换机"></a>(2)双交换机</h3><h4 id="拓扑"><a href="#拓扑" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/i2.png" alt></p>
+<h4 id="指令-1"><a href="#指令-1" class="headerlink" title="指令"></a>指令</h4><p>SW 1</p>
+<pre><code>en
+config
+int f0/1
+sw acc vlan 10
+int f0/2
+sw acc vlan 20
+int f0/24
+sw mode trunk
+sw trunk all vlan all
+end</code></pre><p>SW 2</p>
+<pre><code>en
+config
+int f0/1
+sw acc vlan 10
+int f0/2
+sw acc vlan 20
+int f0/24
+sw mode trunk
+sw trunk all vlan all
+end</code></pre><h2 id="2-Vlan间通信"><a href="#2-Vlan间通信" class="headerlink" title="2.Vlan间通信"></a>2.Vlan间通信</h2><h3 id="1-SVI"><a href="#1-SVI" class="headerlink" title="(1)SVI"></a>(1)SVI</h3><h4 id="拓扑-1"><a href="#拓扑-1" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/ttt.PNG" alt></p>
+<h4 id="指令-2"><a href="#指令-2" class="headerlink" title="指令"></a>指令</h4><pre><code>en
+config
+int vlan 10
+ip add 192.168.1.254 255.255.255.0
+int vlan 20
+ip add 192.168.2.254 255.255.255.0
+exit
+int f0/1
+sw trunk encapsulation dot1q
+sw mode trunk
+ip routing
+end</code></pre><p>二层</p>
+<pre><code>en
+config
+int f0/1
+sw mode trunk
+sw trunk all vlan all
+int f0/2
+sw acc vlan 10
+int f0/4
+sw acc vlan 20</code></pre><h3 id="2-单臂路由"><a href="#2-单臂路由" class="headerlink" title="(2)单臂路由"></a>(2)单臂路由</h3><h4 id="拓扑-2"><a href="#拓扑-2" class="headerlink" title="拓扑"></a>拓扑</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/ccc.PNG" alt></p>
+<h4 id="指令-3"><a href="#指令-3" class="headerlink" title="指令"></a>指令</h4><p>路由</p>
+<pre><code>en 
+config
+int f0/0.1 
+en dot1q 10
+ip add 192.168.1.254 255.255.255.0
+no shutdown 
+int f0/0.2
+en dot1q 20
+ip add 192.168.2.254 255.255.255.0
+no shutdown
+exit 
+int f0/0
+ip routing
+no shutdown
+end</code></pre><p>二层</p>
+<pre><code>en
+config
+int f0/1
+sw mode trunk
+sw trunk all vlan all
+int f0/2
+sw acc vlan 10
+int f0/3
+sw acc vlan 20</code></pre>]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>网络搭建</tag>
+        <tag>收录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo调试-2</title>
+    <url>/2020/06/06/2020-6-6-2/</url>
+    <content><![CDATA[<p>现在可以插入图片了！！<img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/c.gif" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1.gif" alt></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo调试-4</title>
+    <url>/2020/06/07/2020-6-7-2/</url>
+    <content><![CDATA[<p>花了将近一下午的时间，换了另外一款主题，优化了一下界面<br>现在的界面没之前那么单调了，看起来挺舒服的，纵享丝滑<br>这个主题还有预加载功能，体验极好<br>得找点图来，自带的这些图不怎么不好看</p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo调试-1</title>
+    <url>/2020/06/06/2020-6-6/</url>
+    <content><![CDATA[<p>Hexo基本搭建完成</p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>四层主机发现</title>
     <url>/2020/06/25/2020-6-25/</url>
     <content><![CDATA[<blockquote>
@@ -97,48 +228,8 @@
         <category>网络空间安全</category>
       </categories>
       <tags>
-        <tag>网络空间安全</tag>
         <tag>收录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo调试-2</title>
-    <url>/2020/06/06/2020-6-6-2/</url>
-    <content><![CDATA[<p>现在可以插入图片了！！<img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/c.gif" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1.gif" alt></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo调试-1</title>
-    <url>/2020/06/06/2020-6-6/</url>
-    <content><![CDATA[<p>Hexo基本搭建完成</p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo调试-4</title>
-    <url>/2020/06/07/2020-6-7-2/</url>
-    <content><![CDATA[<p>花了将近一下午的时间，换了另外一款主题，优化了一下界面<br>现在的界面没之前那么单调了，看起来挺舒服的，纵享丝滑<br>这个主题还有预加载功能，体验极好<br>得找点图来，自带的这些图不怎么不好看</p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
+        <tag>网络空间安全</tag>
       </tags>
   </entry>
   <entry>
@@ -155,11 +246,9 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-7</title>
-    <url>/2020/06/08/2020-6-8-2/</url>
-    <content><![CDATA[<p>找来了一些图，放在了那个自己搭的图床里，以后再用</p>
-<p>测试了一下博客的访问速度，发现访问速度还是不尽人意，看来GitHub+jsDelivr搭建的图库还是有些小卡，明天再找点教程优化一下吧，弄好之后，就可以一篇一篇的水了233</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/KKEA$V0X8F6WZJE80%7BWN_L8.jpg" alt></p>
+    <title>Hexo调试-3</title>
+    <url>/2020/06/07/2020-6-7/</url>
+    <content><![CDATA[<p>换了个NexT主题<br>挑了一个比较满意的主题风格<br>忙活了几个小时<br>已经1点了<br>是时候休息了呀</p>
 ]]></content>
       <categories>
         <category>调试</category>
@@ -170,9 +259,11 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-3</title>
-    <url>/2020/06/07/2020-6-7/</url>
-    <content><![CDATA[<p>换了个NexT主题<br>挑了一个比较满意的主题风格<br>忙活了几个小时<br>已经1点了<br>是时候休息了呀</p>
+    <title>Hexo调试-7</title>
+    <url>/2020/06/08/2020-6-8-2/</url>
+    <content><![CDATA[<p>找来了一些图，放在了那个自己搭的图床里，以后再用</p>
+<p>测试了一下博客的访问速度，发现访问速度还是不尽人意，看来GitHub+jsDelivr搭建的图库还是有些小卡，明天再找点教程优化一下吧，弄好之后，就可以一篇一篇的水了233</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/KKEA$V0X8F6WZJE80%7BWN_L8.jpg" alt></p>
 ]]></content>
       <categories>
         <category>调试</category>
@@ -261,8 +352,8 @@
         <category>网络空间安全</category>
       </categories>
       <tags>
-        <tag>网络空间安全</tag>
         <tag>收录</tag>
+        <tag>网络空间安全</tag>
       </tags>
   </entry>
   <entry>
@@ -324,107 +415,8 @@
         <category>网络空间安全</category>
       </categories>
       <tags>
-        <tag>网络空间安全</tag>
         <tag>收录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>FTP服务漏洞利用</title>
-    <url>/2020/06/25/FTP-Vulnerability/</url>
-    <content><![CDATA[<h1 id="关于FTP服务的常见漏洞"><a href="#关于FTP服务的常见漏洞" class="headerlink" title="关于FTP服务的常见漏洞"></a>关于FTP服务的常见漏洞</h1><h2 id="1-FTP匿名登录微笑漏洞"><a href="#1-FTP匿名登录微笑漏洞" class="headerlink" title="1.FTP匿名登录微笑漏洞"></a>1.FTP匿名登录微笑漏洞</h2><p>靶机metasploitable2-Linux VSFTPD v2.3.4版本</p>
-<p>渗透机 Kali Linux 2019.3版本</p>
-<p><strong>触发条件：服务允许匿名登录</strong></p>
-<ol>
-<li><strong>首先使用扫描工具对21端口（ftp默认开放于21端口）进行扫描，检测其开放性。</strong></li>
-</ol>
-<p>这里使用<strong>nmap工具</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-51.png" alt></p>
-<p>该端口处于open（开放）状态</p>
-<p>小提示：如果使用扫描工具扫描6200端口（即漏洞触发端口）会显示端口关闭</p>
-<p>虽然是关闭状态，但是不会影响漏洞触发，所以不必担心</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-63.png" alt></p>
-<ol start="2">
-<li><strong>使用nc命令连接FTP服务器</strong></li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-53.png" alt></p>
-<p>在空命令行里输入：</p>
-<p><strong>user anonymous</strong>（使用匿名账户进行登录）<strong>若回显参数为331</strong>，则输入成功</p>
-<p>然后接着输入</p>
-<p><strong>pass pass</strong>（输入密码)由于是匿名登录，pass可以随便打，<strong>若回显参数为230</strong>，则输入成功</p>
-<p>接着可以使用<strong>help命令测试</strong>，登录成功！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-54.png" alt></p>
-<p>测试完毕匿名登录的可用性之后，开始利用漏洞</p>
-<ol start="3">
-<li><p><strong>触发微笑漏洞</strong></p>
-<p>使用nc命令连接目标21端口</p>
-<p>命令行输入：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-55.png" alt></p>
-<p>这里的user用户名可以随便输入，<strong>但是必须包含   :)    字符</strong></p>
-<p>密码也能随便输入，这一步是触发位于6200端口的漏洞</p>
-<p>这里输入help的话是不会回显参数的，这一步登录仅触发漏洞，并无登录意图</p>
-<p><strong>（因包含的字符是 :) 横着看像一个笑脸，所以被誉为FTP笑脸漏洞）</strong></p>
-<ol start="4">
-<li><p><strong>连接端口，漏洞利用</strong></p>
-<p>使用nc连接6200漏洞端口</p>
-<p>输入id命令，可以看到已经获取的root权限了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-56.png" alt></p>
-<h3 id="防御方法！"><a href="#防御方法！" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
-<ol>
-<li>FTP服务禁止匿名登录</li>
-<li>可打上相关的漏洞补丁</li>
-<li>设置防火墙禁止后门6200端口</li>
-</ol>
-</blockquote>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="2-FTP暴力破解"><a href="#2-FTP暴力破解" class="headerlink" title="2.FTP暴力破解"></a>2.FTP暴力破解</h2><p><strong>Kali内集成有很多密码破解工具，这里用medusa举例</strong></p>
-<p>medusa -h 目标IP -u 用户名 -P 字典 -M FTP</p>
-<p>参数-U大写U意为指定用户名字典，小写u指定用户名，-p参数同理，-M指定服务</p>
-<p>可自行编写密码字典，也可以用命令生成（详见其他文章）</p>
-<p>每个密码之间换行就行，这里编写了mm.txt字典</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-57.png" alt></p>
-<p>开始破解，注意这里的字典文件必须使用<strong>绝对路径</strong></p>
-<p>注意，暴力破解的速度取决于<strong>服务器响应速度</strong>和<strong>攻击机处理速度</strong></p>
-<p>所以可以在medusa使用 <strong>-t 和 -r 参数</strong>设置<strong>线程数量</strong>和<strong>重试间隔时间</strong>（默认为3秒）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-58.png" alt></p>
-<p>破解成功！密码为msfadmin，返回了【SUCCESS】（成功！）</p>
-<h3 id="防御方法！-1"><a href="#防御方法！-1" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
-<p>这里以Windows Server 2008 R2为例</p>
-<p>开始 - 管理工具 - 本地安全策略 - 安全设置 - 账户策略 - 账户锁定策略 - 账户锁定阀值</p>
-<p>可设置（___）次无效登录后锁定账户，点击确定后还可设置锁定时间</p>
-</blockquote>
-<h2 id="3-FTP明文验证抓包"><a href="#3-FTP明文验证抓包" class="headerlink" title="3.FTP明文验证抓包"></a>3.FTP明文验证抓包</h2><p>由于<strong>FTP是明文验证/传输</strong>的，所以避免不了网络抓包获取密码</p>
-<p>可以使用<strong>ARP欺骗</strong>（又称断网攻击）进行攻击，网络崩溃后使用<strong>抓包工具</strong>持续抓包</p>
-<p><strong>这里用Wireshark示例</strong></p>
-<ol>
-<li><strong>进行ARP欺骗攻击</strong></li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-59.png" alt></p>
-<blockquote>
-<p>arpspoof -i eth0 -t 192.168.0.103 192.168.0.255</p>
-<p>这里的eth0是本地网卡，注意这里是数字0而不是字母O</p>
-<p>后面第一个IP是目标IP  第二个是本地网关</p>
-</blockquote>
-<p><strong>开始持续ARP攻击，此时目标网络连接会崩溃，一段时间后关闭ARP欺骗，开启抓包监听</strong></p>
-<p>筛选到涉及相关IP的数据流，找到可疑的数据包</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-60.png" alt></p>
-<p>这里可以直观的看到抓取了明文数据流，劫获了目标的登录名和密码</p>
-<p>当然也可以<strong>右键 - 追踪流 - TCP流</strong>更直观的看到</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-61.png" alt></p>
-<h3 id="防御方法！-2"><a href="#防御方法！-2" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
-<p>使用SFTP等其他密文加密传输服务来代替FTP</p>
-</blockquote>
-<h2 id="4-反弹shell"><a href="#4-反弹shell" class="headerlink" title="4.反弹shell"></a>4.反弹shell</h2><p>这里用setoolkit更适用，sessions可直观查看存在的后门并进行连接</p>
-<p>关于上传木马文件并诱其运行以及防御措施等方法不再赘述</p>
-]]></content>
-      <categories>
-        <category>网络空间安全</category>
-      </categories>
-      <tags>
         <tag>网络空间安全</tag>
-        <tag>收录</tag>
       </tags>
   </entry>
   <entry>
@@ -543,70 +535,107 @@ network 192.168.4.0 0.0.0.255 area 0</code></pre><h2 id="结果"><a href="#结�
         <category>网络搭建</category>
       </categories>
       <tags>
-        <tag>收录</tag>
         <tag>网络搭建</tag>
+        <tag>收录</tag>
       </tags>
   </entry>
   <entry>
-    <title>RIP动态路由协议</title>
-    <url>/2020/06/26/RIP/</url>
-    <content><![CDATA[<h1 id="网络搭建—RIP动态路由协议"><a href="#网络搭建—RIP动态路由协议" class="headerlink" title="网络搭建—RIP动态路由协议"></a>网络搭建—RIP动态路由协议</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+    <title>FTP服务漏洞利用</title>
+    <url>/2020/06/25/FTP-Vulnerability/</url>
+    <content><![CDATA[<h1 id="关于FTP服务的常见漏洞"><a href="#关于FTP服务的常见漏洞" class="headerlink" title="关于FTP服务的常见漏洞"></a>关于FTP服务的常见漏洞</h1><h2 id="1-FTP匿名登录微笑漏洞"><a href="#1-FTP匿名登录微笑漏洞" class="headerlink" title="1.FTP匿名登录微笑漏洞"></a>1.FTP匿名登录微笑漏洞</h2><p>靶机metasploitable2-Linux VSFTPD v2.3.4版本</p>
+<p>渗透机 Kali Linux 2019.3版本</p>
+<p><strong>触发条件：服务允许匿名登录</strong></p>
+<ol>
+<li><strong>首先使用扫描工具对21端口（ftp默认开放于21端口）进行扫描，检测其开放性。</strong></li>
+</ol>
+<p>这里使用<strong>nmap工具</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-51.png" alt></p>
+<p>该端口处于open（开放）状态</p>
+<p>小提示：如果使用扫描工具扫描6200端口（即漏洞触发端口）会显示端口关闭</p>
+<p>虽然是关闭状态，但是不会影响漏洞触发，所以不必担心</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-63.png" alt></p>
+<ol start="2">
+<li><strong>使用nc命令连接FTP服务器</strong></li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-53.png" alt></p>
+<p>在空命令行里输入：</p>
+<p><strong>user anonymous</strong>（使用匿名账户进行登录）<strong>若回显参数为331</strong>，则输入成功</p>
+<p>然后接着输入</p>
+<p><strong>pass pass</strong>（输入密码)由于是匿名登录，pass可以随便打，<strong>若回显参数为230</strong>，则输入成功</p>
+<p>接着可以使用<strong>help命令测试</strong>，登录成功！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-54.png" alt></p>
+<p>测试完毕匿名登录的可用性之后，开始利用漏洞</p>
+<ol start="3">
+<li><p><strong>触发微笑漏洞</strong></p>
+<p>使用nc命令连接目标21端口</p>
+<p>命令行输入：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-55.png" alt></p>
+<p>这里的user用户名可以随便输入，<strong>但是必须包含   :)    字符</strong></p>
+<p>密码也能随便输入，这一步是触发位于6200端口的漏洞</p>
+<p>这里输入help的话是不会回显参数的，这一步登录仅触发漏洞，并无登录意图</p>
+<p><strong>（因包含的字符是 :) 横着看像一个笑脸，所以被誉为FTP笑脸漏洞）</strong></p>
+<ol start="4">
+<li><p><strong>连接端口，漏洞利用</strong></p>
+<p>使用nc连接6200漏洞端口</p>
+<p>输入id命令，可以看到已经获取的root权限了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-56.png" alt></p>
+<h3 id="防御方法！"><a href="#防御方法！" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
+<ol>
+<li>FTP服务禁止匿名登录</li>
+<li>可打上相关的漏洞补丁</li>
+<li>设置防火墙禁止后门6200端口</li>
+</ol>
 </blockquote>
-<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r2-1.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
-<pre><code>en
-config
-int f0/0
-no shutdown
-ip add 192.168.1.1 255.255.255.0
-int s0/0/0
-no shutdown
-ip add 192.168.3.1 255.255.255.0
-exit
-ip routing
-route rip
-version 2
-no auto
-network 192.168.1.0
-network 192.168.3.0</code></pre><p>R2</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.3.2 255.255.255.0
-int s0/0/1
-no shutdown
-ip add 192.168.4.2 255.255.255.0
-exit
-ip routing
-route rip
-version 2
-no auto
-network 192.168.4.0
-network 192.168.3.0</code></pre><p>R3</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.4.1 255.255.255.0
-int f0/0
-no shutdown
-ip add 192.168.2.1 255.255.255.0
-exit
-ip routing
-route rip
-version 2
-no auto
-network 192.168.2.0
-network 192.168.4.0</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r2-2.png" alt></p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="2-FTP暴力破解"><a href="#2-FTP暴力破解" class="headerlink" title="2.FTP暴力破解"></a>2.FTP暴力破解</h2><p><strong>Kali内集成有很多密码破解工具，这里用medusa举例</strong></p>
+<p>medusa -h 目标IP -u 用户名 -P 字典 -M FTP</p>
+<p>参数-U大写U意为指定用户名字典，小写u指定用户名，-p参数同理，-M指定服务</p>
+<p>可自行编写密码字典，也可以用命令生成（详见其他文章）</p>
+<p>每个密码之间换行就行，这里编写了mm.txt字典</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-57.png" alt></p>
+<p>开始破解，注意这里的字典文件必须使用<strong>绝对路径</strong></p>
+<p>注意，暴力破解的速度取决于<strong>服务器响应速度</strong>和<strong>攻击机处理速度</strong></p>
+<p>所以可以在medusa使用 <strong>-t 和 -r 参数</strong>设置<strong>线程数量</strong>和<strong>重试间隔时间</strong>（默认为3秒）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-58.png" alt></p>
+<p>破解成功！密码为msfadmin，返回了【SUCCESS】（成功！）</p>
+<h3 id="防御方法！-1"><a href="#防御方法！-1" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
+<p>这里以Windows Server 2008 R2为例</p>
+<p>开始 - 管理工具 - 本地安全策略 - 安全设置 - 账户策略 - 账户锁定策略 - 账户锁定阀值</p>
+<p>可设置（___）次无效登录后锁定账户，点击确定后还可设置锁定时间</p>
+</blockquote>
+<h2 id="3-FTP明文验证抓包"><a href="#3-FTP明文验证抓包" class="headerlink" title="3.FTP明文验证抓包"></a>3.FTP明文验证抓包</h2><p>由于<strong>FTP是明文验证/传输</strong>的，所以避免不了网络抓包获取密码</p>
+<p>可以使用<strong>ARP欺骗</strong>（又称断网攻击）进行攻击，网络崩溃后使用<strong>抓包工具</strong>持续抓包</p>
+<p><strong>这里用Wireshark示例</strong></p>
+<ol>
+<li><strong>进行ARP欺骗攻击</strong></li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-59.png" alt></p>
+<blockquote>
+<p>arpspoof -i eth0 -t 192.168.0.103 192.168.0.255</p>
+<p>这里的eth0是本地网卡，注意这里是数字0而不是字母O</p>
+<p>后面第一个IP是目标IP  第二个是本地网关</p>
+</blockquote>
+<p><strong>开始持续ARP攻击，此时目标网络连接会崩溃，一段时间后关闭ARP欺骗，开启抓包监听</strong></p>
+<p>筛选到涉及相关IP的数据流，找到可疑的数据包</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-60.png" alt></p>
+<p>这里可以直观的看到抓取了明文数据流，劫获了目标的登录名和密码</p>
+<p>当然也可以<strong>右键 - 追踪流 - TCP流</strong>更直观的看到</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-61.png" alt></p>
+<h3 id="防御方法！-2"><a href="#防御方法！-2" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
+<p>使用SFTP等其他密文加密传输服务来代替FTP</p>
+</blockquote>
+<h2 id="4-反弹shell"><a href="#4-反弹shell" class="headerlink" title="4.反弹shell"></a>4.反弹shell</h2><p>这里用setoolkit更适用，sessions可直观查看存在的后门并进行连接</p>
+<p>关于上传木马文件并诱其运行以及防御措施等方法不再赘述</p>
 ]]></content>
       <categories>
-        <category>网络搭建</category>
+        <category>网络空间安全</category>
       </categories>
       <tags>
         <tag>收录</tag>
-        <tag>网络搭建</tag>
+        <tag>网络空间安全</tag>
       </tags>
   </entry>
   <entry>
@@ -695,6 +724,68 @@ shell@msfadmin &gt; ps aux | grep udev  查看pid</code></pre><p><img src="https
       <tags>
         <tag>网络空间安全</tag>
         <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RIP动态路由协议</title>
+    <url>/2020/06/26/RIP/</url>
+    <content><![CDATA[<h1 id="网络搭建—RIP动态路由协议"><a href="#网络搭建—RIP动态路由协议" class="headerlink" title="网络搭建—RIP动态路由协议"></a>网络搭建—RIP动态路由协议</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r2-1.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
+<pre><code>en
+config
+int f0/0
+no shutdown
+ip add 192.168.1.1 255.255.255.0
+int s0/0/0
+no shutdown
+ip add 192.168.3.1 255.255.255.0
+exit
+ip routing
+route rip
+version 2
+no auto
+network 192.168.1.0
+network 192.168.3.0</code></pre><p>R2</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.3.2 255.255.255.0
+int s0/0/1
+no shutdown
+ip add 192.168.4.2 255.255.255.0
+exit
+ip routing
+route rip
+version 2
+no auto
+network 192.168.4.0
+network 192.168.3.0</code></pre><p>R3</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.4.1 255.255.255.0
+int f0/0
+no shutdown
+ip add 192.168.2.1 255.255.255.0
+exit
+ip routing
+route rip
+version 2
+no auto
+network 192.168.2.0
+network 192.168.4.0</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r2-2.png" alt></p>
+]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>网络搭建</tag>
+        <tag>收录</tag>
       </tags>
   </entry>
   <entry>
@@ -790,8 +881,8 @@ ip dhcp snooping trust</code></pre>]]></content>
         <category>网络搭建</category>
       </categories>
       <tags>
-        <tag>收录</tag>
         <tag>网络搭建</tag>
+        <tag>收录</tag>
       </tags>
   </entry>
   <entry>
@@ -1066,8 +1157,8 @@ ip route 192.168.3.0 255.255.255.0 192.168.4.2</code></pre><h2 id="结果"><a hr
         <category>网络搭建</category>
       </categories>
       <tags>
-        <tag>收录</tag>
         <tag>网络搭建</tag>
+        <tag>收录</tag>
       </tags>
   </entry>
   <entry>
@@ -1127,8 +1218,8 @@ ip route 192.168.3.0 255.255.255.0 192.168.4.2</code></pre><h2 id="结果"><a hr
         <category>网络空间安全</category>
       </categories>
       <tags>
-        <tag>网络空间安全</tag>
         <tag>收录</tag>
+        <tag>网络空间安全</tag>
       </tags>
   </entry>
   <entry>
@@ -1218,8 +1309,8 @@ sw acc vlan 20</code></pre>]]></content>
         <category>网络搭建</category>
       </categories>
       <tags>
-        <tag>收录</tag>
         <tag>网络搭建</tag>
+        <tag>收录</tag>
       </tags>
   </entry>
 </search>

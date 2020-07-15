@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://grosad.github.io/"/>
-  <updated>2020-07-15T13:13:43.886Z</updated>
+  <updated>2020-07-15T13:21:41.929Z</updated>
   <id>http://grosad.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://grosad.github.io/2020/07/15/CHAP/"/>
     <id>http://grosad.github.io/2020/07/15/CHAP/</id>
     <published>2020-07-15T13:06:10.000Z</published>
-    <updated>2020-07-15T13:13:43.886Z</updated>
+    <updated>2020-07-15T13:21:41.929Z</updated>
     
     <content type="html"><![CDATA[<h1 id="网络搭建—CHAP认证"><a href="#网络搭建—CHAP认证" class="headerlink" title="网络搭建—CHAP认证"></a>网络搭建—CHAP认证</h1><h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715211109.png" alt></p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p><pre><code>enconfigusername B PAssword 123int s0/0/0ip add 192.168.1.1 255.255.255.0no shutdownencapsulation pppppp authentication chapppp chap hostname Appp chap password 123exitaaa new-model aaa authentication ppp default local</code></pre><p>R2</p><pre><code>enconfigusername A PAssword 123int s0/0/0ip add 192.168.1.2 255.255.255.0no shutdownencapsulation pppppp authentication chapppp chap hostname Bppp chap password 123exitaaa new-model aaa authentication ppp default local</code></pre>]]></content>
     

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://grosad.github.io/"/>
-  <updated>2020-07-15T11:10:51.926Z</updated>
+  <updated>2020-07-15T11:28:56.781Z</updated>
   <id>http://grosad.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://grosad.github.io/2020/07/15/vrrp/"/>
     <id>http://grosad.github.io/2020/07/15/vrrp/</id>
     <published>2020-07-15T11:05:10.000Z</published>
-    <updated>2020-07-15T11:10:51.926Z</updated>
+    <updated>2020-07-15T11:28:56.781Z</updated>
     
     <content type="html"><![CDATA[<h1 id="网络搭建—VRRP"><a href="#网络搭建—VRRP" class="headerlink" title="网络搭建—VRRP"></a>网络搭建—VRRP</h1><blockquote><p>实验平台: Cisco Packet Tracer 7.3.0</p></blockquote><h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715190511.png" alt></p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>SW 1</p><pre><code>enconfigint  vlan 100ip add 10.0.0.1  255.255.255.0exint  f0/1sw acc vlan 100exenconfigint  vlan 200ip add 20.0.0.1  255.255.255.0exint  f0/2sw acc vlan 200exip routingint vlan 100standby 1 ip 10.0.0.10standby 1 preemptstandby 1 priority 150exint vlan 200standby 2 ip 20.0.0.10standby 2 preemptstandby 2 priority 50exroute ospf 1network 10.0.0.0  0.0.0.255 area 0network 20.0.0.0  0.0.0.255 area 0ex</code></pre><p>SW 2</p><pre><code>enconfigint  vlan 100ip add 10.0.0.2  255.255.255.0exint  f0/1sw acc vlan 100exenconfigint  vlan 200ip add 20.0.0.2  255.255.255.0exint  f0/2sw acc vlan 200exip routingint vlan 100standby 1 ip 10.0.0.10standby 1 preemptstandby 1 priority 50exint vlan 200standby 2 ip 20.0.0.10standby 2 preemptstandby 2 priority 150exroute ospf 1network 10.0.0.0  0.0.0.255 area 0network 20.0.0.0  0.0.0.255 area 0ex</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><blockquote><p>这里建议多ping几次，第一次ping可能会失败</p><p>那两个双层交换机摆那就行了</p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715190506.png" alt></p>]]></content>
     
@@ -280,7 +280,7 @@
     <link href="http://grosad.github.io/2020/06/25/dhcp/"/>
     <id>http://grosad.github.io/2020/06/25/dhcp/</id>
     <published>2020-06-25T15:30:05.000Z</published>
-    <updated>2020-06-29T08:43:34.973Z</updated>
+    <updated>2020-07-15T11:29:15.044Z</updated>
     
     <content type="html"><![CDATA[<h1 id="网络搭建—DHCP"><a href="#网络搭建—DHCP" class="headerlink" title="网络搭建—DHCP"></a>网络搭建—DHCP</h1><blockquote><p>实验平台: Cisco Packet Tracer 7.3.0</p></blockquote><h4 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h4><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/dhcp.png" alt></p><h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><h5 id="DHCP配置"><a href="#DHCP配置" class="headerlink" title="DHCP配置"></a>DHCP配置</h5><p>sw1</p><pre><code>enconfigint f0/1no swip add 172.16.1.254 255.255.255.0int f0/23no swip add 10.1.1.1 255.255.255.0service dhcpip dhcp exc 172.16.1.253 172.16.1.254ip dhcp exc 172.16.2.253 172.16.2.254ip dhcp pool net1network 172.16.1.0 255.255.255.0default-router 172.16.1.254dns-server 10.1.2.1exitip dhcp pool net2network 172.16.2.0 255.255.255.0default-router 172.16.2.254dns-server 10.1.2.1exitip route 172.16.2.0 255.255.255.0 10.1.1.2ip routing</code></pre><h5 id="DHCP中继"><a href="#DHCP中继" class="headerlink" title="DHCP中继"></a>DHCP中继</h5><p>sw2</p><pre><code>enconfigint f0/23no swip add 10.1.1.2 255.255.255.0int f0/1no swip add 172.16.2.254 255.255.255.0exitservice dhcpint f0/1ip helper 10.1.1.1exitip routingip route 172.16.1.0 255.255.255.0 10.1.1.1</code></pre><h5 id="DHCP监听"><a href="#DHCP监听" class="headerlink" title="DHCP监听"></a>DHCP监听</h5><p>sw3</p><pre><code>enconfigip dhcp snoopingint f0/1ip dhcp snooping trust</code></pre><p>sw4</p><pre><code>enconfigip dhcp snoopingint f0/1ip dhcp snooping trust</code></pre>]]></content>
     

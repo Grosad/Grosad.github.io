@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://grosad.github.io/"/>
-  <updated>2020-07-15T10:30:11.869Z</updated>
+  <updated>2020-07-15T11:10:51.926Z</updated>
   <id>http://grosad.github.io/</id>
   
   <author>
@@ -17,13 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>VRRP</title>
+    <link href="http://grosad.github.io/2020/07/15/vrrp/"/>
+    <id>http://grosad.github.io/2020/07/15/vrrp/</id>
+    <published>2020-07-15T11:05:10.000Z</published>
+    <updated>2020-07-15T11:10:51.926Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="网络搭建—VRRP"><a href="#网络搭建—VRRP" class="headerlink" title="网络搭建—VRRP"></a>网络搭建—VRRP</h1><blockquote><p>实验平台: Cisco Packet Tracer 7.3.0</p></blockquote><h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715190511.png" alt></p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>SW 1</p><pre><code>enconfigint  vlan 100ip add 10.0.0.1  255.255.255.0exint  f0/1sw acc vlan 100exenconfigint  vlan 200ip add 20.0.0.1  255.255.255.0exint  f0/2sw acc vlan 200exip routingint vlan 100standby 1 ip 10.0.0.10standby 1 preemptstandby 1 priority 150exint vlan 200standby 2 ip 20.0.0.10standby 2 preemptstandby 2 priority 50exroute ospf 1network 10.0.0.0  0.0.0.255 area 0network 20.0.0.0  0.0.0.255 area 0ex</code></pre><p>SW 2</p><pre><code>enconfigint  vlan 100ip add 10.0.0.2  255.255.255.0exint  f0/1sw acc vlan 100exenconfigint  vlan 200ip add 20.0.0.2  255.255.255.0exint  f0/2sw acc vlan 200exip routingint vlan 100standby 1 ip 10.0.0.10standby 1 preemptstandby 1 priority 50exint vlan 200standby 2 ip 20.0.0.10standby 2 preemptstandby 2 priority 150exroute ospf 1network 10.0.0.0  0.0.0.255 area 0network 20.0.0.0  0.0.0.255 area 0ex</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><blockquote><p>这里建议多ping几次，第一次ping可能会失败</p><p>那两个双层交换机摆那就行了</p></blockquote><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715190506.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;网络搭建—VRRP&quot;&gt;&lt;a href=&quot;#网络搭建—VRRP&quot; class=&quot;headerlink&quot; title=&quot;网络搭建—VRRP&quot;&gt;&lt;/a&gt;网络搭建—VRRP&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;实验平台: Cisco Packet Tracer 7.3
+      
+    
+    </summary>
+    
+    
+      <category term="网络搭建" scheme="http://grosad.github.io/categories/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="收录" scheme="http://grosad.github.io/tags/%E6%94%B6%E5%BD%95/"/>
+    
+      <category term="网络搭建" scheme="http://grosad.github.io/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>端口聚合</title>
     <link href="http://grosad.github.io/2020/07/15/2020-7-15/"/>
     <id>http://grosad.github.io/2020/07/15/2020-7-15/</id>
     <published>2020-07-15T10:10:10.000Z</published>
-    <updated>2020-07-15T10:30:11.869Z</updated>
+    <updated>2020-07-15T10:38:59.935Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="网络搭建—端口聚合"><a href="#网络搭建—端口聚合" class="headerlink" title="网络搭建—端口聚合"></a>网络搭建—端口聚合</h1><blockquote><p>实验平台: Cisco Packet Tracer 7.3.0</p></blockquote><h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715182930.png" alt></p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>SW-1</p><pre><code>enconfigint range f0/2-3sw mode trunkchannel-group 1 mode onexitport-channel load-balance dst-ip</code></pre><p>R1</p><pre><code>enconfigint range f0/2-3sw mode trunkchannel-group 1 mode onexitport-channel load-balance dst-ip</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715182919.png" alt></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="网络搭建—端口聚合"><a href="#网络搭建—端口聚合" class="headerlink" title="网络搭建—端口聚合"></a>网络搭建—端口聚合</h1><blockquote><p>实验平台: Cisco Packet Tracer 7.3.0</p></blockquote><h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715182930.png" alt></p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>SW-1</p><pre><code>enconfigint range f0/2-3sw mode trunkchannel-group 1 mode onexitport-channel load-balance dst-ip</code></pre><p>SW-2</p><pre><code>enconfigint range f0/2-3sw mode trunkchannel-group 1 mode onexitport-channel load-balance dst-ip</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715182919.png" alt></p>]]></content>
     
     <summary type="html">
     
@@ -308,7 +337,7 @@
     <link href="http://grosad.github.io/2020/06/25/b-1/"/>
     <id>http://grosad.github.io/2020/06/25/b-1/</id>
     <published>2020-06-25T09:33:25.000Z</published>
-    <updated>2020-06-29T08:41:14.184Z</updated>
+    <updated>2020-07-15T11:26:56.028Z</updated>
     
     <content type="html"><![CDATA[<h1 id="《如果爱了》"><a href="#《如果爱了》" class="headerlink" title="《如果爱了》"></a>《如果爱了》</h1><h5 id="作者：Oscur"><a href="#作者：Oscur" class="headerlink" title="作者：Oscur"></a>作者：Oscur</h5><h2 id="——序章"><a href="#——序章" class="headerlink" title="——序章"></a>——序章</h2><p>​        我考虑了很久，决定创作这篇文章，或许他是日记，仅为留下记忆，或是纪念，或是录堑，亦或是缅怀。</p><p>​        故事很长，倾心诉说。</p><p>​        之前看到过一个疑问，如果让你重新再来一次，你还会重蹈覆辙吗，或是说，你后悔吗？若让我重新再来，我仍会做相同的选择，且不后悔，但在她身上，我再不想留下任何感情。人生中遇见的每一个人，都是安排好的，他一定有意义，但是这份所谓的意义也可以是“经历”，我不后悔遇见她，我也不后悔和她发生的一切，但我再也不是从前那个我，我把她当教训，亦不是三年前痴痴的卑微，更不是半年前深情的舔狗。室友开玩笑的说我像个“喜剧演员”，我想我更像Joker吧。</p><p>​        因为疫情，高二下学期全部被网课代替，我开始讨厌想起她，厌恶脑海中穿插过关于她的点滴，那种感觉很魔幻，像子弹一样击穿我笨拙的壁垒。每当这个时候我总会用力扇自己一耳光，疼痛总会提醒我，质问我到底变了吗，我还是那个我吗？</p><p>​        我喜欢薛之谦，并不是他的歌好听，或是人长得帅，薛先生的歌总会对我的生活产生极大的共鸣，他在讲述一个悲伤的故事，悲伤却被治愈着。最无力，无奈的一首：</p><p>​        没有《演员》的决裂冷炎</p><p>​        没有《绅士》的进退有度</p><p>​        没有《方圆几里》的执着</p><p>​        没有《其实》的歇斯底里</p><p>只有后知后觉的撕心裂肺，连唱腔都隐隐作痛。</p><p>“我们的爱情到这刚刚好，再不争也不吵不必再煎熬，你可以不用记得我的好。”</p><p>现在却害怕听薛之谦，恰好的三行情书总会无数次挑动我已经麻木的伤口。</p><p>​        <strong>等怂恿的烫了手，等看懂的还我自由</strong></p><p>​        谣言横行，舆论传讹，当局者迷。</p><p>​        在他们眼中，我便是“绿了她”，“为了好玩才谈”，可我是个什么样的人，我想我身边的朋友比我更清楚。元旦时期，她对我不冷不热，爱搭不理，在我对她的闺蜜进行刨问，对她开始“恳求”时，她告诉我，我和我的女部下有不当之交，甚至于“周遭皆明，唯其不知”，“所有人都在瞒着我”，“他们都在劝我分”</p><p>​        体测陪跑？我陪的是整个文体部，怎么就是她一个人了？</p><p>​        手牵手？无中生有加上以讹传讹？</p><p>​        当然，我更不知道女当事人和她为了躲避我QQ关联的消息查看而“创群聊完删”的操作中，到底有什么，我想我最好不想知道。</p><p>​        可能我真的将公私分明做出了极致，在红头文件下偏袒她以前的朋友，在开除处分下挽留她现在的闺蜜，在招新面试中挑选她的同学脱颖而出。工作没有特地安排她和我一组，部门之间没有破坏规矩，全会之下没有鼓起官威。正经的工作居然没有掺杂到任何个人感情，我想我很负责，也很可悲，难道不是吗？副主席？</p><p>​        <strong>如果无奈了，那就放下手，野草一定会出卖墙头。</strong></p><p>​                                                                                                                               ———2020年5月30日 凌晨1:43 著序</p>]]></content>
     
@@ -560,35 +589,6 @@
       
       
         &lt;p&gt;又花了几个小时，尝试了一下coding + github 双部署，又觉得coding的使用效果强差人意，还是罢了&lt;br&gt;还有一部分时间，调试了下右下角的这个玩意儿，选来选去，还是用现在这个好了&lt;br&gt;左下角还有个播放音乐的功能，我觉得还挺不错&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-      <category term="调试" scheme="http://grosad.github.io/categories/%E8%B0%83%E8%AF%95/"/>
-    
-    
-      <category term="日常" scheme="http://grosad.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
-    
-      <category term="调试" scheme="http://grosad.github.io/tags/%E8%B0%83%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo调试-4</title>
-    <link href="http://grosad.github.io/2020/06/07/2020-6-7-2/"/>
-    <id>http://grosad.github.io/2020/06/07/2020-6-7-2/</id>
-    <published>2020-06-07T10:59:16.000Z</published>
-    <updated>2020-06-26T14:57:19.801Z</updated>
-    
-    <content type="html"><![CDATA[<p>花了将近一下午的时间，换了另外一款主题，优化了一下界面<br>现在的界面没之前那么单调了，看起来挺舒服的，纵享丝滑<br>这个主题还有预加载功能，体验极好<br>得找点图来，自带的这些图不怎么不好看</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;花了将近一下午的时间，换了另外一款主题，优化了一下界面&lt;br&gt;现在的界面没之前那么单调了，看起来挺舒服的，纵享丝滑&lt;br&gt;这个主题还有预加载功能，体验极好&lt;br&gt;得找点图来，自带的这些图不怎么不好看&lt;/p&gt;
 
       
     

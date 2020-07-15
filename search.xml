@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo调试-2</title>
+    <url>/2020/06/06/2020-6-6-2/</url>
+    <content><![CDATA[<p>现在可以插入图片了！！<img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/c.gif" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1.gif" alt></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>四层主机发现</title>
     <url>/2020/06/25/2020-6-25/</url>
     <content><![CDATA[<blockquote>
@@ -102,36 +116,9 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-2</title>
-    <url>/2020/06/06/2020-6-6-2/</url>
-    <content><![CDATA[<p>现在可以插入图片了！！<img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/c.gif" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1.gif" alt></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo调试-4</title>
     <url>/2020/06/07/2020-6-7-2/</url>
     <content><![CDATA[<p>花了将近一下午的时间，换了另外一款主题，优化了一下界面<br>现在的界面没之前那么单调了，看起来挺舒服的，纵享丝滑<br>这个主题还有预加载功能，体验极好<br>得找点图来，自带的这些图不怎么不好看</p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo调试-5</title>
-    <url>/2020/06/07/2020-6-7-3/</url>
-    <content><![CDATA[<p>又花了几个小时，尝试了一下coding + github 双部署，又觉得coding的使用效果强差人意，还是罢了<br>还有一部分时间，调试了下右下角的这个玩意儿，选来选去，还是用现在这个好了<br>左下角还有个播放音乐的功能，我觉得还挺不错</p>
 ]]></content>
       <categories>
         <category>调试</category>
@@ -155,9 +142,9 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-3</title>
-    <url>/2020/06/07/2020-6-7/</url>
-    <content><![CDATA[<p>换了个NexT主题<br>挑了一个比较满意的主题风格<br>忙活了几个小时<br>已经1点了<br>是时候休息了呀</p>
+    <title>Hexo调试-5</title>
+    <url>/2020/06/07/2020-6-7-3/</url>
+    <content><![CDATA[<p>又花了几个小时，尝试了一下coding + github 双部署，又觉得coding的使用效果强差人意，还是罢了<br>还有一部分时间，调试了下右下角的这个玩意儿，选来选去，还是用现在这个好了<br>左下角还有个播放音乐的功能，我觉得还挺不错</p>
 ]]></content>
       <categories>
         <category>调试</category>
@@ -183,34 +170,16 @@
       </tags>
   </entry>
   <entry>
-    <title>端口聚合</title>
-    <url>/2020/07/15/2020-7-15/</url>
-    <content><![CDATA[<h1 id="网络搭建—端口聚合"><a href="#网络搭建—端口聚合" class="headerlink" title="网络搭建—端口聚合"></a>网络搭建—端口聚合</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715182930.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>SW-1</p>
-<pre><code>en
-config
-int range f0/2-3
-sw mode trunk
-channel-group 1 mode on
-exit
-port-channel load-balance dst-ip</code></pre><p>R1</p>
-<pre><code>en
-config
-int range f0/2-3
-sw mode trunk
-channel-group 1 mode on
-exit
-port-channel load-balance dst-ip</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715182919.png" alt></p>
+    <title>Hexo调试-3</title>
+    <url>/2020/06/07/2020-6-7/</url>
+    <content><![CDATA[<p>换了个NexT主题<br>挑了一个比较满意的主题风格<br>忙活了几个小时<br>已经1点了<br>是时候休息了呀</p>
 ]]></content>
       <categories>
-        <category>网络搭建</category>
+        <category>调试</category>
       </categories>
       <tags>
-        <tag>收录</tag>
-        <tag>网络搭建</tag>
+        <tag>日常</tag>
+        <tag>调试</tag>
       </tags>
   </entry>
   <entry>
@@ -227,6 +196,37 @@ port-channel load-balance dst-ip</code></pre><h2 id="结果"><a href="#结果" c
       <tags>
         <tag>日常</tag>
         <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>端口聚合</title>
+    <url>/2020/07/15/2020-7-15/</url>
+    <content><![CDATA[<h1 id="网络搭建—端口聚合"><a href="#网络搭建—端口聚合" class="headerlink" title="网络搭建—端口聚合"></a>网络搭建—端口聚合</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715182930.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>SW-1</p>
+<pre><code>en
+config
+int range f0/2-3
+sw mode trunk
+channel-group 1 mode on
+exit
+port-channel load-balance dst-ip</code></pre><p>SW-2</p>
+<pre><code>en
+config
+int range f0/2-3
+sw mode trunk
+channel-group 1 mode on
+exit
+port-channel load-balance dst-ip</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715182919.png" alt></p>
+]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -641,6 +641,39 @@ network 192.168.4.0</code></pre><h2 id="结果"><a href="#结果" class="headerl
       </tags>
   </entry>
   <entry>
+    <title>《如果爱了》</title>
+    <url>/2020/06/25/b-1/</url>
+    <content><![CDATA[<h1 id="《如果爱了》"><a href="#《如果爱了》" class="headerlink" title="《如果爱了》"></a>《如果爱了》</h1><h5 id="作者：Oscur"><a href="#作者：Oscur" class="headerlink" title="作者：Oscur"></a>作者：Oscur</h5><h2 id="——序章"><a href="#——序章" class="headerlink" title="——序章"></a>——序章</h2><p>​        我考虑了很久，决定创作这篇文章，或许他是日记，仅为留下记忆，或是纪念，或是录堑，亦或是缅怀。</p>
+<p>​        故事很长，倾心诉说。</p>
+<p>​        之前看到过一个疑问，如果让你重新再来一次，你还会重蹈覆辙吗，或是说，你后悔吗？若让我重新再来，我仍会做相同的选择，且不后悔，但在她身上，我再不想留下任何感情。人生中遇见的每一个人，都是安排好的，他一定有意义，但是这份所谓的意义也可以是“经历”，我不后悔遇见她，我也不后悔和她发生的一切，但我再也不是从前那个我，我把她当教训，亦不是三年前痴痴的卑微，更不是半年前深情的舔狗。室友开玩笑的说我像个“喜剧演员”，我想我更像Joker吧。</p>
+<p>​        因为疫情，高二下学期全部被网课代替，我开始讨厌想起她，厌恶脑海中穿插过关于她的点滴，那种感觉很魔幻，像子弹一样击穿我笨拙的壁垒。每当这个时候我总会用力扇自己一耳光，疼痛总会提醒我，质问我到底变了吗，我还是那个我吗？</p>
+<p>​        我喜欢薛之谦，并不是他的歌好听，或是人长得帅，薛先生的歌总会对我的生活产生极大的共鸣，他在讲述一个悲伤的故事，悲伤却被治愈着。最无力，无奈的一首：</p>
+<p>​        没有《演员》的决裂冷炎</p>
+<p>​        没有《绅士》的进退有度</p>
+<p>​        没有《方圆几里》的执着</p>
+<p>​        没有《其实》的歇斯底里</p>
+<p>只有后知后觉的撕心裂肺，连唱腔都隐隐作痛。</p>
+<p>“我们的爱情到这刚刚好，再不争也不吵不必再煎熬，你可以不用记得我的好。”</p>
+<p>现在却害怕听薛之谦，恰好的三行情书总会无数次挑动我已经麻木的伤口。</p>
+<p>​        <strong>等怂恿的烫了手，等看懂的还我自由</strong></p>
+<p>​        谣言横行，舆论传讹，当局者迷。</p>
+<p>​        在他们眼中，我便是“绿了她”，“为了好玩才谈”，可我是个什么样的人，我想我身边的朋友比我更清楚。元旦时期，她对我不冷不热，爱搭不理，在我对她的闺蜜进行刨问，对她开始“恳求”时，她告诉我，我和我的女部下有不当之交，甚至于“周遭皆明，唯其不知”，“所有人都在瞒着我”，“他们都在劝我分”</p>
+<p>​        体测陪跑？我陪的是整个文体部，怎么就是她一个人了？</p>
+<p>​        手牵手？无中生有加上以讹传讹？</p>
+<p>​        当然，我更不知道女当事人和她为了躲避我QQ关联的消息查看而“创群聊完删”的操作中，到底有什么，我想我最好不想知道。</p>
+<p>​        可能我真的将公私分明做出了极致，在红头文件下偏袒她以前的朋友，在开除处分下挽留她现在的闺蜜，在招新面试中挑选她的同学脱颖而出。工作没有特地安排她和我一组，部门之间没有破坏规矩，全会之下没有鼓起官威。正经的工作居然没有掺杂到任何个人感情，我想我很负责，也很可悲，难道不是吗？副主席？</p>
+<p>​        <strong>如果无奈了，那就放下手，野草一定会出卖墙头。</strong></p>
+<p>​                                                                                                                               ———2020年5月30日 凌晨1:43 著序</p>
+]]></content>
+      <categories>
+        <category>书</category>
+      </categories>
+      <tags>
+        <tag>书</tag>
+        <tag>如果爱了</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Telnet登录提权</title>
     <url>/2020/06/25/Telnet-1/</url>
     <content><![CDATA[<h1 id="Telnet登录破解以及提取最高管理员root权限"><a href="#Telnet登录破解以及提取最高管理员root权限" class="headerlink" title="Telnet登录破解以及提取最高管理员root权限"></a>Telnet登录破解以及提取最高管理员root权限</h1><p>Telnet（Internet<a href="https://baike.baidu.com/item/远程登/2991166" target="_blank" rel="noopener">远程登</a>录服务的标准协议）默认开放于<strong>23端口</strong>。</p>
@@ -726,39 +759,6 @@ shell@msfadmin &gt; ps aux | grep udev  查看pid</code></pre><p><img src="https
       <tags>
         <tag>网络空间安全</tag>
         <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《如果爱了》</title>
-    <url>/2020/06/25/b-1/</url>
-    <content><![CDATA[<h1 id="《如果爱了》"><a href="#《如果爱了》" class="headerlink" title="《如果爱了》"></a>《如果爱了》</h1><h5 id="作者：Oscur"><a href="#作者：Oscur" class="headerlink" title="作者：Oscur"></a>作者：Oscur</h5><h2 id="——序章"><a href="#——序章" class="headerlink" title="——序章"></a>——序章</h2><p>​        我考虑了很久，决定创作这篇文章，或许他是日记，仅为留下记忆，或是纪念，或是录堑，亦或是缅怀。</p>
-<p>​        故事很长，倾心诉说。</p>
-<p>​        之前看到过一个疑问，如果让你重新再来一次，你还会重蹈覆辙吗，或是说，你后悔吗？若让我重新再来，我仍会做相同的选择，且不后悔，但在她身上，我再不想留下任何感情。人生中遇见的每一个人，都是安排好的，他一定有意义，但是这份所谓的意义也可以是“经历”，我不后悔遇见她，我也不后悔和她发生的一切，但我再也不是从前那个我，我把她当教训，亦不是三年前痴痴的卑微，更不是半年前深情的舔狗。室友开玩笑的说我像个“喜剧演员”，我想我更像Joker吧。</p>
-<p>​        因为疫情，高二下学期全部被网课代替，我开始讨厌想起她，厌恶脑海中穿插过关于她的点滴，那种感觉很魔幻，像子弹一样击穿我笨拙的壁垒。每当这个时候我总会用力扇自己一耳光，疼痛总会提醒我，质问我到底变了吗，我还是那个我吗？</p>
-<p>​        我喜欢薛之谦，并不是他的歌好听，或是人长得帅，薛先生的歌总会对我的生活产生极大的共鸣，他在讲述一个悲伤的故事，悲伤却被治愈着。最无力，无奈的一首：</p>
-<p>​        没有《演员》的决裂冷炎</p>
-<p>​        没有《绅士》的进退有度</p>
-<p>​        没有《方圆几里》的执着</p>
-<p>​        没有《其实》的歇斯底里</p>
-<p>只有后知后觉的撕心裂肺，连唱腔都隐隐作痛。</p>
-<p>“我们的爱情到这刚刚好，再不争也不吵不必再煎熬，你可以不用记得我的好。”</p>
-<p>现在却害怕听薛之谦，恰好的三行情书总会无数次挑动我已经麻木的伤口。</p>
-<p>​        <strong>等怂恿的烫了手，等看懂的还我自由</strong></p>
-<p>​        谣言横行，舆论传讹，当局者迷。</p>
-<p>​        在他们眼中，我便是“绿了她”，“为了好玩才谈”，可我是个什么样的人，我想我身边的朋友比我更清楚。元旦时期，她对我不冷不热，爱搭不理，在我对她的闺蜜进行刨问，对她开始“恳求”时，她告诉我，我和我的女部下有不当之交，甚至于“周遭皆明，唯其不知”，“所有人都在瞒着我”，“他们都在劝我分”</p>
-<p>​        体测陪跑？我陪的是整个文体部，怎么就是她一个人了？</p>
-<p>​        手牵手？无中生有加上以讹传讹？</p>
-<p>​        当然，我更不知道女当事人和她为了躲避我QQ关联的消息查看而“创群聊完删”的操作中，到底有什么，我想我最好不想知道。</p>
-<p>​        可能我真的将公私分明做出了极致，在红头文件下偏袒她以前的朋友，在开除处分下挽留她现在的闺蜜，在招新面试中挑选她的同学脱颖而出。工作没有特地安排她和我一组，部门之间没有破坏规矩，全会之下没有鼓起官威。正经的工作居然没有掺杂到任何个人感情，我想我很负责，也很可悲，难道不是吗？副主席？</p>
-<p>​        <strong>如果无奈了，那就放下手，野草一定会出卖墙头。</strong></p>
-<p>​                                                                                                                               ———2020年5月30日 凌晨1:43 著序</p>
-]]></content>
-      <categories>
-        <category>书</category>
-      </categories>
-      <tags>
-        <tag>书</tag>
-        <tag>如果爱了</tag>
       </tags>
   </entry>
   <entry>
@@ -1102,67 +1102,6 @@ ip route 192.168.3.0 255.255.255.0 192.168.4.2</code></pre><h2 id="结果"><a hr
       </tags>
   </entry>
   <entry>
-    <title>5次shift漏洞破解系统密码</title>
-    <url>/2020/06/28/shift/</url>
-    <content><![CDATA[<h1 id="利用5次shift漏洞破解系统密码"><a href="#利用5次shift漏洞破解系统密码" class="headerlink" title="利用5次shift漏洞破解系统密码"></a>利用5次shift漏洞破解系统密码</h1><h2 id="Windows-五次shift键破解密码"><a href="#Windows-五次shift键破解密码" class="headerlink" title="Windows   五次shift键破解密码"></a>Windows   五次shift键破解密码</h2><p>原理：系统登录界面时五次按下shift键会弹出 - 粘滞键菜单   找到对应路径<strong>掉包成CMD即可</strong></p>
-<p>部分win7和win10可以利用系统修复功能来篡改系统文件名</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183502.png" alt></p>
-<p><strong>具体步骤：</strong></p>
-<ol>
-<li><p>开机出现windows启动界面时强制关机</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183544.png" alt></p>
-</li>
-<li><p>再次开机，选择“启动修复”选项</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183614.png" alt></p>
-</li>
-<li><p>等待系统进行扫描，在系统还原选项点击<strong>“取消”</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183631.png" alt></p>
-</li>
-<li><p>到这个界面时，点击”隐藏问题详细信息“</p>
-<p><strong>打开最下面的超链接</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183657.png" alt></p>
-</li>
-<li><p>这里就会弹出操作系统的错误报告，我们只需要点击右上角的</p>
-<p><strong>文件 - 打开</strong>  <strong>然后顺藤摸瓜   摸到C盘目录</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183728.png" alt></p>
-<blockquote>
-<p>这一步只是利用弹出的记事本摸到C盘，跟记事本的内容毫无关联</p>
-</blockquote>
-</li>
-<li><p><strong>开始掉包！</strong></p>
-<p><strong>先到C:\windows\system32目录</strong></p>
-<p>这里 <strong>粘滞键菜单</strong> 是 <strong>sethc</strong> （这里的路径是隐藏扩展名的）</p>
-<p>重命名：随便打</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183748.png" alt></p>
-<p><strong>接着找到CMD，将CMD复制一份并命名为setch</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200629090725.png" alt></p>
-<p>OK，掉包成功！重启计算机！</p>
-<p>重启之后连按5次shift后弹出的不是<strong>粘滞键菜单</strong>，而是<strong>cmd！</strong></p>
-<blockquote>
-<p><strong>方法1：</strong></p>
-<p>net user 用户名 新密码</p>
-<p>缺点：会被发现</p>
-<p><strong>方法2：</strong></p>
-<p>net user 新用户 密码 /add</p>
-<p>net localgroup administrators 新用户 /add</p>
-<p>创建一个新用户   并添加到超级管理员用户组</p>
-<p>PS:操作完之后需要删除用户和日志   毁尸灭迹</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200629090805.png" alt></p>
-<p><strong>然后就可以用新用户登录了</strong>！</p>
-</li>
-</ol>
-<h2 id="防御方法"><a href="#防御方法" class="headerlink" title="防御方法"></a>防御方法</h2><p><strong>升级到最新windows版本即可</strong></p>
-]]></content>
-      <categories>
-        <category>网络空间安全</category>
-      </categories>
-      <tags>
-        <tag>网络空间安全</tag>
-        <tag>收录</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vlan划分</title>
     <url>/2020/06/25/vlan/</url>
     <content><![CDATA[<h1 id="网络搭建—VLAN"><a href="#网络搭建—VLAN" class="headerlink" title="网络搭建—VLAN"></a>网络搭建—VLAN</h1><blockquote>
@@ -1245,6 +1184,150 @@ int f0/2
 sw acc vlan 10
 int f0/3
 sw acc vlan 20</code></pre>]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>5次shift漏洞破解系统密码</title>
+    <url>/2020/06/28/shift/</url>
+    <content><![CDATA[<h1 id="利用5次shift漏洞破解系统密码"><a href="#利用5次shift漏洞破解系统密码" class="headerlink" title="利用5次shift漏洞破解系统密码"></a>利用5次shift漏洞破解系统密码</h1><h2 id="Windows-五次shift键破解密码"><a href="#Windows-五次shift键破解密码" class="headerlink" title="Windows   五次shift键破解密码"></a>Windows   五次shift键破解密码</h2><p>原理：系统登录界面时五次按下shift键会弹出 - 粘滞键菜单   找到对应路径<strong>掉包成CMD即可</strong></p>
+<p>部分win7和win10可以利用系统修复功能来篡改系统文件名</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183502.png" alt></p>
+<p><strong>具体步骤：</strong></p>
+<ol>
+<li><p>开机出现windows启动界面时强制关机</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183544.png" alt></p>
+</li>
+<li><p>再次开机，选择“启动修复”选项</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183614.png" alt></p>
+</li>
+<li><p>等待系统进行扫描，在系统还原选项点击<strong>“取消”</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183631.png" alt></p>
+</li>
+<li><p>到这个界面时，点击”隐藏问题详细信息“</p>
+<p><strong>打开最下面的超链接</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183657.png" alt></p>
+</li>
+<li><p>这里就会弹出操作系统的错误报告，我们只需要点击右上角的</p>
+<p><strong>文件 - 打开</strong>  <strong>然后顺藤摸瓜   摸到C盘目录</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183728.png" alt></p>
+<blockquote>
+<p>这一步只是利用弹出的记事本摸到C盘，跟记事本的内容毫无关联</p>
+</blockquote>
+</li>
+<li><p><strong>开始掉包！</strong></p>
+<p><strong>先到C:\windows\system32目录</strong></p>
+<p>这里 <strong>粘滞键菜单</strong> 是 <strong>sethc</strong> （这里的路径是隐藏扩展名的）</p>
+<p>重命名：随便打</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183748.png" alt></p>
+<p><strong>接着找到CMD，将CMD复制一份并命名为setch</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200629090725.png" alt></p>
+<p>OK，掉包成功！重启计算机！</p>
+<p>重启之后连按5次shift后弹出的不是<strong>粘滞键菜单</strong>，而是<strong>cmd！</strong></p>
+<blockquote>
+<p><strong>方法1：</strong></p>
+<p>net user 用户名 新密码</p>
+<p>缺点：会被发现</p>
+<p><strong>方法2：</strong></p>
+<p>net user 新用户 密码 /add</p>
+<p>net localgroup administrators 新用户 /add</p>
+<p>创建一个新用户   并添加到超级管理员用户组</p>
+<p>PS:操作完之后需要删除用户和日志   毁尸灭迹</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200629090805.png" alt></p>
+<p><strong>然后就可以用新用户登录了</strong>！</p>
+</li>
+</ol>
+<h2 id="防御方法"><a href="#防御方法" class="headerlink" title="防御方法"></a>防御方法</h2><p><strong>升级到最新windows版本即可</strong></p>
+]]></content>
+      <categories>
+        <category>网络空间安全</category>
+      </categories>
+      <tags>
+        <tag>网络空间安全</tag>
+        <tag>收录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VRRP</title>
+    <url>/2020/07/15/vrrp/</url>
+    <content><![CDATA[<h1 id="网络搭建—VRRP"><a href="#网络搭建—VRRP" class="headerlink" title="网络搭建—VRRP"></a>网络搭建—VRRP</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715190511.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>SW 1</p>
+<pre><code>en
+config
+int  vlan 100
+ip add 10.0.0.1  255.255.255.0
+ex
+int  f0/1
+sw acc vlan 100
+ex
+en
+config
+int  vlan 200
+ip add 20.0.0.1  255.255.255.0
+ex
+int  f0/2
+sw acc vlan 200
+ex
+ip routing
+int vlan 100
+standby 1 ip 10.0.0.10
+standby 1 preempt
+standby 1 priority 150
+ex
+int vlan 200
+standby 2 ip 20.0.0.10
+standby 2 preempt
+standby 2 priority 50
+ex
+route ospf 1
+network 10.0.0.0  0.0.0.255 area 0
+network 20.0.0.0  0.0.0.255 area 0
+ex</code></pre><p>SW 2</p>
+<pre><code>en
+config
+int  vlan 100
+ip add 10.0.0.2  255.255.255.0
+ex
+int  f0/1
+sw acc vlan 100
+ex
+en
+config
+int  vlan 200
+ip add 20.0.0.2  255.255.255.0
+ex
+int  f0/2
+sw acc vlan 200
+ex
+ip routing
+int vlan 100
+standby 1 ip 10.0.0.10
+standby 1 preempt
+standby 1 priority 50
+ex
+int vlan 200
+standby 2 ip 20.0.0.10
+standby 2 preempt
+standby 2 priority 150
+ex
+route ospf 1
+network 10.0.0.0  0.0.0.255 area 0
+network 20.0.0.0  0.0.0.255 area 0
+ex</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><blockquote>
+<p>这里建议多ping几次，第一次ping可能会失败</p>
+<p>那两个双层交换机摆那就行了</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715190506.png" alt></p>
+]]></content>
       <categories>
         <category>网络搭建</category>
       </categories>

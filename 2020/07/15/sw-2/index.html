@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="批处理编写, share;diary; experience;">
+    <meta name="keywords" content="交换机端口与MAC绑定, share;diary; experience;">
     <meta name="description" content="the world&#39;s full of lonely people afraid to make the first move.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>批处理编写 | Grosad-BLOG</title>
+    <title>交换机端口与MAC绑定 | Grosad-BLOG</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/libs/awesome/css/all.css">
@@ -344,12 +344,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202141.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715202544.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">批处理编写</h1>
+                    <h1 class="description center-align post-title">交换机端口与MAC绑定</h1>
                 </div>
             </div>
         </div>
@@ -466,12 +466,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/">
-                                <span class="chip bg-color">网络空间安全</span>
-                            </a>
-                        
                             <a href="/tags/%E6%94%B6%E5%BD%95/">
                                 <span class="chip bg-color">收录</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/">
+                                <span class="chip bg-color">网络搭建</span>
                             </a>
                         
                     </div>
@@ -482,8 +482,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/" class="post-category">
-                                网络空间安全
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" class="post-category">
+                                网络搭建
                             </a>
                         
                     </div>
@@ -495,7 +495,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-27
+                    2020-07-15
                 </div>
                 
 
@@ -516,61 +516,20 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一些基础批处理编写收录"><a href="#一些基础批处理编写收录" class="headerlink" title="一些基础批处理编写收录"></a>一些基础批处理编写收录</h1><ol>
-<li><p><strong>批处理的作用</strong></p>
-<p>自上而下成批的处理每一条命令，直到执行最后一条</p>
-</li>
-<li><p><strong>创建批处理</strong></p>
-<p>批处理文件的扩展名：<strong>.bat</strong></p>
-</li>
-<li><p><strong>基础命令</strong></p>
-<p>@echo off   关闭执行过程</p>
-<p>pause   程序暂停</p>
-<p>title   黑框标题</p>
-<p>echo.   输出空行（仅在批处理中有用）</p>
-<p>ping -n 10 127.0.0.1 &gt;nul   延迟10个ping包后关闭程序</p>
-<p>%变量%   取值</p>
-<p>shutdown    关机</p>
-<p>ntsd   杀死进程</p>
-<p>taskkill   杀死进程</p>
-<p>fsutil file createnew 文件路径 大小   新建文件</p>
-<blockquote>
-<p>例：fsutil file createnew e:\123.txt 40960    //在e:\下建立一个叫123.txt的文件，大小为40kb</p>
+                <h1 id="网络搭建—交换机端口与MAC绑定"><a href="#网络搭建—交换机端口与MAC绑定" class="headerlink" title="网络搭建—交换机端口与MAC绑定"></a>网络搭建—交换机端口与MAC绑定</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+<p>目标：将端口f0/1和其所连接PC的MAC地址进行绑定</p>
 </blockquote>
-<p><strong>:   定义区块(这是冒号)</strong></p>
-<p>可以理解为C语言的{}，可以和<strong>goto（跳转）</strong>配合使用，例：</p>
-<blockquote>
-<p>:1   //区块1</p>
-<p>命令1</p>
-<p>命令2</p>
-<p>:2   //区块2</p>
-<p>命令1</p>
-<p>:3   //区块3</p>
-<p>goto :1   //跳转到区块1</p>
-</blockquote>
-<p><strong>set   定义变量</strong></p>
-<blockquote>
-<p>例：</p>
-<p>set /p a=请输入a的值    </p>
-<p> /p参数定义输入函数，若没有/p  =右边的文本会变成a的值</p>
-</blockquote>
-</li>
-<li><h5 id="一些批处理实例-命令后的-是注释的意思，实际使用请划去"><a href="#一些批处理实例-命令后的-是注释的意思，实际使用请划去" class="headerlink" title="一些批处理实例   命令后的//是注释的意思，实际使用请划去//"></a>一些批处理实例   <strong>命令后的//是注释的意思，实际使用请划去</strong>//</h5><blockquote>
-<p>如果看不懂请配合《DOS基本命令》查看</p>
-</blockquote>
-</li>
-</ol>
-<h5 id="C盘毁灭机"><a href="#C盘毁灭机" class="headerlink" title="C盘毁灭机"></a>C盘毁灭机</h5><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202107.png" alt></p>
-<p><strong>撑死他的硬盘</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202141.png" alt></p>
-<p><strong>死循环爆CPU</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202224.png" alt></p>
-<p><strong>关机小程序(这可能是唯一一个有益的程序)</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202303.png" alt></p>
-<p><strong>蓝屏战士</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202322.png" alt></p>
-<p><strong>恐吓小脚本</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627202553.png" alt></p>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715202544.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>交换机</p>
+<pre><code>en
+config
+sw mode access
+switchport port-security
+switchport port-security mac-address 0001.96D9.8752</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><strong>MAC地址修改前</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715202727.png" alt></p>
+<p><strong>MAC地址修改后</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715202914.png" alt></p>
 
             </div>
             <hr/>
@@ -586,7 +545,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Oscur</a>
+                    <a href="/about" rel="external nofollow noreferrer">Grosad</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -596,7 +555,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://grosad.github.io/2020/06/27/DOS-1/">http://grosad.github.io/2020/06/27/DOS-1/</a>
+                    <a href="http://grosad.github.io/2020/07/15/sw-2/">http://grosad.github.io/2020/07/15/sw-2/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -609,7 +568,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Oscur</a>
+                    <a href="/about" target="_blank">Grosad</a>
                     !
                 </span>
             </div>
@@ -634,12 +593,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/">
-                                    <span class="chip bg-color">网络空间安全</span>
-                                </a>
-                            
                                 <a href="/tags/%E6%94%B6%E5%BD%95/">
                                     <span class="chip bg-color">收录</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/">
+                                    <span class="chip bg-color">网络搭建</span>
                                 </a>
                             
                         </div>
@@ -810,7 +769,7 @@
         repo: 'p',
         owner: 'Grosad',
         admin: "Grosad",
-        id: '2020-06-27T17-17-17',
+        id: '2020-07-15T20-01-10',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -838,33 +797,30 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/06/28/shift/">
+                <a href="/2020/07/15/PAP/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200628183544.png" class="responsive-img" alt="5次shift漏洞破解系统密码">
+                        <img src="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715210252.png" class="responsive-img" alt="PAP认证">
                         
-                        <span class="card-title">5次shift漏洞破解系统密码</span>
+                        <span class="card-title">PAP认证</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            利用5次shift漏洞破解系统密码Windows   五次shift键破解密码原理：系统登录界面时五次按下shift键会弹出 - 粘滞键菜单   找到对应路径掉包成CMD即可
-部分win7和win10可以利用系统修复功能来篡改系统文件名
-
-
+                            实验平台Cisco Packet Tracer 7.3.0 PAP认证  拓扑图   指令
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-28
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-15
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/" class="post-category">
-                                    网络空间安全
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" class="post-category">
+                                    网络搭建
                                 </a>
                             
                             
@@ -874,12 +830,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/">
-                        <span class="chip bg-color">网络空间安全</span>
-                    </a>
-                    
                     <a href="/tags/%E6%94%B6%E5%BD%95/">
                         <span class="chip bg-color">收录</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/">
+                        <span class="chip bg-color">网络搭建</span>
                     </a>
                     
                 </div>
@@ -893,31 +849,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/26/ipc$/">
+                <a href="/2020/07/15/sw-1/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Grosad/p/image/6-27--4.png" class="responsive-img" alt="ipc$命令管道入侵示例">
+                        <img src="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715195002.png" class="responsive-img" alt="交换机端口镜像">
                         
-                        <span class="card-title">ipc$命令管道入侵示例</span>
+                        <span class="card-title">交换机端口镜像</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            IPC$入侵示例
-IPC$(Internet Process Connection) 是共享 “ 命名管道 “ 的资源，它是为了让进程间通信而开放的命名管道，通过提供可信任的用户名和口令，连接双方可以建立安全的通道并以此通道进行加密数据的交
+                            实验平台Cisco Packet Tracer 7.3.0 交换机端口镜像  拓扑图   指令
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/" class="post-category">
-                                    网络空间安全
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" class="post-category">
+                                    网络搭建
                                 </a>
                             
                             
@@ -927,12 +882,12 @@ IPC$(Internet Process Connection) 是共享 “ 命名管道 “ 的资源，它
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/">
-                        <span class="chip bg-color">网络空间安全</span>
+                    <a href="/tags/%E6%94%B6%E5%BD%95/">
+                        <span class="chip bg-color">收录</span>
                     </a>
                     
-                    <a href="/tags/%E6%95%99%E7%A8%8B/">
-                        <span class="chip bg-color">教程</span>
+                    <a href="/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/">
+                        <span class="chip bg-color">网络搭建</span>
                     </a>
                     
                 </div>

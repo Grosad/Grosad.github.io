@@ -102,9 +102,10 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-1</title>
-    <url>/2020/06/06/2020-6-6/</url>
-    <content><![CDATA[<p>Hexo基本搭建完成</p>
+    <title>Hexo调试-2</title>
+    <url>/2020/06/06/2020-6-6-2/</url>
+    <content><![CDATA[<p>现在可以插入图片了！！<img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/c.gif" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1.gif" alt></p>
 ]]></content>
       <categories>
         <category>调试</category>
@@ -115,10 +116,9 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-2</title>
-    <url>/2020/06/06/2020-6-6-2/</url>
-    <content><![CDATA[<p>现在可以插入图片了！！<img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/c.gif" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1.gif" alt></p>
+    <title>Hexo调试-1</title>
+    <url>/2020/06/06/2020-6-6/</url>
+    <content><![CDATA[<p>Hexo基本搭建完成</p>
 ]]></content>
       <categories>
         <category>调试</category>
@@ -168,22 +168,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-6</title>
-    <url>/2020/06/08/2020-6-8/</url>
-    <content><![CDATA[<p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p>
-<p>对博客的访问速度优化了一下，在预加载的基础上，弄了个懒加载，<code>懒加载</code>就是:一般是当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载,既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。</p>
-<p>接下来，找点好看的图，把那些细节优化一下，弄完之后，Hexo差不多就调试完毕了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo调试-7</title>
     <url>/2020/06/08/2020-6-8-2/</url>
     <content><![CDATA[<p>找来了一些图，放在了那个自己搭的图床里，以后再用</p>
@@ -199,34 +183,19 @@
       </tags>
   </entry>
   <entry>
-    <title>端口聚合</title>
-    <url>/2020/07/15/2020-7-15/</url>
-    <content><![CDATA[<h1 id="网络搭建—端口聚合"><a href="#网络搭建—端口聚合" class="headerlink" title="网络搭建—端口聚合"></a>网络搭建—端口聚合</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715182930.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>SW-1</p>
-<pre><code>en
-config
-int range f0/2-3
-sw mode trunk
-channel-group 1 mode on
-exit
-port-channel load-balance dst-ip</code></pre><p>SW-2</p>
-<pre><code>en
-config
-int range f0/2-3
-sw mode trunk
-channel-group 1 mode on
-exit
-port-channel load-balance dst-ip</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715182919.png" alt></p>
+    <title>Hexo调试-6</title>
+    <url>/2020/06/08/2020-6-8/</url>
+    <content><![CDATA[<p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p>
+<p>对博客的访问速度优化了一下，在预加载的基础上，弄了个懒加载，<code>懒加载</code>就是:一般是当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载,既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。</p>
+<p>接下来，找点好看的图，把那些细节优化一下，弄完之后，Hexo差不多就调试完毕了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt></p>
 ]]></content>
       <categories>
-        <category>网络搭建</category>
+        <category>调试</category>
       </categories>
       <tags>
-        <tag>收录</tag>
-        <tag>网络搭建</tag>
+        <tag>日常</tag>
+        <tag>调试</tag>
       </tags>
   </entry>
   <entry>
@@ -260,6 +229,37 @@ ppp chap password 123
 exit
 aaa new-model 
 aaa authentication ppp default local</code></pre>]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>端口聚合</title>
+    <url>/2020/07/15/2020-7-15/</url>
+    <content><![CDATA[<h1 id="网络搭建—端口聚合"><a href="#网络搭建—端口聚合" class="headerlink" title="网络搭建—端口聚合"></a>网络搭建—端口聚合</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715182930.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>SW-1</p>
+<pre><code>en
+config
+int range f0/2-3
+sw mode trunk
+channel-group 1 mode on
+exit
+port-channel load-balance dst-ip</code></pre><p>SW-2</p>
+<pre><code>en
+config
+int range f0/2-3
+sw mode trunk
+channel-group 1 mode on
+exit
+port-channel load-balance dst-ip</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715182919.png" alt></p>
+]]></content>
       <categories>
         <category>网络搭建</category>
       </categories>
@@ -786,47 +786,6 @@ network 192.168.4.0 0.0.0.255 area 0</code></pre><h2 id="结果"><a href="#结�
       </tags>
   </entry>
   <entry>
-    <title>PAP认证</title>
-    <url>/2020/07/15/PAP/</url>
-    <content><![CDATA[<h1 id="网络搭建—PAP认证"><a href="#网络搭建—PAP认证" class="headerlink" title="网络搭建—PAP认证"></a>网络搭建—PAP认证</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715210252.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
-<pre><code>en
-config
-username B PAssword 123
-int s0/0/0
-ip add 10.0.0.1 255.255.255.0
-no shutdown
-encapsulation ppp
-ppp authentication pap
-ppp pap sent-username A password 123
-exit
-aaa new-model 
-aaa authentication ppp default local</code></pre><p>R2</p>
-<pre><code>en
-config
-username A PAssword 123
-int s0/0/0
-ip add 192.168.1.2 255.255.255.0
-no shutdown
-encapsulation ppp
-ppp authentication pap
-ppp pap sent-username B password 123
-exit
-aaa new-model 
-aaa authentication ppp default local</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715210325.png" alt></p>
-]]></content>
-      <categories>
-        <category>网络搭建</category>
-      </categories>
-      <tags>
-        <tag>收录</tag>
-        <tag>网络搭建</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>RIP动态路由协议</title>
     <url>/2020/06/26/RIP/</url>
     <content><![CDATA[<h1 id="网络搭建—RIP动态路由协议"><a href="#网络搭建—RIP动态路由协议" class="headerlink" title="网络搭建—RIP动态路由协议"></a>网络搭建—RIP动态路由协议</h1><blockquote>
@@ -974,6 +933,47 @@ shell@msfadmin &gt; ps aux | grep udev  查看pid</code></pre><p><img src="https
       <tags>
         <tag>网络空间安全</tag>
         <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PAP认证</title>
+    <url>/2020/07/15/PAP/</url>
+    <content><![CDATA[<h1 id="网络搭建—PAP认证"><a href="#网络搭建—PAP认证" class="headerlink" title="网络搭建—PAP认证"></a>网络搭建—PAP认证</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715210252.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
+<pre><code>en
+config
+username B PAssword 123
+int s0/0/0
+ip add 10.0.0.1 255.255.255.0
+no shutdown
+encapsulation ppp
+ppp authentication pap
+ppp pap sent-username A password 123
+exit
+aaa new-model 
+aaa authentication ppp default local</code></pre><p>R2</p>
+<pre><code>en
+config
+username A PAssword 123
+int s0/0/0
+ip add 192.168.1.2 255.255.255.0
+no shutdown
+encapsulation ppp
+ppp authentication pap
+ppp pap sent-username B password 123
+exit
+aaa new-model 
+aaa authentication ppp default local</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715210325.png" alt></p>
+]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -1294,6 +1294,84 @@ apt-get clean            #清理无用的包</code></pre><hr>
       <tags>
         <tag>网络空间安全</tag>
         <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NMAP</title>
+    <url>/2020/09/16/nmap-1/</url>
+    <content><![CDATA[<blockquote>
+<p>根据目标影响信息足够多TTL值在确定目标主机的操作系统系统</p>
+<blockquote>
+<p>   TLL是Time To live的缩写，该字段指定IP包被路由丢弃之前允许通过最大网段数量，TTL是IPv4包头的一个子list字段</p>
+</blockquote>
+<p>侦察足以可能影响信息的TTL值在确定目标网络的信息，从黑客的角度来看，信息收集对攻击非常有帮助.</p>
+<ol>
+<li>电子邮件</li>
+<li>端口号</li>
+<li>操作系统</li>
+<li>运行的服务</li>
+<li>DNS信息</li>
+<li>防火墙识别和逃逸</li>
+</ol>
+</blockquote>
+<h2 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h2><blockquote>
+<p>nmap是一个网络连接端扫描软件，用来扫描网上电脑开放的网络连接端。确定哪些服务运行在哪些连接端，并且推断计算器运行在那个操作系统</p>
+</blockquote>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ol>
+<li>主机探测</li>
+<li>端口扫描</li>
+<li>版本检测</li>
+<li>支持探测脚本的编写</li>
+</ol>
+<h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><ul>
+<li>基本快速扫描</li>
+<li>Nmap默认发送一个arp的ping数据包来探测目标主机在1-10000范围内所有开放的端口</li>
+</ul>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><pre><code>nmap [Scan Type(s)] [Options]</code></pre><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>nmap运行通常会得到被扫描主机端口的列表。nmap总会给出well known端口的服务名(如果可能)、端口号、状态和协议等信息。每个端口的状态有：open、filtered、unfiltered。</p>
+<p><strong>open</strong>状态意味着目标主机能够在这个端口使用accept()系统调用接受连接。</p>
+<p><strong>filtered</strong>状态表示：防火墙、包过滤和其它的<a href="http://www.itjj.net/anquan/" target="_blank" rel="noopener">网络安全</a>软件掩盖了这个端口，禁止 nmap探测其是否打开。</p>
+<p><strong>unfiltered</strong>表示：这个端口关闭，并且没有防火墙/包过滤软件来隔离nmap的探测企图。通常情况下，端口的状态基本都是unfiltered状态，只有在大多数被扫描的端口处于filtered状态下，才会显示处于unfiltered状态的端口。</p>
+<h3 id="Nmap参数详解"><a href="#Nmap参数详解" class="headerlink" title="Nmap参数详解"></a>Nmap参数详解</h3><p><strong>主机发现的一些参数</strong></p>
+<h4 id="sP-Ping扫描"><a href="#sP-Ping扫描" class="headerlink" title="-sP(Ping扫描)"></a>-sP(Ping扫描)</h4><p>该选项告诉Nmap仅仅 进行ping扫描 (主机发现)，-sP选项在默认情况下， 发送一个ICMP回声请求和一个TCP报文到80端口</p>
+<h4 id="P0-无ping"><a href="#P0-无ping" class="headerlink" title="-P0 (无ping)"></a>-P0 (无ping)</h4><p>用-P0禁止 主机发现会使Nmap对每一个指定的目标IP地址 进行所要求的扫描。所以如果在命令行指定一?个B类目标地址空间(/16)， 所有 65,536 个IP地址都会被扫描</p>
+<h4 id="PS-portlist-TCP-SYN-Ping"><a href="#PS-portlist-TCP-SYN-Ping" class="headerlink" title="-PS [portlist] (TCP SYN Ping)"></a>-PS [portlist] (TCP SYN Ping)</h4><p>该选项发送一个设置了SYN标志位的空TCP报文，SYN标志位告诉对方您正试图建立一个连接。 通常目标端口是关闭的，一个RST (复位) 包会发回来。<br>如果碰巧端口是开放的，目标会进行TCP三步握手的第二步，回应 一个SYN/ACK TCP报文。然后运行Nmap的机器则会扼杀这个正在建立的连接，<br>发送一个RST而非ACK报文，否则，一个完全的连接将会建立。 RST报文是运行Nmap的机器而不是Nmap本身响应的，因为它对收到的SYN/ACK感到很意外。</p>
+<h4 id="PA-portlist-TCP-ACK-Ping"><a href="#PA-portlist-TCP-ACK-Ping" class="headerlink" title="-PA [portlist] (TCP ACK Ping)"></a>-PA [portlist] (TCP ACK Ping)</h4><p>TCP ACK ping和刚才讨论的SYN ping相当类似。 也许您已经猜到了，区别就是设置TCP的ACK标志位而不是SYN标志位。<br> ACK报文表示确认一个建立连接的尝试，但该连接尚未完全建立。 所以远程主机应该总是回应一个RST报文，<br> 因为它们并没有发出过连接请求到运行Nmap的机器，如果它们正在运行的话。</p>
+<p>提供SYN和ACK两种ping探测的原因是使通过防火墙的机会尽可能大。 许多管理员会配置他们的路由器或者其它简单的防火墙来封锁SYN报文，<br>除非 连接目标是那些公开的服务器像公司网站或者邮件服务器。 这可以阻止其它进入组织的连接，同时也允许用户访问互联网。<br>这种无状态的方法几乎不占用防火墙/路由器的资源，因而被硬件和软件过滤器 广泛支持。Linux的Netfilter/iptables 防火墙软件提供方便的<br>–syn选项来实现这种无状态的方法。 当这样的无状态防火墙规则存在时，发送到关闭目标端口的SYNping探测 (-PS) 很可能被封锁。<br>这种情况下，ACK探测格外有闪光点，因为它正好利用了 这样的规则。</p>
+<h4 id="PU-portlist-UDP-Ping"><a href="#PU-portlist-UDP-Ping" class="headerlink" title="-PU [portlist] (UDP Ping)"></a>-PU [portlist] (UDP Ping)</h4><p>还有一个主机发现的选项是UDP ping，它发送一个空的(除非指定了–data-length UDP报文到给定的端口。如果目标机器的端口是关闭的，UDP探测应该马上得到一个ICMP端口无法到达的回应报文。<br>这对于Nmap意味着该机器正在运行。 许多其它类型的ICMP错误，像主机/网络无法到达或者TTL超时则表示down掉的或者不可到达的主机。<br>没有回应也被这样解释。如果到达一个开放的端口，大部分服务仅仅忽略这个 空报文而不做任何回应。</p>
+<p>该扫描类型的主要优势是它可以穿越只过滤TCP的防火墙和过滤器</p>
+<h4 id="PR-ARP-Ping"><a href="#PR-ARP-Ping" class="headerlink" title="-PR (ARP Ping)"></a>-PR (ARP Ping)</h4><p>最常见的Nmap使用场景之一是扫描一个以太局域网，</p>
+<h4 id="sS-TCP-SYN扫描"><a href="#sS-TCP-SYN扫描" class="headerlink" title="-sS (TCP SYN扫描)"></a>-sS (TCP SYN扫描)</h4><p>SYN扫描作为默认的也是最受欢迎的扫描选项，是有充分理由的。 它执行得很快，在一个没有入侵防火墙的快速网络上，每秒钟可以扫描数千个 端口。SYN扫描相对来说不张扬，不易被注意到，因为它从来不完成TCP连接。它常常被称为半开放扫描， 因为它不打开一个完全的TCP连接。它发送一个SYN报文， 就像您真的要打开一个连接，然后等待响应。 SYN/ACK表示端口在监听 (开放)，而 RST (复位)表示没有监听者。如果数次重发后仍没响应， 该端口就被标记为被过滤。</p>
+<h4 id="sT-TCP-connect-扫描"><a href="#sT-TCP-connect-扫描" class="headerlink" title="-sT (TCP connect()扫描)"></a>-sT (TCP connect()扫描)</h4><p>当SYN扫描不能用时，CP Connect()扫描就是默认的TCP扫描</p>
+<h4 id="sU-UDP扫描"><a href="#sU-UDP扫描" class="headerlink" title="-sU (UDP扫描)"></a>-sU (UDP扫描)</h4><p>虽然互联网上很多流行的服务运行在TCP 协议上，UDP[5]服务也不少。?DNS，SNMP，和DHCP (注册的端口是53，161/162，和67/68)是最常见的三个。<br> 因为UDP扫描一般较慢，比TCP更困难，一些安全审核人员忽略这些端口。 这是一个错误，因为可探测的UDP服务相当普遍，攻击者当然不会忽略整个协议。 所幸，Nmap可以帮助记录并报告UDP端口。</p>
+<p>UDP扫描发送空的(没有数据)UDP报头到每个目标端口。 如果返回ICMP端口不可到达错误(类型3，代码3)，<br>该端口是closed(关闭的)。 其它ICMP不可到达错误(类型3， 代码1，2，9，10，或者13)表明该端口是filtered(被过滤的)。<br>偶尔地，某服务会响应一个UDP报文，证明该端口是open(开放的)。如果几次重试后还没有响应，该端口就被认为是 open|filtered(开放|被过滤的)。<br>这意味着该端口可能是开放的，也可能包过滤器正在封锁通信。 可以用版本扫描(-sV)帮助区分真正的开放端口和被过滤的端口。</p>
+<h4 id="sV-版本探测"><a href="#sV-版本探测" class="headerlink" title="-sV (版本探测)"></a>-sV (版本探测)</h4><p>打开版本探测。 您也可以用-A同时打开操作系统探测和版本探测。</p>
+<h4 id="O-启用操作系统检测"><a href="#O-启用操作系统检测" class="headerlink" title="-O (启用操作系统检测)"></a>-O (启用操作系统检测)</h4><p>防火墙/IDS躲避和哄骗<br>?-f (报文分段); –mtu (使用指定的MTU)<br>-f选项要求扫描时(包挺ping扫描)使用 小的IP包分段。其思路是将TCP头分段在几个包中，使得包过滤器、 IDS以及其它工具的检测更加困难。<br>必须小心使用这个选项，有些系统在处理这些小包时存在问题。</p>
+<h4 id="D-lt-decoy1-，decoy2-，ME-，…-gt-使用诱饵隐蔽扫描"><a href="#D-lt-decoy1-，decoy2-，ME-，…-gt-使用诱饵隐蔽扫描" class="headerlink" title="?-D &lt;decoy1 [，decoy2][，ME]，…&gt; (使用诱饵隐蔽扫描)"></a>?-D &lt;decoy1 [，decoy2][，ME]，…&gt; (使用诱饵隐蔽扫描)</h4><p>注意，作为诱饵的主机须在工作状态，否则会导致目标主机的SYN洪水攻击</p>
+<h4 id="S-源地址哄骗"><a href="#S-源地址哄骗" class="headerlink" title="-S  (源地址哄骗)"></a>-S <IP_Address> (源地址哄骗)</IP_Address></h4><p>在某些情况下，Nmap可能无法确定你的源地址(如果这样，Nmap会给出提示)。此时，使用-S选项并说明所需发送包的接口IP地址。<br>这个标志的另一个用处是哄骗性的扫描，使得目标认为是另 一个地址在进行扫描。可以想象某一个竞争对手在不断扫描某个公司！<br>-e选项常在这种情况下使用，也可采用-P0选项。</p>
+<h4 id="sF-sX-sN-秘密FIN数据包扫描、圣诞树-Xmas-Tree-、空-Null-扫描模式"><a href="#sF-sX-sN-秘密FIN数据包扫描、圣诞树-Xmas-Tree-、空-Null-扫描模式" class="headerlink" title="-sF -sX -sN(秘密FIN数据包扫描、圣诞树(Xmas Tree)、空(Null)扫描模式)"></a>-sF -sX -sN(秘密FIN数据包扫描、圣诞树(Xmas Tree)、空(Null)扫描模式)</h4><p>　　<strong>秘密FIN数据包扫描、圣诞树(Xmas Tree)、空(Null)扫描模式：</strong>即使SYN扫描都无法确定的情况下使用。一些防火墙和包过滤软件能够对发送到被限制端口的SYN数据包进行监视，而且有些程序比如synlogger和courtney能够检测那些扫描。这些高级的扫描方式可以逃过这些干扰。这些扫描方式的理论依据是：关闭的端口需要对你的探测包回应RST包，而打开的端口必需忽略有问题的包(参考RFC 793第64页)。FIN扫描使用暴露的FIN数据包来探测，而圣诞树扫描打开数据包的FIN、URG和PUSH标志。不幸的是，微软决定完全忽略这个标准，另起炉灶。所以这种扫描方式对Windows95/NT无效。不过，从另外的角度讲，可以使用这种方式来分别两种不同的平台。如果使用这种扫描方式可以发现打开的端口，你就可以确定目标主机运行的不是Windows系统。如果使用-sF、-sX或者-sN扫描显示所有的端口都是关闭的，而使用SYN扫描显示有打开的端口，你可以确定目标主机可能运行的是Windwos系统。现在这种方式没有什么太大的用处，因为nmap有内嵌的<a href="http://www.itjj.net/OS/" target="_blank" rel="noopener">操作系统</a>检测功能。还有其它几个系统使用和windows同样的处理方式，包括Cisco、BSDI、HP/UX、MYS、IRIX。在应该抛弃数据包时，以上这些系统都会从打开的端口发出复位数据包。</p>
+<h4 id="sA-ACK扫描"><a href="#sA-ACK扫描" class="headerlink" title="-sA(ACK扫描)"></a>-sA(ACK扫描)</h4><p>ACK扫描：这项高级的扫描方法通常用来穿过防火墙的规则集。通常情况下，这有助于确定一个防火墙是功能比较完善的或者是一个简单的包过滤程序，只是阻塞进入的SYN包。<br>这种扫描是向特定的端口发送ACK包(使用随机的应答/序列号)。如果返回一个RST包，这个端口就标记为unfiltered状态。如果什么都没有返回，或者返回一个不可达ICMP消息，这个端口就归入filtered类。注意，nmap通常不输出unfiltered的端口，所以在输出中通常不显示所有被探测的端口。显然，这种扫描方式不能找出处于打开状态的端口。</p>
+<h3 id="Nmap图形界面——zenmap"><a href="#Nmap图形界面——zenmap" class="headerlink" title="Nmap图形界面——zenmap"></a>Nmap图形界面——zenmap</h3><ul>
+<li>基于windows的nmap图形化zenmap的参数及用法，与基于Liunx和nmap完全相同</li>
+<li>nmap在windows平台上运行时，需要用到winpcap程序支持运行</li>
+</ul>
+<h3 id="Nmap优缺点"><a href="#Nmap优缺点" class="headerlink" title="Nmap优缺点"></a>Nmap优缺点</h3><ul>
+<li><strong>优点</strong></li>
+</ul>
+<p>nmap作为主动式端口扫描工具，只要在对方设有发有通信阻断的情况下，可以在较短的时间内获得结果</p>
+<ul>
+<li><strong>缺点</strong></li>
+</ul>
+<p>（1）现在常有阻断功能的防火墙越来越多，有些防火墙当检测到端口扫描时，会将端口关闭一段时间，还有的机器使用了filter功能，只对特定的IP地址提供服务，这种情况下，主动式的准确性大打折扣</p>
+<p>（2）主动式只是在一瞬间对端口进行扫描，只有当服务器那个时候使用的服务器才可以被侦听到。</p>
+<p>（3）端口扫描是一种广义上的攻击行为，对未经许可的机器，一般不能施行</p>
+]]></content>
+      <categories>
+        <category>网络空间安全</category>
+      </categories>
+      <tags>
+        <tag>网络空间安全</tag>
+        <tag>笔记</tag>
+        <tag>网安网安笔记</tag>
       </tags>
   </entry>
   <entry>

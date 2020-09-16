@@ -399,105 +399,6 @@ port-channel load-balance dst-ip</code></pre><h2 id="结果"><a href="#结果" c
       </tags>
   </entry>
   <entry>
-    <title>FTP服务漏洞利用</title>
-    <url>/2020/06/25/FTP-Vulnerability/</url>
-    <content><![CDATA[<h1 id="关于FTP服务的常见漏洞"><a href="#关于FTP服务的常见漏洞" class="headerlink" title="关于FTP服务的常见漏洞"></a>关于FTP服务的常见漏洞</h1><h2 id="1-FTP匿名登录微笑漏洞"><a href="#1-FTP匿名登录微笑漏洞" class="headerlink" title="1.FTP匿名登录微笑漏洞"></a>1.FTP匿名登录微笑漏洞</h2><p>靶机metasploitable2-Linux VSFTPD v2.3.4版本</p>
-<p>渗透机 Kali Linux 2019.3版本</p>
-<p><strong>触发条件：服务允许匿名登录</strong></p>
-<ol>
-<li><strong>首先使用扫描工具对21端口（ftp默认开放于21端口）进行扫描，检测其开放性。</strong></li>
-</ol>
-<p>这里使用<strong>nmap工具</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-51.png" alt></p>
-<p>该端口处于open（开放）状态</p>
-<p>小提示：如果使用扫描工具扫描6200端口（即漏洞触发端口）会显示端口关闭</p>
-<p>虽然是关闭状态，但是不会影响漏洞触发，所以不必担心</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-63.png" alt></p>
-<ol start="2">
-<li><strong>使用nc命令连接FTP服务器</strong></li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-53.png" alt></p>
-<p>在空命令行里输入：</p>
-<p><strong>user anonymous</strong>（使用匿名账户进行登录）<strong>若回显参数为331</strong>，则输入成功</p>
-<p>然后接着输入</p>
-<p><strong>pass pass</strong>（输入密码)由于是匿名登录，pass可以随便打，<strong>若回显参数为230</strong>，则输入成功</p>
-<p>接着可以使用<strong>help命令测试</strong>，登录成功！</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-54.png" alt></p>
-<p>测试完毕匿名登录的可用性之后，开始利用漏洞</p>
-<ol start="3">
-<li><p><strong>触发微笑漏洞</strong></p>
-<p>使用nc命令连接目标21端口</p>
-<p>命令行输入：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-55.png" alt></p>
-<p>这里的user用户名可以随便输入，<strong>但是必须包含   :)    字符</strong></p>
-<p>密码也能随便输入，这一步是触发位于6200端口的漏洞</p>
-<p>这里输入help的话是不会回显参数的，这一步登录仅触发漏洞，并无登录意图</p>
-<p><strong>（因包含的字符是 :) 横着看像一个笑脸，所以被誉为FTP笑脸漏洞）</strong></p>
-<ol start="4">
-<li><p><strong>连接端口，漏洞利用</strong></p>
-<p>使用nc连接6200漏洞端口</p>
-<p>输入id命令，可以看到已经获取的root权限了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-56.png" alt></p>
-<h3 id="防御方法！"><a href="#防御方法！" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
-<ol>
-<li>FTP服务禁止匿名登录</li>
-<li>可打上相关的漏洞补丁</li>
-<li>设置防火墙禁止后门6200端口</li>
-</ol>
-</blockquote>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="2-FTP暴力破解"><a href="#2-FTP暴力破解" class="headerlink" title="2.FTP暴力破解"></a>2.FTP暴力破解</h2><p><strong>Kali内集成有很多密码破解工具，这里用medusa举例</strong></p>
-<p>medusa -h 目标IP -u 用户名 -P 字典 -M FTP</p>
-<p>参数-U大写U意为指定用户名字典，小写u指定用户名，-p参数同理，-M指定服务</p>
-<p>可自行编写密码字典，也可以用命令生成（详见其他文章）</p>
-<p>每个密码之间换行就行，这里编写了mm.txt字典</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-57.png" alt></p>
-<p>开始破解，注意这里的字典文件必须使用<strong>绝对路径</strong></p>
-<p>注意，暴力破解的速度取决于<strong>服务器响应速度</strong>和<strong>攻击机处理速度</strong></p>
-<p>所以可以在medusa使用 <strong>-t 和 -r 参数</strong>设置<strong>线程数量</strong>和<strong>重试间隔时间</strong>（默认为3秒）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-58.png" alt></p>
-<p>破解成功！密码为msfadmin，返回了【SUCCESS】（成功！）</p>
-<h3 id="防御方法！-1"><a href="#防御方法！-1" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
-<p>这里以Windows Server 2008 R2为例</p>
-<p>开始 - 管理工具 - 本地安全策略 - 安全设置 - 账户策略 - 账户锁定策略 - 账户锁定阀值</p>
-<p>可设置（___）次无效登录后锁定账户，点击确定后还可设置锁定时间</p>
-</blockquote>
-<h2 id="3-FTP明文验证抓包"><a href="#3-FTP明文验证抓包" class="headerlink" title="3.FTP明文验证抓包"></a>3.FTP明文验证抓包</h2><p>由于<strong>FTP是明文验证/传输</strong>的，所以避免不了网络抓包获取密码</p>
-<p>可以使用<strong>ARP欺骗</strong>（又称断网攻击）进行攻击，网络崩溃后使用<strong>抓包工具</strong>持续抓包</p>
-<p><strong>这里用Wireshark示例</strong></p>
-<ol>
-<li><strong>进行ARP欺骗攻击</strong></li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-59.png" alt></p>
-<blockquote>
-<p>arpspoof -i eth0 -t 192.168.0.103 192.168.0.255</p>
-<p>这里的eth0是本地网卡，注意这里是数字0而不是字母O</p>
-<p>后面第一个IP是目标IP  第二个是本地网关</p>
-</blockquote>
-<p><strong>开始持续ARP攻击，此时目标网络连接会崩溃，一段时间后关闭ARP欺骗，开启抓包监听</strong></p>
-<p>筛选到涉及相关IP的数据流，找到可疑的数据包</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-60.png" alt></p>
-<p>这里可以直观的看到抓取了明文数据流，劫获了目标的登录名和密码</p>
-<p>当然也可以<strong>右键 - 追踪流 - TCP流</strong>更直观的看到</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-61.png" alt></p>
-<h3 id="防御方法！-2"><a href="#防御方法！-2" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
-<p>使用SFTP等其他密文加密传输服务来代替FTP</p>
-</blockquote>
-<h2 id="4-反弹shell"><a href="#4-反弹shell" class="headerlink" title="4.反弹shell"></a>4.反弹shell</h2><p>这里用setoolkit更适用，sessions可直观查看存在的后门并进行连接</p>
-<p>关于上传木马文件并诱其运行以及防御措施等方法不再赘述</p>
-]]></content>
-      <categories>
-        <category>网络空间安全</category>
-      </categories>
-      <tags>
-        <tag>网络空间安全</tag>
-        <tag>收录</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux中关于文件权限</title>
     <url>/2020/06/25/Linux-1/</url>
     <content><![CDATA[<blockquote>
@@ -730,6 +631,105 @@ p 粘贴
       </tags>
   </entry>
   <entry>
+    <title>FTP服务漏洞利用</title>
+    <url>/2020/06/25/FTP-Vulnerability/</url>
+    <content><![CDATA[<h1 id="关于FTP服务的常见漏洞"><a href="#关于FTP服务的常见漏洞" class="headerlink" title="关于FTP服务的常见漏洞"></a>关于FTP服务的常见漏洞</h1><h2 id="1-FTP匿名登录微笑漏洞"><a href="#1-FTP匿名登录微笑漏洞" class="headerlink" title="1.FTP匿名登录微笑漏洞"></a>1.FTP匿名登录微笑漏洞</h2><p>靶机metasploitable2-Linux VSFTPD v2.3.4版本</p>
+<p>渗透机 Kali Linux 2019.3版本</p>
+<p><strong>触发条件：服务允许匿名登录</strong></p>
+<ol>
+<li><strong>首先使用扫描工具对21端口（ftp默认开放于21端口）进行扫描，检测其开放性。</strong></li>
+</ol>
+<p>这里使用<strong>nmap工具</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-51.png" alt></p>
+<p>该端口处于open（开放）状态</p>
+<p>小提示：如果使用扫描工具扫描6200端口（即漏洞触发端口）会显示端口关闭</p>
+<p>虽然是关闭状态，但是不会影响漏洞触发，所以不必担心</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-63.png" alt></p>
+<ol start="2">
+<li><strong>使用nc命令连接FTP服务器</strong></li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-53.png" alt></p>
+<p>在空命令行里输入：</p>
+<p><strong>user anonymous</strong>（使用匿名账户进行登录）<strong>若回显参数为331</strong>，则输入成功</p>
+<p>然后接着输入</p>
+<p><strong>pass pass</strong>（输入密码)由于是匿名登录，pass可以随便打，<strong>若回显参数为230</strong>，则输入成功</p>
+<p>接着可以使用<strong>help命令测试</strong>，登录成功！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-54.png" alt></p>
+<p>测试完毕匿名登录的可用性之后，开始利用漏洞</p>
+<ol start="3">
+<li><p><strong>触发微笑漏洞</strong></p>
+<p>使用nc命令连接目标21端口</p>
+<p>命令行输入：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-55.png" alt></p>
+<p>这里的user用户名可以随便输入，<strong>但是必须包含   :)    字符</strong></p>
+<p>密码也能随便输入，这一步是触发位于6200端口的漏洞</p>
+<p>这里输入help的话是不会回显参数的，这一步登录仅触发漏洞，并无登录意图</p>
+<p><strong>（因包含的字符是 :) 横着看像一个笑脸，所以被誉为FTP笑脸漏洞）</strong></p>
+<ol start="4">
+<li><p><strong>连接端口，漏洞利用</strong></p>
+<p>使用nc连接6200漏洞端口</p>
+<p>输入id命令，可以看到已经获取的root权限了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-56.png" alt></p>
+<h3 id="防御方法！"><a href="#防御方法！" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
+<ol>
+<li>FTP服务禁止匿名登录</li>
+<li>可打上相关的漏洞补丁</li>
+<li>设置防火墙禁止后门6200端口</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="2-FTP暴力破解"><a href="#2-FTP暴力破解" class="headerlink" title="2.FTP暴力破解"></a>2.FTP暴力破解</h2><p><strong>Kali内集成有很多密码破解工具，这里用medusa举例</strong></p>
+<p>medusa -h 目标IP -u 用户名 -P 字典 -M FTP</p>
+<p>参数-U大写U意为指定用户名字典，小写u指定用户名，-p参数同理，-M指定服务</p>
+<p>可自行编写密码字典，也可以用命令生成（详见其他文章）</p>
+<p>每个密码之间换行就行，这里编写了mm.txt字典</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-57.png" alt></p>
+<p>开始破解，注意这里的字典文件必须使用<strong>绝对路径</strong></p>
+<p>注意，暴力破解的速度取决于<strong>服务器响应速度</strong>和<strong>攻击机处理速度</strong></p>
+<p>所以可以在medusa使用 <strong>-t 和 -r 参数</strong>设置<strong>线程数量</strong>和<strong>重试间隔时间</strong>（默认为3秒）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-58.png" alt></p>
+<p>破解成功！密码为msfadmin，返回了【SUCCESS】（成功！）</p>
+<h3 id="防御方法！-1"><a href="#防御方法！-1" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
+<p>这里以Windows Server 2008 R2为例</p>
+<p>开始 - 管理工具 - 本地安全策略 - 安全设置 - 账户策略 - 账户锁定策略 - 账户锁定阀值</p>
+<p>可设置（___）次无效登录后锁定账户，点击确定后还可设置锁定时间</p>
+</blockquote>
+<h2 id="3-FTP明文验证抓包"><a href="#3-FTP明文验证抓包" class="headerlink" title="3.FTP明文验证抓包"></a>3.FTP明文验证抓包</h2><p>由于<strong>FTP是明文验证/传输</strong>的，所以避免不了网络抓包获取密码</p>
+<p>可以使用<strong>ARP欺骗</strong>（又称断网攻击）进行攻击，网络崩溃后使用<strong>抓包工具</strong>持续抓包</p>
+<p><strong>这里用Wireshark示例</strong></p>
+<ol>
+<li><strong>进行ARP欺骗攻击</strong></li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-59.png" alt></p>
+<blockquote>
+<p>arpspoof -i eth0 -t 192.168.0.103 192.168.0.255</p>
+<p>这里的eth0是本地网卡，注意这里是数字0而不是字母O</p>
+<p>后面第一个IP是目标IP  第二个是本地网关</p>
+</blockquote>
+<p><strong>开始持续ARP攻击，此时目标网络连接会崩溃，一段时间后关闭ARP欺骗，开启抓包监听</strong></p>
+<p>筛选到涉及相关IP的数据流，找到可疑的数据包</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-60.png" alt></p>
+<p>这里可以直观的看到抓取了明文数据流，劫获了目标的登录名和密码</p>
+<p>当然也可以<strong>右键 - 追踪流 - TCP流</strong>更直观的看到</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-61.png" alt></p>
+<h3 id="防御方法！-2"><a href="#防御方法！-2" class="headerlink" title="防御方法！"></a>防御方法！</h3><blockquote>
+<p>使用SFTP等其他密文加密传输服务来代替FTP</p>
+</blockquote>
+<h2 id="4-反弹shell"><a href="#4-反弹shell" class="headerlink" title="4.反弹shell"></a>4.反弹shell</h2><p>这里用setoolkit更适用，sessions可直观查看存在的后门并进行连接</p>
+<p>关于上传木马文件并诱其运行以及防御措施等方法不再赘述</p>
+]]></content>
+      <categories>
+        <category>网络空间安全</category>
+      </categories>
+      <tags>
+        <tag>网络空间安全</tag>
+        <tag>收录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>OSPF动态路由协议</title>
     <url>/2020/06/26/OSPF/</url>
     <content><![CDATA[<h1 id="网络搭建—OSPF动态路由协议"><a href="#网络搭建—OSPF动态路由协议" class="headerlink" title="网络搭建—OSPF动态路由协议"></a>网络搭建—OSPF动态路由协议</h1><blockquote>
@@ -776,6 +776,47 @@ ip routing
 route ospf 1
 network 192.168.2.0 0.0.0.255 area 0
 network 192.168.4.0 0.0.0.255 area 0</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627000520.png" alt></p>
+]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PAP认证</title>
+    <url>/2020/07/15/PAP/</url>
+    <content><![CDATA[<h1 id="网络搭建—PAP认证"><a href="#网络搭建—PAP认证" class="headerlink" title="网络搭建—PAP认证"></a>网络搭建—PAP认证</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715210252.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
+<pre><code>en
+config
+username B PAssword 123
+int s0/0/0
+ip add 10.0.0.1 255.255.255.0
+no shutdown
+encapsulation ppp
+ppp authentication pap
+ppp pap sent-username A password 123
+exit
+aaa new-model 
+aaa authentication ppp default local</code></pre><p>R2</p>
+<pre><code>en
+config
+username A PAssword 123
+int s0/0/0
+ip add 192.168.1.2 255.255.255.0
+no shutdown
+encapsulation ppp
+ppp authentication pap
+ppp pap sent-username B password 123
+exit
+aaa new-model 
+aaa authentication ppp default local</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715210325.png" alt></p>
 ]]></content>
       <categories>
         <category>网络搭建</category>
@@ -936,80 +977,6 @@ shell@msfadmin &gt; ps aux | grep udev  查看pid</code></pre><p><img src="https
       </tags>
   </entry>
   <entry>
-    <title>PAP认证</title>
-    <url>/2020/07/15/PAP/</url>
-    <content><![CDATA[<h1 id="网络搭建—PAP认证"><a href="#网络搭建—PAP认证" class="headerlink" title="网络搭建—PAP认证"></a>网络搭建—PAP认证</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715210252.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
-<pre><code>en
-config
-username B PAssword 123
-int s0/0/0
-ip add 10.0.0.1 255.255.255.0
-no shutdown
-encapsulation ppp
-ppp authentication pap
-ppp pap sent-username A password 123
-exit
-aaa new-model 
-aaa authentication ppp default local</code></pre><p>R2</p>
-<pre><code>en
-config
-username A PAssword 123
-int s0/0/0
-ip add 192.168.1.2 255.255.255.0
-no shutdown
-encapsulation ppp
-ppp authentication pap
-ppp pap sent-username B password 123
-exit
-aaa new-model 
-aaa authentication ppp default local</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715210325.png" alt></p>
-]]></content>
-      <categories>
-        <category>网络搭建</category>
-      </categories>
-      <tags>
-        <tag>收录</tag>
-        <tag>网络搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《如果爱了》</title>
-    <url>/2020/06/25/b-1/</url>
-    <content><![CDATA[<h1 id="《如果爱了》"><a href="#《如果爱了》" class="headerlink" title="《如果爱了》"></a>《如果爱了》</h1><h5 id="作者：Oscur"><a href="#作者：Oscur" class="headerlink" title="作者：Oscur"></a>作者：Oscur</h5><h2 id="——序章"><a href="#——序章" class="headerlink" title="——序章"></a>——序章</h2><p>​        我考虑了很久，决定创作这篇文章，或许他是日记，仅为留下记忆，或是纪念，或是录堑，亦或是缅怀。</p>
-<p>​        故事很长，倾心诉说。</p>
-<p>​        之前看到过一个疑问，如果让你重新再来一次，你还会重蹈覆辙吗，或是说，你后悔吗？若让我重新再来，我仍会做相同的选择，且不后悔，但在她身上，我再不想留下任何感情。人生中遇见的每一个人，都是安排好的，他一定有意义，但是这份所谓的意义也可以是“经历”，我不后悔遇见她，我也不后悔和她发生的一切，但我再也不是从前那个我，我把她当教训，亦不是三年前痴痴的卑微，更不是半年前深情的舔狗。室友开玩笑的说我像个“喜剧演员”，我想我更像Joker吧。</p>
-<p>​        因为疫情，高二下学期全部被网课代替，我开始讨厌想起她，厌恶脑海中穿插过关于她的点滴，那种感觉很魔幻，像子弹一样击穿我笨拙的壁垒。每当这个时候我总会用力扇自己一耳光，疼痛总会提醒我，质问我到底变了吗，我还是那个我吗？</p>
-<p>​        我喜欢薛之谦，并不是他的歌好听，或是人长得帅，薛先生的歌总会对我的生活产生极大的共鸣，他在讲述一个悲伤的故事，悲伤却被治愈着。最无力，无奈的一首：</p>
-<p>​        没有《演员》的决裂冷炎</p>
-<p>​        没有《绅士》的进退有度</p>
-<p>​        没有《方圆几里》的执着</p>
-<p>​        没有《其实》的歇斯底里</p>
-<p>只有后知后觉的撕心裂肺，连唱腔都隐隐作痛。</p>
-<p>“我们的爱情到这刚刚好，再不争也不吵不必再煎熬，你可以不用记得我的好。”</p>
-<p>现在却害怕听薛之谦，恰好的三行情书总会无数次挑动我已经麻木的伤口。</p>
-<p>​        <strong>等怂恿的烫了手，等看懂的还我自由</strong></p>
-<p>​        谣言横行，舆论传讹，当局者迷。</p>
-<p>​        在他们眼中，我便是“绿了她”，“为了好玩才谈”，可我是个什么样的人，我想我身边的朋友比我更清楚。元旦时期，她对我不冷不热，爱搭不理，在我对她的闺蜜进行刨问，对她开始“恳求”时，她告诉我，我和我的女部下有不当之交，甚至于“周遭皆明，唯其不知”，“所有人都在瞒着我”，“他们都在劝我分”</p>
-<p>​        体测陪跑？我陪的是整个文体部，怎么就是她一个人了？</p>
-<p>​        手牵手？无中生有加上以讹传讹？</p>
-<p>​        当然，我更不知道女当事人和她为了躲避我QQ关联的消息查看而“创群聊完删”的操作中，到底有什么，我想我最好不想知道。</p>
-<p>​        可能我真的将公私分明做出了极致，在红头文件下偏袒她以前的朋友，在开除处分下挽留她现在的闺蜜，在招新面试中挑选她的同学脱颖而出。工作没有特地安排她和我一组，部门之间没有破坏规矩，全会之下没有鼓起官威。正经的工作居然没有掺杂到任何个人感情，我想我很负责，也很可悲，难道不是吗？副主席？</p>
-<p>​        <strong>如果无奈了，那就放下手，野草一定会出卖墙头。</strong></p>
-<p>​                                                                                                                               ———2020年5月30日 凌晨1:43 著序</p>
-]]></content>
-      <categories>
-        <category>书</category>
-      </categories>
-      <tags>
-        <tag>书</tag>
-        <tag>如果爱了</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>DHCP</title>
     <url>/2020/06/25/dhcp/</url>
     <content><![CDATA[<h1 id="网络搭建—DHCP"><a href="#网络搭建—DHCP" class="headerlink" title="网络搭建—DHCP"></a>网络搭建—DHCP</h1><blockquote>
@@ -1071,6 +1038,39 @@ ip dhcp snooping trust</code></pre>]]></content>
       <tags>
         <tag>收录</tag>
         <tag>网络搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《如果爱了》</title>
+    <url>/2020/06/25/b-1/</url>
+    <content><![CDATA[<h1 id="《如果爱了》"><a href="#《如果爱了》" class="headerlink" title="《如果爱了》"></a>《如果爱了》</h1><h5 id="作者：Oscur"><a href="#作者：Oscur" class="headerlink" title="作者：Oscur"></a>作者：Oscur</h5><h2 id="——序章"><a href="#——序章" class="headerlink" title="——序章"></a>——序章</h2><p>​        我考虑了很久，决定创作这篇文章，或许他是日记，仅为留下记忆，或是纪念，或是录堑，亦或是缅怀。</p>
+<p>​        故事很长，倾心诉说。</p>
+<p>​        之前看到过一个疑问，如果让你重新再来一次，你还会重蹈覆辙吗，或是说，你后悔吗？若让我重新再来，我仍会做相同的选择，且不后悔，但在她身上，我再不想留下任何感情。人生中遇见的每一个人，都是安排好的，他一定有意义，但是这份所谓的意义也可以是“经历”，我不后悔遇见她，我也不后悔和她发生的一切，但我再也不是从前那个我，我把她当教训，亦不是三年前痴痴的卑微，更不是半年前深情的舔狗。室友开玩笑的说我像个“喜剧演员”，我想我更像Joker吧。</p>
+<p>​        因为疫情，高二下学期全部被网课代替，我开始讨厌想起她，厌恶脑海中穿插过关于她的点滴，那种感觉很魔幻，像子弹一样击穿我笨拙的壁垒。每当这个时候我总会用力扇自己一耳光，疼痛总会提醒我，质问我到底变了吗，我还是那个我吗？</p>
+<p>​        我喜欢薛之谦，并不是他的歌好听，或是人长得帅，薛先生的歌总会对我的生活产生极大的共鸣，他在讲述一个悲伤的故事，悲伤却被治愈着。最无力，无奈的一首：</p>
+<p>​        没有《演员》的决裂冷炎</p>
+<p>​        没有《绅士》的进退有度</p>
+<p>​        没有《方圆几里》的执着</p>
+<p>​        没有《其实》的歇斯底里</p>
+<p>只有后知后觉的撕心裂肺，连唱腔都隐隐作痛。</p>
+<p>“我们的爱情到这刚刚好，再不争也不吵不必再煎熬，你可以不用记得我的好。”</p>
+<p>现在却害怕听薛之谦，恰好的三行情书总会无数次挑动我已经麻木的伤口。</p>
+<p>​        <strong>等怂恿的烫了手，等看懂的还我自由</strong></p>
+<p>​        谣言横行，舆论传讹，当局者迷。</p>
+<p>​        在他们眼中，我便是“绿了她”，“为了好玩才谈”，可我是个什么样的人，我想我身边的朋友比我更清楚。元旦时期，她对我不冷不热，爱搭不理，在我对她的闺蜜进行刨问，对她开始“恳求”时，她告诉我，我和我的女部下有不当之交，甚至于“周遭皆明，唯其不知”，“所有人都在瞒着我”，“他们都在劝我分”</p>
+<p>​        体测陪跑？我陪的是整个文体部，怎么就是她一个人了？</p>
+<p>​        手牵手？无中生有加上以讹传讹？</p>
+<p>​        当然，我更不知道女当事人和她为了躲避我QQ关联的消息查看而“创群聊完删”的操作中，到底有什么，我想我最好不想知道。</p>
+<p>​        可能我真的将公私分明做出了极致，在红头文件下偏袒她以前的朋友，在开除处分下挽留她现在的闺蜜，在招新面试中挑选她的同学脱颖而出。工作没有特地安排她和我一组，部门之间没有破坏规矩，全会之下没有鼓起官威。正经的工作居然没有掺杂到任何个人感情，我想我很负责，也很可悲，难道不是吗？副主席？</p>
+<p>​        <strong>如果无奈了，那就放下手，野草一定会出卖墙头。</strong></p>
+<p>​                                                                                                                               ———2020年5月30日 凌晨1:43 著序</p>
+]]></content>
+      <categories>
+        <category>书</category>
+      </categories>
+      <tags>
+        <tag>书</tag>
+        <tag>如果爱了</tag>
       </tags>
   </entry>
   <entry>
@@ -1297,6 +1297,59 @@ apt-get clean            #清理无用的包</code></pre><hr>
       </tags>
   </entry>
   <entry>
+    <title>静态路由</title>
+    <url>/2020/06/26/route/</url>
+    <content><![CDATA[<h1 id="网络搭建—静态路由"><a href="#网络搭建—静态路由" class="headerlink" title="网络搭建—静态路由"></a>网络搭建—静态路由</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-1.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R0</p>
+<pre><code>en
+config
+int f0/0
+no shutdown
+ip add 192.168.1.1 255.255.255.0
+int s0/0/0
+no shutdown
+ip add 192.168.3.1 255.255.255.0
+exit
+ip routing
+ip route 192.168.4.0 255.255.255.0 192.168.3.2
+ip route 192.168.2.0 255.255.255.0 192.168.3.2</code></pre><p>R1</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.3.2 255.255.255.0
+int s0/0/1
+no shutdown
+ip add 192.168.4.2 255.255.255.0
+exit
+ip routing
+ip route 192.168.1.0 255.255.255.0 192.168.3.1
+ip route 192.168.2.0 255.255.255.0 192.168.4.1</code></pre><p>R2</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.4.1 255.255.255.0
+int f0/0
+no shutdown
+ip add 192.168.2.1 255.255.255.0
+exit
+ip routing
+ip route 192.168.1.0 255.255.255.0 192.168.4.2
+ip route 192.168.3.0 255.255.255.0 192.168.4.2</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-2.png" alt></p>
+]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>NMAP</title>
     <url>/2020/09/16/nmap-1/</url>
     <content><![CDATA[<blockquote>
@@ -1372,59 +1425,6 @@ apt-get clean            #清理无用的包</code></pre><hr>
         <tag>网络空间安全</tag>
         <tag>笔记</tag>
         <tag>网安网安笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>静态路由</title>
-    <url>/2020/06/26/route/</url>
-    <content><![CDATA[<h1 id="网络搭建—静态路由"><a href="#网络搭建—静态路由" class="headerlink" title="网络搭建—静态路由"></a>网络搭建—静态路由</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-1.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R0</p>
-<pre><code>en
-config
-int f0/0
-no shutdown
-ip add 192.168.1.1 255.255.255.0
-int s0/0/0
-no shutdown
-ip add 192.168.3.1 255.255.255.0
-exit
-ip routing
-ip route 192.168.4.0 255.255.255.0 192.168.3.2
-ip route 192.168.2.0 255.255.255.0 192.168.3.2</code></pre><p>R1</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.3.2 255.255.255.0
-int s0/0/1
-no shutdown
-ip add 192.168.4.2 255.255.255.0
-exit
-ip routing
-ip route 192.168.1.0 255.255.255.0 192.168.3.1
-ip route 192.168.2.0 255.255.255.0 192.168.4.1</code></pre><p>R2</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.4.1 255.255.255.0
-int f0/0
-no shutdown
-ip add 192.168.2.1 255.255.255.0
-exit
-ip routing
-ip route 192.168.1.0 255.255.255.0 192.168.4.2
-ip route 192.168.3.0 255.255.255.0 192.168.4.2</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-2.png" alt></p>
-]]></content>
-      <categories>
-        <category>网络搭建</category>
-      </categories>
-      <tags>
-        <tag>收录</tag>
-        <tag>网络搭建</tag>
       </tags>
   </entry>
   <entry>

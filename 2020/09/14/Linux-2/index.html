@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CHAP认证, share;diary; experience;">
+    <meta name="keywords" content="Linux文件基础命令, share;diary; experience;">
     <meta name="description" content="the world&#39;s full of lonely people afraid to make the first move.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CHAP认证 | Grosad-BLOG</title>
+    <title>Linux文件基础命令 | Grosad-BLOG</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/libs/awesome/css/all.css">
@@ -344,12 +344,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715211109.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/Grosad/p/image/20200916192555.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CHAP认证</h1>
+                    <h1 class="description center-align post-title">Linux文件基础命令</h1>
                 </div>
             </div>
         </div>
@@ -466,12 +466,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%94%B6%E5%BD%95/">
-                                <span class="chip bg-color">收录</span>
+                            <a href="/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/">
+                                <span class="chip bg-color">网络空间安全</span>
                             </a>
                         
-                            <a href="/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/">
-                                <span class="chip bg-color">网络搭建</span>
+                            <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                <span class="chip bg-color">教程</span>
                             </a>
                         
                     </div>
@@ -482,8 +482,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/" class="post-category">
-                                网络搭建
+                            <a href="/categories/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/" class="post-category">
+                                网络空间安全
                             </a>
                         
                     </div>
@@ -495,7 +495,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-07-15
+                    2020-09-14
                 </div>
                 
 
@@ -516,34 +516,163 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="网络搭建—CHAP认证"><a href="#网络搭建—CHAP认证" class="headerlink" title="网络搭建—CHAP认证"></a>网络搭建—CHAP认证</h1><h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715211109.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
-<pre><code>en
-config
-username B PAssword 123
-int s0/0/0
-ip add 192.168.1.1 255.255.255.0
-no shutdown
-encapsulation ppp
-ppp authentication chap
-ppp chap hostname A
-ppp chap password 123
-exit
-aaa new-model 
-aaa authentication ppp default local</code></pre><p>R2</p>
-<pre><code>en
-config
-username A PAssword 123
-int s0/0/0
-ip add 192.168.1.2 255.255.255.0
-no shutdown
-encapsulation ppp
-ppp authentication chap
-ppp chap hostname B
-ppp chap password 123
-exit
-aaa new-model 
-aaa authentication ppp default local</code></pre>
+                <h1 id="Linux文件基础命令"><a href="#Linux文件基础命令" class="headerlink" title="Linux文件基础命令"></a>Linux文件基础命令</h1><p><strong>1. 用户基本操作</strong></p>
+<pre><code>whoami 查看当前登录用户
+su [用户名] 切换用户
+&quot;$&quot;普通用户   &quot;#&quot;管理员
+管理员切换普通用户不用密码，普通用户之间需要密码
+useradd   (只有root能用)
+passwd [用户名] (只有root能用)</code></pre><p><strong>2. shell快捷键</strong></p>
+<pre><code>Ctrl + a 调用命令行的开头
+Ctrl + e 调用命令行的结尾
+Ctrl + u 将光标处到命令行开头的内容清除
+Ctrl + k 将光标处到命令行结尾的内容清除
+Ctrl + r 在历史记录列表中搜索某一命令
+Ctrl + l 清屏
+history 显示历史命令
+![number] 直接执行曾执行过的命令
+pwd -alh 显示所有信息 -d 只看当前目录的信息</code></pre><p><strong>3.Linux中的目录结构ls命令</strong></p>
+<pre><code>cd 路径   切换路径
+cd - 返回到之前的目录
+cd .. 回上一级目录
+cd ~ 到用户所在的家目录</code></pre><p><strong>4.Linux目录含义</strong></p>
+<pre><code>/boot Linux启动时需要的文件
+/dev      设备文件
+/etc       配置文件
+/home  用户家目录 
+/media 媒体文件
+/mnt     挂载文件
+/opt      第三方软件
+/proc    虚拟化文件
+/root    管理员的家目录
+/run     进程文件
+/srv      压缩过的文件
+/sys      系统文件
+/usr      安装的软件，共享库
+/var      可变数据，日志文件
+/tmp     临时文件
+/usr/bin     普通用户可以使用的命令
+/usr/sbin   超级用户可以使用的命令
+/usr/lib      32位库文件
+/usr/lib64  64位库文件</code></pre><p><strong>5.Linux中文件的操作</strong></p>
+<pre><code>touch 创建一个文件
+cp 复制文件
+mkdir 创建目录    (-p参数递归创建)
+mv 移动文件 (也可重命名)
+rm 删除文件 ( -rf 强制删除)</code></pre><p><strong>文件查看</strong></p>
+<pre><code>nl  显示的时候出现行号
+tac  从最后一行开始显示
+head 显示文件的前10行 -n设置行数
+tail 显示文件结尾10行 -n设置行数
+wc 显示文件的行数，数字，字节</code></pre><p><strong>cat 查看文件</strong></p>
+<pre><code>-A 整合命令-vET
+-b 列出行号(空白行不算)
+-E 将结尾的断行符($)显示出来
+-n 列出行号(空白行也会表示)
+-T 将tab按键显示
+-v 列出特殊字符</code></pre><p><strong>nl</strong></p>
+<pre><code>-ba 无论是否有空行都列出行号
+-bt 不列出空白行号(默认)
+-nln 行号在屏幕最左方
+-nrn 行号在屏幕最右方，前面不加0
+-nrz 行号在屏幕最右方，前面加0
+-w 缩进多少位
+find 查找
+umount 取消挂载
+mount 挂载
+vim 编辑**查看文件 - more**
+more (一页一页的翻动)
+空格：向下翻页
+回车：向下翻一行
+/字符串  搜索
+:+ 立刻显示文件名和行数
+b 翻到第一页
+q 离开</code></pre><p><strong>5.Linux中文件的操作</strong></p>
+<pre><code>touch 创建一个文件
+cp 复制文件
+mkdir 创建目录    (-p参数递归创建)
+mv 移动文件 (也可重命名)
+rm 删除文件 ( -rf 强制删除)**文件查看**
+nl  显示的时候出现行号
+tac  从最后一行开始显示
+head 显示文件的前10行 -n设置行数
+tail 显示文件结尾10行 -n设置行数
+wc 显示文件的行数，数字，字节</code></pre><p><strong>cat 查看文件</strong></p>
+<pre><code>-A 整合命令-vET
+-b 列出行号(空白行不算)
+-E 将结尾的断行符($)显示出来
+-n 列出行号(空白行也会表示)
+-T 将tab按键显示
+-v 列出特殊字符</code></pre><p><strong>nl</strong></p>
+<pre><code>-ba 无论是否有空行都列出行号
+-bt 不列出空白行号(默认)
+-nln 行号在屏幕最左方
+-nrn 行号在屏幕最右方，前面不加0
+-nrz 行号在屏幕最右方，前面加0
+-w 缩进多少位
+find 查找
+umount 取消挂载
+mount 挂载
+vim 编辑</code></pre><p><strong>查看文件 - more</strong></p>
+<pre><code>more (一页一页的翻动)
+空格：向下翻页
+回车：向下翻一行
+/字符串  搜索
+:+ 立刻显示文件名和行数
+b 翻到第一页
+q 离开</code></pre><p><strong>查看文件 - less</strong></p>
+<pre><code>less (一页一页的翻动)
+空格 向下翻动一页
+pagedown 向下翻动一页
+pageup 向上翻动一页
+n 重复前一个搜索
+N 反方向重新前一个搜索
+q 退出</code></pre><p><strong>查看文件</strong></p>
+<pre><code>head tail 显示文件头或尾几行
+-n 指示显示几行，默认是10行
+日志文件/var/log/message 我们只需要看尾部最新的几行即可</code></pre><p><strong>wc 显示文件的行数，数字，字节</strong></p>
+<pre><code>-c 只显示字节
+-w 只显示字数 一个字被定义为空白，空格或换行字符分隔的字符串
+-l 只显示行</code></pre><p><strong>vi / vim 编辑器 (vi是Linux内置编辑器，vim是增强版)</strong></p>
+<pre><code>i 插入
+esc 退出
+u 撤销
+x 删除
+
+
+v 选择文本
+y 复制
+yy 复制当前行
+dd 删除光标所在行
+p 粘贴
+
+
+:w 保存
+:wq 保存并退出
+:q! 强退 （不保存）</code></pre><p><strong>gedit编辑器[文本编辑器] - 需要X-windows的支持</strong></p>
+<h2 id="关机"><a href="#关机" class="headerlink" title="关机"></a><strong>关机</strong></h2><h3 id="需要注意的事项"><a href="#需要注意的事项" class="headerlink" title="需要注意的事项"></a>需要注意的事项</h3><ul>
+<li>观察系统的使用状态</li>
+<li>通知在线使用者关机的时间</li>
+<li>正确的关机指令使用</li>
+</ul>
+<p><strong>关机指令</strong></p>
+<ul>
+<li><p>数据同步写入磁盘 -sync</p>
+</li>
+<li><p>常用的关机指令:shutdown</p>
+</li>
+<li><p>重启，关机：reboot , half , poweroff</p>
+</li>
+</ul>
+<pre><code>    shutdown 
+
+-t 添加倒数关机秒数
+    -k 假关机，发出警报信息
+  -r 在系统服务都停止后重启
+    -h 在系统服务都停止后关机
+  -f 关闭并且开机以后强行略过磁盘检查
+    -F 重启后强制进行磁盘检查
+  -C 取消已经在进行的shutdown指令内容</code></pre>
             </div>
             <hr/>
 
@@ -558,7 +687,7 @@ aaa authentication ppp default local</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Grosad</a>
+                    <a href="/about" rel="external nofollow noreferrer">Oscur</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -568,7 +697,7 @@ aaa authentication ppp default local</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://grosad.github.io/2020/07/15/CHAP/">http://grosad.github.io/2020/07/15/CHAP/</a>
+                    <a href="http://grosad.github.io/2020/09/14/Linux-2/">http://grosad.github.io/2020/09/14/Linux-2/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -581,7 +710,7 @@ aaa authentication ppp default local</code></pre>
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Grosad</a>
+                    <a href="/about" target="_blank">Oscur</a>
                     !
                 </span>
             </div>
@@ -606,12 +735,12 @@ aaa authentication ppp default local</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%94%B6%E5%BD%95/">
-                                    <span class="chip bg-color">收录</span>
+                                <a href="/tags/%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8/">
+                                    <span class="chip bg-color">网络空间安全</span>
                                 </a>
                             
-                                <a href="/tags/%E7%BD%91%E7%BB%9C%E6%90%AD%E5%BB%BA/">
-                                    <span class="chip bg-color">网络搭建</span>
+                                <a href="/tags/%E6%95%99%E7%A8%8B/">
+                                    <span class="chip bg-color">教程</span>
                                 </a>
                             
                         </div>
@@ -782,7 +911,7 @@ aaa authentication ppp default local</code></pre>
         repo: 'p',
         owner: 'Grosad',
         admin: "Grosad",
-        id: '2020-07-15T21-06-10',
+        id: '2020-09-14T20-06-37',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -806,9 +935,10 @@ aaa authentication ppp default local</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/09/14/Linux-2/">
                     <div class="card-image">
@@ -830,9 +960,9 @@ useradd
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -845,6 +975,7 @@ useradd
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -867,18 +998,18 @@ useradd
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/07/15/PAP/">
+                <a href="/2020/07/15/CHAP/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715210252.png" class="responsive-img" alt="PAP认证">
+                        <img src="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715211109.png" class="responsive-img" alt="CHAP认证">
                         
-                        <span class="card-title">PAP认证</span>
+                        <span class="card-title">CHAP认证</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            实验平台Cisco Packet Tracer 7.3.0 PAP认证  拓扑图   指令
+                            CHAP认证
                         
                     </div>
                     <div class="publish-info">

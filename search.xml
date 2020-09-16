@@ -1,33 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo调试-2</title>
-    <url>/2020/06/06/2020-6-6-2/</url>
-    <content><![CDATA[<p>现在可以插入图片了！！<img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/c.gif" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1.gif" alt></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo调试-4</title>
-    <url>/2020/06/07/2020-6-7-2/</url>
-    <content><![CDATA[<p>花了将近一下午的时间，换了另外一款主题，优化了一下界面<br>现在的界面没之前那么单调了，看起来挺舒服的，纵享丝滑<br>这个主题还有预加载功能，体验极好<br>得找点图来，自带的这些图不怎么不好看</p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>四层主机发现</title>
     <url>/2020/06/25/2020-6-25/</url>
     <content><![CDATA[<blockquote>
@@ -142,6 +115,33 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo调试-2</title>
+    <url>/2020/06/06/2020-6-6-2/</url>
+    <content><![CDATA[<p>现在可以插入图片了！！<img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/c.gif" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1.gif" alt></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo调试-4</title>
+    <url>/2020/06/07/2020-6-7-2/</url>
+    <content><![CDATA[<p>花了将近一下午的时间，换了另外一款主题，优化了一下界面<br>现在的界面没之前那么单调了，看起来挺舒服的，纵享丝滑<br>这个主题还有预加载功能，体验极好<br>得找点图来，自带的这些图不怎么不好看</p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo调试-5</title>
     <url>/2020/06/07/2020-6-7-3/</url>
     <content><![CDATA[<p>又花了几个小时，尝试了一下coding + github 双部署，又觉得coding的使用效果强差人意，还是罢了<br>还有一部分时间，调试了下右下角的这个玩意儿，选来选去，还是用现在这个好了<br>左下角还有个播放音乐的功能，我觉得还挺不错</p>
@@ -168,6 +168,22 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo调试-6</title>
+    <url>/2020/06/08/2020-6-8/</url>
+    <content><![CDATA[<p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p>
+<p>对博客的访问速度优化了一下，在预加载的基础上，弄了个懒加载，<code>懒加载</code>就是:一般是当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载,既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。</p>
+<p>接下来，找点好看的图，把那些细节优化一下，弄完之后，Hexo差不多就调试完毕了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo调试-7</title>
     <url>/2020/06/08/2020-6-8-2/</url>
     <content><![CDATA[<p>找来了一些图，放在了那个自己搭的图床里，以后再用</p>
@@ -183,19 +199,34 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-6</title>
-    <url>/2020/06/08/2020-6-8/</url>
-    <content><![CDATA[<p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p>
-<p>对博客的访问速度优化了一下，在预加载的基础上，弄了个懒加载，<code>懒加载</code>就是:一般是当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载,既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。</p>
-<p>接下来，找点好看的图，把那些细节优化一下，弄完之后，Hexo差不多就调试完毕了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt></p>
+    <title>端口聚合</title>
+    <url>/2020/07/15/2020-7-15/</url>
+    <content><![CDATA[<h1 id="网络搭建—端口聚合"><a href="#网络搭建—端口聚合" class="headerlink" title="网络搭建—端口聚合"></a>网络搭建—端口聚合</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715182930.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>SW-1</p>
+<pre><code>en
+config
+int range f0/2-3
+sw mode trunk
+channel-group 1 mode on
+exit
+port-channel load-balance dst-ip</code></pre><p>SW-2</p>
+<pre><code>en
+config
+int range f0/2-3
+sw mode trunk
+channel-group 1 mode on
+exit
+port-channel load-balance dst-ip</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715182919.png" alt></p>
 ]]></content>
       <categories>
-        <category>调试</category>
+        <category>网络搭建</category>
       </categories>
       <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -302,37 +333,6 @@ aaa authentication ppp default local</code></pre>]]></content>
       <tags>
         <tag>网络空间安全</tag>
         <tag>收录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>端口聚合</title>
-    <url>/2020/07/15/2020-7-15/</url>
-    <content><![CDATA[<h1 id="网络搭建—端口聚合"><a href="#网络搭建—端口聚合" class="headerlink" title="网络搭建—端口聚合"></a>网络搭建—端口聚合</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715182930.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>SW-1</p>
-<pre><code>en
-config
-int range f0/2-3
-sw mode trunk
-channel-group 1 mode on
-exit
-port-channel load-balance dst-ip</code></pre><p>SW-2</p>
-<pre><code>en
-config
-int range f0/2-3
-sw mode trunk
-channel-group 1 mode on
-exit
-port-channel load-balance dst-ip</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715182919.png" alt></p>
-]]></content>
-      <categories>
-        <category>网络搭建</category>
-      </categories>
-      <tags>
-        <tag>收录</tag>
-        <tag>网络搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -498,62 +498,6 @@ port-channel load-balance dst-ip</code></pre><h2 id="结果"><a href="#结果" c
       </tags>
   </entry>
   <entry>
-    <title>OSPF动态路由协议</title>
-    <url>/2020/06/26/OSPF/</url>
-    <content><![CDATA[<h1 id="网络搭建—OSPF动态路由协议"><a href="#网络搭建—OSPF动态路由协议" class="headerlink" title="网络搭建—OSPF动态路由协议"></a>网络搭建—OSPF动态路由协议</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627000547.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
-<pre><code>en
-config
-int f0/0
-no shutdown
-ip add 192.168.1.1 255.255.255.0
-int s0/0/0
-no shutdown
-ip add 192.168.3.1 255.255.255.0
-exit
-ip routing
-route ospf 1
-network 192.168.1.0 0.0.0.255 area 0
-network 192.168.3.0 0.0.0.255 area 0</code></pre><p>R2</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.3.2 255.255.255.0
-int s0/0/1
-no shutdown
-ip add 192.168.4.2 255.255.255.0
-exit
-ip routing
-route ospf 1
-network 192.168.4.0 0.0.0.255 area 0
-network 192.168.3.0 0.0.0.255 area 0</code></pre><p>R3</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.4.1 255.255.255.0
-int f0/0
-no shutdown
-ip add 192.168.2.1 255.255.255.0
-exit
-ip routing
-route ospf 1
-network 192.168.2.0 0.0.0.255 area 0
-network 192.168.4.0 0.0.0.255 area 0</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627000520.png" alt></p>
-]]></content>
-      <categories>
-        <category>网络搭建</category>
-      </categories>
-      <tags>
-        <tag>收录</tag>
-        <tag>网络搭建</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux中关于文件权限</title>
     <url>/2020/06/25/Linux-1/</url>
     <content><![CDATA[<blockquote>
@@ -615,6 +559,230 @@ chmod -x 1.py   为1.py文件去除x权限（执行权限）</code></pre><hr>
       <tags>
         <tag>网络空间安全</tag>
         <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux文件基础命令</title>
+    <url>/2020/09/14/Linux-2/</url>
+    <content><![CDATA[<h1 id="Linux文件基础命令"><a href="#Linux文件基础命令" class="headerlink" title="Linux文件基础命令"></a>Linux文件基础命令</h1><p><strong>1. 用户基本操作</strong></p>
+<pre><code>whoami 查看当前登录用户
+su [用户名] 切换用户
+&quot;$&quot;普通用户   &quot;#&quot;管理员
+管理员切换普通用户不用密码，普通用户之间需要密码
+useradd   (只有root能用)
+passwd [用户名] (只有root能用)</code></pre><p><strong>2. shell快捷键</strong></p>
+<pre><code>Ctrl + a 调用命令行的开头
+Ctrl + e 调用命令行的结尾
+Ctrl + u 将光标处到命令行开头的内容清除
+Ctrl + k 将光标处到命令行结尾的内容清除
+Ctrl + r 在历史记录列表中搜索某一命令
+Ctrl + l 清屏
+history 显示历史命令
+![number] 直接执行曾执行过的命令
+pwd -alh 显示所有信息 -d 只看当前目录的信息</code></pre><p><strong>3.Linux中的目录结构ls命令</strong></p>
+<pre><code>cd 路径   切换路径
+cd - 返回到之前的目录
+cd .. 回上一级目录
+cd ~ 到用户所在的家目录</code></pre><p><strong>4.Linux目录含义</strong></p>
+<pre><code>/boot Linux启动时需要的文件
+/dev      设备文件
+/etc       配置文件
+/home  用户家目录 
+/media 媒体文件
+/mnt     挂载文件
+/opt      第三方软件
+/proc    虚拟化文件
+/root    管理员的家目录
+/run     进程文件
+/srv      压缩过的文件
+/sys      系统文件
+/usr      安装的软件，共享库
+/var      可变数据，日志文件
+/tmp     临时文件
+/usr/bin     普通用户可以使用的命令
+/usr/sbin   超级用户可以使用的命令
+/usr/lib      32位库文件
+/usr/lib64  64位库文件</code></pre><p><strong>5.Linux中文件的操作</strong></p>
+<pre><code>touch 创建一个文件
+cp 复制文件
+mkdir 创建目录    (-p参数递归创建)
+mv 移动文件 (也可重命名)
+rm 删除文件 ( -rf 强制删除)</code></pre><p><strong>文件查看</strong></p>
+<pre><code>nl  显示的时候出现行号
+tac  从最后一行开始显示
+head 显示文件的前10行 -n设置行数
+tail 显示文件结尾10行 -n设置行数
+wc 显示文件的行数，数字，字节</code></pre><p><strong>cat 查看文件</strong></p>
+<pre><code>-A 整合命令-vET
+-b 列出行号(空白行不算)
+-E 将结尾的断行符($)显示出来
+-n 列出行号(空白行也会表示)
+-T 将tab按键显示
+-v 列出特殊字符</code></pre><p><strong>nl</strong></p>
+<pre><code>-ba 无论是否有空行都列出行号
+-bt 不列出空白行号(默认)
+-nln 行号在屏幕最左方
+-nrn 行号在屏幕最右方，前面不加0
+-nrz 行号在屏幕最右方，前面加0
+-w 缩进多少位
+find 查找
+umount 取消挂载
+mount 挂载
+vim 编辑**查看文件 - more**
+more (一页一页的翻动)
+空格：向下翻页
+回车：向下翻一行
+/字符串  搜索
+:+ 立刻显示文件名和行数
+b 翻到第一页
+q 离开</code></pre><p><strong>5.Linux中文件的操作</strong></p>
+<pre><code>touch 创建一个文件
+cp 复制文件
+mkdir 创建目录    (-p参数递归创建)
+mv 移动文件 (也可重命名)
+rm 删除文件 ( -rf 强制删除)**文件查看**
+nl  显示的时候出现行号
+tac  从最后一行开始显示
+head 显示文件的前10行 -n设置行数
+tail 显示文件结尾10行 -n设置行数
+wc 显示文件的行数，数字，字节</code></pre><p><strong>cat 查看文件</strong></p>
+<pre><code>-A 整合命令-vET
+-b 列出行号(空白行不算)
+-E 将结尾的断行符($)显示出来
+-n 列出行号(空白行也会表示)
+-T 将tab按键显示
+-v 列出特殊字符</code></pre><p><strong>nl</strong></p>
+<pre><code>-ba 无论是否有空行都列出行号
+-bt 不列出空白行号(默认)
+-nln 行号在屏幕最左方
+-nrn 行号在屏幕最右方，前面不加0
+-nrz 行号在屏幕最右方，前面加0
+-w 缩进多少位
+find 查找
+umount 取消挂载
+mount 挂载
+vim 编辑</code></pre><p><strong>查看文件 - more</strong></p>
+<pre><code>more (一页一页的翻动)
+空格：向下翻页
+回车：向下翻一行
+/字符串  搜索
+:+ 立刻显示文件名和行数
+b 翻到第一页
+q 离开</code></pre><p><strong>查看文件 - less</strong></p>
+<pre><code>less (一页一页的翻动)
+空格 向下翻动一页
+pagedown 向下翻动一页
+pageup 向上翻动一页
+n 重复前一个搜索
+N 反方向重新前一个搜索
+q 退出</code></pre><p><strong>查看文件</strong></p>
+<pre><code>head tail 显示文件头或尾几行
+-n 指示显示几行，默认是10行
+日志文件/var/log/message 我们只需要看尾部最新的几行即可</code></pre><p><strong>wc 显示文件的行数，数字，字节</strong></p>
+<pre><code>-c 只显示字节
+-w 只显示字数 一个字被定义为空白，空格或换行字符分隔的字符串
+-l 只显示行</code></pre><p><strong>vi / vim 编辑器 (vi是Linux内置编辑器，vim是增强版)</strong></p>
+<pre><code>i 插入
+esc 退出
+u 撤销
+x 删除
+
+
+v 选择文本
+y 复制
+yy 复制当前行
+dd 删除光标所在行
+p 粘贴
+
+
+:w 保存
+:wq 保存并退出
+:q! 强退 （不保存）</code></pre><p><strong>gedit编辑器[文本编辑器] - 需要X-windows的支持</strong></p>
+<h2 id="关机"><a href="#关机" class="headerlink" title="关机"></a><strong>关机</strong></h2><h3 id="需要注意的事项"><a href="#需要注意的事项" class="headerlink" title="需要注意的事项"></a>需要注意的事项</h3><ul>
+<li>观察系统的使用状态</li>
+<li>通知在线使用者关机的时间</li>
+<li>正确的关机指令使用</li>
+</ul>
+<p><strong>关机指令</strong></p>
+<ul>
+<li><p>数据同步写入磁盘 -sync</p>
+</li>
+<li><p>常用的关机指令:shutdown</p>
+</li>
+<li><p>重启，关机：reboot , half , poweroff</p>
+</li>
+</ul>
+<pre><code>    shutdown 
+
+-t 添加倒数关机秒数
+    -k 假关机，发出警报信息
+  -r 在系统服务都停止后重启
+    -h 在系统服务都停止后关机
+  -f 关闭并且开机以后强行略过磁盘检查
+    -F 重启后强制进行磁盘检查
+  -C 取消已经在进行的shutdown指令内容</code></pre>]]></content>
+      <categories>
+        <category>网络空间安全</category>
+      </categories>
+      <tags>
+        <tag>网络空间安全</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>OSPF动态路由协议</title>
+    <url>/2020/06/26/OSPF/</url>
+    <content><![CDATA[<h1 id="网络搭建—OSPF动态路由协议"><a href="#网络搭建—OSPF动态路由协议" class="headerlink" title="网络搭建—OSPF动态路由协议"></a>网络搭建—OSPF动态路由协议</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627000547.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R1</p>
+<pre><code>en
+config
+int f0/0
+no shutdown
+ip add 192.168.1.1 255.255.255.0
+int s0/0/0
+no shutdown
+ip add 192.168.3.1 255.255.255.0
+exit
+ip routing
+route ospf 1
+network 192.168.1.0 0.0.0.255 area 0
+network 192.168.3.0 0.0.0.255 area 0</code></pre><p>R2</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.3.2 255.255.255.0
+int s0/0/1
+no shutdown
+ip add 192.168.4.2 255.255.255.0
+exit
+ip routing
+route ospf 1
+network 192.168.4.0 0.0.0.255 area 0
+network 192.168.3.0 0.0.0.255 area 0</code></pre><p>R3</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.4.1 255.255.255.0
+int f0/0
+no shutdown
+ip add 192.168.2.1 255.255.255.0
+exit
+ip routing
+route ospf 1
+network 192.168.2.0 0.0.0.255 area 0
+network 192.168.4.0 0.0.0.255 area 0</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200627000520.png" alt></p>
+]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -809,6 +977,39 @@ shell@msfadmin &gt; ps aux | grep udev  查看pid</code></pre><p><img src="https
       </tags>
   </entry>
   <entry>
+    <title>《如果爱了》</title>
+    <url>/2020/06/25/b-1/</url>
+    <content><![CDATA[<h1 id="《如果爱了》"><a href="#《如果爱了》" class="headerlink" title="《如果爱了》"></a>《如果爱了》</h1><h5 id="作者：Oscur"><a href="#作者：Oscur" class="headerlink" title="作者：Oscur"></a>作者：Oscur</h5><h2 id="——序章"><a href="#——序章" class="headerlink" title="——序章"></a>——序章</h2><p>​        我考虑了很久，决定创作这篇文章，或许他是日记，仅为留下记忆，或是纪念，或是录堑，亦或是缅怀。</p>
+<p>​        故事很长，倾心诉说。</p>
+<p>​        之前看到过一个疑问，如果让你重新再来一次，你还会重蹈覆辙吗，或是说，你后悔吗？若让我重新再来，我仍会做相同的选择，且不后悔，但在她身上，我再不想留下任何感情。人生中遇见的每一个人，都是安排好的，他一定有意义，但是这份所谓的意义也可以是“经历”，我不后悔遇见她，我也不后悔和她发生的一切，但我再也不是从前那个我，我把她当教训，亦不是三年前痴痴的卑微，更不是半年前深情的舔狗。室友开玩笑的说我像个“喜剧演员”，我想我更像Joker吧。</p>
+<p>​        因为疫情，高二下学期全部被网课代替，我开始讨厌想起她，厌恶脑海中穿插过关于她的点滴，那种感觉很魔幻，像子弹一样击穿我笨拙的壁垒。每当这个时候我总会用力扇自己一耳光，疼痛总会提醒我，质问我到底变了吗，我还是那个我吗？</p>
+<p>​        我喜欢薛之谦，并不是他的歌好听，或是人长得帅，薛先生的歌总会对我的生活产生极大的共鸣，他在讲述一个悲伤的故事，悲伤却被治愈着。最无力，无奈的一首：</p>
+<p>​        没有《演员》的决裂冷炎</p>
+<p>​        没有《绅士》的进退有度</p>
+<p>​        没有《方圆几里》的执着</p>
+<p>​        没有《其实》的歇斯底里</p>
+<p>只有后知后觉的撕心裂肺，连唱腔都隐隐作痛。</p>
+<p>“我们的爱情到这刚刚好，再不争也不吵不必再煎熬，你可以不用记得我的好。”</p>
+<p>现在却害怕听薛之谦，恰好的三行情书总会无数次挑动我已经麻木的伤口。</p>
+<p>​        <strong>等怂恿的烫了手，等看懂的还我自由</strong></p>
+<p>​        谣言横行，舆论传讹，当局者迷。</p>
+<p>​        在他们眼中，我便是“绿了她”，“为了好玩才谈”，可我是个什么样的人，我想我身边的朋友比我更清楚。元旦时期，她对我不冷不热，爱搭不理，在我对她的闺蜜进行刨问，对她开始“恳求”时，她告诉我，我和我的女部下有不当之交，甚至于“周遭皆明，唯其不知”，“所有人都在瞒着我”，“他们都在劝我分”</p>
+<p>​        体测陪跑？我陪的是整个文体部，怎么就是她一个人了？</p>
+<p>​        手牵手？无中生有加上以讹传讹？</p>
+<p>​        当然，我更不知道女当事人和她为了躲避我QQ关联的消息查看而“创群聊完删”的操作中，到底有什么，我想我最好不想知道。</p>
+<p>​        可能我真的将公私分明做出了极致，在红头文件下偏袒她以前的朋友，在开除处分下挽留她现在的闺蜜，在招新面试中挑选她的同学脱颖而出。工作没有特地安排她和我一组，部门之间没有破坏规矩，全会之下没有鼓起官威。正经的工作居然没有掺杂到任何个人感情，我想我很负责，也很可悲，难道不是吗？副主席？</p>
+<p>​        <strong>如果无奈了，那就放下手，野草一定会出卖墙头。</strong></p>
+<p>​                                                                                                                               ———2020年5月30日 凌晨1:43 著序</p>
+]]></content>
+      <categories>
+        <category>书</category>
+      </categories>
+      <tags>
+        <tag>书</tag>
+        <tag>如果爱了</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>DHCP</title>
     <url>/2020/06/25/dhcp/</url>
     <content><![CDATA[<h1 id="网络搭建—DHCP"><a href="#网络搭建—DHCP" class="headerlink" title="网络搭建—DHCP"></a>网络搭建—DHCP</h1><blockquote>
@@ -973,92 +1174,6 @@ net share c$ /delete</code></pre><ol start="2">
       </tags>
   </entry>
   <entry>
-    <title>静态路由</title>
-    <url>/2020/06/26/route/</url>
-    <content><![CDATA[<h1 id="网络搭建—静态路由"><a href="#网络搭建—静态路由" class="headerlink" title="网络搭建—静态路由"></a>网络搭建—静态路由</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-1.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R0</p>
-<pre><code>en
-config
-int f0/0
-no shutdown
-ip add 192.168.1.1 255.255.255.0
-int s0/0/0
-no shutdown
-ip add 192.168.3.1 255.255.255.0
-exit
-ip routing
-ip route 192.168.4.0 255.255.255.0 192.168.3.2
-ip route 192.168.2.0 255.255.255.0 192.168.3.2</code></pre><p>R1</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.3.2 255.255.255.0
-int s0/0/1
-no shutdown
-ip add 192.168.4.2 255.255.255.0
-exit
-ip routing
-ip route 192.168.1.0 255.255.255.0 192.168.3.1
-ip route 192.168.2.0 255.255.255.0 192.168.4.1</code></pre><p>R2</p>
-<pre><code>en
-config
-int s0/0/0
-no shutdown
-ip add 192.168.4.1 255.255.255.0
-int f0/0
-no shutdown
-ip add 192.168.2.1 255.255.255.0
-exit
-ip routing
-ip route 192.168.1.0 255.255.255.0 192.168.4.2
-ip route 192.168.3.0 255.255.255.0 192.168.4.2</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-2.png" alt></p>
-]]></content>
-      <categories>
-        <category>网络搭建</category>
-      </categories>
-      <tags>
-        <tag>收录</tag>
-        <tag>网络搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《如果爱了》</title>
-    <url>/2020/06/25/b-1/</url>
-    <content><![CDATA[<h1 id="《如果爱了》"><a href="#《如果爱了》" class="headerlink" title="《如果爱了》"></a>《如果爱了》</h1><h5 id="作者：Oscur"><a href="#作者：Oscur" class="headerlink" title="作者：Oscur"></a>作者：Oscur</h5><h2 id="——序章"><a href="#——序章" class="headerlink" title="——序章"></a>——序章</h2><p>​        我考虑了很久，决定创作这篇文章，或许他是日记，仅为留下记忆，或是纪念，或是录堑，亦或是缅怀。</p>
-<p>​        故事很长，倾心诉说。</p>
-<p>​        之前看到过一个疑问，如果让你重新再来一次，你还会重蹈覆辙吗，或是说，你后悔吗？若让我重新再来，我仍会做相同的选择，且不后悔，但在她身上，我再不想留下任何感情。人生中遇见的每一个人，都是安排好的，他一定有意义，但是这份所谓的意义也可以是“经历”，我不后悔遇见她，我也不后悔和她发生的一切，但我再也不是从前那个我，我把她当教训，亦不是三年前痴痴的卑微，更不是半年前深情的舔狗。室友开玩笑的说我像个“喜剧演员”，我想我更像Joker吧。</p>
-<p>​        因为疫情，高二下学期全部被网课代替，我开始讨厌想起她，厌恶脑海中穿插过关于她的点滴，那种感觉很魔幻，像子弹一样击穿我笨拙的壁垒。每当这个时候我总会用力扇自己一耳光，疼痛总会提醒我，质问我到底变了吗，我还是那个我吗？</p>
-<p>​        我喜欢薛之谦，并不是他的歌好听，或是人长得帅，薛先生的歌总会对我的生活产生极大的共鸣，他在讲述一个悲伤的故事，悲伤却被治愈着。最无力，无奈的一首：</p>
-<p>​        没有《演员》的决裂冷炎</p>
-<p>​        没有《绅士》的进退有度</p>
-<p>​        没有《方圆几里》的执着</p>
-<p>​        没有《其实》的歇斯底里</p>
-<p>只有后知后觉的撕心裂肺，连唱腔都隐隐作痛。</p>
-<p>“我们的爱情到这刚刚好，再不争也不吵不必再煎熬，你可以不用记得我的好。”</p>
-<p>现在却害怕听薛之谦，恰好的三行情书总会无数次挑动我已经麻木的伤口。</p>
-<p>​        <strong>等怂恿的烫了手，等看懂的还我自由</strong></p>
-<p>​        谣言横行，舆论传讹，当局者迷。</p>
-<p>​        在他们眼中，我便是“绿了她”，“为了好玩才谈”，可我是个什么样的人，我想我身边的朋友比我更清楚。元旦时期，她对我不冷不热，爱搭不理，在我对她的闺蜜进行刨问，对她开始“恳求”时，她告诉我，我和我的女部下有不当之交，甚至于“周遭皆明，唯其不知”，“所有人都在瞒着我”，“他们都在劝我分”</p>
-<p>​        体测陪跑？我陪的是整个文体部，怎么就是她一个人了？</p>
-<p>​        手牵手？无中生有加上以讹传讹？</p>
-<p>​        当然，我更不知道女当事人和她为了躲避我QQ关联的消息查看而“创群聊完删”的操作中，到底有什么，我想我最好不想知道。</p>
-<p>​        可能我真的将公私分明做出了极致，在红头文件下偏袒她以前的朋友，在开除处分下挽留她现在的闺蜜，在招新面试中挑选她的同学脱颖而出。工作没有特地安排她和我一组，部门之间没有破坏规矩，全会之下没有鼓起官威。正经的工作居然没有掺杂到任何个人感情，我想我很负责，也很可悲，难道不是吗？副主席？</p>
-<p>​        <strong>如果无奈了，那就放下手，野草一定会出卖墙头。</strong></p>
-<p>​                                                                                                                               ———2020年5月30日 凌晨1:43 著序</p>
-]]></content>
-      <categories>
-        <category>书</category>
-      </categories>
-      <tags>
-        <tag>书</tag>
-        <tag>如果爱了</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>kali安装</title>
     <url>/2020/06/23/kali-install-1/</url>
     <content><![CDATA[<blockquote>
@@ -1182,6 +1297,59 @@ apt-get clean            #清理无用的包</code></pre><hr>
       </tags>
   </entry>
   <entry>
+    <title>静态路由</title>
+    <url>/2020/06/26/route/</url>
+    <content><![CDATA[<h1 id="网络搭建—静态路由"><a href="#网络搭建—静态路由" class="headerlink" title="网络搭建—静态路由"></a>网络搭建—静态路由</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-1.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>R0</p>
+<pre><code>en
+config
+int f0/0
+no shutdown
+ip add 192.168.1.1 255.255.255.0
+int s0/0/0
+no shutdown
+ip add 192.168.3.1 255.255.255.0
+exit
+ip routing
+ip route 192.168.4.0 255.255.255.0 192.168.3.2
+ip route 192.168.2.0 255.255.255.0 192.168.3.2</code></pre><p>R1</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.3.2 255.255.255.0
+int s0/0/1
+no shutdown
+ip add 192.168.4.2 255.255.255.0
+exit
+ip routing
+ip route 192.168.1.0 255.255.255.0 192.168.3.1
+ip route 192.168.2.0 255.255.255.0 192.168.4.1</code></pre><p>R2</p>
+<pre><code>en
+config
+int s0/0/0
+no shutdown
+ip add 192.168.4.1 255.255.255.0
+int f0/0
+no shutdown
+ip add 192.168.2.1 255.255.255.0
+exit
+ip routing
+ip route 192.168.1.0 255.255.255.0 192.168.4.2
+ip route 192.168.3.0 255.255.255.0 192.168.4.2</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/r1-2.png" alt></p>
+]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>5次shift漏洞破解系统密码</title>
     <url>/2020/06/28/shift/</url>
     <content><![CDATA[<h1 id="利用5次shift漏洞破解系统密码"><a href="#利用5次shift漏洞破解系统密码" class="headerlink" title="利用5次shift漏洞破解系统密码"></a>利用5次shift漏洞破解系统密码</h1><h2 id="Windows-五次shift键破解密码"><a href="#Windows-五次shift键破解密码" class="headerlink" title="Windows   五次shift键破解密码"></a>Windows   五次shift键破解密码</h2><p>原理：系统登录界面时五次按下shift键会弹出 - 粘滞键菜单   找到对应路径<strong>掉包成CMD即可</strong></p>
@@ -1291,89 +1459,6 @@ switchport port-security mac-address 0001.96D9.8752</code></pre><h2 id="结果">
       </tags>
   </entry>
   <entry>
-    <title>VRRP</title>
-    <url>/2020/07/15/vrrp/</url>
-    <content><![CDATA[<h1 id="网络搭建—VRRP"><a href="#网络搭建—VRRP" class="headerlink" title="网络搭建—VRRP"></a>网络搭建—VRRP</h1><blockquote>
-<p>实验平台: Cisco Packet Tracer 7.3.0</p>
-</blockquote>
-<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715190511.png" alt></p>
-<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>SW 1</p>
-<pre><code>en
-config
-int  vlan 100
-ip add 10.0.0.1  255.255.255.0
-ex
-int  f0/1
-sw acc vlan 100
-ex
-en
-config
-int  vlan 200
-ip add 20.0.0.1  255.255.255.0
-ex
-int  f0/2
-sw acc vlan 200
-ex
-ip routing
-int vlan 100
-standby 1 ip 10.0.0.10
-standby 1 preempt
-standby 1 priority 150
-ex
-int vlan 200
-standby 2 ip 20.0.0.10
-standby 2 preempt
-standby 2 priority 50
-ex
-route ospf 1
-network 10.0.0.0  0.0.0.255 area 0
-network 20.0.0.0  0.0.0.255 area 0
-ex</code></pre><p>SW 2</p>
-<pre><code>en
-config
-int  vlan 100
-ip add 10.0.0.2  255.255.255.0
-ex
-int  f0/1
-sw acc vlan 100
-ex
-en
-config
-int  vlan 200
-ip add 20.0.0.2  255.255.255.0
-ex
-int  f0/2
-sw acc vlan 200
-ex
-ip routing
-int vlan 100
-standby 1 ip 10.0.0.10
-standby 1 preempt
-standby 1 priority 50
-ex
-int vlan 200
-standby 2 ip 20.0.0.10
-standby 2 preempt
-standby 2 priority 150
-ex
-route ospf 1
-network 10.0.0.0  0.0.0.255 area 0
-network 20.0.0.0  0.0.0.255 area 0
-ex</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><blockquote>
-<p>这里建议多ping几次，第一次ping可能会失败</p>
-<p>那两个双层交换机摆那就行了</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715190506.png" alt></p>
-]]></content>
-      <categories>
-        <category>网络搭建</category>
-      </categories>
-      <tags>
-        <tag>收录</tag>
-        <tag>网络搭建</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vlan划分</title>
     <url>/2020/06/25/vlan/</url>
     <content><![CDATA[<h1 id="网络搭建—VLAN"><a href="#网络搭建—VLAN" class="headerlink" title="网络搭建—VLAN"></a>网络搭建—VLAN</h1><blockquote>
@@ -1456,6 +1541,89 @@ int f0/2
 sw acc vlan 10
 int f0/3
 sw acc vlan 20</code></pre>]]></content>
+      <categories>
+        <category>网络搭建</category>
+      </categories>
+      <tags>
+        <tag>收录</tag>
+        <tag>网络搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VRRP</title>
+    <url>/2020/07/15/vrrp/</url>
+    <content><![CDATA[<h1 id="网络搭建—VRRP"><a href="#网络搭建—VRRP" class="headerlink" title="网络搭建—VRRP"></a>网络搭建—VRRP</h1><blockquote>
+<p>实验平台: Cisco Packet Tracer 7.3.0</p>
+</blockquote>
+<h2 id="拓扑图"><a href="#拓扑图" class="headerlink" title="拓扑图"></a>拓扑图</h2><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715190511.png" alt></p>
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><p>SW 1</p>
+<pre><code>en
+config
+int  vlan 100
+ip add 10.0.0.1  255.255.255.0
+ex
+int  f0/1
+sw acc vlan 100
+ex
+en
+config
+int  vlan 200
+ip add 20.0.0.1  255.255.255.0
+ex
+int  f0/2
+sw acc vlan 200
+ex
+ip routing
+int vlan 100
+standby 1 ip 10.0.0.10
+standby 1 preempt
+standby 1 priority 150
+ex
+int vlan 200
+standby 2 ip 20.0.0.10
+standby 2 preempt
+standby 2 priority 50
+ex
+route ospf 1
+network 10.0.0.0  0.0.0.255 area 0
+network 20.0.0.0  0.0.0.255 area 0
+ex</code></pre><p>SW 2</p>
+<pre><code>en
+config
+int  vlan 100
+ip add 10.0.0.2  255.255.255.0
+ex
+int  f0/1
+sw acc vlan 100
+ex
+en
+config
+int  vlan 200
+ip add 20.0.0.2  255.255.255.0
+ex
+int  f0/2
+sw acc vlan 200
+ex
+ip routing
+int vlan 100
+standby 1 ip 10.0.0.10
+standby 1 preempt
+standby 1 priority 50
+ex
+int vlan 200
+standby 2 ip 20.0.0.10
+standby 2 preempt
+standby 2 priority 150
+ex
+route ospf 1
+network 10.0.0.0  0.0.0.255 area 0
+network 20.0.0.0  0.0.0.255 area 0
+ex</code></pre><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><blockquote>
+<p>这里建议多ping几次，第一次ping可能会失败</p>
+<p>那两个双层交换机摆那就行了</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/20200715190506.png" alt></p>
+]]></content>
       <categories>
         <category>网络搭建</category>
       </categories>

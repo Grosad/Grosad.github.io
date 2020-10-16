@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://grosad.github.io/2020/06/25/Linux-1/</loc>
+    
+    <lastmod>2020-10-16T04:53:28.972Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://grosad.github.io/artitalk/index.html</loc>
     
-    <lastmod>2020-10-16T03:18:27.712Z</lastmod>
+    <lastmod>2020-10-16T04:24:04.409Z</lastmod>
     
   </url>
   
@@ -82,13 +89,6 @@
     <loc>http://grosad.github.io/2020/06/25/FTP-Vulnerability/</loc>
     
     <lastmod>2020-06-29T08:43:21.341Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://grosad.github.io/2020/06/25/Linux-1/</loc>
-    
-    <lastmod>2020-06-29T08:42:54.063Z</lastmod>
     
   </url>
   

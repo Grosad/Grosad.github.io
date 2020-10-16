@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo调试-2</title>
+    <url>/2020/06/06/2020-6-6-2/</url>
+    <content><![CDATA[<p>现在可以插入图片了！！<img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/c.gif" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1.gif" alt></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>四层主机发现</title>
     <url>/2020/06/25/2020-6-25/</url>
     <content><![CDATA[<blockquote>
@@ -102,20 +116,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo调试-2</title>
-    <url>/2020/06/06/2020-6-6-2/</url>
-    <content><![CDATA[<p>现在可以插入图片了！！<img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/c.gif" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1.gif" alt></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo调试-1</title>
     <url>/2020/06/06/2020-6-6/</url>
     <content><![CDATA[<p>Hexo基本搭建完成</p>
@@ -173,6 +173,22 @@
     <content><![CDATA[<p>找来了一些图，放在了那个自己搭的图床里，以后再用</p>
 <p>测试了一下博客的访问速度，发现访问速度还是不尽人意，看来GitHub+jsDelivr搭建的图库还是有些小卡，明天再找点教程优化一下吧，弄好之后，就可以一篇一篇的水了233</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/KKEA$V0X8F6WZJE80%7BWN_L8.jpg" alt></p>
+]]></content>
+      <categories>
+        <category>调试</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo调试-6</title>
+    <url>/2020/06/08/2020-6-8/</url>
+    <content><![CDATA[<p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p>
+<p>对博客的访问速度优化了一下，在预加载的基础上，弄了个懒加载，<code>懒加载</code>就是:一般是当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载,既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。</p>
+<p>接下来，找点好看的图，把那些细节优化一下，弄完之后，Hexo差不多就调试完毕了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt></p>
 ]]></content>
       <categories>
         <category>调试</category>
@@ -250,22 +266,6 @@ aaa authentication ppp default local</code></pre>]]></content>
       <tags>
         <tag>收录</tag>
         <tag>网络搭建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo调试-6</title>
-    <url>/2020/06/08/2020-6-8/</url>
-    <content><![CDATA[<p>用了昨天一个晚上晚上，和今天上午几个小时，用GitHub+jsDelivr+PicGo搭建了个免费图床，感觉效果还不错，还弄了个Gitalk 评论模块，挺好看的，有个美中不足的地方，就是要Github登录之后才能评论，不过也好，还世界一片清净。</p>
-<p>对博客的访问速度优化了一下，在预加载的基础上，弄了个懒加载，<code>懒加载</code>就是:一般是当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载,既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。</p>
-<p>接下来，找点好看的图，把那些细节优化一下，弄完之后，Hexo差不多就调试完毕了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/0.jpg" alt></p>
-]]></content>
-      <categories>
-        <category>调试</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-        <tag>调试</tag>
       </tags>
   </entry>
   <entry>
@@ -546,7 +546,8 @@ aaa authentication ppp default local</code></pre>]]></content>
 </blockquote>
 <p>这里的a.out拥有x权限，所以可以尝试运行</p>
 <p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-83.png" alt></p>
-<h4 id="这个时候有人会问了，如果写的程序没有执行权限该怎么办？"><a href="#这个时候有人会问了，如果写的程序没有执行权限该怎么办？" class="headerlink" title="这个时候有人会问了，如果写的程序没有执行权限该怎么办？"></a>这个时候有人会问了，如果写的程序没有执行权限该怎么办？</h4><h2 id><a href="#" class="headerlink" title></a><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-84.png" alt></h2><pre><code>chmod +x 1.py   为1.py文件添加x权限（执行权限）
+<p><strong>这个时候有人会问了，如果写的程序没有执行权限该怎么办？</strong></p>
+<h2 id><a href="#" class="headerlink" title></a><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-84.png" alt></h2><pre><code>chmod +x 1.py   为1.py文件添加x权限（执行权限）
 chmod -x 1.py   为1.py文件去除x权限（执行权限）</code></pre><hr>
 <p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-85.png" alt></p>
 <p>这里就成功运行了！</p>
@@ -1252,129 +1253,6 @@ net share c$ /delete</code></pre><ol start="2">
       </tags>
   </entry>
   <entry>
-    <title>kali安装</title>
-    <url>/2020/06/23/kali-install-1/</url>
-    <content><![CDATA[<blockquote>
-<p>自从Hexo基本搭建完成后，不知道写些什么，所以咕咕咕了个10几天。<br>想了想，先从网安开始吧，后续再写几篇网络搭建的。</p>
-</blockquote>
-<h1 id="Kali安装"><a href="#Kali安装" class="headerlink" title="Kali安装"></a>Kali安装</h1><ul>
-<li>镜像我用的是 2019.3</li>
-<li>VMware 15</li>
-<li>多图警告，可能加载比较慢</li>
-</ul>
-<hr>
-<pre><code>开始安装</code></pre><hr>
-<p>新建虚拟机</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-1.png" alt></p>
-<p>把镜像路径选好</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-2.png" alt></p>
-<p>把操作系统选好</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-3.png" alt></p>
-<p>虚拟机名字随意，虚拟机路径最好不要选在C盘</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-4.png" alt></p>
-<p>磁盘大小调到30G</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-5.png" alt></p>
-<p>点击 <code>自定义硬件</code> </p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-6.png" alt></p>
-<p>虚拟机内核和内存分配好，把网络适配器改成 <code>桥接模式 (自动)</code></p>
-<blockquote>
-<p>最好把配置调高点，不然Kali用起来会比较卡</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-7.png" alt></p>
-<p>点击<code>完成</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-8.png" alt></p>
-<p>点击 <code>开启此虚拟机</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-9.png" alt></p>
-<p>开启虚拟机之后，用<code>↓</code>键选中 <code>Graphical install</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-10.png" alt></p>
-<p>选中<code>中文（简体）</code> 然后点击 <code>Continue</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-11.png" alt></p>
-<p>之后一路点 <code>继续</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-13.png" alt></p>
-<p>主机名随意，默认 的<code>kali</code>也可以</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-14.png" alt></p>
-<p>域名留空即可</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1161.png" alt></p>
-<p>设置好root密码，然后继续</p>
-<blockquote>
-<p>习惯小键盘输入的，记得按一下<code>NumLock</code>键哦</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-17.png" alt></p>
-<p>选中<code>使用整个磁盘</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-18.jpg" alt></p>
-<p>之后一路<code>继续</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-19.png" alt></p>
-<p>选中<code>是</code>，然后点击<code>继续</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-20.png" alt></p>
-<p>之后就开始安装了</p>
-<blockquote>
-<p>我安装在机械盘，大约需要15分钟</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-22.png" alt></p>
-<p>选中 <code>否</code>，然后点击<code>继续</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-24.png" alt></p>
-<p>安装GRUB，选<code>是</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-25.png" alt></p>
-<p>选中 <code>/dev/sda</code> ,然后<code>继续</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-26.png" alt></p>
-<p>稍等几秒后，安装完成，点击<code>继续</code>结束安装，之后系统自动重启</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/127.png" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-31.png" alt></p>
-<p>输入 <code>root</code>、<code>下一步</code>、输入刚才设置的密码，然后登陆</p>
-<blockquote>
-<p>记得按一下<code>NumLock</code>键哦</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-32.png" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-33.png" alt></p>
-<p>安装VMware的增强包、点击VMware的选项<code>虚拟机</code>–&gt;<code>安装 VMware Tools</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-34.png" alt></p>
-<p>然后进入虚拟机，打开终端，输入</p>
-<hr>
-<pre><code>cd /media/cdrom0/
-cp VM&lt;TAB键&gt; /root    #复制到root文件夹
-cd /root
-tar -zxvf VM&lt;TAB键&gt;   #解压</code></pre><hr>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-35.png" alt></p>
-<p>解压之后</p>
-<hr>
-<pre><code>cd vmware-tools-distrib/
-./vmware-install.pl</code></pre><hr>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-36.png" alt></p>
-<p>回车，开始安装增强包，之后一路回车</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-38.png" alt></p>
-<p>当出现以下字段的时候，说明安装已完成</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-39.png" alt></p>
-<p>输入 <code>reboot</code>重启Kali</p>
-<p>重启玩之后，进入kali的<code>设置</code>，把自动挂起设置为关闭</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-40.png" alt></p>
-<p>打开终端，输入</p>
-<hr>
-<pre><code>leafpad /etc/apt/sources.list</code></pre><hr>
-<p>然后加个源，我用的是阿里云的源、然后Ctrl+s保存退出</p>
-<hr>
-<pre><code>deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
-deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/a41.png" alt></p>
-<p>然后然后apt指令四连</p>
-<hr>
-<pre><code>apt-get update           #读取软件列表
-apt-get upgrade          #更新软件
-apt-get dist-upgrade   
-apt-get clean            #清理无用的包</code></pre><hr>
-<blockquote>
-<p>upgrade指令可能会很久…</p>
-</blockquote>
-<p>到这里Kali就基本上安装完成了</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/bq-1.jpg" alt></p>
-]]></content>
-      <categories>
-        <category>网络空间安全</category>
-      </categories>
-      <tags>
-        <tag>网络空间安全</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>静态路由</title>
     <url>/2020/06/26/route/</url>
     <content><![CDATA[<h1 id="网络搭建—静态路由"><a href="#网络搭建—静态路由" class="headerlink" title="网络搭建—静态路由"></a>网络搭建—静态路由</h1><blockquote>
@@ -1534,6 +1412,129 @@ switchport port-security mac-address 0001.96D9.8752</code></pre><h2 id="结果">
       <tags>
         <tag>收录</tag>
         <tag>网络搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>kali安装</title>
+    <url>/2020/06/23/kali-install-1/</url>
+    <content><![CDATA[<blockquote>
+<p>自从Hexo基本搭建完成后，不知道写些什么，所以咕咕咕了个10几天。<br>想了想，先从网安开始吧，后续再写几篇网络搭建的。</p>
+</blockquote>
+<h1 id="Kali安装"><a href="#Kali安装" class="headerlink" title="Kali安装"></a>Kali安装</h1><ul>
+<li>镜像我用的是 2019.3</li>
+<li>VMware 15</li>
+<li>多图警告，可能加载比较慢</li>
+</ul>
+<hr>
+<pre><code>开始安装</code></pre><hr>
+<p>新建虚拟机</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-1.png" alt></p>
+<p>把镜像路径选好</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-2.png" alt></p>
+<p>把操作系统选好</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-3.png" alt></p>
+<p>虚拟机名字随意，虚拟机路径最好不要选在C盘</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-4.png" alt></p>
+<p>磁盘大小调到30G</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-5.png" alt></p>
+<p>点击 <code>自定义硬件</code> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-6.png" alt></p>
+<p>虚拟机内核和内存分配好，把网络适配器改成 <code>桥接模式 (自动)</code></p>
+<blockquote>
+<p>最好把配置调高点，不然Kali用起来会比较卡</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-7.png" alt></p>
+<p>点击<code>完成</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-8.png" alt></p>
+<p>点击 <code>开启此虚拟机</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-9.png" alt></p>
+<p>开启虚拟机之后，用<code>↓</code>键选中 <code>Graphical install</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-10.png" alt></p>
+<p>选中<code>中文（简体）</code> 然后点击 <code>Continue</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-11.png" alt></p>
+<p>之后一路点 <code>继续</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-13.png" alt></p>
+<p>主机名随意，默认 的<code>kali</code>也可以</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-14.png" alt></p>
+<p>域名留空即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1161.png" alt></p>
+<p>设置好root密码，然后继续</p>
+<blockquote>
+<p>习惯小键盘输入的，记得按一下<code>NumLock</code>键哦</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-17.png" alt></p>
+<p>选中<code>使用整个磁盘</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-18.jpg" alt></p>
+<p>之后一路<code>继续</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-19.png" alt></p>
+<p>选中<code>是</code>，然后点击<code>继续</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-20.png" alt></p>
+<p>之后就开始安装了</p>
+<blockquote>
+<p>我安装在机械盘，大约需要15分钟</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-22.png" alt></p>
+<p>选中 <code>否</code>，然后点击<code>继续</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-24.png" alt></p>
+<p>安装GRUB，选<code>是</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-25.png" alt></p>
+<p>选中 <code>/dev/sda</code> ,然后<code>继续</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-26.png" alt></p>
+<p>稍等几秒后，安装完成，点击<code>继续</code>结束安装，之后系统自动重启</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/127.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-31.png" alt></p>
+<p>输入 <code>root</code>、<code>下一步</code>、输入刚才设置的密码，然后登陆</p>
+<blockquote>
+<p>记得按一下<code>NumLock</code>键哦</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-32.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-33.png" alt></p>
+<p>安装VMware的增强包、点击VMware的选项<code>虚拟机</code>–&gt;<code>安装 VMware Tools</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-34.png" alt></p>
+<p>然后进入虚拟机，打开终端，输入</p>
+<hr>
+<pre><code>cd /media/cdrom0/
+cp VM&lt;TAB键&gt; /root    #复制到root文件夹
+cd /root
+tar -zxvf VM&lt;TAB键&gt;   #解压</code></pre><hr>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-35.png" alt></p>
+<p>解压之后</p>
+<hr>
+<pre><code>cd vmware-tools-distrib/
+./vmware-install.pl</code></pre><hr>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-36.png" alt></p>
+<p>回车，开始安装增强包，之后一路回车</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-38.png" alt></p>
+<p>当出现以下字段的时候，说明安装已完成</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-39.png" alt></p>
+<p>输入 <code>reboot</code>重启Kali</p>
+<p>重启玩之后，进入kali的<code>设置</code>，把自动挂起设置为关闭</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/1-40.png" alt></p>
+<p>打开终端，输入</p>
+<hr>
+<pre><code>leafpad /etc/apt/sources.list</code></pre><hr>
+<p>然后加个源，我用的是阿里云的源、然后Ctrl+s保存退出</p>
+<hr>
+<pre><code>deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib
+deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib</code></pre><p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/a41.png" alt></p>
+<p>然后然后apt指令四连</p>
+<hr>
+<pre><code>apt-get update           #读取软件列表
+apt-get upgrade          #更新软件
+apt-get dist-upgrade   
+apt-get clean            #清理无用的包</code></pre><hr>
+<blockquote>
+<p>upgrade指令可能会很久…</p>
+</blockquote>
+<p>到这里Kali就基本上安装完成了</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Grosad/Grosad.github.io/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/Grosad/p/image/bq-1.jpg" alt></p>
+]]></content>
+      <categories>
+        <category>网络空间安全</category>
+      </categories>
+      <tags>
+        <tag>网络空间安全</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>

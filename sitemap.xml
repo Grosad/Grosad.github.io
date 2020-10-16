@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://grosad.github.io/artitalk/index.html</loc>
+    
+    <lastmod>2020-10-16T03:18:27.712Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://grosad.github.io/2020/09/16/nmap-1/</loc>
     
     <lastmod>2020-09-16T11:59:10.917Z</lastmod>
